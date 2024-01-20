@@ -1,0 +1,16 @@
+{
+  "title": "API",
+  "description": "Choose what kind of data you want to generate.",
+  "slug": "/category/api",
+  "permalink": "/docs/category/api",
+  "navigation": {
+    "previous": {
+      "title": "Localization",
+      "permalink": "/docs/localization"
+    },
+    "next": {
+      "title": "✈️ Airlines",
+      "permalink": "/docs/api/airlines"
+    }
+  }
+}

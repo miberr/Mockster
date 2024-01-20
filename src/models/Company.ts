@@ -1,24 +1,46 @@
-import { faker } from "@faker-js/faker";
-
 export class Company {
-    buzzAdjective: string =  faker.company.buzzAdjective();
-    buzzNoun: string =  faker.company.buzzNoun();
-    buzzPhrase: string =  faker.company.buzzPhrase();
-    buzzVerb: string =  faker.company.buzzVerb();
-    catchPhrase: string =  faker.company.catchPhrase();
-    catchPhraseAdjective: string =  faker.company.catchPhraseAdjective();
-    catchPhraseDescriptor: string =  faker.company.catchPhraseDescriptor();
-    catchPhraseNoun: string =  faker.company.catchPhraseNoun();
-    city: string =  faker.location.city(); // Complimentary to faker-company
-    country: string =  faker.location.country(); // Complimentary to faker-company
-    creditLimit: number =  faker.number.int(10000) * 1000000; // Complimentary to faker-company
-    email: string =  faker.internet.email(); // Complimentary to faker-company
-    mobilePhone: string =  faker.helpers.fromRegExp('+[1-9]{1,3} [0-9]{6,9}'); // Complimentary to faker-company
-    name: string =  faker.company.name();
-    numberOfEmployees: number =  faker.number.int(10000);// Complimentary to faker-company
-    phone: string =  faker.helpers.fromRegExp('+[1-9]{1,3} [0-9]{6,9}'); // Complimentary to faker-company
-    revenue: number =  faker.number.int(10000) * 1000000; // Complimentary to faker-company
-    streetAddress: string =  faker.location.streetAddress(); // Complimentary to faker-company
-    website: string =  faker.internet.url(); // Complimentary to faker-company
-    zipCode: string =  faker.location.zipCode(); // Complimentary to faker-company
+    buzzAdjective: string;
+    buzzNoun: string;
+    buzzPhrase: string;
+    buzzVerb: string;
+    catchPhrase: string;
+    catchPhraseAdjective: string;
+    catchPhraseDescriptor: string;
+    catchPhraseNoun: string;
+    city: string;
+    country: string;
+    creditLimit: number;
+    email: string;
+    mobilePhone: string;
+    name: string;
+    numberOfEmployees: number;
+    phone: string;
+    revenue: number;
+    streetAddress: string;
+    website: string;
+    zipCode: string;
+
+    constructor(localizedFaker) {
+        const faker = localizedFaker;
+        this.buzzAdjective = faker.company.buzzAdjective();
+        this.buzzNoun = faker.company.buzzNoun();
+        this.buzzPhrase = faker.company.buzzPhrase();
+        this.buzzVerb = faker.company.buzzVerb();
+        this.catchPhrase = faker.company.catchPhrase();
+        this.catchPhraseAdjective = faker.company.catchPhraseAdjective();
+        this.catchPhraseDescriptor = faker.company.catchPhraseDescriptor();
+        this.catchPhraseNoun = faker.company.catchPhraseNoun();
+        this.city = faker.location.city();
+        this.country = faker.location.country();
+        this.creditLimit = faker.number.int(100) * 1000000;
+        this.email = faker.internet.email();
+        this.mobilePhone = faker.phone.number();
+        this.name = faker.company.name();
+        this.numberOfEmployees = faker.number.int(10000);
+        this.phone = faker.phone.number();
+        this.revenue = faker.number.int(100) * 1000000;
+        this.streetAddress = faker.location.streetAddress();
+        this.website = faker.internet.url();
+        this.zipCode = faker.location.zipCode();
+    }
 }

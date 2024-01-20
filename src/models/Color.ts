@@ -1,15 +1,28 @@
-import { faker } from "@faker-js/faker";
-
 export class Color {
-    cmyk: number[] = faker.color.cmyk();
-    colorByCSSColorSpace: number[] =  faker.color.colorByCSSColorSpace();
-    cssSupportedFunction: string =  faker.color.cssSupportedFunction();
-    cssSupportedSpace: string =  faker.color.cssSupportedSpace();
-    hsl: number[] =  faker.color.hsl();
-    human: string =  faker.color.human();
-    hwb: number[] =  faker.color.hwb();
-    lab: number[] =  faker.color.lab();
-    lch: number[] =  faker.color.lch();
-    rgb: string =  faker.color.rgb();
-    space: string =  faker.color.space()
+    cmyk: number[];
+    colorByCSSColorSpace: number[];
+    cssSupportedFunction: string;
+    cssSupportedSpace: string;
+    hsl: number[];
+    human: string;
+    hwb: number[];
+    lab: number[];
+    lch: number[];
+    rgb: string;
+    space: string;
+
+    constructor(localizedFaker) {
+        const faker = localizedFaker.color;
+        this.cmyk = faker.cmyk();
+        this.colorByCSSColorSpace = faker.colorByCSSColorSpace();
+        this.cssSupportedFunction = faker.cssSupportedFunction();
+        this.cssSupportedSpace = faker.cssSupportedSpace();
+        this.hsl = faker.hsl();
+        this.human = faker.human();
+        this.hwb = faker.hwb();
+        this.lab = faker.lab();
+        this.lch = faker.lch();
+        this.rgb = faker.rgb();
+        this.space = faker.space();
+    }
 }

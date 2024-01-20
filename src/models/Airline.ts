@@ -1,13 +1,36 @@
-import { faker } from "@faker-js/faker";
-
 export class Airline {
-    aircraftType: string = faker.airline.aircraftType();
-    airline: object = faker.airline.airline();
-    airplane: object = faker.airline.airplane();
-    airport: object = faker.airline.airport();
-    departureAirport: object = faker.airline.airport();
-    arrivalAirport: object = faker.airline.airport();
-    flightNumber: string = faker.airline.flightNumber();
-    recordLocator: string = faker.airline.recordLocator();
-    seat: string = faker.airline.seat();
+    aircraftType: string;
+    airlineName: string;
+    airlineCode: string;
+    airplaneName: string;
+    airplaneTypeCode: string;
+    departureAirportName: string;
+    departureAirportCode: string;
+    arrivalAirportName: string;
+    arrivalAirportCode: string;
+    flightNumber: string;
+    recordLocator: string;
+    seat: string;
+
+    constructor(localizedFaker) {
+        const faker = localizedFaker.airline;
+        const aircraftType = faker.aircraftType();
+        const airline = faker.airline();
+        const airplane = faker.airplane();
+        const departureAirport = faker.airport();
+        const arrivalAirport = faker.airport();
+
+        this.aircraftType = aircraftType;
+        this.airlineName = airline.name;
+        this.airlineCode = airline.iataCode;
+        this.airplaneName = airplane.name;
+        this.airplaneTypeCode = airplane.iataTypeCode;
+        this.departureAirportName = departureAirport.name;
+        this.departureAirportCode = departureAirport.iataCode;
+        this.arrivalAirportName = arrivalAirport.name;
+        this.arrivalAirportCode = arrivalAirport.iataCode;
+        this.flightNumber = airline.iataCode + faker.flightNumber({ addLeadingZeros: true });
+        this.recordLocator = faker.recordLocator();
+        this.seat = faker.seat(aircraftType);
+    }
 }
