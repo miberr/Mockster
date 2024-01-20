@@ -97,3 +97,10 @@ local.settings.json
 __blobstorage__
 __queuestorage__
 __azurite_db*__.json
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+tests-examples/demo-todo-app.spec.ts
+
+.fake

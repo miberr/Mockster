@@ -1,0 +1,27 @@
+{
+  "id": "api/colors",
+  "title": "🌈 Colors",
+  "description": "Generate color related data. Includes color values in different formats as well as human readable value. Returns an array of colors, by default ten. Some values may be localized.",
+  "source": "@site/docs/api/colors.md",
+  "sourceDirName": "api",
+  "slug": "/api/colors",
+  "permalink": "/docs/api/colors",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/api/colors.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "🌈 Colors",
+    "description": "Generate color related data. Includes color values in different formats as well as human readable value. Returns an array of colors, by default ten. Some values may be localized."
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "🐷 Animals",
+    "permalink": "/docs/api/animals"
+  },
+  "next": {
+    "title": "🏢 Companies",
+    "permalink": "/docs/api/companies"
+  }
+}

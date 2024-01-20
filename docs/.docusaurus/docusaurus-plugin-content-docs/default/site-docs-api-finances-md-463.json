@@ -1,0 +1,27 @@
+{
+  "id": "api/finances",
+  "title": "💶 Finances",
+  "description": "Generate finance related data.",
+  "source": "@site/docs/api/finances.md",
+  "sourceDirName": "api",
+  "slug": "/api/finances",
+  "permalink": "/docs/api/finances",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/api/finances.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "💶 Finances",
+    "description": "Generate finance related data."
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "🗓️ Dates",
+    "permalink": "/docs/api/dates"
+  },
+  "next": {
+    "title": "📁 Gits",
+    "permalink": "/docs/api/gits"
+  }
+}

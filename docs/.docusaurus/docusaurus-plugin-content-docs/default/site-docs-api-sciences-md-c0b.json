@@ -1,0 +1,27 @@
+{
+  "id": "api/sciences",
+  "title": "👩🏻‍🔬 Science",
+  "description": "Generate science data.",
+  "source": "@site/docs/api/sciences.md",
+  "sourceDirName": "api",
+  "slug": "/api/sciences",
+  "permalink": "/docs/api/sciences",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/api/sciences.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "👩🏻‍🔬 Science",
+    "description": "Generate science data."
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "🧸 Products",
+    "permalink": "/docs/api/products"
+  },
+  "next": {
+    "title": "🔠 Strings",
+    "permalink": "/docs/api/strings"
+  }
+}

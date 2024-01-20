@@ -1,4 +1,4 @@
-import { SexType, faker } from "@faker-js/faker";
+import { SexType, allFakers } from "@faker-js/faker";
 
 const departments = [
     "Accounting",
@@ -16,29 +16,38 @@ const departments = [
 ]
 
 export class Person {
-    sexType: SexType =  faker.person.sexType();
-    firstName: string =  faker.person.firstName(this.sexType);
-    lastName: string =  faker.person.lastName(this.sexType);
-    bio: string =  faker.person.bio();
-    birthday: Date =  faker.date.birthdate(); 
-    businessPhone: string =  faker.helpers.fromRegExp('+[1-9]{1,3} [0-9]{6,9}'); // Complimentary to faker-person
-    city: string =  faker.location.city(); // Complimentary to faker-person
-    country: string =  faker.location.country(); // Complimentary to faker-person
-    creditLimit: number =  faker.number.int(10000) * 1000; // Complimentary to faker-person
-    department: string =  faker.helpers.arrayElement(departments); // Complimentary to faker-person
-    description: string =  faker.person.bio(); // Complimentary to faker-person
-    email: string =  faker.internet.email({firstName: this.firstName, lastName: this.lastName});
-    fullName: string =  this.firstName + " " + this.lastName;
-    gener: string =  faker.person.gender();
-    jobArea: string =  faker.person.jobArea();
-    jobDescriptor: string =  faker.person.jobDescriptor();
-    jobTitle: string =  faker.person.jobTitle();
-    jobType: string =  faker.person.jobType();
-    prefix: string =  faker.person.prefix(this.sexType);
-    mobilePhone: string =  faker.helpers.fromRegExp('+[1-9]{1,3} [0-9]{6,9}');
-    salutation: string =  faker.person.prefix(this.sexType);
-    streetAddress: string =  faker.location.streetAddress();
-    suffix: string =  faker.helpers.maybe(() => faker.person.suffix(), {probability:  0.1}); // Complimentary implementation to faker-person with 10% change of field being populated 
-    zipCode: string =  faker.location.zipCode(); // Complicated to faker-person
-    zodiacSign: string =  faker.person.zodiacSign(); 
+    sexType: SexType;
+    firstName: string;
+    lastName: string;
+    bio: string;
+    birthday: string;
+    businessPhone: string;
+    city: string;
+    country: string;
+    creditLimit: number;
+    department: string;
+    description: string;
+    email: string;
+    fullName: string;
+    gender: string;
+    jobArea: string;
+
+    constructor(location: string) {
+        const faker = allFakers[location];
+        this.sexType = faker.person.sexType();
+        this.firstName = faker.person.firstName(this.sexType);
+        this.lastName = faker.person.lastName(this.sexType);
+        this.bio = faker.person.bio();
+        this.birthday = faker.date.birthdate().toISOString();
+        this.businessPhone = faker.helpers.fromRegExp('+[1-9]{1,3} [0-9]{6,9}');
+        this.city = faker.location.city();
+        this.country = faker.location.country();
+        this.creditLimit = faker.number.int(10000) * 1000;
+        this.department = faker.helpers.arrayElement(departments);
+        this.description = faker.person.bio();
+        this.email = faker.internet.email({firstName: this.firstName, lastName: this.lastName});
+        this.fullName = this.firstName + " " + this.lastName;
+        this.gender = faker.person.gender();
+        this.jobArea = faker.person.jobArea();
+    }
 }
