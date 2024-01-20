@@ -23,6 +23,10 @@ jobs:
     - name: Install dependencies
       run: npm install
 
+    # Install function core tools
+    - name: Install Azure Function tools
+      run: npm install azure-functions-core-tools@4
+    
     # Instal Playwright browsers
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
