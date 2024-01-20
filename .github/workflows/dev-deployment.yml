@@ -31,6 +31,14 @@ jobs:
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
 
+    # Start Azure Functions
+    - name: Start Azure Functions
+      run: nohup npm run start &
+
+    # Seep before testing
+    - name: Sleep for 30 seconds
+      run: Start-Sleep -s 30
+
     # Run Playwright tests
     - name: Run Playwright tests
       run: npx playwright test
