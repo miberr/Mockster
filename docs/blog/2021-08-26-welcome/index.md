@@ -11,7 +11,7 @@ Simply add Markdown files (or folders) to the `blog` directory.
 
 Regular blog authors can be added to `authors.yml`. 
 
-The blog post date can be extracted from filenames, such as: 
+The blog post date can be extracted from filenames, such aas: 
 
 - `2019-05-30-welcome.md`
 - `2019-05-30-welcome/index.md`
