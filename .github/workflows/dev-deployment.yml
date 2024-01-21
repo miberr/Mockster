@@ -24,12 +24,18 @@ jobs:
     - name: 'Resolve Project Dependencies Using Npm'
       shell: bash
       run: |
-        pushd './${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}'
+        pushd './functions'
         npm install
         npm run build --if-present
         npm run test --if-present
         popd
 
+    # Upload build artifact
+    - name: Upload build artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: functions
+        path: ./functions/dist
    
 
     
