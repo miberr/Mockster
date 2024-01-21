@@ -7,8 +7,8 @@ export class Git {
     commitMessage: string;
     commitSha: string;
 
-    constructor(locale: string) {
-        const faker = allFakers[locale].git;
+    constructor(localizedFaker) {
+        const faker = localizedFaker.git;
 
         this.branch = faker.branch();
         this.commitDate = faker.commitDate();
