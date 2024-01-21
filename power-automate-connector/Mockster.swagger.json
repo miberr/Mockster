@@ -796,28 +796,33 @@
                 "properties": {
                   "branch": {
                     "type": "string",
-                    "description": "Returns a random branch name.",
-                    "title": "Branch"
+                    "description": "Returns the branch name of the commit. For example: interface-compress.",
+                    "x-ms-summary": "Branch",
+                    "x-ms-visibility": "advanced"
                   },
                   "commitDate": {
                     "type": "string",
-                    "description": "Returns a random commit date as ISO 8601 date string.",
-                    "title": "Commit Date"
+                    "description": "Returns the date and time of the commit. Formatting is the same as in git log. For example: Tue Jan 2 18:12:21 2024 +0300.",
+                    "x-ms-summary": "Commit Date",
+                    "x-ms-visibility": "advanced"
                   },
                   "commitEntry": {
                     "type": "string",
-                    "description": "Returns a random commit entry.",
-                    "title": "Commit Entry"
+                    "description": "Returns the full commit entry, including the commit SHA, author, date, and message.",
+                    "x-ms-summary": "Commit Entry",
+                    "x-ms-visibility": "advanced"
                   },
                   "commitMessage": {
                     "type": "string",
-                    "description": "Returns a random commit message.",
-                    "title": "Commit Message"
+                    "description": "Returns the commit message. For example: compress open-source array.",
+                    "x-ms-summary": "Commit Message",
+                    "x-ms-visibility": "important"
                   },
                   "commitSha": {
                     "type": "string",
-                    "description": "Returns a random commit SHA.",
-                    "title": "Commit SHA"
+                    "description": "Returns the SHA of the commit. For example: b5daadecfa08c22c5fea7ba3c0fdc5bdff4bab87.",
+                    "x-ms-summary": "Commit SHA",
+                    "x-ms-visibility": "advanced"
                   }
                 }
               }
@@ -825,7 +830,7 @@
           }
         },
         "summary": "Get git mockdata",
-        "description": "Get rich data about git. Returns an array, by default ten.",
+        "description": "Generate git related data. Returns an array of properties, by default ten.",
         "operationId": "getGits",
         "parameters": [
           {
@@ -833,6 +838,9 @@
           },
           {
             "$ref": "#/parameters/count"
+          },
+          {
+            "$ref": "#/parameters/seed"
           }
         ]
       }
