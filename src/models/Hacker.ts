@@ -1,5 +1,3 @@
-import { allFakers } from "@faker-js/faker";
-
 export class Hacker {
     abbreviation: string;
     adjective: string;
@@ -8,8 +6,8 @@ export class Hacker {
     phrase: string;
     verb: string;
 
-    constructor(locale: string) {
-        const faker = allFakers[locale].hacker;
+    constructor(localizedFaker) {
+        const faker = localizedFaker.hacker;
         
         this.abbreviation = faker.abbreviation();
         this.adjective = faker.adjective();

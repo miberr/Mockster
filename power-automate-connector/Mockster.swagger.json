@@ -855,40 +855,46 @@
               "properties": {
                 "abbreviation": {
                   "type": "string",
-                  "description": "Returns a random abbreviation.",
-                  "title": "Abbreviation"
+                  "description": "Returns an abbreviation from technologies. For example: XSS.",
+                  "x-ms-summary": "Abbreviation",
+                  "x-ms-visibility": "advanced"
                 },
                 "adjective": {
                   "type": "string",
-                  "description": "Returns a random adjective.",
-                  "title": "Adjective"
+                  "description": "Returns a hacker or technology related adjective. For example: 1080p.",
+                  "x-ms-summary": "Adjective",
+                  "x-ms-visibility": "advanced"
                 },
                 "ingverb": {
                   "type": "string",
-                  "description": "Returns a random verb ending with -ing.",
-                  "title": "Verb ending with -ing"
+                  "description": "Returns a verb ending in -ing. For example: quantifying.",
+                  "x-ms-summary": "Verb ending with -ing",
+                  "x-ms-visibility": "advanced"
                 },
                 "noun": {
                   "type": "string",
-                  "description": "Returns a random noun.",
-                  "title": "Noun"
+                  "description": "Returns a hacker or technology related noun. For example: card.",
+                  "x-ms-summary": "Noun",
+                  "x-ms-visibility": "advanced"
                 },
                 "phrase": {
                   "type": "string",
-                  "description": "Returns a random phrase.",
-                  "title": "Phrase"
+                  "description": "Returns a hacker or technology related phrase. For example: I'll connect the open-source RSS interface, that should circuit the VGA transmitter!.",
+                  "x-ms-summary": "Phrase",
+                  "x-ms-visibility": "important"
                 },
                 "verb": {
                   "type": "string",
-                  "description": "Returns a random verb.",
-                  "title": "Verb"
+                  "description": "Returns a hacker or technology related verb. For example: override.",
+                  "x-ms-summary": "Verb",
+                  "x-ms-visibility": "advanced"
                 }
               }
             }
           }
         },
         "summary": "Get hacker mockdata",
-        "description": "Get rich data about hackers. Returns an object with different hacker properties.",
+        "description": "Generate hacker or IT related buzzwords. Returns an array of properties, by default ten. Some properties might be localized.",
         "operationId": "getHackers",
         "parameters": [
           {
@@ -896,6 +902,9 @@
           },
           {
             "$ref": "#/parameters/count"
+          },
+          {
+            "$ref": "#/parameters/seed"
           }
         ]
       }

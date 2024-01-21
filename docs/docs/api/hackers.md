@@ -5,13 +5,15 @@ description: "Generate hacker related data."
 
 # 🥷🏼 Hackers
 
-Generate hacker related data. Returns an array of properties, by default ten.
+Generate hacker or IT related buzzwords. Returns an array of properties, by default ten. Some properties might be localized.
 
 ## Query options
 
 |Parameter|Description|Default|
 |---------|:---------|---------|
 |`Count`| Count of objects returned | 10 |
+|`Locale`| Localization for the response, see [Localization](./../localization) | en |
+|`Seed` | Seed value for reproducible results. | null |
 
 ## Request
 
@@ -43,7 +45,7 @@ Accept: application/json
 |:---------|:---------|
 `abbreviation`|`Abbreviation`
 
-Returns a hacker abbreviation. For example: `XSS`.
+Returns an abbreviation from technologies. For example: `XSS`.
 
 Return datatype: **string**
 
@@ -53,7 +55,7 @@ Return datatype: **string**
 |:---------|:---------|
 `adjective`|`Adjective`
 
-Returns a hacker adjective. For example: `1080p`.
+Returns a hacker or technology related adjective. For example: `1080p`.
 
 Return datatype: **string**
 
@@ -73,7 +75,7 @@ Return datatype: **string**
 |:---------|:---------|
 `noun`|`Noun`
 
-Returns a hacker noun. For example: `card`.
+Returns a hacker or technology related noun. For example: `card`.
 
 Return datatype: **string**
 
@@ -83,7 +85,7 @@ Return datatype: **string**
 |:---------|:---------|
 `phrase`|`Phrase`
 
-Returns a hacker phrase. For example: `I'll connect the open-source RSS interface, that should circuit the VGA transmitter!`.
+Returns a hacker or technology related phrase. For example: `I'll connect the open-source RSS interface, that should circuit the VGA transmitter!`.
 
 Return datatype: **string**
 
@@ -93,6 +95,13 @@ Return datatype: **string**
 |:---------|:---------|
 `verb`|`Verb`
 
-Returns a hacker verb. For example: `override`.
+Returns a hacker or technology related verb. For example: `override`.
 
 Return datatype: **string**
+
+## Related endpoints
+
+There are multiple endpoints that create similar data:
+
+- [🆒 Words](./words) endpoint for generic words.
+- [💬 Lorem](./lorem) endpoint for lorem ipsum words and phrases.
