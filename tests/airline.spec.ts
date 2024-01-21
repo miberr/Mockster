@@ -47,3 +47,29 @@ test('All properties have current datatypes', async ({ request }) => {
   expect(typeof responseJson[0].recordLocator).toBe('string');
   expect(typeof responseJson[0].seat).toBe('string');
 });
+
+test('Seeded properties are consistent with the same seed', async ({ request }) => {
+
+  const response1 = await request.get('api/airlines?seed=1');  
+  const response1Json = await response1.json();
+
+  // Implement a delay to ensure the output is different
+  await new Promise(f => setTimeout(f, 1000));
+
+  const response2 = await request.get('api/airlines?seed=1');
+  const response2Json = await response2.json();
+
+  expect(response1Json[0].aircraftType).toEqual(response2Json[0].aircraftType);
+  expect(response1Json[0].airlineName).toEqual(response2Json[0].airlineName);
+  expect(response1Json[0].airlineCode).toEqual(response2Json[0].airlineCode);
+  expect(response1Json[0].airplaneName).toEqual(response2Json[0].airplaneName);
+  expect(response1Json[0].airplaneTypeCode).toEqual(response2Json[0].airplaneTypeCode);
+  expect(response1Json[0].departureAirportName).toEqual(response2Json[0].departureAirportName);
+  expect(response1Json[0].departureAirportCode).toEqual(response2Json[0].departureAirportCode);
+  expect(response1Json[0].arrivalAirportName).toEqual(response2Json[0].arrivalAirportName);
+  expect(response1Json[0].arrivalAirportCode).toEqual(response2Json[0].arrivalAirportCode);
+  expect(response1Json[0].flightNumber).toEqual(response2Json[0].flightNumber);
+  expect(response1Json[0].recordLocator).toEqual(response2Json[0].recordLocator);
+  expect(response1Json[0].seat).toEqual(response2Json[0].seat);
+
+});

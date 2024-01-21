@@ -54,3 +54,32 @@ test('All properties have current datatypes', async ({ request }) => {
   expect(typeof responseJson[0].type).toBe('string');
 
 });
+
+test('Seeded properties are consistent with the same seed', async ({ request }) => {
+
+  const response1 = await request.get('api/animals?seed=1');  
+  const response1Json = await response1.json();
+
+  // Implement a delay to ensure the output is different
+  await new Promise(f => setTimeout(f, 1000));
+
+  const response2 = await request.get('api/animals?seed=1');
+  const response2Json = await response2.json();
+
+  expect(response1Json[0].bear).toEqual(response2Json[0].bear);
+  expect(response1Json[0].bird).toEqual(response2Json[0].bird);
+  expect(response1Json[0].cat).toEqual(response2Json[0].cat);
+  expect(response1Json[0].cetacean).toEqual(response2Json[0].cetacean);
+  expect(response1Json[0].cow).toEqual(response2Json[0].cow);
+  expect(response1Json[0].crocodilia).toEqual(response2Json[0].crocodilia);
+  expect(response1Json[0].dog).toEqual(response2Json[0].dog);
+  expect(response1Json[0].fish).toEqual(response2Json[0].fish);
+  expect(response1Json[0].horse).toEqual(response2Json[0].horse);
+  expect(response1Json[0].insect).toEqual(response2Json[0].insect);
+  expect(response1Json[0].lion).toEqual(response2Json[0].lion);
+  expect(response1Json[0].rabbit).toEqual(response2Json[0].rabbit);
+  expect(response1Json[0].rodent).toEqual(response2Json[0].rodent);
+  expect(response1Json[0].snake).toEqual(response2Json[0].snake);
+  expect(response1Json[0].type).toEqual(response2Json[0].type);
+
+});

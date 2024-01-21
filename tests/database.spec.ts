@@ -32,5 +32,24 @@ test('All properties have current datatypes', async ({ request }) => {
   expect(typeof responseJson[0].engine).toBe('string');
   expect(typeof responseJson[0].mongodbObjectId).toBe('string');
   expect(typeof responseJson[0].type).toBe('string');
-  
+
+});
+
+test('Seeded properties are consistent with the same seed', async ({ request }) => {
+
+  const response1 = await request.get('api/databases?seed=1');  
+  const response1Json = await response1.json();
+
+  // Implement a delay to ensure the output is different
+  await new Promise(f => setTimeout(f, 1000));
+
+  const response2 = await request.get('api/databases?seed=1');
+  const response2Json = await response2.json();
+
+  expect(response1Json[0].collation).toEqual(response2Json[0].collation);
+  expect(response1Json[0].column).toEqual(response2Json[0].column);
+  expect(response1Json[0].engine).toEqual(response2Json[0].engine);
+  expect(response1Json[0].mongodbObjectId).toEqual(response2Json[0].mongodbObjectId);
+  expect(response1Json[0].type).toEqual(response2Json[0].type);
+
 });

@@ -90,3 +90,28 @@ test('All properties have current datatypes', async ({ request }) => {
   expect(typeof responseJson[0].space).toBe('string');
   
 });
+
+test('Seeded properties are consistent with the same seed', async ({ request }) => {
+
+  const response1 = await request.get('api/colors?seed=1');  
+  const response1Json = await response1.json();
+
+  // Implement a delay to ensure the output is different
+  await new Promise(f => setTimeout(f, 1000));
+
+  const response2 = await request.get('api/colors?seed=1');
+  const response2Json = await response2.json();
+
+  expect(response1Json[0].cmyk).toEqual(response2Json[0].cmyk);
+  expect(response1Json[0].colorByCSSColorSpace).toEqual(response2Json[0].colorByCSSColorSpace);
+  expect(response1Json[0].cssSupportedFunction).toEqual(response2Json[0].cssSupportedFunction);
+  expect(response1Json[0].cssSupportedSpace).toEqual(response2Json[0].cssSupportedSpace);
+  expect(response1Json[0].hsl).toEqual(response2Json[0].hsl);
+  expect(response1Json[0].human).toEqual(response2Json[0].human);
+  expect(response1Json[0].hwb).toEqual(response2Json[0].hwb);
+  expect(response1Json[0].lab).toEqual(response2Json[0].lab);
+  expect(response1Json[0].lch).toEqual(response2Json[0].lch);
+  expect(response1Json[0].rgb).toEqual(response2Json[0].rgb);
+  expect(response1Json[0].space).toEqual(response2Json[0].space);
+  
+});

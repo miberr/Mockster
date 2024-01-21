@@ -60,3 +60,36 @@ test('All properties have current datatypes', async ({ request }) => {
   expect(typeof responseJson[0].transactionDescription).toBe('string');
   expect(typeof responseJson[0].transactionType).toBe('string');
 });
+
+test('Seeded properties are consistent with the same seed', async ({ request }) => {
+
+  const response1 = await request.get('api/finances?seed=1');  
+  const response1Json = await response1.json();
+
+  // Implement a delay to ensure the output is different
+  await new Promise(f => setTimeout(f, 1000));
+
+  const response2 = await request.get('api/finances?seed=1');
+  const response2Json = await response2.json();
+
+  expect(response1Json[0].accountName).toEqual(response2Json[0].accountName);
+  expect(response1Json[0].accountNumber).toEqual(response2Json[0].accountNumber);
+  expect(response1Json[0].amount).toEqual(response2Json[0].amount);
+  expect(response1Json[0].bic).toEqual(response2Json[0].bic);
+  expect(response1Json[0].bitcoinAddress).toEqual(response2Json[0].bitcoinAddress);
+  expect(response1Json[0].creditCardCVV).toEqual(response2Json[0].creditCardCVV);
+  expect(response1Json[0].creditCardIssuer).toEqual(response2Json[0].creditCardIssuer);
+  expect(response1Json[0].creditCardNumber).toEqual(response2Json[0].creditCardNumber);
+  expect(response1Json[0].currencyCode).toEqual(response2Json[0].currencyCode);
+  expect(response1Json[0].currencyName).toEqual(response2Json[0].currencyName);
+  expect(response1Json[0].currencySymbol).toEqual(response2Json[0].currencySymbol);
+  expect(response1Json[0].ethereumAddress).toEqual(response2Json[0].ethereumAddress);
+  expect(response1Json[0].iban).toEqual(response2Json[0].iban);
+  expect(response1Json[0].litecoinAddress).toEqual(response2Json[0].litecoinAddress);
+  expect(response1Json[0].maskedNumber).toEqual(response2Json[0].maskedNumber);
+  expect(response1Json[0].pin).toEqual(response2Json[0].pin);
+  expect(response1Json[0].routingNumber).toEqual(response2Json[0].routingNumber);
+  expect(response1Json[0].transactionDescription).toEqual(response2Json[0].transactionDescription);
+  expect(response1Json[0].transactionType).toEqual(response2Json[0].transactionType);
+
+});
