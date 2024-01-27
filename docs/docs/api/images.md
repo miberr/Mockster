@@ -16,7 +16,7 @@ Service is provided by https://loremflickr.com.
 |`Category`| Available categories are: `abstract`, `animals`, `business`, `cats`, `city`, `fashion`, `food`, `nature`, `nightlife`, `people`, `sports`, `technics`, `transport` | `random` |
 |`Count`| Count of objects returned | 10 |
 |`Height`| Height of all returned images in pixels | 480 |
-|`Seed` | Seed value for reproducible results. | null |
+
 |`Width`| Widhts of all returned images in pixels | 640 |
 
 ## Request
