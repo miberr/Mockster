@@ -4,6 +4,9 @@ on:
     branches:
       - development
 
+permissions:
+  id-token: write
+
 jobs:
   setup: 
     name: Setup
