@@ -1,6 +1,6 @@
 
 import { test, expect } from '@playwright/test';
-import { validLocales } from "./../src/functions/helpers";
+import { validLocales } from "../src/functions/helpers";
 
 test.describe('Count parameter tests', () => {
 
