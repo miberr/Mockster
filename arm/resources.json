@@ -97,7 +97,7 @@
                         },
                         {
                             "name": "FUNCTIONS_EXTENSION_VERSION",
-                            "value": "~2"
+                            "value": "~4"
                         },
                         {
                             "name": "APPINSIGHTS_INSTRUMENTATIONKEY",
@@ -106,6 +106,10 @@
                         {
                             "name": "FUNCTIONS_WORKER_RUNTIME",
                             "value": "node"
+                        },
+                        {
+                            "name": "WEBSITE_NODE_DEFAULT_VERSION",
+                            "value": "~18"
                         }
                     ],
                     "ftpsState": "FtpsOnly",
@@ -127,7 +131,7 @@
         },
         {
             "type": "Microsoft.ApiManagement/service",
-            "apiVersion": "2023-05-01-preview",
+            "apiVersion": "2023-03-01-preview",
             "name": "[variables('apimName')]",
             "location": "[resourceGroup().location]",
             "sku": {
@@ -151,7 +155,7 @@
             "resources": [
                 {
                     "type": "apiVersionSets",
-                    "apiVersion": "2023-05-01-preview",
+                    "apiVersion": "2023-03-01-preview",
                     "name": "[variables('apimVersionSetName')]",
                     "dependsOn": [
                         "[resourceId('Microsoft.ApiManagement/service', variables('apimName'))]"
