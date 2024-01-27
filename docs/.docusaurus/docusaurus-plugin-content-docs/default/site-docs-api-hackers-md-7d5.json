@@ -1,0 +1,27 @@
+{
+  "id": "api/hackers",
+  "title": "🥷🏼 Hackers",
+  "description": "Generate hacker related data.",
+  "source": "@site/docs/api/hackers.md",
+  "sourceDirName": "api",
+  "slug": "/api/hackers",
+  "permalink": "/docs/api/hackers",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/api/hackers.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "🥷🏼 Hackers",
+    "description": "Generate hacker related data."
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "📁 Gits",
+    "permalink": "/docs/api/gits"
+  },
+  "next": {
+    "title": "🌆 Images",
+    "permalink": "/docs/api/images"
+  }
+}
