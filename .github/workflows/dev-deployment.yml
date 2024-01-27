@@ -39,6 +39,7 @@ jobs:
   infra:
     name: Deploy infrastructure to Azure
     runs-on: ubuntu-latest
+    environment: development
     steps:
     
     # Checkout code from repo
