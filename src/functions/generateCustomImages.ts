@@ -1,5 +1,5 @@
 import { HttpRequest, HttpResponseInit, InvocationContext } from "@azure/functions";
-import { faker } from "@faker-js/faker";
+import { faker, simpleFaker } from "@faker-js/faker";
 
 export async function generateCustomImages(request: HttpRequest, context: InvocationContext): Promise<HttpResponseInit> 
     {
@@ -8,14 +8,14 @@ export async function generateCustomImages(request: HttpRequest, context: Invoca
    
 
     // If count is specified and is not a number, return 400
-    if (request.query.get("count") && isNaN(+request.query.get("count"))) {
+    if (request.query.get("count") && (isNaN(+request.query.get("count")) || +request.query.get("count") < 0 || !Number.isInteger(+request.query.get("count")))) {
 
-        context.log(`Count provided is not a number. CorrelationId: ${context.invocationId}"`);
+        context.log(`Count provided is not a valid positive number. CorrelationId: ${context.invocationId}"`);
 
         return { 
             status: 400, 
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ error: 'Invalid count parameter. Must be a number.' })
+            body: JSON.stringify({ error: 'Invalid count parameter. Must be a positive whole number.' })
         };
     }
 
@@ -66,7 +66,24 @@ export async function generateCustomImages(request: HttpRequest, context: Invoca
 
     const category =  request.query.get("category") || 'random';
 
+    // If seed is specified and is not a number, return 400
+    if (request.query.get("seed") && (isNaN(+request.query.get("seed")) || +request.query.get("seed") < 0 || !Number.isInteger(+request.query.get("seed")))) {
+
+        context.log(`Seed provided is not a valid positive number. CorrelationId: ${context.invocationId}"`);
+
+        return { 
+            status: 400, 
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ error: 'Invalid seed parameter. Must be a positive whole number.' })
+        };
+    }
+
+    // If no seed is specified, rgenerate a random seed
+    const seed = +request.query.get("seed") || simpleFaker.number.int({min: 1, max: 999999});
+
     var images = [];
+
+    faker.seed(+seed);
 
     // Create array of objects with count number of objects
     for (var i = 0; i < count; i++) {
