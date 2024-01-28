@@ -10,7 +10,7 @@ permissions:
 jobs:
   setup: 
     name: Setup
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
 
     # Checkout code from repo
