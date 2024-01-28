@@ -68,7 +68,7 @@ jobs:
 
   deployFunction:
     name: Deploy function to Azure
-    runs-on: window-latest
+    runs-on: windows-latest
     environment: development
     needs: [setup, infra]
     steps:
