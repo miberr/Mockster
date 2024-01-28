@@ -1,0 +1,27 @@
+{
+  "id": "api/animals",
+  "title": "🐷 Animals",
+  "description": "Generate different kinds of animal species. Returns an array of animal species, by default ten. All values may be localized.",
+  "source": "@site/docs/api/animals.md",
+  "sourceDirName": "api",
+  "slug": "/api/animals",
+  "permalink": "/docs/api/animals",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/api/animals.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "🐷 Animals",
+    "description": "Generate different kinds of animal species. Returns an array of animal species, by default ten. All values may be localized."
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "✈️ Airlines",
+    "permalink": "/docs/api/airlines"
+  },
+  "next": {
+    "title": "🌈 Colors",
+    "permalink": "/docs/api/colors"
+  }
+}

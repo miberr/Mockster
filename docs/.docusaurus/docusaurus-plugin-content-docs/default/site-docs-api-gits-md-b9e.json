@@ -1,0 +1,27 @@
+{
+  "id": "api/gits",
+  "title": "📁 Gits",
+  "description": "Generate git related data.",
+  "source": "@site/docs/api/gits.md",
+  "sourceDirName": "api",
+  "slug": "/api/gits",
+  "permalink": "/docs/api/gits",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/api/gits.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "📁 Gits",
+    "description": "Generate git related data."
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "💶 Finances",
+    "permalink": "/docs/api/finances"
+  },
+  "next": {
+    "title": "🥷🏼 Hackers",
+    "permalink": "/docs/api/hackers"
+  }
+}
