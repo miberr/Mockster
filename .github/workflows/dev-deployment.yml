@@ -33,6 +33,11 @@ jobs:
         npm run test --if-present
         popd
 
+    - name: print working directory
+      run: |
+        pwd
+        ls -la
+
     # Upload build artifact
     - name: Upload build artifact
       uses: actions/upload-artifact@v3
