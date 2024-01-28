@@ -922,12 +922,14 @@
                   "name": {
                     "type": "string",
                     "description": "Returns an image name.",
-                    "title": "Image Name"
+                    "x-ms-summary": "Image Name",
+                    "x-ms-visibility": "important"
                   },
                   "url": {
                     "type": "string",
                     "description": "Returns an image url.",
-                    "title": "Image Url"
+                    "x-ms-summary": "Image Url",
+                    "x-ms-visibility": "important"
                   }
                 }
               }
@@ -946,6 +948,7 @@
             "required": false,
             "type": "integer",
             "x-ms-summary": "Width",
+            "x-ms-visibility": "advanced",
             "description": "Define the width of the image. Default is 640."
           },
           {
@@ -954,6 +957,7 @@
             "required": false,
             "type": "integer",
             "x-ms-summary": "Height",
+            "x-ms-visibility": "advanced",
             "description": "Define the height of the image. Default is 480."
           },
           {
@@ -962,6 +966,7 @@
             "required": false,
             "type": "string",
             "x-ms-summary": "Category",
+            "x-ms-visibility": "important",
             "description": "Define the category of the image. Default is blank and returns an image from a random category.",
             "enum": [
               "abstract",
