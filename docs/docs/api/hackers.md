@@ -5,6 +5,8 @@ description: "Generate hacker related data."
 
 # 🥷🏼 Hackers
 
+## Description
+
 Generate hacker or IT related buzzwords. Returns an array of properties, by default ten. Some properties might be localized.
 
 ## Query options

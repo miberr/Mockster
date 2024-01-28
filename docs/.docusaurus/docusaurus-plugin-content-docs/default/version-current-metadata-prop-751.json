@@ -266,7 +266,7 @@
     "api/internet": {
       "id": "api/internet",
       "title": "🌐 Internet",
-      "description": "Generate hacker related data.",
+      "description": "Get rich data about things in the internet like users or networking terms.",
       "sidebar": "tutorialSidebar"
     },
     "api/locations": {

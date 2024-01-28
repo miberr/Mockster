@@ -5,6 +5,8 @@ description: "Generate git related data."
 
 # 📁 Gits
 
+## Description
+
 Generate git related data. Returns an array of properties, by default ten. 
 
 ## Query options

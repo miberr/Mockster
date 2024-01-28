@@ -5,6 +5,8 @@ description: "Generate word data."
 
 # 🌆 Images
 
+## Description
+
 Generate real images for your data. You can also use query parameter for returning spesific categories of images with spesific height and width. Returns an array of image URLS and names, by default ten. 
 
 Service is provided by https://loremflickr.com. 
@@ -16,7 +18,6 @@ Service is provided by https://loremflickr.com.
 |`Category`| Available categories are: `abstract`, `animals`, `business`, `cats`, `city`, `fashion`, `food`, `nature`, `nightlife`, `people`, `sports`, `technics`, `transport` | null |
 |`Count`| Count of objects returned | 10 |
 |`Height`| Height of all returned images in pixels | 480 |
-
 |`Width`| Widhts of all returned images in pixels | 640 |
 
 ## Request

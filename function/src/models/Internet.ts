@@ -1,7 +1,6 @@
 import { allFakers } from "@faker-js/faker";
 
 export class Internet {
-    avatar: string;
     color: string;
     displayName: string;
     domainName: string;
@@ -23,17 +22,19 @@ export class Internet {
     userAgent: string;
     userName: string;
 
-    constructor(locale: string) {
-        const faker = allFakers[locale].internet;
-        this.avatar = faker.avatar();
+    constructor(localizedFaker) {
+        const faker = localizedFaker.internet;
+        const firstName = localizedFaker.person.firstName();
+        const lastName = localizedFaker.person.lastName();
+
         this.color = faker.color();
-        this.displayName = faker.displayName();
+        this.displayName = faker.displayName({firstName: firstName, lastName: lastName});
         this.domainName = faker.domainName();
         this.domainSuffix = faker.domainSuffix();
         this.domainWord = faker.domainWord();
-        this.email = faker.email();
+        this.email = faker.email({firstName: firstName, lastName: lastName});
         this.emoji = faker.emoji();
-        this.exampleEmail = faker.exampleEmail();
+        this.exampleEmail = faker.exampleEmail({firstName: firstName, lastName: lastName});
         this.httpMethod = faker.httpMethod();
         this.httpStatusCode = faker.httpStatusCode();
         this.ip = faker.ip();
@@ -45,6 +46,6 @@ export class Internet {
         this.protocol = faker.protocol();
         this.url = faker.url();
         this.userAgent = faker.userAgent();
-        this.userName = faker.userName();
+        this.userName = faker.userName({firstName: firstName, lastName: lastName});
     }
 }

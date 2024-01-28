@@ -1,17 +1,20 @@
 ---
 sidebar_label: "🌐 Internet"
-description: "Generate hacker related data."
+description: "Get rich data about things in the internet like users or networking terms."
 ---
 
 # 🌐 Internet
 
-Generate internet related data. Returns an array of properties, by default ten.
+## Description
+
+Get rich data about things in the internet like users or networking terms. Returns an array of objects with different internet properties, by default ten.
 
 ## Query options
 
 |Parameter|Description|Default|
 |---------|:---------|---------|
 |`Count`| Count of objects returned | 10 |
+|`Seed` | Seed value for reproducible results. | null |
 
 ## Request
 
@@ -27,40 +30,29 @@ Accept: application/json
 ```jsx title="JSON"
 [
     {
-        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/127.jpg",
-        "color": "#0d667f",
-        "displayName": "Lillian_Leuschke1",
-        "domainName": "quick-outhouse.biz",
-        "domainSuffix": "biz",
-        "domainWord": "thunderous-observation",
-        "email": "Lonzo_Lowe95@gmail.com",
-        "emoji": "🤶🏻",
-        "exampleEmail": "Americo41@example.org",
-        "httpMethod": "GET",
-        "httpStatusCode": 408,
-        "ip": "85.142.141.159",
-        "ipv4": "255.143.84.244",
-        "ipv6": "a40e:aa0d:8fb4:39bf:3f56:573c:5f39:8d94",
-        "mac": "76:6f:a3:5c:ea:71",
-        "password": "bS2Q23a2yvUMw5r",
-        "port": 51968,
-        "protocol": "http",
-        "url": "https://careful-crook.biz",
-        "userAgent": "Mozilla/5.0 (compatible; MSIE 8.0; Windows NT 6.3; Trident/5.0)",
-        "userName": "Ansel44"
-    }
+        "color": "#511134",
+        "displayName": "Ted.Runolfsson48",
+        "domainName": "clear-operating.info",
+        "domainSuffix": "net",
+        "domainWord": "sparkling-bather",
+        "email": "Ted_Runolfsson10@yahoo.com",
+        "emoji": "😺",
+        "exampleEmail": "Ted_Runolfsson88@example.net",
+        "httpMethod": "PUT",
+        "httpStatusCode": 103,
+        "ip": "b8bb:21ac:da45:baf2:fe1c:7e62:7f2c:c6dc",
+        "ipv4": "146.120.42.165",
+        "ipv6": "1eff:77af:b6d3:ae02:8e0d:1d7d:feb2:7a01",
+        "mac": "c8:14:d0:db:1e:d4",
+        "password": "eqv2uVVHsXkWcRs",
+        "port": 5071,
+        "protocol": "https",
+        "url": "https://immaculate-debtor.biz",
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64 AppleWebKit/532.2.0 (KHTML, like Gecko) Chrome/18.0.884.0 Safari/532.2.0",
+        "userName": "Ted42"
+    },
 ]
 ```
-
-### Avatar
-
-|JSON|Power Automate|
-|:---------|:---------|
-`avatar`|`Avatar`
-
-Returns a URL to an avatar image. For example: `https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/127.jpg`.
-
-Return datatype: **string**
 
 ### Color
 
@@ -68,7 +60,7 @@ Return datatype: **string**
 |:---------|:---------|
 `color`|`Color`
 
-Returns a color code. For example: `#0d667f`.
+Returns a random color code in hex format. For example: `#511134`.
 
 Return datatype: **string**
 
@@ -78,7 +70,7 @@ Return datatype: **string**
 |:---------|:---------|
 `displayName`|`Display Name`
 
-Returns a display name. For example: `Lillian_Leuschke1`.
+Returns a display name for a given user. All user related properties use the same first and lastname as a base. For example: `Ted.Runolfsson48`.
 
 Return datatype: **string**
 
@@ -88,7 +80,7 @@ Return datatype: **string**
 |:---------|:---------|
 `domainName`|`Domain Name`
 
-Returns a domain name. For example: `quick-outhouse.biz`.
+Returns a random domain name. For example: `clear-operating.info`.
 
 Return datatype: **string**
 
@@ -98,7 +90,7 @@ Return datatype: **string**
 |:---------|:---------|
 `domainSuffix`|`Domain Suffix`
 
-Returns a domain suffix. For example: `biz`.
+Returns a domain suffix. For example: `net`.
 
 Return datatype: **string**
 
@@ -108,17 +100,21 @@ Return datatype: **string**
 |:---------|:---------|
 `domainWord`|`Domain Word`
 
-Returns a domain word. For example: `thunderous-observation`.
+Returns a random word to be used in a domain. For example: `sparkling-bather`.
 
 Return datatype: **string**
 
 ### Email
 
+:::caution Caution
+Returned email is realistic and could coincidentally be real email, do **NOT** use these for sending emails. For this usecase, you should use [exampleEmail](./internet#example-email).
+::::
+
 |JSON|Power Automate|
 |:---------|:---------|
 `email`|`Email`
 
-Returns an email address. For example: `Lonzo_Lowe95@gmail.com`.
+Returns an email address. For example: `Ted_Runolfsson10@yahoo.com`.
 
 Return datatype: **string**
 
@@ -128,7 +124,7 @@ Return datatype: **string**
 |:---------|:---------|
 `emoji`|`Emoji`
 
-Returns an emoji. For example: `🤶🏻`.
+Returns a random emoji. For example: `😺`.
 
 Return datatype: **string**
 
@@ -138,7 +134,7 @@ Return datatype: **string**
 |:---------|:---------|
 `exampleEmail`|`Example Email`
 
-Returns an example email address. For example: `Americo41@example.org`.
+Returns an example email address. All user related properties use the same first and lastname as a base. For example: `Ted_Runolfsson88@example.net`.
 
 Return datatype: **string**
 
@@ -148,7 +144,7 @@ Return datatype: **string**
 |:---------|:---------|
 `httpMethod`|`HTTP Method`
 
-Returns an HTTP method. For example: `GET`.
+Returns a HTTP method. For example: `PUT`.
 
 Return datatype: **string**
 
@@ -158,7 +154,7 @@ Return datatype: **string**
 |:---------|:---------|
 `httpStatusCode`|`HTTP Status Code`
 
-Returns an HTTP status code. For example: `408`.
+Returns a HTTP status code. For example: `103`.
 
 Return datatype: **number**
 
@@ -168,7 +164,7 @@ Return datatype: **number**
 |:---------|:---------|
 `ip`|`IP`
 
-Returns an IP address. For example: `85.142.141.159`.
+Returns a random IPv4 or IPv6 address. For example: `b8bb:21ac:da45:baf2:fe1c:7e62:7f2c:c6dc`.
 
 Return datatype: **string**
 
@@ -178,7 +174,7 @@ Return datatype: **string**
 |:---------|:---------|
 `ipv4`|`IPv4`
 
-Returns an IPv4 address. For example: `255.143.84.244`.
+Returns an IPv4 address. For example: `146.120.42.165`.
 
 Return datatype: **string**
 
@@ -188,7 +184,7 @@ Return datatype: **string**
 |:---------|:---------|
 `ipv6`|`IPv6`
 
-Returns an IPv6 address. For example: `a40e:aa0d:8fb4:39bf:3f56:573c:5f39:8d94`.
+Returns an IPv6 address. For example: `1eff:77af:b6d3:ae02:8e0d:1d7d:feb2:7a01`.
 
 Return datatype: **string**
 
@@ -198,7 +194,7 @@ Return datatype: **string**
 |:---------|:---------|
 `mac`|`MAC`
 
-Returns a MAC address. For example: `76:6f:a3:5c:ea:71`.
+Returns a MAC address. For example: `c8:14:d0:db:1e:d4`.
 
 Return datatype: **string**
 
@@ -208,7 +204,7 @@ Return datatype: **string**
 |:---------|:---------|
 `password`|`Password`
 
-Returns a password. For example: `bS2Q23a2yvUMw5r`.
+Returns a random string to be used as a password. For example: `eqv2uVVHsXkWcRs`.
 
 Return datatype: **string**
 
@@ -218,7 +214,7 @@ Return datatype: **string**
 |:---------|:---------|
 `port`|`Port`
 
-Returns a port number. For example: `51968`.
+Returns a random port number. For example: `5071`.
 
 Return datatype: **number**
 
@@ -228,7 +224,7 @@ Return datatype: **number**
 |:---------|:---------|
 `protocol`|`Protocol`
 
-Returns a protocol. For example: `http`.
+Returns a protocol. For example: `https`.
 
 Return datatype: **string**
 
@@ -238,7 +234,7 @@ Return datatype: **string**
 |:---------|:---------|
 `url`|`URL`
 
-Returns a URL. For example: `https://careful-crook.biz`.
+Returns a random URL. For example: `https://immaculate-debtor.biz`.
 
 Return datatype: **string**
 
@@ -248,7 +244,7 @@ Return datatype: **string**
 |:---------|:---------|
 `userAgent`|`User Agent`
 
-Returns a user agent. For example: `Mozilla/5.0 (compatible; MSIE 8.0; Windows NT 6.3; Trident/5.0)`.
+Returns a random user agent. For example: `Mozilla/5.0 (X11; Linux x86_64 AppleWebKit/532.2.0 (KHTML, like Gecko) Chrome/18.0.884.0 Safari/532.2.0`.
 
 Return datatype: **string**
 
@@ -258,6 +254,10 @@ Return datatype: **string**
 |:---------|:---------|
 `userName`|`User Name`
 
-Returns a user name. For example: `Ansel44`.
+Returns a user name. All user related properties use the same first and lastname as a base. For example: `Ted42`.
 
 Return datatype: **string**
+
+## Related endpoints
+
+To create other user data you can use the [🧍🏻 Persons](./persons) endpoint.

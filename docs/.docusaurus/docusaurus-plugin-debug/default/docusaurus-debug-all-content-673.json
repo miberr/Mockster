@@ -292,7 +292,7 @@
             {
               "id": "api/internet",
               "title": "🌐 Internet",
-              "description": "Generate hacker related data.",
+              "description": "Get rich data about things in the internet like users or networking terms.",
               "source": "@site/docs/api/internet.md",
               "sourceDirName": "api",
               "slug": "/api/internet",
@@ -304,7 +304,7 @@
               "version": "current",
               "frontMatter": {
                 "sidebar_label": "🌐 Internet",
-                "description": "Generate hacker related data."
+                "description": "Get rich data about things in the internet like users or networking terms."
               },
               "sidebar": "tutorialSidebar",
               "previous": {
