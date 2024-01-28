@@ -25,7 +25,6 @@ import { Word } from "../models/Word";
 
 import { customRequest } from "./customRequest";
 import { generateCustomImages } from "./generateCustomImages";
-import { generatePlaceholderImage } from "./generatePlaceholderImage";
 
 app.http('airlines', { 
     methods: ['GET'],
@@ -87,13 +86,6 @@ app.http('images', {
     authLevel: 'anonymous',
     handler: generateCustomImages
 })
-
-app.http('image-placeholder', { 
-    methods: ['GET'],
-    authLevel: 'anonymous', 
-    handler: generatePlaceholderImage
-
-});
 
 app.http('internets', { 
     methods: ['GET'],

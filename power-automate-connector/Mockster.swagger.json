@@ -987,60 +987,6 @@
         ]
       }
     },
-    "/image-placeholder": {
-      "get": {
-        "responses": {
-          "200": {
-            "description": "default",
-            "schema": {
-              "type": "string",
-              "description": "Returns a placeholder image as dataUri string.",
-              "title": "Placeholder Image"
-            }
-          }
-        },
-        "summary": "Get placeholder image",
-        "operationId": "getImagePlaceholder",
-        "parameters": [
-          {
-            "name": "width",
-            "in": "query",
-            "required": false,
-            "type": "integer",
-            "x-ms-summary": "Width",
-            "description": "Define the width of the image. Default is 640."
-          },
-          {
-            "name": "height",
-            "in": "query",
-            "required": false,
-            "type": "integer",
-            "x-ms-summary": "Height",
-            "description": "Define the height of the image. Default is 480."
-          },
-          {
-            "name": "color",
-            "in": "query",
-            "required": false,
-            "type": "string",
-            "x-ms-summary": "Text",
-            "description": "Define the fill color of the placeholder image. Default is gray."
-          },
-          {
-            "name": "type",
-            "in": "query",
-            "required": false,
-            "type": "string",
-            "x-ms-summary": "Type",
-            "description": "Select the type of the placeholder image. Default is svg-uri.",
-            "enum": [
-              "svg-base64",
-              "svg-uri"
-            ]
-          }
-        ]
-      }
-    },
     "/internets": {
       "get": {
         "responses": {
