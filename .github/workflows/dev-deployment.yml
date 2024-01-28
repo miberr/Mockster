@@ -39,8 +39,8 @@ jobs:
       with:
         name: functions
         path: |
-         .function
-         !./function/node_modules
+         .
+         !./node_modules
   infra:
     name: Deploy infrastructure to Azure
     runs-on: ubuntu-latest
