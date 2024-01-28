@@ -100,7 +100,7 @@ jobs:
         with:
           app-name: ${{ vars.FUNCTION_APP_NAME }}
           slot-name: production
-          package: .
+          package: function
 
 
    
