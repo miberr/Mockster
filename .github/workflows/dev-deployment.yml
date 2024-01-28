@@ -34,7 +34,6 @@ jobs:
         rm -r ./dist/**/*.map
         cp -r ./host.json ./package.json ./node_modules ./dist
         rm -r ./dist/node_modules/@types/
-        rm -r ./dist/node_modules/azure-functions-core-tools/
         rm -r ./dist/node_modules/typescript/
         pushd './dist'
         mkdir dist
