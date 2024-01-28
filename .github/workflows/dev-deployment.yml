@@ -31,20 +31,29 @@ jobs:
         npm install
         npm run build --if-present
         npm run test --if-present
+        rm -r ./dist/**/*.map
+        cp -r ./host.json ./package.json ./node_modules ./dist
+        rm -r ./dist/node_modules/@types/
+        rm -r ./dist/node_modules/azure-functions-core-tools/
+        rm -r ./dist/node_modules/typescript/
+        pushd './dist'
+        mkdir dist
+        mv ./src ./dist/
+        zip -r ../deploy.zip ./*
+        popd
         popd
 
     - name: print working directory
       run: |
         pwd
         ls
+
     # Upload build artifact
     - name: Upload build artifact
       uses: actions/upload-artifact@v3
       with:
-        name: functions
-        path: |
-         function
-         !function/node_modules
+        name: function
+        path: ./function/deploy.zip
   infra:
     name: Deploy infrastructure to Azure
     runs-on: ubuntu-latest
@@ -83,7 +92,7 @@ jobs:
       - name: Download build artifact
         uses: actions/download-artifact@v3
         with:
-          name: functions
+          name: function
 
       # Login to Azure
       - name: Authenticate to Azure
@@ -100,7 +109,7 @@ jobs:
         with:
           app-name: ${{ vars.FUNCTION_APP_NAME }}
           slot-name: production
-          package: function
+          package: deploy.zip
 
 
    
