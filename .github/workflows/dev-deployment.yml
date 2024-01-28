@@ -4,6 +4,9 @@ on:
     branches:
       - development
 
+permissions:
+  id-token: write
+
 jobs:
   setup: 
     name: Setup
@@ -67,8 +70,6 @@ jobs:
     name: Deploy function to Azure
     runs-on: window-latest
     environment: development
-    permissions:
-      id-token: write
     needs: [setup, infra]
     steps:
 
