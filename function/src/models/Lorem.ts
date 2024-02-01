@@ -1,5 +1,3 @@
-import { allFakers } from "@faker-js/faker";
-
 export class Lorem {
     lines: string;
     paragraph: string;
@@ -11,8 +9,8 @@ export class Lorem {
     word: string;
     words: string;
 
-    constructor(locale: string) {
-        const faker = allFakers[locale].lorem;
+    constructor(localizedFaker) {
+        const faker = localizedFaker.lorem;
 
         this.lines = faker.lines();
         this.paragraph = faker.paragraph();

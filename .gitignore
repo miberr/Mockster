@@ -105,3 +105,4 @@ __azurite_db*__.json
 tests-examples/demo-todo-app.spec.ts
 
 .fake
+function/playwright-report/index.html

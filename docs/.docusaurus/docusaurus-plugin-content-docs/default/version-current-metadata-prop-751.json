@@ -278,7 +278,7 @@
     "api/lorem": {
       "id": "api/lorem",
       "title": "💬 Lorem",
-      "description": "Generate Lorem Ipsum data.",
+      "description": "Generate Lorem Ipsum.",
       "sidebar": "tutorialSidebar"
     },
     "api/musics": {

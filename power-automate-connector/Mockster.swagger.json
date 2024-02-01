@@ -1253,47 +1253,47 @@
                 "properties": {
                   "lines": {
                     "type": "string",
-                    "description": "Returns random lines.",
+                    "description": "Returns a set of lines. For example: Vorax contigo convoco.\nBeatae comparo animadverto conicio iste.\nUterque succedo attonbitus sordeo est clementia.\nEnim conicio quam praesentium curto adflicto audax..",
                     "x-ms-summary": "Lines"
                   },
                   "paragraph": {
                     "type": "string",
-                    "description": "Returns a random paragraph.",
+                    "description": "Returns a paragraph. For example: Est tubineus sponte conor nam ipsam optio. Amet volaticus demitto. Et angelus alii demonstro iure..",
                     "x-ms-summary": "Paragraph"
                   },
                   "paragraphs": {
                     "type": "string",
-                    "description": "Returns random paragraphs.",
+                    "description": "Returns multiple paragraphs. For example: Theca adamo video supplanto. Voluptates conturbo creator bellicus aut vir adinventitias altus cupiditate canto. Curo decumbo adipiscor inflammatio sponte cornu aegrotatio sopor capio calcar.\nBibo audeo adipisci beatae ustilo ambulo. Derelinquo desolo spectaculum inventore derelinquo asper carcer caries. Clementia pauper apto armarium.\nDedecor vis tui averto vorax praesentium tantillus catena adhaero adsidue. Decimus vitium aequitas veritas auctor adinventitias desparatus. Defetiscor vicissitudo absum delinquo amplexus acsi sed uter depopulo utor..",
                     "x-ms-summary": "Paragraphs"
                   },
                   "sentence": {
                     "type": "string",
-                    "description": "Returns a random sentence.",
+                    "description": "Returns a sentence. For example: Provident supra custodia aegrotatio..",
                     "x-ms-summary": "Sentence"
                   },
                   "sentences": {
                     "type": "string",
-                    "description": "Returns random sentences.",
+                    "description": "Returns multiple sentences. For example: Terminatio cubo voco trado amaritudo delectus. Beatus attollo arbitro desparatus una angelus vesper. Provident voluntarius capitulus universe compono. Conscendo animadverto apto aegrotatio. Ut virgo turbo sol viscus quam..",
                     "x-ms-summary": "Sentences"
                   },
                   "slug": {
                     "type": "string",
-                    "description": "Returns a random slug.",
+                    "description": "Returns a slug. For example: patria-numquam-arbor.",
                     "x-ms-summary": "Slug"
                   },
                   "text": {
                     "type": "string",
-                    "description": "Returns a random text.",
+                    "description": "Returns a text. For example: Sum laudantium totam utrum victus sunt paens demergo cervus vulgivagus.\nVentus clarus cotidie conduco sollicito degero carmen turbo combibo.\nTandem vulpes villa tribuo doloremque tergeo..",
                     "x-ms-summary": "Text"
                   },
                   "word": {
                     "type": "string",
-                    "description": "Returns a random word.",
+                    "description": "Returns a word. For example: circumvenio.",
                     "x-ms-summary": "Word"
                   },
                   "words": {
                     "type": "string",
-                    "description": "Returns random words.",
+                    "description": "Returns multiple words. For example: toties ter colligo.",
                     "x-ms-summary": "Words"
                   }
                 }
@@ -1302,14 +1302,14 @@
           }
         },
         "summary": "Get Lorem Ipsum mockdata",
-        "description": "Get rich about lorem ipsum. Returns an object with different lorem ipsum properties.",
+        "description": "Generate lorem ipsum. Returns an array of properties, by default ten.",
         "operationId": "getMusics",
         "parameters": [
           {
-            "$ref": "#/parameters/availableLocales"
+            "$ref": "#/parameters/count"
           },
           {
-            "$ref": "#/parameters/count"
+            "$ref": "#/parameters/seed"
           }
         ]
       }

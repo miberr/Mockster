@@ -99,7 +99,7 @@ app.http('locations', {
     handler: (request, context) => customRequest(request, context, Location)
 });
 
-app.http('lorem', { 
+app.http('lorems', { 
     methods: ['GET'],
     authLevel: 'anonymous', 
     handler: (request, context) => customRequest(request, context, Lorem)
