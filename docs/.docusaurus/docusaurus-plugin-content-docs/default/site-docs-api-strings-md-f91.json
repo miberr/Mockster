@@ -1,7 +1,7 @@
 {
   "id": "api/strings",
   "title": "🔠 Strings",
-  "description": "Generate string data.",
+  "description": "Generate random strings.",
   "source": "@site/docs/api/strings.md",
   "sourceDirName": "api",
   "slug": "/api/strings",
@@ -13,7 +13,7 @@
   "version": "current",
   "frontMatter": {
     "sidebar_label": "🔠 Strings",
-    "description": "Generate string data."
+    "description": "Generate random strings."
   },
   "sidebar": "tutorialSidebar",
   "previous": {

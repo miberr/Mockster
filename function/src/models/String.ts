@@ -1,5 +1,3 @@
-import { allFakers } from "@faker-js/faker";
-
 export class String {
     alpha: string;
     alphaNumeric: string;
@@ -12,8 +10,8 @@ export class String {
     symbol: string;
     uuid: string;
 
-    constructor(locale: string) {
-        const faker = allFakers[locale].string;
+    constructor(localizedFaker) {
+        const faker = localizedFaker.string;
 
         this.alpha = faker.alpha();
         this.alphaNumeric = faker.alphanumeric();

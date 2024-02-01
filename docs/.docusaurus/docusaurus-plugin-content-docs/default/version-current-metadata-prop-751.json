@@ -320,7 +320,7 @@
     "api/strings": {
       "id": "api/strings",
       "title": "🔠 Strings",
-      "description": "Generate string data.",
+      "description": "Generate random strings.",
       "sidebar": "tutorialSidebar"
     },
     "api/systems": {

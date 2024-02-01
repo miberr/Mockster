@@ -1747,52 +1747,52 @@
                 "properties":{
                   "alpha": {
                     "type": "string",
-                    "description": "Returns a random alpha string.",
+                    "description": "Returns an alphabetic character. For example: C.",
                     "x-ms-summary": "Alpha"
                   },
                   "alphanumeric": {
                     "type": "string",
-                    "description": "Returns a random alphanumeric string.",
+                    "description": "Returns an alphanumeric character. For example: X.",
                     "x-ms-summary": "Alphanumeric"
                   },
                   "binary":{
                     "type":"string",
-                    "description":"Returns a random binary string.",
+                    "description":"Returns a binary number. For example: 0b0.",
                     "x-ms-summary":"Binary"
                   },
                   "hexadecimal":{
                     "type":"string",
-                    "description":"Returns a random hexadecimal string.",
+                    "description":"Returns a hexadecimal number. For example: 0xa.",
                     "x-ms-summary":"Hexadecimal"
                   },
                   "nanoid":{
                     "type":"string",
-                    "description":"Returns a random nanoid string.",
+                    "description":"Returns a nanoid. For example: tooWOZFFJtCGUTLofxCia.",
                     "x-ms-summary":"Nanoid"
                   },
                   "numeric":{
                     "type":"string",
-                    "description":"Returns a random numeric string.",
+                    "description":"Returns a numeric character. For example: 6.",
                     "x-ms-summary":"Numeric"
                   },
                   "octal":{
                     "type":"string",
-                    "description":"Returns a random octal string.",
+                    "description":"Returns an octal number. For example: 0o6.",
                     "x-ms-summary":"Octal"
                   },
                   "sample":{
                     "type":"string",
-                    "description":"Returns a random sample string.",
+                    "description":"Returns a sample string. For example: G^XL?D'u|D.",
                     "x-ms-summary":"Sample"
                   },
                   "symbol":{
                     "type":"string",
-                    "description":"Returns a random symbol string.",
+                    "description":"Returns a symbol. For example: -.",
                     "x-ms-summary":"Symbol"
                   },
                   "uuid":{
                     "type":"string",
-                    "description":"Returns a random uuid string.",
+                    "description":"Returns a UUID. For example: 9b39132d-5157-42c4-bd5e-84f30c6d3692.",
                     "x-ms-summary":"UUID"
                   }
                 }
@@ -1801,14 +1801,14 @@
           }
         },
         "summary": "Get string mockdata",
-        "description": "Get different kinds of strings. Returns an object with different string properties.",
+        "description": "Generate random strings. Returns an array of properties, by default ten.",
         "operationId": "getStrings",
         "parameters": [
           {
-            "$ref":"#/parameters/availableLocales"
+            "$ref":"#/parameters/count"
           },
           {
-            "$ref":"#/parameters/count"
+            "$ref":"#/parameters/seed"
           }
         ]
       }
