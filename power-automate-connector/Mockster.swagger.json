@@ -1452,128 +1452,87 @@
                 "properties": {
                   "bio": {
                     "type": "string",
-                    "description": "Returns a random short biography",
-                    "x-ms-summary": "Bio"
+                    "description": "Returns the bio of the person. For example: diabetes supporter, engineer.",
+                    "x-ms-summary": "Bio",
+                    "x-ms-visibility": "advanced"
                   },
                   "birthday": {
                     "type": "string",
-                    "description": "Returns a random birthday as ISO 8601 date string.",
-                    "x-ms-summary": "Birthday"
+                    "description": "Returns the birthday of the person. For example: 1998-10-17T08:20:10.984Z.",
+                    "x-ms-summary": "Birthday",
+                    "x-ms-visibility": "advanced"
                   },
                   "businessPhone": {
                     "type": "string",
-                    "description": "Returns a random business phone number.",
-                    "x-ms-summary": "Business Phone"
+                    "description": "Returns the business phone number of the person. For example: 1-617-812-6179 x7382.",
+                    "x-ms-summary": "Business Phone",
+                    "x-ms-visibility": "advanced"
                   },
                   "city": {
                     "type": "string",
-                    "description": "Returns a random city name.",
-                    "x-ms-summary": "City"
+                    "description": "Returns the city of the person. For example: McLaughlinchester.",
+                    "x-ms-summary": "City",
+                    "x-ms-visibility": "advanced"
                   },
                   "country": {
                     "type": "string",
-                    "description": "Returns a random country name.",
-                    "x-ms-summary": "Country"
+                    "description": "Returns the country of the person. For example: New Caledonia.",
+                    "x-ms-summary": "Country",
+                    "x-ms-visibility": "advanced"
                   },
                   "creditLimit": {
                     "type": "number",
-                    "description": "Returns a random credit limit.",
-                    "x-ms-summary": "Credit Limit"
+                    "description": "Returns the credit limit of the person. For example: 6203000.",
+                    "x-ms-summary": "Credit Limit",
+                    "x-ms-visibility": "advanced"
                   },
                   "department": {
                     "type": "string",
-                    "description": "Returns a random department.",
-                    "x-ms-summary": "Department"
+                    "description": "Returns the department of the person. For example: Purchasing.",
+                    "x-ms-summary": "Department",
+                    "x-ms-visibility": "advanced"
                   },
                   "description": {
                     "type": "string",
-                    "description": "Returns a random description.",
-                    "x-ms-summary": "Description"
+                    "description": "Returns the description of the person. For example: significance lover.",
+                    "x-ms-summary": "Description",
+                    "x-ms-visibility": "advanced"
                   },
                   "email": {
                     "type": "string",
-                    "description": "Returns a random email address.",
-                    "x-ms-summary": "Email"
+                    "description": "Returns the email of the person. For example: Angelo.Runte95@gmail.com.",
+                    "x-ms-summary": "Email",
+                    "x-ms-visibility": "advanced"
                   },
                   "firstName": {
                     "type": "string",
-                    "description": "Returns a random first name.",
-                    "x-ms-summary": "First Name"
+                    "description": "Returns the first name of the person. For example: Angelo.",
+                    "x-ms-summary": "First Name",
+                    "x-ms-visibility": "important"
                   },
                   "fullName": {
                     "type": "string",
-                    "description": "Generates a random full name.",
-                    "x-ms-summary": "Full Name"
-                  },
-                  "gender": {
-                    "type": "string",
-                    "description": "Returns a random gender.",
-                    "x-ms-summary": "Gender"
+                    "description": "Returns the full name of the person. For example: Angelo Runte.",
+                    "x-ms-summary": "Full Name",
+                    "x-ms-visibility": "important"
                   },
                   "jobArea": {
                     "type": "string",
-                    "description": "Generates a random job area.",
-                    "x-ms-summary": "Job Area"
-                  },
-                  "jobDescriptor": {
-                    "type": "string",
-                    "description": "Generates a random job descriptor.",
-                    "x-ms-summary": "Job Descriptor"
-                  },
-                  "jobx-ms-summary": {
-                    "type": "string",
-                    "description": "Generates a random job x-ms-summary.",
-                    "x-ms-summary": "Job x-ms-summary"
-                  },
-                  "jobType": {
-                    "type": "string",
-                    "description": "Generates a random job type.",
-                    "x-ms-summary": "Job Type"
-                  },
-                  "prefix": {
-                    "type": "string",
-                    "description": "Generates a random prefix.",
-                    "x-ms-summary": "Prefix"
-                  },
-                  "mobilePhone": {
-                    "type": "string",
-                    "description": "Returns a random mobile phone number.",
-                    "x-ms-summary": "Mobile Phone"
+                    "description": "Returns the job area of the person. For example: Intranet.",
+                    "x-ms-summary": "Job Area",
+                    "x-ms-visibility": "advanced"
                   },
                   "lastname": {
                     "type": "string",
-                    "description": "Generates a random last name.",
-                    "x-ms-summary": "Last Name"
-                  },
-                  "salutation": {
-                    "type": "string",
-                    "description": "Generates a random salutation.",
-                    "x-ms-summary": "Salutation"
+                    "description": "Returns the last name of the person. For example: Runte.",
+                    "x-ms-summary": "Last Name",
+                    "x-ms-visibility": "important"
                   },
                   "sexType": {
                     "type": "string",
-                    "description": "Generates a random sex type.",
-                    "x-ms-summary": "Sex Type"
-                  },
-                  "streetAddress": {
-                    "type": "string",
-                    "description": "Returns a random street address.",
-                    "x-ms-summary": "Street Address"
-                  },
-                  "suffix": {
-                    "type": "string",
-                    "description": "Generates a random suffix.",
-                    "x-ms-summary": "Suffix"
-                  },
-                  "zipCode": {
-                    "type": "string",
-                    "description": "Returns a random zip code.",
-                    "x-ms-summary": "Zip Code"
-                  },
-                  "zodiacSign": {
-                    "type": "string",
-                    "description": "Generates a random zodiac sign.",
-                    "x-ms-summary": "Zodiac Sign"
+                    "description": "Returns the sex type of the person. For example: male.",
+                    "x-ms-summary": "Sex Type",
+                    "x-ms-visibility": "advanced"
                   }
                 }
               }
@@ -1581,7 +1540,7 @@
           }
         },
         "summary": "Get people",
-        "description": "Get rich people mockup data. Returns an array of people with additional usefull properties, by default ten.",
+        "description": "Generate data for a person. Returns an array of properties, by default ten. Some properties might be localized.",
         "operationId": "getPeople",
         "parameters": [
           {
@@ -1589,6 +1548,9 @@
           },
           {
             "$ref": "#/parameters/count"
+          },
+          {
+            "$ref": "#/parameters/seed"
           }
         ]
       }

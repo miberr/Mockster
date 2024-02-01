@@ -295,8 +295,8 @@
     },
     "api/persons": {
       "id": "api/persons",
-      "title": "🧍🏽‍♀️🧍🏻 Persons",
-      "description": "Generate number data.",
+      "title": "🧍🏻 Persons",
+      "description": "Generate data for a person.",
       "sidebar": "tutorialSidebar"
     },
     "api/phones": {

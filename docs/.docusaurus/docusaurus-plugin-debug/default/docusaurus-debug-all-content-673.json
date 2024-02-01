@@ -426,8 +426,8 @@
             },
             {
               "id": "api/persons",
-              "title": "🧍🏽‍♀️🧍🏻 Persons",
-              "description": "Generate number data.",
+              "title": "🧍🏻 Persons",
+              "description": "Generate data for a person.",
               "source": "@site/docs/api/persons.md",
               "sourceDirName": "api",
               "slug": "/api/persons",
@@ -439,7 +439,7 @@
               "version": "current",
               "frontMatter": {
                 "sidebar_label": "🧍🏻 Persons",
-                "description": "Generate number data."
+                "description": "Generate data for a person."
               },
               "sidebar": "tutorialSidebar",
               "previous": {

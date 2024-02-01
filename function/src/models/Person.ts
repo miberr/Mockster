@@ -1,4 +1,4 @@
-import { SexType, allFakers } from "@faker-js/faker";
+import { SexType } from "@faker-js/faker";
 
 const departments = [
     "Accounting",
@@ -16,9 +16,6 @@ const departments = [
 ]
 
 export class Person {
-    sexType: SexType;
-    firstName: string;
-    lastName: string;
     bio: string;
     birthday: string;
     businessPhone: string;
@@ -28,26 +25,32 @@ export class Person {
     department: string;
     description: string;
     email: string;
+    firstName: string;
     fullName: string;
     gender: string;
     jobArea: string;
+    lastName: string;
+    sexType: SexType;
 
-    constructor(location: string) {
-        const faker = allFakers[location];
-        this.sexType = faker.person.sexType();
-        this.firstName = faker.person.firstName(this.sexType);
-        this.lastName = faker.person.lastName(this.sexType);
+    constructor(localizedFaker) {
+        const faker = localizedFaker;
+        const sexType = faker.person.sexType();
+        const firstName = faker.person.firstName(sexType);
+        const lastName = faker.person.lastName(sexType);
         this.bio = faker.person.bio();
         this.birthday = faker.date.birthdate().toISOString();
-        this.businessPhone = faker.helpers.fromRegExp('+[1-9]{1,3} [0-9]{6,9}');
+        this.businessPhone = faker.phone.number();
         this.city = faker.location.city();
         this.country = faker.location.country();
         this.creditLimit = faker.number.int(10000) * 1000;
         this.department = faker.helpers.arrayElement(departments);
         this.description = faker.person.bio();
-        this.email = faker.internet.email({firstName: this.firstName, lastName: this.lastName});
+        this.email = faker.internet.email({firstName: firstName, lastName: lastName});
+        this.firstName = firstName;
         this.fullName = this.firstName + " " + this.lastName;
         this.gender = faker.person.gender();
         this.jobArea = faker.person.jobArea();
+        this.lastName = lastName;
+        this.sexType = sexType;
     }
 }
