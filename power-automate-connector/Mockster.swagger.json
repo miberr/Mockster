@@ -1143,82 +1143,82 @@
                 "properties": {
                   "buildingNumber": {
                     "type": "string",
-                    "description": "Returns a random building number.",
+                    "description": "Returns a building number. For example: 79502.",
                     "x-ms-summary": "Building Number"
                   },
                   "cardinalDirection": {
                     "type": "string",
-                    "description": "Returns a random cardinal direction.",
+                    "description": "Returns a cardinal direction. For example: South.",
                     "x-ms-summary": "Cardinal Direction"
                   },
                   "city": {
                     "type": "string",
-                    "description": "Returns a random city name.",
+                    "description": "Returns a city name. For example: Devantestead.",
                     "x-ms-summary": "City"
                   },
                   "country": {
                     "type": "string",
-                    "description": "Returns a random country name.",
+                    "description": "Returns a country name. For example: Faroe Islands.",
                     "x-ms-summary": "Country"
                   },
                   "countryCode": {
                     "type": "string",
-                    "description": "Returns a random country code.",
+                    "description": "Returns a country code. For example: PE.",
                     "x-ms-summary": "Country Code"
                   },
                   "county": {
                     "type": "string",
-                    "description": "Returns a random county name.",
+                    "description": "Returns a county name. For example: Avon.",
                     "x-ms-summary": "County"
                   },
                   "direction": {
                     "type": "string",
-                    "description": "Returns a random direction.",
+                    "description": "Returns a direction. For example: Southeast.",
                     "x-ms-summary": "Direction"
                   },
                   "latitude": {
                     "type": "number",
-                    "description": "Returns a random latitude.",
+                    "description": "Returns a latitude coordinate. For example: -21.109.",
                     "x-ms-summary": "Latitude"
                   },
                   "longitude": {
                     "type": "number",
-                    "description": "Returns a random longitude.",
+                    "description": "Returns a longitude coordinate. For example: -60.2472.",
                     "x-ms-summary": "Longitude"
                   },
                   "ordinalDirection": {
                     "type": "string",
-                    "description": "Returns a random ordinal direction.",
+                    "description": "Returns an ordinal direction. For example: Northwest.",
                     "x-ms-summary": "Ordinal Direction"
                   },
                   "secondaryAddress": {
                     "type": "string",
-                    "description": "Returns a random secondary address.",
+                    "description": "Returns a secondary address. For example: Suite 719.",
                     "x-ms-summary": "Secondary Address"
                   },
                   "state": {
                     "type": "string",
-                    "description": "Returns a random state name.",
+                    "description": "Returns a state name. For example: Kansas.",
                     "x-ms-summary": "State"
                   },
                   "street": {
                     "type": "string",
-                    "description": "Returns a random street name.",
+                    "description": "Returns a street name. For example: Willow Street.",
                     "x-ms-summary": "Street"
                   },
                   "streetAddress": {
                     "type": "string",
-                    "description": "Returns a random street address.",
+                    "description": "Returns a street address. For example: 7619 Damaris Junctions.",
                     "x-ms-summary": "Street Address"
                   },
                   "timeZone": {
                     "type": "string",
-                    "description": "Returns a random time zone.",
+                    "description": "Returns a time zone. For example: Pacific/Funafuti.",
                     "x-ms-summary": "Time Zone"
                   },
                   "zipCode": {
                     "type": "string",
-                    "description": "Returns a random zip code.",
+                    "description": "Returns a zip code. For example: 38467.",
                     "x-ms-summary": "Zip Code"
                   }
                 }
@@ -1227,7 +1227,7 @@
           }
         },
         "summary": "Get location mockdata",
-        "description": "Get rich data about locations. Returns an array, by default ten.",
+        "description": "Generate location related data. Returns an array of properties, by default ten.",
         "operationId": "getLocations",
         "parameters": [
           {
@@ -1235,6 +1235,9 @@
           },
           {
             "$ref": "#/parameters/count"
+          },
+          {
+            "$ref": "#/parameters/seed"
           }
         ]
       }

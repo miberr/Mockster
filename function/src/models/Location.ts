@@ -1,5 +1,3 @@
-import { allFakers } from "@faker-js/faker";
-
 export class Location {
     buildingNumber: string;
     cardinalDirection: string;
@@ -18,8 +16,8 @@ export class Location {
     timeZone: string;
     zipCode: string;
 
-    constructor(locale: string) {
-        const faker = allFakers[locale].location;
+    constructor(lozalizedFaker) {
+        const faker = lozalizedFaker.location;
         const GPSCoordinates = faker.nearbyGPSCoordinate();
         
         this.buildingNumber = faker.buildingNumber();
