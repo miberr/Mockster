@@ -454,7 +454,7 @@
             {
               "id": "api/phones",
               "title": "📱 Phones",
-              "description": "Generate phone data.",
+              "description": "Generate phone nuber and IMEI.",
               "source": "@site/docs/api/phones.md",
               "sourceDirName": "api",
               "slug": "/api/phones",
@@ -466,7 +466,7 @@
               "version": "current",
               "frontMatter": {
                 "sidebar_label": "📱 Phones",
-                "description": "Generate phone data."
+                "description": "Generate phone nuber and IMEI."
               },
               "sidebar": "tutorialSidebar",
               "previous": {

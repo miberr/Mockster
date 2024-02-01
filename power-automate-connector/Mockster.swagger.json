@@ -1567,13 +1567,15 @@
                 "properties":{
                   "imei": {
                     "type": "string",
-                    "description": "Returns a random imei.",
-                    "x-ms-summary": "IMEI"
+                    "description": "Returns the IMEI number of the phone. For example: 45-156714-750405-6.",
+                    "x-ms-summary": "IMEI",
+                    "x-ms-visibility": "important"
                   },
                   "number": {
                     "type": "string",
                     "description": "Returns a random phone number in international format.",
-                    "x-ms-summary": "Phone number"
+                    "x-ms-summary": "Phone number",
+                    "x-ms-visibility": "important"
                   }
                 }
               }
@@ -1581,7 +1583,7 @@
           }
         },
         "summary": "Get phone mockdata",
-        "description": "Get rich data about phones. Returns an object with different phone related properties.",
+        "description": "Generate phone nuber and IMEI. Returns an array of properties, by default ten. Phone number may be localized.",
         "operationId": "getPhones",
         "parameters": [
           {
@@ -1589,6 +1591,9 @@
           },
           {
             "$ref": "#/parameters/count"
+          },
+          {
+            "$ref": "#/parameters/seed"
           }
         ]
       }

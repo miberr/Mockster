@@ -302,7 +302,7 @@
     "api/phones": {
       "id": "api/phones",
       "title": "📱 Phones",
-      "description": "Generate phone data.",
+      "description": "Generate phone nuber and IMEI.",
       "sidebar": "tutorialSidebar"
     },
     "api/products": {
