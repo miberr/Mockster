@@ -1,5 +1,3 @@
-import { allFakers } from "@faker-js/faker";
-
 export class Science {
 
     chemicalElementSymbol: string;
@@ -8,8 +6,8 @@ export class Science {
     unitName: string;
     unitSymbol: string;
 
-    constructor(locale: string) {
-        const faker = allFakers[locale].science;
+    constructor(localizedFaker) {
+        const faker = localizedFaker.science;
         const chemicalElement = faker.chemicalElement();
         const unit = faker.unit();
 

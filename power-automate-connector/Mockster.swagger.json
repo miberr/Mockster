@@ -1687,15 +1687,35 @@
               "items":{
                 "type":"object",
                 "properties":{
-                  "chemicalElement": {
+                  "chemicalElementSymbol": {
                     "type": "string",
-                    "description": "Returns a random chemical element.",
-                    "x-ms-summary": "Chemical Element"
+                    "description": "Returns the symbol of the chemical element. For example: Ga.",
+                    "x-ms-summary": "Chemical Element Symbol",
+                    "x-ms-visibility": "advanced"
                   },
-                  "unit": {
+                  "chemicalElementName": {
+                    "type": "string",
+                    "description": "Returns the name of the chemical element. For example: Gallium.",
+                    "x-ms-summary": "Chemical Element Name",
+                    "x-ms-visibility": "important"
+                  },
+                  "chemicalElementAtomicNumber": {
+                    "type": "integer",
+                    "description": "Returns the atomic number of the chemical element. For example: 31.",
+                    "x-ms-summary": "Chemical Element Atomic Number",
+                    "x-ms-visibility": "advanced"
+                  },
+                  "unitName": {
                     "type":"string",
                     "description":"Returns a random unit.",
-                    "x-ms-summary":"Unit"
+                    "x-ms-summary":"Unit Name",
+                    "x-ms-visibility": "important"
+                  },
+                  "unitSymbol": {
+                    "type":"string",
+                    "description":"Returns the symbol of the unit. For example: lx.",
+                    "x-ms-summary":"Unit Symbol",
+                    "x-ms-visibility": "advanced"
                   }
                 }
               }
@@ -1703,14 +1723,14 @@
           }
         },
         "summary": "Get science mockdata",
-        "description": "Get rich data about science. Returns an object with different science properties.",
+        "description": "Generate science related data. Returns an array of properties, by default ten.",
         "operationId": "getSciences",
         "parameters": [
           {
-            "$ref":"#/parameters/availableLocales"
+            "$ref":"#/parameters/count"
           },
           {
-            "$ref":"#/parameters/count"
+            "$ref":"#/parameters/seed"
           }
         ]
       }
