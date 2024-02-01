@@ -5,13 +5,14 @@ description: "Generate number data."
 
 # 🔢 Numbers
 
-Generate numers related data. Returns an array of properties, by default ten.
+Generate different kinds of numbers. Returns an array of properties, by default ten.
 
 ## Query options
 
 |Parameter|Description|Default|
 |---------|:---------|---------|
 |`Count`| Count of objects returned | 10 |
+|`Seed` | Seed value for reproducible results. | null |
 
 ## Request
 

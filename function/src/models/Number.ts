@@ -1,5 +1,3 @@
-import { allFakers } from "@faker-js/faker";
-
 export class Number {
 
     binary: string;
@@ -8,8 +6,8 @@ export class Number {
     int: number;
     octal: string;
 
-    constructor(locale: string) {
-        const faker = allFakers[locale].number;
+    constructor(localizedFake) {
+        const faker = localizedFake.number;
 
         this.binary = faker.binary();
         this.float = faker.float();
