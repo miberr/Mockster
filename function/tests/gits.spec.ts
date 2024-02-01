@@ -39,6 +39,7 @@ test('All properties have current datatypes', async ({ request }) => {
 test('Endpoint returns different results with the same seed', async ({ request }) => {
 
   const response1 = await request.get('gits?seed=1');
+  await new Promise(f => setTimeout(f, 1000));
   const response2 = await request.get('gits?seed=1');
 
   expect(await response1.json()).not.toEqual(await response2.json());
