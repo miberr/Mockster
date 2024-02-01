@@ -1144,82 +1144,98 @@
                   "buildingNumber": {
                     "type": "string",
                     "description": "Returns a building number. For example: 79502.",
-                    "x-ms-summary": "Building Number"
+                    "x-ms-summary": "Building Number",
+                    "x-ms-visibility": "advanced"
                   },
                   "cardinalDirection": {
                     "type": "string",
                     "description": "Returns a cardinal direction. For example: South.",
-                    "x-ms-summary": "Cardinal Direction"
+                    "x-ms-summary": "Cardinal Direction",
+                    "x-ms-visibility": "advanced"
                   },
                   "city": {
                     "type": "string",
                     "description": "Returns a city name. For example: Devantestead.",
-                    "x-ms-summary": "City"
+                    "x-ms-summary": "City",
+                    "x-ms-visibility": "important"
                   },
                   "country": {
                     "type": "string",
                     "description": "Returns a country name. For example: Faroe Islands.",
-                    "x-ms-summary": "Country"
+                    "x-ms-summary": "Country",
+                    "x-ms-visibility": "important"
                   },
                   "countryCode": {
                     "type": "string",
                     "description": "Returns a country code. For example: PE.",
-                    "x-ms-summary": "Country Code"
+                    "x-ms-summary": "Country Code",
+                    "x-ms-visibility": "advanced"
                   },
                   "county": {
                     "type": "string",
                     "description": "Returns a county name. For example: Avon.",
-                    "x-ms-summary": "County"
+                    "x-ms-summary": "County",
+                    "x-ms-visibility": "advanced"
                   },
                   "direction": {
                     "type": "string",
                     "description": "Returns a direction. For example: Southeast.",
-                    "x-ms-summary": "Direction"
+                    "x-ms-summary": "Direction",
+                    "x-ms-visibility": "advanced"
                   },
                   "latitude": {
                     "type": "number",
                     "description": "Returns a latitude coordinate. For example: -21.109.",
-                    "x-ms-summary": "Latitude"
+                    "x-ms-summary": "Latitude",
+                    "x-ms-visibility": "advanced"
                   },
                   "longitude": {
                     "type": "number",
                     "description": "Returns a longitude coordinate. For example: -60.2472.",
-                    "x-ms-summary": "Longitude"
+                    "x-ms-summary": "Longitude",
+                    "x-ms-visibility": "advanced"
                   },
                   "ordinalDirection": {
                     "type": "string",
                     "description": "Returns an ordinal direction. For example: Northwest.",
-                    "x-ms-summary": "Ordinal Direction"
+                    "x-ms-summary": "Ordinal Direction",
+                    "x-ms-visibility": "advanced"
                   },
                   "secondaryAddress": {
                     "type": "string",
                     "description": "Returns a secondary address. For example: Suite 719.",
-                    "x-ms-summary": "Secondary Address"
+                    "x-ms-summary": "Secondary Address",
+                    "x-ms-visibility": "advanced"
                   },
                   "state": {
                     "type": "string",
                     "description": "Returns a state name. For example: Kansas.",
-                    "x-ms-summary": "State"
+                    "x-ms-summary": "State",
+                    "x-ms-visibility": "advanced"
                   },
                   "street": {
                     "type": "string",
                     "description": "Returns a street name. For example: Willow Street.",
-                    "x-ms-summary": "Street"
+                    "x-ms-summary": "Street",
+                    "x-ms-visibility": "important"
                   },
                   "streetAddress": {
                     "type": "string",
                     "description": "Returns a street address. For example: 7619 Damaris Junctions.",
-                    "x-ms-summary": "Street Address"
+                    "x-ms-summary": "Street Address",
+                    "x-ms-visibility": "important"
                   },
                   "timeZone": {
                     "type": "string",
                     "description": "Returns a time zone. For example: Pacific/Funafuti.",
-                    "x-ms-summary": "Time Zone"
+                    "x-ms-summary": "Time Zone",
+                    "x-ms-visibility": "advanced"
                   },
                   "zipCode": {
                     "type": "string",
                     "description": "Returns a zip code. For example: 38467.",
-                    "x-ms-summary": "Zip Code"
+                    "x-ms-summary": "Zip Code",
+                    "x-ms-visibility": "important"
                   }
                 }
               }
@@ -1254,47 +1270,56 @@
                   "lines": {
                     "type": "string",
                     "description": "Returns a set of lines. For example: Vorax contigo convoco.\nBeatae comparo animadverto conicio iste.\nUterque succedo attonbitus sordeo est clementia.\nEnim conicio quam praesentium curto adflicto audax..",
-                    "x-ms-summary": "Lines"
+                    "x-ms-summary": "Lines",
+                    "x-ms-visibility": "advanced"
                   },
                   "paragraph": {
                     "type": "string",
                     "description": "Returns a paragraph. For example: Est tubineus sponte conor nam ipsam optio. Amet volaticus demitto. Et angelus alii demonstro iure..",
-                    "x-ms-summary": "Paragraph"
+                    "x-ms-summary": "Paragraph",
+                    "x-ms-visibility": "important"
                   },
                   "paragraphs": {
                     "type": "string",
                     "description": "Returns multiple paragraphs. For example: Theca adamo video supplanto. Voluptates conturbo creator bellicus aut vir adinventitias altus cupiditate canto. Curo decumbo adipiscor inflammatio sponte cornu aegrotatio sopor capio calcar.\nBibo audeo adipisci beatae ustilo ambulo. Derelinquo desolo spectaculum inventore derelinquo asper carcer caries. Clementia pauper apto armarium.\nDedecor vis tui averto vorax praesentium tantillus catena adhaero adsidue. Decimus vitium aequitas veritas auctor adinventitias desparatus. Defetiscor vicissitudo absum delinquo amplexus acsi sed uter depopulo utor..",
-                    "x-ms-summary": "Paragraphs"
+                    "x-ms-summary": "Paragraphs",
+                    "x-ms-visibility": "advanced"
                   },
                   "sentence": {
                     "type": "string",
                     "description": "Returns a sentence. For example: Provident supra custodia aegrotatio..",
-                    "x-ms-summary": "Sentence"
+                    "x-ms-summary": "Sentence",
+                    "x-ms-visibility": "important"
                   },
                   "sentences": {
                     "type": "string",
                     "description": "Returns multiple sentences. For example: Terminatio cubo voco trado amaritudo delectus. Beatus attollo arbitro desparatus una angelus vesper. Provident voluntarius capitulus universe compono. Conscendo animadverto apto aegrotatio. Ut virgo turbo sol viscus quam..",
-                    "x-ms-summary": "Sentences"
+                    "x-ms-summary": "Sentences",
+                    "x-ms-visibility": "advanced"
                   },
                   "slug": {
                     "type": "string",
                     "description": "Returns a slug. For example: patria-numquam-arbor.",
-                    "x-ms-summary": "Slug"
+                    "x-ms-summary": "Slug",
+                    "x-ms-visibility": "advanced"
                   },
                   "text": {
                     "type": "string",
                     "description": "Returns a text. For example: Sum laudantium totam utrum victus sunt paens demergo cervus vulgivagus.\nVentus clarus cotidie conduco sollicito degero carmen turbo combibo.\nTandem vulpes villa tribuo doloremque tergeo..",
-                    "x-ms-summary": "Text"
+                    "x-ms-summary": "Text",
+                    "x-ms-visibility": "advanced"
                   },
                   "word": {
                     "type": "string",
                     "description": "Returns a word. For example: circumvenio.",
-                    "x-ms-summary": "Word"
+                    "x-ms-summary": "Word",
+                    "x-ms-visibility": "important"
                   },
                   "words": {
                     "type": "string",
                     "description": "Returns multiple words. For example: toties ter colligo.",
-                    "x-ms-summary": "Words"
+                    "x-ms-summary": "Words",
+                    "x-ms-visibility": "advanced"
                   }
                 }
               }
@@ -1327,12 +1352,14 @@
                   "genre": {
                     "type": "string",
                     "description": "Returns a random genre.",
-                    "x-ms-summary": "Genre"
+                    "x-ms-summary": "Genre",
+                    "x-ms-visibility": "important"
                   },
                   "songName": {
                     "type": "string",
                     "description": "Returns a random song name.",
-                    "x-ms-summary": "Song name"
+                    "x-ms-summary": "Song name",
+                    "x-ms-visibility": "important"
                   }
                 }
               }
@@ -1340,7 +1367,7 @@
           }
         },
         "summary": "Get music mockdata",
-        "description": "Get rich data about music. Returns an object with different music properties.",
+        "description": "Generate music related data. Returns an array of properties, by default ten. Some properties might be localized.",
         "operationId": "getMusics",
         "parameters": [
           {
@@ -1348,6 +1375,9 @@
           },
           {
             "$ref": "#/parameters/count"
+          },
+          {
+            "$ref": "#/parameters/seed"
           }
         ]
       }
