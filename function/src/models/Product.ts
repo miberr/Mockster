@@ -1,5 +1,3 @@
-import { allFakers } from "@faker-js/faker";
-
 // Implements Facker Commerce model
 // named as Product for clarity
 export class Product {
@@ -12,8 +10,8 @@ export class Product {
     productMaterial: string;
     productName: string;
 
-    constructor(locale: string) {
-        const faker = allFakers[locale].commerce;
+    constructor(localizedFaker) {
+        const faker = localizedFaker.commerce;
         this.department = faker.department();
         this.isbn = faker.isbn();
         this.price = Number(faker.price());

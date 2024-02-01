@@ -1610,43 +1610,51 @@
                 "properties": {
                   "department": {
                     "type": "string",
-                    "description": "Returns a random department.",
-                    "x-ms-summary": "Department"
+                    "description": "Returns the department of the product. For example: Computers.",
+                    "x-ms-summary": "Department",
+                    "x-ms-visibility": "important"
                   },
                   "isbn": {
                     "type": "string",
-                    "description": "Returns a random ISBN number.",
-                    "x-ms-summary": "ISBN"
+                    "description": "Returns the ISBN of the product. For example: 978-0-911547-60-3.",
+                    "x-ms-summary": "ISBN",
+                    "x-ms-visibility": "advanced"
                   },
                   "price": {
                     "type": "number",
-                    "description": "Returns a random price.",
-                    "x-ms-summary": "Price"
+                    "description": "Returns the price of the product. For example: 606.",
+                    "x-ms-summary": "Price",
+                    "x-ms-visibility": "important"
                   },
                   "product": {
                     "type": "string",
-                    "description": "Returns a random short product name.",
-                    "x-ms-summary": "Short product name"
+                    "description": "Returns the type of the product. For example: Salad.",
+                    "x-ms-summary": "Short product name",
+                    "x-ms-visibility": "important"
                   },
                   "productAdjective": {
                     "type": "string",
-                    "description": "Returns a random product adjective.",
-                    "x-ms-summary": "Product Adjective"
+                    "description": "Returns an adjective describing the product. For example: Elegant.",
+                    "x-ms-summary": "Product Adjective",
+                    "x-ms-visibility": "advanced"
                   },
                   "productDescription": {
                     "type": "string",
-                    "description": "Returns a random product description.",
-                    "x-ms-summary": "Product Description"
+                    "description": "Returns a description of the product. For example: Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles.",
+                    "x-ms-summary": "Product Description",
+                    "x-ms-visibility": "advanced"
                   },
                   "productMaterial": {
                     "type": "string",
-                    "description": "Returns a random product material.",
-                    "x-ms-summary": "Product Material"
+                    "description": "Returns the material of the product. For example: Granite.",
+                    "x-ms-summary": "Product Material",
+                    "x-ms-visibility": "advanced"
                   },
                   "productName": {
                     "type": "string",
-                    "description": "Returns a random descriptive product name.",
-                    "x-ms-summary": "Product Name"
+                    "description": "Returns the name of the product. For example: Oriental Frozen Cheese.",
+                    "x-ms-summary": "Product Name",
+                    "x-ms-visibility": "important"
                   }
                 }
               }
@@ -1654,7 +1662,7 @@
           }
         },
         "summary": "Get product mockdata",
-        "description": "Get rich data about products. Returns an array, by default ten.",
+        "description": "Generate product related data. Returns an array of properties, by default ten. Some properties may be localized.",
         "operationId": "getProducts",
         "parameters": [
           {
@@ -1662,6 +1670,9 @@
           },
           {
             "$ref": "#/parameters/count"
+          },
+          {
+            "$ref": "#/parameters/seed"
           }
         ]
       }
