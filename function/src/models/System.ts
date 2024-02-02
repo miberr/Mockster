@@ -1,5 +1,3 @@
-import { allFakers } from "@faker-js/faker";    
-
 export class System {
     commonFileExt: string;
     commonFileName: string;
@@ -14,8 +12,8 @@ export class System {
     networkInterface: string;
     semver: string;
 
-    constructor(locale: string) {
-        const faker = allFakers[locale].system;
+    constructor(localizedFaker) {
+        const faker = localizedFaker.system;
 
         this.commonFileExt = faker.commonFileExt();
         this.commonFileName = faker.commonFileName();

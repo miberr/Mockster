@@ -1825,62 +1825,62 @@
                 "properties":{
                   "commonFileExt": {
                     "type": "string",
-                    "description": "Returns a random common file extension.",
+                    "description": "Returns a common file name. For example: amongst_vivaciously_populate.wav.",
                     "x-ms-summary": "Common File Extension"
                   },
                   "commonFileName": {
                     "type": "string",
-                    "description": "Returns a random common file name.",
+                    "description": "Returns a common file name. For example: amongst_vivaciously_populate.wav.",
                     "x-ms-summary": "Common File Name"
                   },
                   "commonFileType": {
                     "type": "string",
-                    "description": "Returns a random common file type.",
+                    "description": "Returns a common file type. For example: image.",
                     "x-ms-summary": "Common File Type"
                   },
                   "cron": {
                     "type": "string",
-                    "description": "Returns a random cron expression.",
+                    "description": "Returns a cron expression. For example: 15 * * * ?.",
                     "x-ms-summary": "Cron"
                   },
                   "directoryPath": {
                     "type": "string",
-                    "description": "Returns a random directory path.",
+                    "description": "Returns a directory path. For example: /usr/libexec.",
                     "x-ms-summary": "Directory Path"
                   },
                   "fileExt": {
                     "type": "string",
-                    "description": "Returns a random file extension.",
+                    "description": "Returns a file extension. For example: pot.",
                     "x-ms-summary": "File Extension"
                   },
                   "fileName": {
                     "type": "string",
-                    "description": "Returns a random file name.",
+                    "description": "Returns a file name. For example: yummy_commercialise_despite.mid.",
                     "x-ms-summary": "File Name"
                   },
                   "filePath": {
                     "type": "string",
-                    "description": "Returns a random file path.",
+                    "description": "Returns a file path. For example: /private/tmp/interrelate_hmph.tar.",
                     "x-ms-summary": "File Path"
                   },
                   "fileType": {
                     "type": "string",
-                    "description": "Returns a random file type.",
+                    "description": "Returns a file type. For example: image.",
                     "x-ms-summary": "File Type"
                   },
                   "mimeType": {
                     "type": "string",
-                    "description": "Returns a random mime type.",
+                    "description": "Returns a mime type. For example: image/gif.",
                     "x-ms-summary": "Mime Type"
                   },
                   "networkInterface": {
                     "type": "string",
-                    "description": "Returns a random network interface.",
+                    "description": "Returns a network interface. For example: wlo6.",
                     "x-ms-summary": "Network Interface"
                   },
                   "semver": {
                     "type": "string",
-                    "description": "Returns a random semantic version.",
+                    "description": "Returns a semantic version number. For example: 6.2.5.",
                     "x-ms-summary": "Semantic Version"
                   }
                 }
@@ -1889,14 +1889,14 @@
           }
         },
         "summary": "Get system mockdata",
-        "description": "Get rich data about systems. Returns an object with different system properties.",
+        "description": "Generate system related data. Returns an array of properties, by default ten.",
         "operationId": "getSystems",
         "parameters": [
           {
-            "$ref":"#/parameters/availableLocales"
+            "$ref":"#/parameters/count"
           },
           {
-            "$ref":"#/parameters/count"
+            "$ref":"#/parameters/seed"
           }
         ]
       }
