@@ -1,7 +1,7 @@
 {
   "id": "api/vehicles",
   "title": "🏎️ Vehicles",
-  "description": "Generate vehicle data.",
+  "description": "Generate different kinds of vehicles.",
   "source": "@site/docs/api/vehicles.md",
   "sourceDirName": "api",
   "slug": "/api/vehicles",
@@ -13,7 +13,7 @@
   "version": "current",
   "frontMatter": {
     "sidebar_label": "🏎️ Vehicles",
-    "description": "Generate vehicle data."
+    "description": "Generate different kinds of vehicles."
   },
   "sidebar": "tutorialSidebar",
   "previous": {

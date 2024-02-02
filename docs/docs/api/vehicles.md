@@ -1,22 +1,24 @@
 ---
 sidebar_label: "🏎️ Vehicles"
-description: "Generate vehicle data."
+description: "Generate different kinds of vehicles."
 ---
 
 # 🏎️ Vehicles
 
-Generate phones related data. Returns an array of properties, by default ten.
+Generate different kinds of vehicles and related properties. Returns an array of properties, by default ten. Some of the data may be localized.
 
 ## Query options
 
 |Parameter|Description|Default|
 |---------|:---------|---------|
 |`Count`| Count of objects returned | 10 |
+|`Locale`| Localization for the response, see [Localization](./../localization) | en |
+|`Seed` | Seed value for reproducible results. | null |
 
 ## Request
 
 ```http title="HTTP"
-GET https://mockster.dev/api/v1/science
+GET https://mockster.dev/api/v1/vehicles
 Accept: application/json  
 ```
 

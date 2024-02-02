@@ -332,7 +332,7 @@
     "api/vehicles": {
       "id": "api/vehicles",
       "title": "🏎️ Vehicles",
-      "description": "Generate vehicle data.",
+      "description": "Generate different kinds of vehicles.",
       "sidebar": "tutorialSidebar"
     },
     "api/words": {

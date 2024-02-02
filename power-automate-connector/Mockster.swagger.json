@@ -1826,22 +1826,26 @@
                   "commonFileExt": {
                     "type": "string",
                     "description": "Returns a common file name. For example: amongst_vivaciously_populate.wav.",
-                    "x-ms-summary": "Common File Extension"
+                    "x-ms-summary": "Common File Extension",
+                    "x-ms-visibility": "advanced"
                   },
                   "commonFileName": {
                     "type": "string",
                     "description": "Returns a common file name. For example: amongst_vivaciously_populate.wav.",
-                    "x-ms-summary": "Common File Name"
+                    "x-ms-summary": "Common File Name",
+                    "x-ms-visibility": "important"
                   },
                   "commonFileType": {
                     "type": "string",
                     "description": "Returns a common file type. For example: image.",
-                    "x-ms-summary": "Common File Type"
+                    "x-ms-summary": "Common File Type",
+                    "x-ms-visibility": "advanced"
                   },
                   "cron": {
                     "type": "string",
                     "description": "Returns a cron expression. For example: 15 * * * ?.",
-                    "x-ms-summary": "Cron"
+                    "x-ms-summary": "Cron",
+                    "x-ms-visibility": "advanced"
                   },
                   "directoryPath": {
                     "type": "string",
@@ -1851,37 +1855,44 @@
                   "fileExt": {
                     "type": "string",
                     "description": "Returns a file extension. For example: pot.",
-                    "x-ms-summary": "File Extension"
+                    "x-ms-summary": "File Extension",
+                    "x-ms-visibility": "important"
                   },
                   "fileName": {
                     "type": "string",
                     "description": "Returns a file name. For example: yummy_commercialise_despite.mid.",
-                    "x-ms-summary": "File Name"
+                    "x-ms-summary": "File Name",
+                    "x-ms-visibility": "advanced"
                   },
                   "filePath": {
                     "type": "string",
                     "description": "Returns a file path. For example: /private/tmp/interrelate_hmph.tar.",
-                    "x-ms-summary": "File Path"
+                    "x-ms-summary": "File Path",
+                    "x-ms-visibility": "advanced"
                   },
                   "fileType": {
                     "type": "string",
                     "description": "Returns a file type. For example: image.",
-                    "x-ms-summary": "File Type"
+                    "x-ms-summary": "File Type",
+                    "x-ms-visibility": "advanced"
                   },
                   "mimeType": {
                     "type": "string",
                     "description": "Returns a mime type. For example: image/gif.",
-                    "x-ms-summary": "Mime Type"
+                    "x-ms-summary": "Mime Type",
+                    "x-ms-visibility": "important"
                   },
                   "networkInterface": {
                     "type": "string",
                     "description": "Returns a network interface. For example: wlo6.",
-                    "x-ms-summary": "Network Interface"
+                    "x-ms-summary": "Network Interface",
+                    "x-ms-visibility": "advanced"
                   },
                   "semver": {
                     "type": "string",
                     "description": "Returns a semantic version number. For example: 6.2.5.",
-                    "x-ms-summary": "Semantic Version"
+                    "x-ms-summary": "Semantic Version",
+                    "x-ms-visibility": "advanced"
                   }
                 }
               }
@@ -1913,48 +1924,57 @@
                 "properties":{
                   "bicycle": {
                     "type":"string",
-                    "description":"Returns a random bicycle.",
-                    "x-ms-summary":"Bicycle"
+                    "description":"Returns the type of the bicycle. For example: Track/Fixed-Gear Bicycle.",
+                    "x-ms-summary":"Bicycle",
+                    "x-ms-visibility": "advanced"
                   },
                   "color":{
                     "type":"string",
-                    "description":"Returns a random color.",
-                    "x-ms-summary":"Color"
+                    "description":"Returns the color of the vehicle. For example: turquoise.",
+                    "x-ms-summary":"Color",
+                    "x-ms-visibility": "important"
                   },
                   "fuel":{
                     "type":"string",
-                    "description":"Returns a random fuel.",
-                    "x-ms-summary":"Fuel"
+                    "description":"Returns the type of fuel the vehicle uses. For example: Electric.",
+                    "x-ms-summary":"Fuel",
+                    "x-ms-visibility": "important"
                   },
                   "manufacturer":{
                     "type":"string",
-                    "description":"Returns a random manufacturer.",
-                    "x-ms-summary":"Manufacturer"
+                    "description":"Returns the manufacturer of the vehicle. For example: Nissan.",
+                    "x-ms-summary":"Manufacturer",
+                    "x-ms-visibility": "important"
                   },
                   "model":{
                     "type":"string",
-                    "description":"Returns a random model.",
-                    "x-ms-summary":"Model"
+                    "description":"Returns the model of the vehicle. For example: Charger.",
+                    "x-ms-summary":"Model",
+                    "x-ms-visibility": "important"
                   },
                   "type":{
                     "type":"string",
-                    "description":"Returns a random type.",
-                    "x-ms-summary":"Type"
+                    "description":"Returns the type of the vehicle. For example: Extended Cab Pickup.",
+                    "x-ms-summary":"Type",
+                    "x-ms-visibility": "advanced"
                   },
                   "vehicle":{
                     "type":"string",
-                    "description":"Returns a random vehicle.",
-                    "x-ms-summary":"Vehicle"
+                    "description":"Returns the name of the vehicle. For example: Toyota Grand Caravan.",
+                    "x-ms-summary":"Vehicle",
+                    "x-ms-visibility": "advanced"
                   },
                   "vin":{
                     "type":"string",
-                    "description":"Returns a random vin.",
-                    "x-ms-summary":"VIN"
+                    "description":"Returns the Vehicle Identification Number. For example: 5Z4BWRAU40BP99482.",
+                    "x-ms-summary":"VIN",
+                    "x-ms-visibility": "advanced"
                   },
                   "vrm":{
                     "type":"string",
-                    "description":"Returns a random vrm.",
-                    "x-ms-summary":"VRM"
+                    "description":"Returns the Vehicle Registration Mark. For example: ZJ14CUT.",
+                    "x-ms-summary":"VRM",
+                    "x-ms-visibility": "advanced"
                   }
                 }
               }
@@ -1962,7 +1982,7 @@
           }
         },
         "summary": "Get vehicle mockdata",
-        "description": "Get rich data about vehicles. Returns an object with different vehicle properties.",
+        "description": "Generate different kinds of vehicles and related properties. Returns an array of properties, by default ten. Some of the data may be localized.",
         "operationId": "getVehicles",
         "parameters": [
           {
@@ -1970,6 +1990,9 @@
           },
           {
             "$ref":"#/parameters/count"
+          },
+          {
+            "$ref":"#/parameters/seed"
           }
         ]
       }

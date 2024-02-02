@@ -1,5 +1,3 @@
-import { allFakers } from "@faker-js/faker";
-
 export class Vehicle {
     bicycle: string;
     color: string;
@@ -11,8 +9,8 @@ export class Vehicle {
     vin: string;
     vrm: string;
 
-    constructor(locale: string) {
-        const faker = allFakers[locale];
+    constructor(localizedFaker) {
+        const faker = localizedFaker;
         this.bicycle = faker.vehicle.bicycle();
         this.color = faker.vehicle.color();
         this.fuel = faker.vehicle.fuel();
