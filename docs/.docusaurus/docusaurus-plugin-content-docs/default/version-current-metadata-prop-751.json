@@ -1,0 +1,363 @@
+{
+  "pluginId": "default",
+  "version": "current",
+  "label": "Next",
+  "banner": null,
+  "badge": false,
+  "noIndex": false,
+  "className": "docs-version-current",
+  "isLast": true,
+  "docsSidebars": {
+    "tutorialSidebar": [
+      {
+        "type": "link",
+        "label": "What's Mockster?",
+        "href": "/docs/whats-mockster",
+        "docId": "whats-mockster",
+        "unlisted": false
+      },
+      {
+        "type": "link",
+        "label": "Getting started",
+        "href": "/docs/getting-started",
+        "docId": "getting-started",
+        "unlisted": false
+      },
+      {
+        "type": "link",
+        "label": "Localization",
+        "href": "/docs/localization",
+        "docId": "localization",
+        "unlisted": false
+      },
+      {
+        "type": "category",
+        "label": "API",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "✈️ Airlines",
+            "href": "/docs/api/airlines",
+            "docId": "api/airlines",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "🐷 Animals",
+            "href": "/docs/api/animals",
+            "docId": "api/animals",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "🌈 Colors",
+            "href": "/docs/api/colors",
+            "docId": "api/colors",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "🏢 Companies",
+            "href": "/docs/api/companies",
+            "docId": "api/companies",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "💾 Databases",
+            "href": "/docs/api/databases",
+            "docId": "api/databases",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "🗓️ Dates",
+            "href": "/docs/api/dates",
+            "docId": "api/dates",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "💶 Finances",
+            "href": "/docs/api/finances",
+            "docId": "api/finances",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "📁 Gits",
+            "href": "/docs/api/gits",
+            "docId": "api/gits",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "🥷🏼 Hackers",
+            "href": "/docs/api/hackers",
+            "docId": "api/hackers",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "🌆 Images",
+            "href": "/docs/api/images",
+            "docId": "api/images",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "🌐 Internet",
+            "href": "/docs/api/internet",
+            "docId": "api/internet",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "📍 Locations",
+            "href": "/docs/api/locations",
+            "docId": "api/locations",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "💬 Lorem",
+            "href": "/docs/api/lorem",
+            "docId": "api/lorem",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "🎶 Musics",
+            "href": "/docs/api/musics",
+            "docId": "api/musics",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "🔢 Numbers",
+            "href": "/docs/api/numbers",
+            "docId": "api/numbers",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "🧍🏻 Persons",
+            "href": "/docs/api/persons",
+            "docId": "api/persons",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "📱 Phones",
+            "href": "/docs/api/phones",
+            "docId": "api/phones",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "🧸 Products",
+            "href": "/docs/api/products",
+            "docId": "api/products",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "👩🏻‍🔬 Science",
+            "href": "/docs/api/sciences",
+            "docId": "api/sciences",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "🔠 Strings",
+            "href": "/docs/api/strings",
+            "docId": "api/strings",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "💻 Systems",
+            "href": "/docs/api/systems",
+            "docId": "api/systems",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "🏎️ Vehicles",
+            "href": "/docs/api/vehicles",
+            "docId": "api/vehicles",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "🆒 Words",
+            "href": "/docs/api/words",
+            "docId": "api/words",
+            "unlisted": false
+          }
+        ],
+        "href": "/docs/category/api"
+      }
+    ]
+  },
+  "docs": {
+    "api/airlines": {
+      "id": "api/airlines",
+      "title": "✈️ Airlines",
+      "description": "Generate aviation related data. You can use this endpoint for creating realistic mock data for flights or tickets. Returns an array of airline related properties, by default ten.",
+      "sidebar": "tutorialSidebar"
+    },
+    "api/animals": {
+      "id": "api/animals",
+      "title": "🐷 Animals",
+      "description": "Generate different kinds of animal species. Returns an array of animal species, by default ten. All values may be localized.",
+      "sidebar": "tutorialSidebar"
+    },
+    "api/colors": {
+      "id": "api/colors",
+      "title": "🌈 Colors",
+      "description": "Generate color related data. Includes color values in different formats as well as human readable value. Returns an array of colors, by default ten. Some values may be localized.",
+      "sidebar": "tutorialSidebar"
+    },
+    "api/companies": {
+      "id": "api/companies",
+      "title": "🏢 Companies",
+      "description": "Generate company related data, like names and company jargon. Returns an array of properties, by default ten. Some of the properties can be localized.",
+      "sidebar": "tutorialSidebar"
+    },
+    "api/databases": {
+      "id": "api/databases",
+      "title": "💾 Databases",
+      "description": "Generate database related technical data, like columns or engines. Returns an array of properties, by default ten.",
+      "sidebar": "tutorialSidebar"
+    },
+    "api/dates": {
+      "id": "api/dates",
+      "title": "🗓️ Dates",
+      "description": "Generate datetime data.",
+      "sidebar": "tutorialSidebar"
+    },
+    "api/finances": {
+      "id": "api/finances",
+      "title": "💶 Finances",
+      "description": "Generate finance related data.",
+      "sidebar": "tutorialSidebar"
+    },
+    "api/gits": {
+      "id": "api/gits",
+      "title": "📁 Gits",
+      "description": "Generate git related data.",
+      "sidebar": "tutorialSidebar"
+    },
+    "api/hackers": {
+      "id": "api/hackers",
+      "title": "🥷🏼 Hackers",
+      "description": "Generate hacker related data.",
+      "sidebar": "tutorialSidebar"
+    },
+    "api/images": {
+      "id": "api/images",
+      "title": "🌆 Images",
+      "description": "Generate word data.",
+      "sidebar": "tutorialSidebar"
+    },
+    "api/internet": {
+      "id": "api/internet",
+      "title": "🌐 Internet",
+      "description": "Get rich data about things in the internet like users or networking terms.",
+      "sidebar": "tutorialSidebar"
+    },
+    "api/locations": {
+      "id": "api/locations",
+      "title": "📍 Locations",
+      "description": "Generate hacker related data.",
+      "sidebar": "tutorialSidebar"
+    },
+    "api/lorem": {
+      "id": "api/lorem",
+      "title": "💬 Lorem",
+      "description": "Generate Lorem Ipsum.",
+      "sidebar": "tutorialSidebar"
+    },
+    "api/musics": {
+      "id": "api/musics",
+      "title": "🎶 Musics",
+      "description": "Generate Lorem Ipsum data.",
+      "sidebar": "tutorialSidebar"
+    },
+    "api/numbers": {
+      "id": "api/numbers",
+      "title": "🔢 Numbers",
+      "description": "Generate number data.",
+      "sidebar": "tutorialSidebar"
+    },
+    "api/persons": {
+      "id": "api/persons",
+      "title": "🧍🏻 Persons",
+      "description": "Generate data for a person.",
+      "sidebar": "tutorialSidebar"
+    },
+    "api/phones": {
+      "id": "api/phones",
+      "title": "📱 Phones",
+      "description": "Generate phone nuber and IMEI.",
+      "sidebar": "tutorialSidebar"
+    },
+    "api/products": {
+      "id": "api/products",
+      "title": "🧸 Products",
+      "description": "Generate products data.",
+      "sidebar": "tutorialSidebar"
+    },
+    "api/sciences": {
+      "id": "api/sciences",
+      "title": "👩🏻‍🔬 Science",
+      "description": "Generate science data.",
+      "sidebar": "tutorialSidebar"
+    },
+    "api/strings": {
+      "id": "api/strings",
+      "title": "🔠 Strings",
+      "description": "Generate random strings.",
+      "sidebar": "tutorialSidebar"
+    },
+    "api/systems": {
+      "id": "api/systems",
+      "title": "💻 Systems",
+      "description": "Generate system data.",
+      "sidebar": "tutorialSidebar"
+    },
+    "api/vehicles": {
+      "id": "api/vehicles",
+      "title": "🏎️ Vehicles",
+      "description": "Generate different kinds of vehicles.",
+      "sidebar": "tutorialSidebar"
+    },
+    "api/words": {
+      "id": "api/words",
+      "title": "🆒 Words",
+      "description": "Generate word data.",
+      "sidebar": "tutorialSidebar"
+    },
+    "getting-started": {
+      "id": "getting-started",
+      "title": "Getting Started",
+      "description": "You can get started by making your first HTTP-request to Mocksters endpoint or from Power Automate.",
+      "sidebar": "tutorialSidebar"
+    },
+    "localization": {
+      "id": "localization",
+      "title": "Support for different locales",
+      "description": "As FakerJS, so does Mockster support multiple locales for generated mock data. This means some of the responses can be tailored to spesific locales, for example in Finnish. Default locale is English.",
+      "sidebar": "tutorialSidebar"
+    },
+    "whats-mockster": {
+      "id": "whats-mockster",
+      "title": "What's Mockster?",
+      "description": "One time, I was training a Microsoft Official Course about Power Platform, I was asked how can one generate some testing data to Dataverse. Had no idea. I researched quite a while and couldn't find anything just right for citizen developers. There are so many mock data generators, JSON fakers, data seeders and so on. None I could find makes it easy for non-programmers to use. So Mockster was born.",
+      "sidebar": "tutorialSidebar"
+    }
+  }
+}

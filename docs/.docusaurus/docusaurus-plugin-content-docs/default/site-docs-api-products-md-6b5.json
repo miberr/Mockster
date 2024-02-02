@@ -1,0 +1,27 @@
+{
+  "id": "api/products",
+  "title": "🧸 Products",
+  "description": "Generate products data.",
+  "source": "@site/docs/api/products.md",
+  "sourceDirName": "api",
+  "slug": "/api/products",
+  "permalink": "/docs/api/products",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/api/products.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "🧸 Products",
+    "description": "Generate products data."
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "📱 Phones",
+    "permalink": "/docs/api/phones"
+  },
+  "next": {
+    "title": "👩🏻‍🔬 Science",
+    "permalink": "/docs/api/sciences"
+  }
+}

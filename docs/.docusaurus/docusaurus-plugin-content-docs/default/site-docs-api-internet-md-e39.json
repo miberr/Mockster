@@ -1,0 +1,27 @@
+{
+  "id": "api/internet",
+  "title": "🌐 Internet",
+  "description": "Get rich data about things in the internet like users or networking terms.",
+  "source": "@site/docs/api/internet.md",
+  "sourceDirName": "api",
+  "slug": "/api/internet",
+  "permalink": "/docs/api/internet",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/api/internet.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "🌐 Internet",
+    "description": "Get rich data about things in the internet like users or networking terms."
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "🌆 Images",
+    "permalink": "/docs/api/images"
+  },
+  "next": {
+    "title": "📍 Locations",
+    "permalink": "/docs/api/locations"
+  }
+}

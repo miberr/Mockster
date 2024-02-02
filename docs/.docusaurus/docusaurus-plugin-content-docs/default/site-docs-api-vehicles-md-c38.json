@@ -1,0 +1,27 @@
+{
+  "id": "api/vehicles",
+  "title": "🏎️ Vehicles",
+  "description": "Generate different kinds of vehicles.",
+  "source": "@site/docs/api/vehicles.md",
+  "sourceDirName": "api",
+  "slug": "/api/vehicles",
+  "permalink": "/docs/api/vehicles",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/api/vehicles.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "🏎️ Vehicles",
+    "description": "Generate different kinds of vehicles."
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "💻 Systems",
+    "permalink": "/docs/api/systems"
+  },
+  "next": {
+    "title": "🆒 Words",
+    "permalink": "/docs/api/words"
+  }
+}
