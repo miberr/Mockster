@@ -2009,48 +2009,57 @@
                 "properties":{
                   "adjective":{
                     "type":"string",
-                    "description":"Returns a random adjective.",
-                    "x-ms-summary":"Adjective"
+                    "description":"Returns an adjective. For example: remote.",
+                    "x-ms-summary":"Adjective",
+                    "x-ms-visibility": "important"
                   },
                   "adverb":{
                     "type":"string",
-                    "description":"Returns a random adverb.",
-                    "x-ms-summary":"Adverb"
+                    "description":"Returns an adverb. For example: loudly.",
+                    "x-ms-summary":"Adverb",
+                    "x-ms-visibility": "advanced"
                   },
                   "conjunction":{
                     "type":"string",
-                    "description":"Returns a random conjunction.",
-                    "x-ms-summary":"Conjunction"
+                    "description":"Returns a conjunction. For example: as.",
+                    "x-ms-summary":"Conjunction",
+                    "x-ms-visibility": "advanced"
                   },
                   "interjection":{
                     "type":"string",
-                    "description":"Returns a random interjection.",
-                    "x-ms-summary":"Interjection"
+                    "description":"Returns an interjection. For example: ha.",
+                    "x-ms-summary":"Interjection",
+                    "x-ms-visibility": "advanced"
                   },
                   "noun":{
                     "type":"string",
-                    "description":"Returns a random noun.",
-                    "x-ms-summary":"Noun"
+                    "description":"Returns a noun. For example: testing.",
+                    "x-ms-summary":"Noun",
+                    "x-ms-visibility": "important"
                   },
                   "preposition":{
                     "type":"string",
-                    "description":"Returns a random preposition.",
-                    "x-ms-summary":"Preposition"
+                    "description":"Returns a preposition. For example: between.",
+                    "x-ms-summary":"Preposition",
+                    "x-ms-visibility": "important"
                   },
                   "sample":{
                     "type":"string",
-                    "description":"Returns a random sample.",
-                    "x-ms-summary":"Sample"
+                    "description":"Returns a sample string. For example: deliberately.",
+                    "x-ms-summary":"Sample",
+                    "x-ms-visibility": "advanced"
                   },
                   "verb":{
                     "type":"string",
-                    "description":"Returns a random verb.",
-                    "x-ms-summary":"Verb"
+                    "description":"Returns a verb. For example: crease.",
+                    "x-ms-summary":"Verb",
+                    "x-ms-visibility": "important"
                   },
                   "words":{
                     "type":"string",
-                    "description":"Returns random words.",
-                    "x-ms-summary":"Words"
+                    "description":"Returns a string of words. For example: aha insectarium exhausted.",
+                    "x-ms-summary":"Words",
+                    "x-ms-visibility": "important"
                   }
                 }
               }
@@ -2066,13 +2075,14 @@
           },
           {
             "$ref":"#/parameters/count"
+          },
+          {
+            "$ref":"#/parameters/seed"
           }
         ]
       }
     }       
   },
-  
-  
   "definitions": {},
   "parameters": {
     "availableLocales": {
@@ -2447,20 +2457,6 @@
       "x-ms-visibility": "advanced",
       "description": "Seed value for reproducible results."
     }
-  },
-  "format": {
-    "name": "format",
-    "in": "query",
-    "required": false,
-    "type": "string",
-    "x-ms-summary": "Format",
-    "x-ms-visibility": "advanced",
-    "description": "Select format of the color values. Default is decimal.",
-    "enum": [
-      "binary",
-      "css",
-      "decimal"
-    ]
   },
   "responses": {},
   "securityDefinitions": {},

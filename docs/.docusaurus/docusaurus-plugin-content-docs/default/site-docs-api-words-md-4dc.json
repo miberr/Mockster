@@ -1,7 +1,7 @@
 {
   "id": "api/words",
   "title": "🆒 Words",
-  "description": "Generate word data.",
+  "description": "Generate random words.",
   "source": "@site/docs/api/words.md",
   "sourceDirName": "api",
   "slug": "/api/words",
@@ -13,7 +13,7 @@
   "version": "current",
   "frontMatter": {
     "sidebar_label": "🆒 Words",
-    "description": "Generate word data."
+    "description": "Generate random words."
   },
   "sidebar": "tutorialSidebar",
   "previous": {

@@ -338,7 +338,7 @@
     "api/words": {
       "id": "api/words",
       "title": "🆒 Words",
-      "description": "Generate word data.",
+      "description": "Generate random words.",
       "sidebar": "tutorialSidebar"
     },
     "getting-started": {

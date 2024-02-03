@@ -1,5 +1,3 @@
-import { allFakers } from "@faker-js/faker";
-
 export class Word {
     adjective: string;
     adverb: string;
@@ -11,8 +9,8 @@ export class Word {
     verb: string;
     words: string;
 
-    constructor(locale: string) {
-        const faker = allFakers[locale].word;
+    constructor(localizedFaker) {
+        const faker = localizedFaker.word;
 
         this.adjective = faker.adjective();
         this.adverb = faker.adverb();

@@ -1,22 +1,24 @@
 ---
 sidebar_label: "🆒 Words"
-description: "Generate word data."
+description: "Generate random words."
 ---
 
 # 🆒 Words
 
-Generate phones related data. Returns an array of properties, by default ten.
+Generate random words. Returns an array of properties, by default ten. Some values may be localized.
 
 ## Query options
 
 |Parameter|Description|Default|
 |---------|:---------|---------|
 |`Count`| Count of objects returned | 10 |
+|`Locale`| Localization for the response, see [Localization](./../localization) | en |
+|`Seed` | Seed value for reproducible results. | null |
 
 ## Request
 
 ```http title="HTTP"
-GET https://mockster.dev/api/v1/science
+GET https://mockster.dev/api/v1/words
 Accept: application/json  
 ```
 
@@ -39,6 +41,15 @@ Accept: application/json
     }
 ]
 ```
+### Adjective
+
+|JSON|Power Automate|
+|:---------|:---------|
+`adjective`|`Adjective`
+
+Returns an adjective. For example: `remote`.
+
+Return datatype: **string**
 
 ### Adverb
 
