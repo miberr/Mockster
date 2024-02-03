@@ -1,12 +1,31 @@
 {
   "swagger": "2.0",
   "info": {
-    "x-ms-summary": "Mockster",
-    "description": "Say bye bye to Lorem ipsum! Used to generate random data for all kinds of purposes. Generated data is mimicking something that might be in the real world.",
-    "version": "1.0"
+    "title": "Mockster",
+    "description": "Say bye bye to Lorem ipsum! Mockster is used to generate random data for all kinds of purposes. Generated data is mimicking something that might be in the real world as well.",
+    "version": "1.0",
+    "contact": {
+      "name": "Mockster",
+      "url": "https://mockster.dev",
+      "email": "support@mockster.dev"
+    }
   },
-  "host": "apim-mockster-dev.azure-api.net",
-  "basePath": "/v1",
+  "x-ms-connector-metadata": [
+    {
+      "propertyName": "Website",
+      "propertyValue": "https://mockster.dev"
+    },
+    {
+      "propertyName": "Privacy policy",
+      "propertyValue": "https://mockster.dev/privacy-policy"
+    },
+    {
+      "propertyName": "Categories",
+      "propertyValue": "Data;Content and Files"
+    }
+  ],
+  "host": "api.mockster.dev",
+  "basePath": "/api/v1",
   "schemes": [
     "https"
   ],
@@ -17,7 +36,7 @@
       "get": {
         "responses": {
           "200": {
-            "description": "default",
+            "description": "OK",
             "schema": {
               "type": "array",
               "items": {
@@ -55,7 +74,7 @@
                   },
                   "departureAirportName": {
                     "type": "string",
-                    "description": "Returns a random departure airport name. For example: Indira Gandhi International Airport.",
+                    "description": "Returns a random departure airport name. For example: Heathrow.",
                     "x-ms-summary": "Departure Airport Name",
                     "x-ms-visibility": "important"
                   },
@@ -79,19 +98,19 @@
                   },
                   "flightNumber": {
                     "type": "string",
-                    "description": "Returns a random flight number. For example: H20316. Flight numbers are 1 to 4 numbers long. Leading zeros are added as well as airline IATA code to generate commonly used format.",
+                    "description": "Returns a random flight number. For example: H20316.",
                     "x-ms-summary": "Flight Number",
                     "x-ms-visibility": "important"
                   },
                   "recordLocator": {
                     "type": "string",
-                    "description": "Returns a random record locator. For example: ACWNMD. Airlines commonly use this to identify reservations. Can be used as a booking reference, confirmation codes etc.",
+                    "description": "Returns a random record locator. For example: ACWNMD.",
                     "x-ms-summary": "Record Locator",
                     "x-ms-visibility": "advanced"
                   },
                   "seat": {
                     "type": "string",
-                    "description": "Returns a random seat. For example: 14A. Property uses generated Aircraft Type as input for consistensy.",
+                    "description": "Returns a random seat. For example: 14A.",
                     "x-ms-summary": "Seat",
                     "x-ms-visibility": "important"
                   }
@@ -101,8 +120,9 @@
           }
         },
         "summary": "Get airline mockdata",
-        "description": "Generate aviation related data. You can use this endpoint for creating realistic mock data for flights or tickets. Returns an array of airline related properties, by default ten.",
-        "operationId": "getAirlines",
+        "description": "Generate aviation related data.",
+        "operationId": "GetAirlines",
+        "x-ms-visibility": "advanced",
         "parameters": [
           {
             "$ref": "#/parameters/count"
@@ -117,7 +137,7 @@
       "get": {
         "responses": {
           "200": {
-            "description": "default",
+            "description": "OK",
             "schema": {
               "type": "array",
               "items": {
@@ -219,8 +239,9 @@
           }
         },
         "summary": "Get animals mockdata",
-        "description": "Generate different kinds of animal species. Returns an array of animal species, by default ten. All values may be localized.",
-        "operationId": "getAnimals",
+        "description": "Generate different kinds of animal species.",
+        "operationId": "GetAnimals",
+        "x-ms-visibility": "advanced",
         "parameters": [
           {
             "$ref": "#/parameters/availableLocales"
@@ -238,7 +259,7 @@
       "get": {
         "responses": {
           "200": {
-            "description": "default",
+            "description": "OK",
             "schema": {
               "type": "array",
               "items": {
@@ -264,13 +285,13 @@
                   },
                   "cssSupportedFunction": {
                     "type": "string",
-                    "description": "Returns a random CSS supported color function name. Options are: cmyk, color, hsl, hsla, hwb, lab, lch, rgb or rgba. For example: lch.",
+                    "description": "Returns a random CSS supported color function name. For example: lch.",
                     "x-ms-summary": "CSS Supported Function",
                     "x-ms-visibility": "advanced"
                   },
                   "cssSupportedSpace": {
                     "type": "string",
-                    "description": "Returns a random CSS supported color space name. Options are: a98-rgb, display-p3, prophoto-rgb, rec2020, sRGB. For example: rec2020.",
+                    "description": "Returns a random CSS supported color space name. For example: rec2020.",
                     "x-ms-summary": "CSS Supported Space",
                     "x-ms-visibility": "advanced"
                   },
@@ -334,8 +355,9 @@
           }
         },
         "summary": "Get color mockdata",
-        "description": "Generate color related data. Includes color values in different formats as well as human readable value. Returns an array of colors, by default ten. Some values may be localized.",
-        "operationId": "getColors",
+        "description": "Generate color related data.",
+        "operationId": "GetColors",
+        "x-ms-visibility": "advanced",
         "parameters": [
           {
             "$ref": "#/parameters/availableLocales"
@@ -353,7 +375,7 @@
       "get": {
         "responses": {
           "200": {
-            "description": "default",
+            "description": "OK",
             "schema": {
               "type": "array",
               "items": {
@@ -385,7 +407,7 @@
                   },
                   "catchPhrase": {
                     "type": "string",
-                    "description": "Returns a random catch phrase. For example: Business-focused responsive moratorium.",
+                    "description": "Returns a random catch phrase. For example: Business-focused moratorium.",
                     "x-ms-summary": "Catch Phrase",
                     "x-ms-visibility": "advanced"
                   },
@@ -421,7 +443,7 @@
                   },
                   "creditLimit": {
                     "type": "number",
-                    "description": "Returns a random credit limit. This is a integer from 1 to 100 million. Displayed in millions. For example: 9000000.",
+                    "description": "Returns a random credit limit. For example: 9000000.",
                     "x-ms-summary": "Credit Limit",
                     "x-ms-visibility": "advanced"
                   },
@@ -445,7 +467,7 @@
                   },
                   "numberOfEmployees": {
                     "type": "integer",
-                    "description": "Returns a random number of employees. This is a number between 1 and 10 000. For example: 9820.",
+                    "description": "Returns a random number of employees. For example: 9820.",
                     "x-ms-summary": "Number Of Employees",
                     "x-ms-visibility": "important"
                   },
@@ -457,7 +479,7 @@
                   },
                   "revenue": {
                     "type": "number",
-                    "description": "Returns a random revenue. This is a integer between 1 and 100 million. Displayed in millions. For example: 8000000.",
+                    "description": "Returns a random revenue. For example: 8000000.",
                     "x-ms-summary": "Revenue",
                     "x-ms-visibility": "advanced"
                   },
@@ -485,8 +507,9 @@
           }
         },
         "summary": "Get company mockdata",
-        "description": "Generate company related data, like names and company jargon. Returns an array of properties, by default ten. Some of the properties can be localized.",
-        "operationId": "getCompanies",
+        "description": "Generate company related data, like names and company jargon.",
+        "operationId": "GetCompanies",
+        "x-ms-visibility": "important",
         "parameters": [
           {
             "$ref": "#/parameters/availableLocales"
@@ -504,7 +527,7 @@
       "get": {
         "responses": {
           "200": {
-            "description": "default",
+            "description": "OK",
             "schema": {
               "type": "array",
               "items": {
@@ -546,8 +569,9 @@
           }
         },
         "summary": "Get database mockdata",
-        "description": "Generate database related technical data, like columns or engines. Returns an array of properties, by default ten.",
-        "operationId": "getDatabases",
+        "description": "Generate database related technical data, like columns or engines.",
+        "operationId": "GetDatabases",
+        "x-ms-visibility": "advanced",
         "parameters": [
           {
             "$ref": "#/parameters/count"
@@ -562,13 +586,13 @@
       "get": {
         "responses": {
           "200": {
-            "description": "default",
+            "description": "OK",
             "schema": {
               "type": "object",
               "properties": {
                 "anytime": {
                   "type": "string",
-                  "description": "Returns a random date and time. Can be in the future or in the past. For example: 2023-12-30T01:54:24.658Z.",
+                  "description": "Returns a random date and time. For example: 2023-12-30T01:54:24.658Z.",
                   "x-ms-summary": "Date",
                   "x-ms-visibility": "important"
                 },
@@ -598,13 +622,13 @@
                 },
                 "recent": {
                   "type": "string",
-                  "description": "Returns a random recent date and time in recent past, at most 5 days away. For example: 2024-01-02T03:09:38.383Z.",
+                  "description": "Returns a random recent date and time in recent past.",
                   "x-ms-summary": "Recent",
                   "x-ms-visibility": "important"
                 },
                 "soon": {
                   "type": "string",
-                  "description": "Returns a random date and time in the near future, at most 5 days away. For example: 2024-01-03T11:00:08.493Z.",
+                  "description": "Returns a random date and time in the near future, at most 5 days away.",
                   "x-ms-summary": "Soon",
                   "x-ms-visibility": "important"
                 },
@@ -624,8 +648,9 @@
           }
         },
         "summary": "Get date mockdata",
-        "description": "Generate datetime data. While seed usage is available, note that most of the properties depend on the time the enpoint is requested, rather than a spesific seed value. Returns an array of properties, by default ten. All dates are returned as ISO-8601 datetime strings. Month and weekday might be localized.",
-        "operationId": "getDates",
+        "description": "Generate datetime data.",
+        "operationId": "GetDates",
+        "x-ms-visibility": "advanced",
         "parameters": [
           {
             "$ref": "#/parameters/availableLocales"
@@ -643,7 +668,7 @@
       "get": {
         "responses": {
           "200": {
-            "description": "default",
+            "description": "OK",
             "schema": {
               "type": "array",
               "items": {
@@ -663,7 +688,7 @@
                   },
                   "amount": {
                     "type": "number",
-                    "description": "Returns a random amount for a transaction. Value has two decimal places. For example: 540.29.",
+                    "description": "Returns a random amount for a transaction. For example: 540.29.",
                     "x-ms-summary": "Amount",
                     "x-ms-visibility": "important"
                   },
@@ -675,7 +700,7 @@
                   },
                   "bitcoinAddress": {
                     "type": "string",
-                    "description": "Returns a random Bitcoin address. For example: 36ks9VMpLaFeWbR8hu1Uuz4zgbUid4XWvn.",
+                    "description": "Returns a random Bitcoin address.",
                     "x-ms-summary": "Bitcoin Address",
                     "x-ms-visibility": "advanced"
                   },
@@ -693,43 +718,43 @@
                   },
                   "creditCardNumber": {
                     "type": "string",
-                    "description": "Returns a random Credit Card Number from the issuer from the issuer property. For example: 4584186609458.",
+                    "description": "Returns a random Credit Card Number. For example: 4584186609458.",
                     "x-ms-summary": "Credit Card Number",
                     "x-ms-visibility": "advanced"
                   },
                   "currencyCode": {
                     "type": "string",
-                    "description": "Returns a random Currency Code. Currency Code, Currency Name and Currency Symmbol are from them same currency. For example: TRY.",
+                    "description": "Returns a random Currency Code. For example: TRY.",
                     "x-ms-summary": "Currency Code",
                     "x-ms-visibility": "important"
                   },
                   "currencyName": {
                     "type": "string",
-                    "description": "Returns a random Currency Name. Currency Code, Currency Name and Currency Symmbol are from them same currency. For example: Turkish Lira.",
+                    "description": "Returns a random Currency Name. For example: Turkish Lira.",
                     "x-ms-summary": "Currency Name",
                     "x-ms-visibility": "advanced"
                   },
                   "currencySymbol": {
                     "type": "string",
-                    "description": "Returns a random Currency Symbol. Currency Code, Currency Name and Currency Symmbol are from them same currency. For example: ₺.",
+                    "description": "Returns a random Currency Symbol. For example: ₺.",
                     "x-ms-summary": "Currency Symbol",
                     "x-ms-visibility": "advanced"
                   },
                   "ethereumAddress": {
                     "type": "string",
-                    "description": "Returns a random Ethereum Address. For example: 0x83a44fb302d6d7a68fcdac2b2efdfc3e0ea53c2a.",
+                    "description": "Returns a random Ethereum Address.",
                     "x-ms-summary": "Ethereum Address",
                     "x-ms-visibility": "advanced"
                   },
                   "iban": {
                     "type": "string",
-                    "description": "Returns a random IBAN (International Bank Account Number). For example: GL3144820110800764.",
+                    "description": "Returns a random IBAN (International Bank Account Number).",
                     "x-ms-summary": "IBAN",
                     "x-ms-visibility": "important"
                   },
                   "litecoinAddress": {
                     "type": "string",
-                    "description": "Returns a random Litecoin Address. For example: Ljo4LU3FMxfVyVF7sTVvDzfBhp.",
+                    "description": "Returns a random Litecoin Address.",
                     "x-ms-summary": "Litecoin Address",
                     "x-ms-visibility": "advanced"
                   },
@@ -741,7 +766,7 @@
                   },
                   "pin": {
                     "type": "string",
-                    "description": "Returns a random PIN (Personal Identification Number). For example: 1309.",
+                    "description": "Returns a random PIN. For example: 1309.",
                     "x-ms-summary": "PIN",
                     "x-ms-visibility": "advanced"
                   },
@@ -753,7 +778,7 @@
                   },
                   "transactionDescription": {
                     "type": "string",
-                    "description": "Returns a random Transaction Description. For example: deposit transaction at Reinger, Hamill and Gutmann using card ending with ***(...3677) for TJS 820.80 in account ***44178655.",
+                    "description": "Returns a random Transaction Description.",
                     "x-ms-summary": "Transaction Description",
                     "x-ms-visibility": "advanced"
                   },
@@ -769,8 +794,9 @@
           }
         },
         "summary": "Get finance mockdata",
-        "description": "Generate finance related data, like credit card information, account information and so on. Returns an array of properties, by default ten. Some properties might be localized.",
-        "operationId": "getFinances",
+        "description": "Generate finance related data, like credit card information, or account information.",
+        "operationId": "GetFinances",
+        "x-ms-visibility": "advanced",
         "parameters": [
           {
             "$ref": "#/parameters/availableLocales"
@@ -788,7 +814,7 @@
       "get": {
         "responses": {
           "200": {
-            "description": "default",
+            "description": "OK",
             "schema": {
               "type": "array",
               "items": {
@@ -802,13 +828,13 @@
                   },
                   "commitDate": {
                     "type": "string",
-                    "description": "Returns the date and time of the commit. Formatting is the same as in git log. For example: Tue Jan 2 18:12:21 2024 +0300.",
+                    "description": "Returns the date and time of the commit. Formatting is the same as in git log.",
                     "x-ms-summary": "Commit Date",
                     "x-ms-visibility": "advanced"
                   },
                   "commitEntry": {
                     "type": "string",
-                    "description": "Returns the full commit entry, including the commit SHA, author, date, and message.",
+                    "description": "Returns the full commit entry.",
                     "x-ms-summary": "Commit Entry",
                     "x-ms-visibility": "advanced"
                   },
@@ -820,7 +846,7 @@
                   },
                   "commitSha": {
                     "type": "string",
-                    "description": "Returns the SHA of the commit. For example: b5daadecfa08c22c5fea7ba3c0fdc5bdff4bab87.",
+                    "description": "Returns the SHA of the commit.",
                     "x-ms-summary": "Commit SHA",
                     "x-ms-visibility": "advanced"
                   }
@@ -830,8 +856,9 @@
           }
         },
         "summary": "Get git mockdata",
-        "description": "Generate git related data. Returns an array of properties, by default ten.",
-        "operationId": "getGits",
+        "description": "Generate git related data.",
+        "operationId": "GetGits",
+        "x-ms-visibility": "advanced",
         "parameters": [
           {
             "$ref": "#/parameters/availableLocales"
@@ -849,7 +876,7 @@
       "get": {
         "responses": {
           "200": {
-            "description": "default",
+            "description": "OK",
             "schema": {
               "type": "object",
               "properties": {
@@ -879,7 +906,7 @@
                 },
                 "phrase": {
                   "type": "string",
-                  "description": "Returns a hacker or technology related phrase. For example: I'll connect the open-source RSS interface, that should circuit the VGA transmitter!.",
+                  "description": "Returns a hacker or technology related phrase.",
                   "x-ms-summary": "Phrase",
                   "x-ms-visibility": "important"
                 },
@@ -894,8 +921,9 @@
           }
         },
         "summary": "Get hacker mockdata",
-        "description": "Generate hacker or IT related buzzwords. Returns an array of properties, by default ten. Some properties might be localized.",
-        "operationId": "getHackers",
+        "description": "Generate hacker or IT related buzzwords.",
+        "operationId": "GetHackers",
+        "x-ms-visibility": "advanced",
         "parameters": [
           {
             "$ref": "#/parameters/availableLocales"
@@ -913,7 +941,7 @@
       "get": {
         "responses": {
           "200": {
-            "description": "default",
+            "description": "OK",
             "schema": {
               "type": "array",
               "items": {
@@ -937,7 +965,9 @@
           }
         },
         "summary": "Get random images",
-        "operationId": "getRandomImages",
+        "description": "Generate random images.",
+        "operationId": "GetRandomImages",
+        "x-ms-visibility": "advanced",
         "parameters": [
           {
             "$ref": "#/parameters/count"
@@ -967,7 +997,7 @@
             "type": "string",
             "x-ms-summary": "Category",
             "x-ms-visibility": "important",
-            "description": "Define the category of the image. Default is blank and returns an image from a random category.",
+            "description": "Define the category of the image.",
             "enum": [
               "abstract",
               "animals",
@@ -991,7 +1021,7 @@
       "get": {
         "responses": {
           "200": {
-            "description": "default",
+            "description": "OK",
             "schema": {
               "type": "object",
               "properties": {
@@ -1003,7 +1033,7 @@
                 },
                 "displayName": {
                   "type": "string",
-                  "description": "Returns a display name for a given user. All user related properties use the same first and lastname as a base. For example: Ted.Runolfsson48.",
+                  "description": "Returns a display name for a given user.",
                   "x-ms-summary": "Display Name",
                   "x-ms-visibility": "important"
                 },
@@ -1039,7 +1069,7 @@
                 },
                 "exampleEmail": {
                   "type": "string",
-                  "description": "Returns an example email address. All user related properties use the same first and lastname as a base. For example: Ted_Runolfsson88@example.net.",
+                  "description": "Returns an example email address. For example: Ted_Runolfsson88@example.net.",
                   "x-ms-summary": "Example Email"
                 },
                 "httpMethod": {
@@ -1056,7 +1086,7 @@
                 },
                 "ip": {
                   "type": "string",
-                  "description": "Returns a random IPv4 or IPv6 address. For example: b8bb:21ac:da45:baf2:fe1c:7e62:7f2c:c6dc.",
+                  "description": "Returns a random IPv4 or IPv6 address.",
                   "x-ms-summary": "IP Address",
                   "x-ms-visibility": "advanced"
                 },
@@ -1068,7 +1098,7 @@
                 },
                 "ipv6": {
                   "type": "string",
-                  "description": "Returns an IPv6 address. For example: 1eff:77af:b6d3:ae02:8e0d:1d7d:feb2:7a01.",
+                  "description": "Returns an IPv6 address.",
                   "x-ms-summary": "IPv6 Address",
                   "x-ms-visibility": "advanced"
                 },
@@ -1080,7 +1110,7 @@
                 },
                 "password": {
                   "type": "string",
-                  "description": "Returns a random string to be used as a password. For example: eqv2uVVHsXkWcRs.",
+                  "description": "Returns a random string to be used as a password.",
                   "x-ms-summary": "Password",
                   "x-ms-visibility": "advanced"
                 },
@@ -1104,13 +1134,13 @@
                 },
                 "userAgent": {
                   "type": "string",
-                  "description": "Returns a random user agent. For example: Mozilla/5.0 (X11; Linux x86_64 AppleWebKit/532.2.0 (KHTML, like Gecko) Chrome/18.0.884.0 Safari/532.2.0.",
+                  "description": "Returns a random user agent. ",
                   "x-ms-summary": "User Agent",
                   "x-ms-visibility": "advanced"
                 },
                 "userName": {
                   "type": "string",
-                  "description": "Returns a user name. All user related properties use the same first and lastname as a base. For example: Ted42.",
+                  "description": "Returns a user name. For example: Ted42.",
                   "x-ms-summary": "Username",
                   "x-ms-visibility": "important"
                 }
@@ -1119,8 +1149,9 @@
           }
         },
         "summary": "Get internet mockdata",
-        "description": "Get rich data about things in the internet like users or networking terms. Returns an array of objects with different internet properties.",
-        "operationId": "getInternet",
+        "description": "Get rich data about things in the internet like users or networking terms.",
+        "operationId": "GetInternet",
+        "x-ms-visibility": "advanced",
         "parameters": [
           {
             "$ref": "#/parameters/count"
@@ -1135,7 +1166,7 @@
       "get": {
         "responses": {
           "200": {
-            "description": "default",
+            "description": "OK",
             "schema": {
               "type": "array",
               "items": {
@@ -1243,8 +1274,9 @@
           }
         },
         "summary": "Get location mockdata",
-        "description": "Generate location related data. Returns an array of properties, by default ten.",
-        "operationId": "getLocations",
+        "description": "Generate location related data.",
+        "operationId": "GetLocations",
+        "x-ms-visibility": "important",
         "parameters": [
           {
             "$ref": "#/parameters/availableLocales"
@@ -1262,50 +1294,51 @@
       "get": {
         "responses": {
           "200": {
-            "description": "default",
+            "description": "OK",
             "schema": {
               "type": "array",
               "items": {
+                "type":"object",
                 "properties": {
                   "lines": {
                     "type": "string",
-                    "description": "Returns a set of lines. For example: Vorax contigo convoco.\nBeatae comparo animadverto conicio iste.\nUterque succedo attonbitus sordeo est clementia.\nEnim conicio quam praesentium curto adflicto audax..",
+                    "description": "Returns a set of lines.",
                     "x-ms-summary": "Lines",
                     "x-ms-visibility": "advanced"
                   },
                   "paragraph": {
                     "type": "string",
-                    "description": "Returns a paragraph. For example: Est tubineus sponte conor nam ipsam optio. Amet volaticus demitto. Et angelus alii demonstro iure..",
+                    "description": "Returns a paragraph.",
                     "x-ms-summary": "Paragraph",
                     "x-ms-visibility": "important"
                   },
                   "paragraphs": {
                     "type": "string",
-                    "description": "Returns multiple paragraphs. For example: Theca adamo video supplanto. Voluptates conturbo creator bellicus aut vir adinventitias altus cupiditate canto. Curo decumbo adipiscor inflammatio sponte cornu aegrotatio sopor capio calcar.\nBibo audeo adipisci beatae ustilo ambulo. Derelinquo desolo spectaculum inventore derelinquo asper carcer caries. Clementia pauper apto armarium.\nDedecor vis tui averto vorax praesentium tantillus catena adhaero adsidue. Decimus vitium aequitas veritas auctor adinventitias desparatus. Defetiscor vicissitudo absum delinquo amplexus acsi sed uter depopulo utor..",
+                    "description": "Returns multiple paragraphs.",
                     "x-ms-summary": "Paragraphs",
                     "x-ms-visibility": "advanced"
                   },
                   "sentence": {
                     "type": "string",
-                    "description": "Returns a sentence. For example: Provident supra custodia aegrotatio..",
+                    "description": "Returns a sentence.",
                     "x-ms-summary": "Sentence",
                     "x-ms-visibility": "important"
                   },
                   "sentences": {
                     "type": "string",
-                    "description": "Returns multiple sentences. For example: Terminatio cubo voco trado amaritudo delectus. Beatus attollo arbitro desparatus una angelus vesper. Provident voluntarius capitulus universe compono. Conscendo animadverto apto aegrotatio. Ut virgo turbo sol viscus quam..",
+                    "description": "Returns multiple sentences.",
                     "x-ms-summary": "Sentences",
                     "x-ms-visibility": "advanced"
                   },
                   "slug": {
                     "type": "string",
-                    "description": "Returns a slug. For example: patria-numquam-arbor.",
+                    "description": "Returns a slug.",
                     "x-ms-summary": "Slug",
                     "x-ms-visibility": "advanced"
                   },
                   "text": {
                     "type": "string",
-                    "description": "Returns a text. For example: Sum laudantium totam utrum victus sunt paens demergo cervus vulgivagus.\nVentus clarus cotidie conduco sollicito degero carmen turbo combibo.\nTandem vulpes villa tribuo doloremque tergeo..",
+                    "description": "Returns a text.",
                     "x-ms-summary": "Text",
                     "x-ms-visibility": "advanced"
                   },
@@ -1327,8 +1360,9 @@
           }
         },
         "summary": "Get Lorem Ipsum mockdata",
-        "description": "Generate lorem ipsum. Returns an array of properties, by default ten.",
-        "operationId": "getMusics",
+        "description": "Generate lorem ipsum.",
+        "operationId": "GetLorems",
+        "x-ms-visibility": "advanced",
         "parameters": [
           {
             "$ref": "#/parameters/count"
@@ -1343,7 +1377,7 @@
       "get": {
         "responses": {
           "200": {
-            "description": "default",
+            "description": "OK",
             "schema": {
               "type": "array",
               "items": {
@@ -1367,8 +1401,9 @@
           }
         },
         "summary": "Get music mockdata",
-        "description": "Generate music related data. Returns an array of properties, by default ten. Some properties might be localized.",
-        "operationId": "getMusics",
+        "description": "Generate music related data.",
+        "operationId": "GetMusics",
+        "x-ms-visibility": "advanced",
         "parameters": [
           {
             "$ref": "#/parameters/availableLocales"
@@ -1386,7 +1421,7 @@
       "get": {
         "responses": {
           "200": {
-            "description": "default",
+            "description": "OK",
             "schema": {
               "type": "array",
               "items": {
@@ -1428,8 +1463,9 @@
           }
         },
         "summary": "Get numeric mockdata",
-        "description": "Generate different kinds of numbers. Returns an array of properties, by default ten.",
-        "operationId": "getNumbers",
+        "description": "Generate different kinds of numbers.",
+        "operationId": "GetNumbers",
+        "x-ms-visibility": "advanced",
         "parameters": [
           {
             "$ref": "#/parameters/count"
@@ -1444,7 +1480,7 @@
       "get": {
         "responses": {
           "200": {
-            "description": "default",
+            "description": "OK",
             "schema": {
               "type": "array",
               "items": {
@@ -1452,19 +1488,19 @@
                 "properties": {
                   "bio": {
                     "type": "string",
-                    "description": "Returns the bio of the person. For example: diabetes supporter, engineer.",
+                    "description": "Returns the bio of the person.",
                     "x-ms-summary": "Bio",
                     "x-ms-visibility": "advanced"
                   },
                   "birthday": {
                     "type": "string",
-                    "description": "Returns the birthday of the person. For example: 1998-10-17T08:20:10.984Z.",
+                    "description": "Returns the birthday of the person.",
                     "x-ms-summary": "Birthday",
                     "x-ms-visibility": "advanced"
                   },
                   "businessPhone": {
                     "type": "string",
-                    "description": "Returns the business phone number of the person. For example: 1-617-812-6179 x7382.",
+                    "description": "Returns the business phone number of the person.",
                     "x-ms-summary": "Business Phone",
                     "x-ms-visibility": "advanced"
                   },
@@ -1540,8 +1576,9 @@
           }
         },
         "summary": "Get people",
-        "description": "Generate data for a person. Returns an array of properties, by default ten. Some properties might be localized.",
-        "operationId": "getPeople",
+        "description": "Generate data for a person.",
+        "operationId": "GetPeople",
+        "x-ms-visibility": "important",
         "parameters": [
           {
             "$ref": "#/parameters/availableLocales"
@@ -1559,7 +1596,7 @@
       "get": {
         "responses": {
           "200": {
-            "description": "default",
+            "description": "OK",
             "schema": {
               "type": "array",
               "items": {
@@ -1583,8 +1620,9 @@
           }
         },
         "summary": "Get phone mockdata",
-        "description": "Generate phone nuber and IMEI. Returns an array of properties, by default ten. Phone number may be localized.",
-        "operationId": "getPhones",
+        "description": "Generate phone nuber and IMEI.",
+        "operationId": "GetPhones",
+        "x-ms-visibility": "advanced",
         "parameters": [
           {
             "$ref": "#/parameters/availableLocales"
@@ -1602,7 +1640,7 @@
       "get": {
         "responses": {
           "200": {
-            "description": "default",
+            "description": "OK",
             "schema": {
               "type": "array",
               "items": {
@@ -1640,7 +1678,7 @@
                   },
                   "productDescription": {
                     "type": "string",
-                    "description": "Returns a description of the product. For example: Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles.",
+                    "description": "Returns a description of the product.",
                     "x-ms-summary": "Product Description",
                     "x-ms-visibility": "advanced"
                   },
@@ -1662,8 +1700,9 @@
           }
         },
         "summary": "Get product mockdata",
-        "description": "Generate product related data. Returns an array of properties, by default ten. Some properties may be localized.",
-        "operationId": "getProducts",
+        "description": "Generate product related data.",
+        "operationId": "GetProducts",
+        "x-ms-visibility": "important",
         "parameters": [
           {
             "$ref": "#/parameters/availableLocales"
@@ -1723,8 +1762,9 @@
           }
         },
         "summary": "Get science mockdata",
-        "description": "Generate science related data. Returns an array of properties, by default ten.",
-        "operationId": "getSciences",
+        "description": "Generate science related data.",
+        "operationId": "GetSciences",
+        "x-ms-visibility": "advanced",
         "parameters": [
           {
             "$ref":"#/parameters/count"
@@ -1802,7 +1842,8 @@
         },
         "summary": "Get string mockdata",
         "description": "Generate random strings. Returns an array of properties, by default ten.",
-        "operationId": "getStrings",
+        "operationId": "GetStrings",
+        "x-ms-visibility": "advanced",
         "parameters": [
           {
             "$ref":"#/parameters/count"
@@ -1900,8 +1941,9 @@
           }
         },
         "summary": "Get system mockdata",
-        "description": "Generate system related data. Returns an array of properties, by default ten.",
-        "operationId": "getSystems",
+        "description": "Generate system related data.",
+        "operationId": "GetSystems",
+        "x-ms-visibility": "advanced",
         "parameters": [
           {
             "$ref":"#/parameters/count"
@@ -1982,8 +2024,9 @@
           }
         },
         "summary": "Get vehicle mockdata",
-        "description": "Generate different kinds of vehicles and related properties. Returns an array of properties, by default ten. Some of the data may be localized.",
-        "operationId": "getVehicles",
+        "description": "Generate different kinds of vehicles and related properties.",
+        "operationId": "GetVehicles",
+        "x-ms-visibility": "advanced",
         "parameters": [
           {
             "$ref":"#/parameters/availableLocales"
@@ -2067,8 +2110,9 @@
           }
         },
         "summary": "Get word mockdata",
-        "description": "Get rich data about words. Returns an object with different word properties.",
-        "operationId": "getWords",
+        "description": "Get rich data about words.",
+        "operationId": "GetWords",
+        "x-ms-visibility": "advanced",
         "parameters": [
           {
             "$ref":"#/parameters/availableLocales"
@@ -2092,6 +2136,7 @@
       "type": "string",
       "x-ms-summary": "Locale",
       "x-ms-visibility": "advanced",
+      "description": "The locale to use. Note that not all locales might be supported for all properties.",
       "enum": [
         "af_ZA",
         "ar",
