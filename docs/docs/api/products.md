@@ -5,13 +5,21 @@ description: "Generate products data."
 
 # 🧸 Products
 
-Generate phones related data. Returns an array of properties, by default ten.
+:::danger Power Automate connector not yet available
+Power Automate connector can be expected to be available Q1/2024
+:::
+
+## Description
+
+Generate product related data. Returns an array of properties, by default ten. Some properties may be localized.
 
 ## Query options
 
 |Parameter|Description|Default|
 |---------|:---------|---------|
 |`Count`| Count of objects returned | 10 |
+|`Locale`| Localization for the response, see [Localization](./../localization) | en |
+|`Seed` | Seed value for reproducible results. | null |
 
 ## Request
 

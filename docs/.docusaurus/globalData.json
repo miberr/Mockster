@@ -13,142 +13,142 @@
             {
               "id": "api/airlines",
               "path": "/docs/api/airlines",
-              "sidebar": "tutorialSidebar"
+              "sidebar": "docsSidebar"
             },
             {
               "id": "api/animals",
               "path": "/docs/api/animals",
-              "sidebar": "tutorialSidebar"
+              "sidebar": "docsSidebar"
             },
             {
               "id": "api/colors",
               "path": "/docs/api/colors",
-              "sidebar": "tutorialSidebar"
+              "sidebar": "docsSidebar"
             },
             {
               "id": "api/companies",
               "path": "/docs/api/companies",
-              "sidebar": "tutorialSidebar"
+              "sidebar": "docsSidebar"
             },
             {
               "id": "api/databases",
               "path": "/docs/api/databases",
-              "sidebar": "tutorialSidebar"
+              "sidebar": "docsSidebar"
             },
             {
               "id": "api/dates",
               "path": "/docs/api/dates",
-              "sidebar": "tutorialSidebar"
+              "sidebar": "docsSidebar"
             },
             {
               "id": "api/finances",
               "path": "/docs/api/finances",
-              "sidebar": "tutorialSidebar"
+              "sidebar": "docsSidebar"
             },
             {
               "id": "api/gits",
               "path": "/docs/api/gits",
-              "sidebar": "tutorialSidebar"
+              "sidebar": "docsSidebar"
             },
             {
               "id": "api/hackers",
               "path": "/docs/api/hackers",
-              "sidebar": "tutorialSidebar"
+              "sidebar": "docsSidebar"
             },
             {
               "id": "api/images",
               "path": "/docs/api/images",
-              "sidebar": "tutorialSidebar"
+              "sidebar": "docsSidebar"
             },
             {
               "id": "api/internet",
               "path": "/docs/api/internet",
-              "sidebar": "tutorialSidebar"
+              "sidebar": "docsSidebar"
             },
             {
               "id": "api/locations",
               "path": "/docs/api/locations",
-              "sidebar": "tutorialSidebar"
+              "sidebar": "docsSidebar"
             },
             {
               "id": "api/lorem",
               "path": "/docs/api/lorem",
-              "sidebar": "tutorialSidebar"
+              "sidebar": "docsSidebar"
             },
             {
               "id": "api/musics",
               "path": "/docs/api/musics",
-              "sidebar": "tutorialSidebar"
+              "sidebar": "docsSidebar"
             },
             {
               "id": "api/numbers",
               "path": "/docs/api/numbers",
-              "sidebar": "tutorialSidebar"
+              "sidebar": "docsSidebar"
             },
             {
               "id": "api/persons",
               "path": "/docs/api/persons",
-              "sidebar": "tutorialSidebar"
+              "sidebar": "docsSidebar"
             },
             {
               "id": "api/phones",
               "path": "/docs/api/phones",
-              "sidebar": "tutorialSidebar"
+              "sidebar": "docsSidebar"
             },
             {
               "id": "api/products",
               "path": "/docs/api/products",
-              "sidebar": "tutorialSidebar"
+              "sidebar": "docsSidebar"
             },
             {
               "id": "api/sciences",
               "path": "/docs/api/sciences",
-              "sidebar": "tutorialSidebar"
+              "sidebar": "docsSidebar"
             },
             {
               "id": "api/strings",
               "path": "/docs/api/strings",
-              "sidebar": "tutorialSidebar"
+              "sidebar": "docsSidebar"
             },
             {
               "id": "api/systems",
               "path": "/docs/api/systems",
-              "sidebar": "tutorialSidebar"
+              "sidebar": "docsSidebar"
             },
             {
               "id": "api/vehicles",
               "path": "/docs/api/vehicles",
-              "sidebar": "tutorialSidebar"
+              "sidebar": "docsSidebar"
             },
             {
               "id": "api/words",
               "path": "/docs/api/words",
-              "sidebar": "tutorialSidebar"
+              "sidebar": "docsSidebar"
             },
             {
               "id": "getting-started",
               "path": "/docs/getting-started",
-              "sidebar": "tutorialSidebar"
+              "sidebar": "docsSidebar"
             },
             {
               "id": "localization",
               "path": "/docs/localization",
-              "sidebar": "tutorialSidebar"
+              "sidebar": "docsSidebar"
             },
             {
               "id": "whats-mockster",
               "path": "/docs/whats-mockster",
-              "sidebar": "tutorialSidebar"
+              "sidebar": "docsSidebar"
             },
             {
               "id": "/category/api",
               "path": "/docs/category/api",
-              "sidebar": "tutorialSidebar"
+              "sidebar": "docsSidebar"
             }
           ],
           "draftIds": [],
           "sidebars": {
-            "tutorialSidebar": {
+            "docsSidebar": {
               "link": {
                 "path": "/docs/whats-mockster",
                 "label": "What's Mockster?"

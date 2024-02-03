@@ -1,21 +1,20 @@
 {
   "id": "api/words",
   "title": "🆒 Words",
-  "description": "Generate word data.",
+  "description": "Generate random words.",
   "source": "@site/docs/api/words.md",
   "sourceDirName": "api",
   "slug": "/api/words",
   "permalink": "/docs/api/words",
   "draft": false,
   "unlisted": false,
-  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/api/words.md",
   "tags": [],
   "version": "current",
   "frontMatter": {
     "sidebar_label": "🆒 Words",
-    "description": "Generate word data."
+    "description": "Generate random words."
   },
-  "sidebar": "tutorialSidebar",
+  "sidebar": "docsSidebar",
   "previous": {
     "title": "🏎️ Vehicles",
     "permalink": "/docs/api/vehicles"

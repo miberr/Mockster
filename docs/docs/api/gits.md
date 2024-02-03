@@ -5,13 +5,25 @@ description: "Generate git related data."
 
 # 📁 Gits
 
-Generate git related data. Returns an array of properties, by default ten.
+:::danger Power Automate connector not yet available
+Power Automate connector can be expected to be available Q1/2024
+:::
+
+## Description
+
+Generate git related data. Returns an array of properties, by default ten. 
 
 ## Query options
+
+:::caution Seeding
+Reproducible response is not available only for `commitEntry` and `commitDate`. These depends on current time, rather than a seed value.
+::::
 
 |Parameter|Description|Default|
 |---------|:---------|---------|
 |`Count`| Count of objects returned | 10 |
+|`Locale`| Localization for the response, see [Localization](./../localization) | en |
+|`Seed` | Seed value for reproducible results. | null |
 
 ## Request
 
@@ -52,7 +64,7 @@ Return datatype: **string**
 |:---------|:---------|
 `commitDate`|`Commit Date`
 
-Returns the date and time of the commit. For example: `Tue Jan 2 18:12:21 2024 +0300`.
+Returns the date and time of the commit. Formatting is the same as in git log. For example: `Tue Jan 2 18:12:21 2024 +0300`.
 
 Return datatype: **string**
 

@@ -5,6 +5,10 @@ description: "Generate finance related data."
 
 # 💶 Finances
 
+:::danger Power Automate connector not yet available
+Power Automate connector can be expected to be available Q1/2024
+:::
+
 ## Description
 
 Generate finance related data, like credit card information, account information and so on. Returns an array of properties, by default ten. Some properties might be localized.

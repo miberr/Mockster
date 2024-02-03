@@ -1,7 +1,7 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "Mockster",
+    "x-ms-summary": "Mockster",
     "description": "Say bye bye to Lorem ipsum! Used to generate random data for all kinds of purposes. Generated data is mimicking something that might be in the real world.",
     "version": "1.0"
   },
@@ -796,28 +796,33 @@
                 "properties": {
                   "branch": {
                     "type": "string",
-                    "description": "Returns a random branch name.",
-                    "title": "Branch"
+                    "description": "Returns the branch name of the commit. For example: interface-compress.",
+                    "x-ms-summary": "Branch",
+                    "x-ms-visibility": "advanced"
                   },
                   "commitDate": {
                     "type": "string",
-                    "description": "Returns a random commit date as ISO 8601 date string.",
-                    "title": "Commit Date"
+                    "description": "Returns the date and time of the commit. Formatting is the same as in git log. For example: Tue Jan 2 18:12:21 2024 +0300.",
+                    "x-ms-summary": "Commit Date",
+                    "x-ms-visibility": "advanced"
                   },
                   "commitEntry": {
                     "type": "string",
-                    "description": "Returns a random commit entry.",
-                    "title": "Commit Entry"
+                    "description": "Returns the full commit entry, including the commit SHA, author, date, and message.",
+                    "x-ms-summary": "Commit Entry",
+                    "x-ms-visibility": "advanced"
                   },
                   "commitMessage": {
                     "type": "string",
-                    "description": "Returns a random commit message.",
-                    "title": "Commit Message"
+                    "description": "Returns the commit message. For example: compress open-source array.",
+                    "x-ms-summary": "Commit Message",
+                    "x-ms-visibility": "important"
                   },
                   "commitSha": {
                     "type": "string",
-                    "description": "Returns a random commit SHA.",
-                    "title": "Commit SHA"
+                    "description": "Returns the SHA of the commit. For example: b5daadecfa08c22c5fea7ba3c0fdc5bdff4bab87.",
+                    "x-ms-summary": "Commit SHA",
+                    "x-ms-visibility": "advanced"
                   }
                 }
               }
@@ -825,7 +830,7 @@
           }
         },
         "summary": "Get git mockdata",
-        "description": "Get rich data about git. Returns an array, by default ten.",
+        "description": "Generate git related data. Returns an array of properties, by default ten.",
         "operationId": "getGits",
         "parameters": [
           {
@@ -833,6 +838,9 @@
           },
           {
             "$ref": "#/parameters/count"
+          },
+          {
+            "$ref": "#/parameters/seed"
           }
         ]
       }
@@ -847,40 +855,46 @@
               "properties": {
                 "abbreviation": {
                   "type": "string",
-                  "description": "Returns a random abbreviation.",
-                  "title": "Abbreviation"
+                  "description": "Returns an abbreviation from technologies. For example: XSS.",
+                  "x-ms-summary": "Abbreviation",
+                  "x-ms-visibility": "advanced"
                 },
                 "adjective": {
                   "type": "string",
-                  "description": "Returns a random adjective.",
-                  "title": "Adjective"
+                  "description": "Returns a hacker or technology related adjective. For example: 1080p.",
+                  "x-ms-summary": "Adjective",
+                  "x-ms-visibility": "advanced"
                 },
                 "ingverb": {
                   "type": "string",
-                  "description": "Returns a random verb ending with -ing.",
-                  "title": "Verb ending with -ing"
+                  "description": "Returns a verb ending in -ing. For example: quantifying.",
+                  "x-ms-summary": "Verb ending with -ing",
+                  "x-ms-visibility": "advanced"
                 },
                 "noun": {
                   "type": "string",
-                  "description": "Returns a random noun.",
-                  "title": "Noun"
+                  "description": "Returns a hacker or technology related noun. For example: card.",
+                  "x-ms-summary": "Noun",
+                  "x-ms-visibility": "advanced"
                 },
                 "phrase": {
                   "type": "string",
-                  "description": "Returns a random phrase.",
-                  "title": "Phrase"
+                  "description": "Returns a hacker or technology related phrase. For example: I'll connect the open-source RSS interface, that should circuit the VGA transmitter!.",
+                  "x-ms-summary": "Phrase",
+                  "x-ms-visibility": "important"
                 },
                 "verb": {
                   "type": "string",
-                  "description": "Returns a random verb.",
-                  "title": "Verb"
+                  "description": "Returns a hacker or technology related verb. For example: override.",
+                  "x-ms-summary": "Verb",
+                  "x-ms-visibility": "advanced"
                 }
               }
             }
           }
         },
         "summary": "Get hacker mockdata",
-        "description": "Get rich data about hackers. Returns an object with different hacker properties.",
+        "description": "Generate hacker or IT related buzzwords. Returns an array of properties, by default ten. Some properties might be localized.",
         "operationId": "getHackers",
         "parameters": [
           {
@@ -888,6 +902,9 @@
           },
           {
             "$ref": "#/parameters/count"
+          },
+          {
+            "$ref": "#/parameters/seed"
           }
         ]
       }
@@ -905,12 +922,14 @@
                   "name": {
                     "type": "string",
                     "description": "Returns an image name.",
-                    "title": "Image Name"
+                    "x-ms-summary": "Image Name",
+                    "x-ms-visibility": "important"
                   },
                   "url": {
                     "type": "string",
                     "description": "Returns an image url.",
-                    "title": "Image Url"
+                    "x-ms-summary": "Image Url",
+                    "x-ms-visibility": "important"
                   }
                 }
               }
@@ -929,6 +948,7 @@
             "required": false,
             "type": "integer",
             "x-ms-summary": "Width",
+            "x-ms-visibility": "advanced",
             "description": "Define the width of the image. Default is 640."
           },
           {
@@ -937,6 +957,7 @@
             "required": false,
             "type": "integer",
             "x-ms-summary": "Height",
+            "x-ms-visibility": "advanced",
             "description": "Define the height of the image. Default is 480."
           },
           {
@@ -945,6 +966,7 @@
             "required": false,
             "type": "string",
             "x-ms-summary": "Category",
+            "x-ms-visibility": "important",
             "description": "Define the category of the image. Default is blank and returns an image from a random category.",
             "enum": [
               "abstract",
@@ -965,60 +987,6 @@
         ]
       }
     },
-    "/image-placeholder": {
-      "get": {
-        "responses": {
-          "200": {
-            "description": "default",
-            "schema": {
-              "type": "string",
-              "description": "Returns a placeholder image as dataUri string.",
-              "title": "Placeholder Image"
-            }
-          }
-        },
-        "summary": "Get placeholder image",
-        "operationId": "getImagePlaceholder",
-        "parameters": [
-          {
-            "name": "width",
-            "in": "query",
-            "required": false,
-            "type": "integer",
-            "x-ms-summary": "Width",
-            "description": "Define the width of the image. Default is 640."
-          },
-          {
-            "name": "height",
-            "in": "query",
-            "required": false,
-            "type": "integer",
-            "x-ms-summary": "Height",
-            "description": "Define the height of the image. Default is 480."
-          },
-          {
-            "name": "color",
-            "in": "query",
-            "required": false,
-            "type": "string",
-            "x-ms-summary": "Text",
-            "description": "Define the fill color of the placeholder image. Default is gray."
-          },
-          {
-            "name": "type",
-            "in": "query",
-            "required": false,
-            "type": "string",
-            "x-ms-summary": "Type",
-            "description": "Select the type of the placeholder image. Default is svg-uri.",
-            "enum": [
-              "svg-base64",
-              "svg-uri"
-            ]
-          }
-        ]
-      }
-    },
     "/internets": {
       "get": {
         "responses": {
@@ -1027,110 +995,124 @@
             "schema": {
               "type": "object",
               "properties": {
-                "avatar": {
-                  "type": "string",
-                  "description": "Returns a random avatar url.",
-                  "title": "Avatar"
-                },
                 "color": {
                   "type": "string",
-                  "description": "Returns a random hexadecimal color.",
-                  "title": "Color"
+                  "description": "Returns a random color code in hex format. For example: #511134.",
+                  "x-ms-summary": "Color",
+                  "x-ms-visibility": "advanced"
                 },
                 "displayName": {
                   "type": "string",
-                  "description": "Returns a random display name.",
-                  "title": "Display Name"
+                  "description": "Returns a display name for a given user. All user related properties use the same first and lastname as a base. For example: Ted.Runolfsson48.",
+                  "x-ms-summary": "Display Name",
+                  "x-ms-visibility": "important"
                 },
                 "domainName": {
                   "type": "string",
-                  "description": "Returns a random domain name.",
-                  "title": "Domain Name"
+                  "description": "Returns a random domain name. For example: clear-operating.info.",
+                  "x-ms-summary": "Domain Name",
+                  "x-ms-visibility": "important"
                 },
                 "domainSuffix": {
                   "type": "string",
-                  "description": "Returns a random domain suffix.",
-                  "title": "Domain Suffix"
+                  "description": "Returns a domain suffix. For example: net.",
+                  "x-ms-summary": "Domain Suffix",
+                  "x-ms-visibility": "advanced"
                 },
                 "domainWord": {
                   "type": "string",
-                  "description": "Returns a random domain word.",
-                  "title": "Domain Word"
+                  "description": "Returns a random word to be used in a domain. For example: sparkling-bather.",
+                  "x-ms-summary": "Domain Word",
+                  "x-ms-visibility": "advanced"
                 },
                 "email": {
                   "type": "string",
-                  "description": "Returns a random email address.",
-                  "title": "Email"
+                  "description": "Returns an email address. For example: Ted_Runolfsson10@yahoo.com.",
+                  "x-ms-summary": "Email",
+                  "x-ms-visibility": "advanced"
                 },
                 "emoji": {
                   "type": "string",
-                  "description": "Returns a random emoji.",
-                  "title": "Emoji"
+                  "description": "Returns a random emoji. For example: 😺.",
+                  "x-ms-summary": "Emoji",
+                  "x-ms-visibility": "advanced"
                 },
                 "exampleEmail": {
                   "type": "string",
-                  "description": "Returns a random example email address.",
-                  "title": "Example Email"
+                  "description": "Returns an example email address. All user related properties use the same first and lastname as a base. For example: Ted_Runolfsson88@example.net.",
+                  "x-ms-summary": "Example Email"
                 },
                 "httpMethod": {
                   "type": "string",
-                  "description": "Returns a random HTTP method.",
-                  "title": "HTTP Method"
+                  "description": "Returns a HTTP method. For example: PUT.",
+                  "x-ms-summary": "HTTP Method",
+                  "x-ms-visibility": "advanced"
                 },
-                "httoStatusCode": {
+                "httpStatusCode": {
                   "type": "integer",
-                  "description": "Returns a random HTTP status code.",
-                  "title": "HTTP Status Code"
+                  "description": "Returns a HTTP status code. For example: 103.",
+                  "x-ms-summary": "HTTP Status Code",
+                  "x-ms-visibility": "advanced"
                 },
                 "ip": {
                   "type": "string",
-                  "description": "Returns a random IP address.",
-                  "title": "IP Address"
+                  "description": "Returns a random IPv4 or IPv6 address. For example: b8bb:21ac:da45:baf2:fe1c:7e62:7f2c:c6dc.",
+                  "x-ms-summary": "IP Address",
+                  "x-ms-visibility": "advanced"
                 },
                 "ipv4": {
                   "type": "string",
-                  "description": "Returns a random IPv4 address.",
-                  "title": "IPv4 Address"
+                  "description": "Returns an IPv4 address. For example: 146.120.42.165.",
+                  "x-ms-summary": "IPv4 Address",
+                  "x-ms-visibility": "advanced"
                 },
                 "ipv6": {
                   "type": "string",
-                  "description": "Returns a random IPv6 address.",
-                  "title": "IPv6 Address"
+                  "description": "Returns an IPv6 address. For example: 1eff:77af:b6d3:ae02:8e0d:1d7d:feb2:7a01.",
+                  "x-ms-summary": "IPv6 Address",
+                  "x-ms-visibility": "advanced"
                 },
                 "mac": {
                   "type": "string",
-                  "description": "Returns a random MAC address.",
-                  "title": "MAC Address"
+                  "description": "Returns a MAC address. For example: c8:14:d0:db:1e:d4.",
+                  "x-ms-summary": "MAC Address",
+                  "x-ms-visibility": "advanced"
                 },
                 "password": {
                   "type": "string",
-                  "description": "Returns a random password.",
-                  "title": "Password"
+                  "description": "Returns a random string to be used as a password. For example: eqv2uVVHsXkWcRs.",
+                  "x-ms-summary": "Password",
+                  "x-ms-visibility": "advanced"
                 },
                 "port": {
                   "type": "integer",
-                  "description": "Returns a random port number.",
-                  "title": "Port Number"
+                  "description": "Returns a random port number. For example: 5071.",
+                  "x-ms-summary": "Port Number",
+                  "x-ms-visibility": "advanced"
                 },
                 "protocol": {
                   "type": "string",
-                  "description": "Returns a random protocol.",
-                  "title": "Protocol"
+                  "description": "Returns a protocol. For example: https.",
+                  "x-ms-summary": "Protocol",
+                  "x-ms-visibility": "advanced"
                 },
                 "url": {
                   "type": "string",
-                  "description": "Returns a random URL.",
-                  "title": "URL"
+                  "description": "Returns a random URL. For example: https://immaculate-debtor.biz.",
+                  "x-ms-summary": "URL",
+                  "x-ms-visibility": "advanced"
                 },
                 "userAgent": {
                   "type": "string",
-                  "description": "Returns a random user agent.",
-                  "title": "User Agent"
+                  "description": "Returns a random user agent. For example: Mozilla/5.0 (X11; Linux x86_64 AppleWebKit/532.2.0 (KHTML, like Gecko) Chrome/18.0.884.0 Safari/532.2.0.",
+                  "x-ms-summary": "User Agent",
+                  "x-ms-visibility": "advanced"
                 },
                 "userName": {
                   "type": "string",
-                  "description": "Returns a random username.",
-                  "title": "Username"
+                  "description": "Returns a user name. All user related properties use the same first and lastname as a base. For example: Ted42.",
+                  "x-ms-summary": "Username",
+                  "x-ms-visibility": "important"
                 }
               }
             }
@@ -1141,10 +1123,10 @@
         "operationId": "getInternet",
         "parameters": [
           {
-            "$ref": "#/parameters/availableLocales"
+            "$ref": "#/parameters/count"
           },
           {
-            "$ref": "#/parameters/count"
+            "$ref": "#/parameters/seed"
           }
         ]
       }
@@ -1161,83 +1143,99 @@
                 "properties": {
                   "buildingNumber": {
                     "type": "string",
-                    "description": "Returns a random building number.",
-                    "title": "Building Number"
+                    "description": "Returns a building number. For example: 79502.",
+                    "x-ms-summary": "Building Number",
+                    "x-ms-visibility": "advanced"
                   },
                   "cardinalDirection": {
                     "type": "string",
-                    "description": "Returns a random cardinal direction.",
-                    "title": "Cardinal Direction"
+                    "description": "Returns a cardinal direction. For example: South.",
+                    "x-ms-summary": "Cardinal Direction",
+                    "x-ms-visibility": "advanced"
                   },
                   "city": {
                     "type": "string",
-                    "description": "Returns a random city name.",
-                    "title": "City"
+                    "description": "Returns a city name. For example: Devantestead.",
+                    "x-ms-summary": "City",
+                    "x-ms-visibility": "important"
                   },
                   "country": {
                     "type": "string",
-                    "description": "Returns a random country name.",
-                    "title": "Country"
+                    "description": "Returns a country name. For example: Faroe Islands.",
+                    "x-ms-summary": "Country",
+                    "x-ms-visibility": "important"
                   },
                   "countryCode": {
                     "type": "string",
-                    "description": "Returns a random country code.",
-                    "title": "Country Code"
+                    "description": "Returns a country code. For example: PE.",
+                    "x-ms-summary": "Country Code",
+                    "x-ms-visibility": "advanced"
                   },
                   "county": {
                     "type": "string",
-                    "description": "Returns a random county name.",
-                    "title": "County"
+                    "description": "Returns a county name. For example: Avon.",
+                    "x-ms-summary": "County",
+                    "x-ms-visibility": "advanced"
                   },
                   "direction": {
                     "type": "string",
-                    "description": "Returns a random direction.",
-                    "title": "Direction"
+                    "description": "Returns a direction. For example: Southeast.",
+                    "x-ms-summary": "Direction",
+                    "x-ms-visibility": "advanced"
                   },
                   "latitude": {
                     "type": "number",
-                    "description": "Returns a random latitude.",
-                    "title": "Latitude"
+                    "description": "Returns a latitude coordinate. For example: -21.109.",
+                    "x-ms-summary": "Latitude",
+                    "x-ms-visibility": "advanced"
                   },
                   "longitude": {
                     "type": "number",
-                    "description": "Returns a random longitude.",
-                    "title": "Longitude"
+                    "description": "Returns a longitude coordinate. For example: -60.2472.",
+                    "x-ms-summary": "Longitude",
+                    "x-ms-visibility": "advanced"
                   },
                   "ordinalDirection": {
                     "type": "string",
-                    "description": "Returns a random ordinal direction.",
-                    "title": "Ordinal Direction"
+                    "description": "Returns an ordinal direction. For example: Northwest.",
+                    "x-ms-summary": "Ordinal Direction",
+                    "x-ms-visibility": "advanced"
                   },
                   "secondaryAddress": {
                     "type": "string",
-                    "description": "Returns a random secondary address.",
-                    "title": "Secondary Address"
+                    "description": "Returns a secondary address. For example: Suite 719.",
+                    "x-ms-summary": "Secondary Address",
+                    "x-ms-visibility": "advanced"
                   },
                   "state": {
                     "type": "string",
-                    "description": "Returns a random state name.",
-                    "title": "State"
+                    "description": "Returns a state name. For example: Kansas.",
+                    "x-ms-summary": "State",
+                    "x-ms-visibility": "advanced"
                   },
                   "street": {
                     "type": "string",
-                    "description": "Returns a random street name.",
-                    "title": "Street"
+                    "description": "Returns a street name. For example: Willow Street.",
+                    "x-ms-summary": "Street",
+                    "x-ms-visibility": "important"
                   },
                   "streetAddress": {
                     "type": "string",
-                    "description": "Returns a random street address.",
-                    "title": "Street Address"
+                    "description": "Returns a street address. For example: 7619 Damaris Junctions.",
+                    "x-ms-summary": "Street Address",
+                    "x-ms-visibility": "important"
                   },
                   "timeZone": {
                     "type": "string",
-                    "description": "Returns a random time zone.",
-                    "title": "Time Zone"
+                    "description": "Returns a time zone. For example: Pacific/Funafuti.",
+                    "x-ms-summary": "Time Zone",
+                    "x-ms-visibility": "advanced"
                   },
                   "zipCode": {
                     "type": "string",
-                    "description": "Returns a random zip code.",
-                    "title": "Zip Code"
+                    "description": "Returns a zip code. For example: 38467.",
+                    "x-ms-summary": "Zip Code",
+                    "x-ms-visibility": "important"
                   }
                 }
               }
@@ -1245,7 +1243,7 @@
           }
         },
         "summary": "Get location mockdata",
-        "description": "Get rich data about locations. Returns an array, by default ten.",
+        "description": "Generate location related data. Returns an array of properties, by default ten.",
         "operationId": "getLocations",
         "parameters": [
           {
@@ -1253,6 +1251,9 @@
           },
           {
             "$ref": "#/parameters/count"
+          },
+          {
+            "$ref": "#/parameters/seed"
           }
         ]
       }
@@ -1268,48 +1269,57 @@
                 "properties": {
                   "lines": {
                     "type": "string",
-                    "description": "Returns random lines.",
-                    "title": "Lines"
+                    "description": "Returns a set of lines. For example: Vorax contigo convoco.\nBeatae comparo animadverto conicio iste.\nUterque succedo attonbitus sordeo est clementia.\nEnim conicio quam praesentium curto adflicto audax..",
+                    "x-ms-summary": "Lines",
+                    "x-ms-visibility": "advanced"
                   },
                   "paragraph": {
                     "type": "string",
-                    "description": "Returns a random paragraph.",
-                    "title": "Paragraph"
+                    "description": "Returns a paragraph. For example: Est tubineus sponte conor nam ipsam optio. Amet volaticus demitto. Et angelus alii demonstro iure..",
+                    "x-ms-summary": "Paragraph",
+                    "x-ms-visibility": "important"
                   },
                   "paragraphs": {
                     "type": "string",
-                    "description": "Returns random paragraphs.",
-                    "title": "Paragraphs"
+                    "description": "Returns multiple paragraphs. For example: Theca adamo video supplanto. Voluptates conturbo creator bellicus aut vir adinventitias altus cupiditate canto. Curo decumbo adipiscor inflammatio sponte cornu aegrotatio sopor capio calcar.\nBibo audeo adipisci beatae ustilo ambulo. Derelinquo desolo spectaculum inventore derelinquo asper carcer caries. Clementia pauper apto armarium.\nDedecor vis tui averto vorax praesentium tantillus catena adhaero adsidue. Decimus vitium aequitas veritas auctor adinventitias desparatus. Defetiscor vicissitudo absum delinquo amplexus acsi sed uter depopulo utor..",
+                    "x-ms-summary": "Paragraphs",
+                    "x-ms-visibility": "advanced"
                   },
                   "sentence": {
                     "type": "string",
-                    "description": "Returns a random sentence.",
-                    "title": "Sentence"
+                    "description": "Returns a sentence. For example: Provident supra custodia aegrotatio..",
+                    "x-ms-summary": "Sentence",
+                    "x-ms-visibility": "important"
                   },
                   "sentences": {
                     "type": "string",
-                    "description": "Returns random sentences.",
-                    "title": "Sentences"
+                    "description": "Returns multiple sentences. For example: Terminatio cubo voco trado amaritudo delectus. Beatus attollo arbitro desparatus una angelus vesper. Provident voluntarius capitulus universe compono. Conscendo animadverto apto aegrotatio. Ut virgo turbo sol viscus quam..",
+                    "x-ms-summary": "Sentences",
+                    "x-ms-visibility": "advanced"
                   },
                   "slug": {
                     "type": "string",
-                    "description": "Returns a random slug.",
-                    "title": "Slug"
+                    "description": "Returns a slug. For example: patria-numquam-arbor.",
+                    "x-ms-summary": "Slug",
+                    "x-ms-visibility": "advanced"
                   },
                   "text": {
                     "type": "string",
-                    "description": "Returns a random text.",
-                    "title": "Text"
+                    "description": "Returns a text. For example: Sum laudantium totam utrum victus sunt paens demergo cervus vulgivagus.\nVentus clarus cotidie conduco sollicito degero carmen turbo combibo.\nTandem vulpes villa tribuo doloremque tergeo..",
+                    "x-ms-summary": "Text",
+                    "x-ms-visibility": "advanced"
                   },
                   "word": {
                     "type": "string",
-                    "description": "Returns a random word.",
-                    "title": "Word"
+                    "description": "Returns a word. For example: circumvenio.",
+                    "x-ms-summary": "Word",
+                    "x-ms-visibility": "important"
                   },
                   "words": {
                     "type": "string",
-                    "description": "Returns random words.",
-                    "title": "Words"
+                    "description": "Returns multiple words. For example: toties ter colligo.",
+                    "x-ms-summary": "Words",
+                    "x-ms-visibility": "advanced"
                   }
                 }
               }
@@ -1317,14 +1327,14 @@
           }
         },
         "summary": "Get Lorem Ipsum mockdata",
-        "description": "Get rich about lorem ipsum. Returns an object with different lorem ipsum properties.",
+        "description": "Generate lorem ipsum. Returns an array of properties, by default ten.",
         "operationId": "getMusics",
         "parameters": [
           {
-            "$ref": "#/parameters/availableLocales"
+            "$ref": "#/parameters/count"
           },
           {
-            "$ref": "#/parameters/count"
+            "$ref": "#/parameters/seed"
           }
         ]
       }
@@ -1342,12 +1352,14 @@
                   "genre": {
                     "type": "string",
                     "description": "Returns a random genre.",
-                    "title": "Genre"
+                    "x-ms-summary": "Genre",
+                    "x-ms-visibility": "important"
                   },
                   "songName": {
                     "type": "string",
                     "description": "Returns a random song name.",
-                    "title": "Song name"
+                    "x-ms-summary": "Song name",
+                    "x-ms-visibility": "important"
                   }
                 }
               }
@@ -1355,7 +1367,7 @@
           }
         },
         "summary": "Get music mockdata",
-        "description": "Get rich data about music. Returns an object with different music properties.",
+        "description": "Generate music related data. Returns an array of properties, by default ten. Some properties might be localized.",
         "operationId": "getMusics",
         "parameters": [
           {
@@ -1363,6 +1375,9 @@
           },
           {
             "$ref": "#/parameters/count"
+          },
+          {
+            "$ref": "#/parameters/seed"
           }
         ]
       }
@@ -1377,35 +1392,35 @@
               "items": {
                 "type":"object",
                 "properties":{
-                  "bigint": {
-                    "type": "number",
-                    "description": "Returns a random genre.",
-                    "title": "Big Int"
-                  },
                   "binary": {
                     "type": "string",
-                    "description": "Returns a random song name.",
-                    "title": "Binary"
+                    "description": "Returns a binary number. For example: 0.",
+                    "x-ms-summary": "Binary",
+                    "x-ms-visibility": "advanced"
                   },
                   "float": {
                     "type": "number",
-                    "description": "Returns a random genre.",
-                    "title": "Float"
+                    "description": "Returns a floating point number. For example: 0.5515858614817262.",
+                    "x-ms-summary": "Float",
+                    "x-ms-visibility": "important"
                   },
                   "hex": {
                     "type": "string",
-                    "description": "Returns a random song name.",
-                    "title": "Hex"
+                    "description": "Returns a hexadecimal number. For example: e.",
+                    "x-ms-summary": "Hexadecimal",
+                    "x-ms-visibility": "advanced"
                   },
                   "int": {
                     "type": "number",
-                    "description": "Returns a random genre.",
-                    "title": "Int"
+                    "description": "Returns an integer number. For example: 8414578299895808.",
+                    "x-ms-summary": "Integer",
+                    "x-ms-visibility": "important"
                   },
                   "octal": {
                     "type": "string",
-                    "description": "Returns a random song name.",
-                    "title": "Octal"
+                    "description": "Returns an octal number. For example: 5.",
+                    "x-ms-summary": "Octal",
+                    "x-ms-visibility": "advanced"
                   }
                 }
               }
@@ -1413,14 +1428,14 @@
           }
         },
         "summary": "Get numeric mockdata",
-        "description": "Get rich data with all kinds of numbers. Returns an object with different number properties.",
+        "description": "Generate different kinds of numbers. Returns an array of properties, by default ten.",
         "operationId": "getNumbers",
         "parameters": [
           {
-            "$ref": "#/parameters/availableLocales"
+            "$ref": "#/parameters/count"
           },
           {
-            "$ref": "#/parameters/count"
+            "$ref": "#/parameters/seed"
           }
         ]
       }
@@ -1437,128 +1452,87 @@
                 "properties": {
                   "bio": {
                     "type": "string",
-                    "description": "Returns a random short biography",
-                    "title": "Bio"
+                    "description": "Returns the bio of the person. For example: diabetes supporter, engineer.",
+                    "x-ms-summary": "Bio",
+                    "x-ms-visibility": "advanced"
                   },
                   "birthday": {
                     "type": "string",
-                    "description": "Returns a random birthday as ISO 8601 date string.",
-                    "title": "Birthday"
+                    "description": "Returns the birthday of the person. For example: 1998-10-17T08:20:10.984Z.",
+                    "x-ms-summary": "Birthday",
+                    "x-ms-visibility": "advanced"
                   },
                   "businessPhone": {
                     "type": "string",
-                    "description": "Returns a random business phone number.",
-                    "title": "Business Phone"
+                    "description": "Returns the business phone number of the person. For example: 1-617-812-6179 x7382.",
+                    "x-ms-summary": "Business Phone",
+                    "x-ms-visibility": "advanced"
                   },
                   "city": {
                     "type": "string",
-                    "description": "Returns a random city name.",
-                    "title": "City"
+                    "description": "Returns the city of the person. For example: McLaughlinchester.",
+                    "x-ms-summary": "City",
+                    "x-ms-visibility": "advanced"
                   },
                   "country": {
                     "type": "string",
-                    "description": "Returns a random country name.",
-                    "title": "Country"
+                    "description": "Returns the country of the person. For example: New Caledonia.",
+                    "x-ms-summary": "Country",
+                    "x-ms-visibility": "advanced"
                   },
                   "creditLimit": {
                     "type": "number",
-                    "description": "Returns a random credit limit.",
-                    "title": "Credit Limit"
+                    "description": "Returns the credit limit of the person. For example: 6203000.",
+                    "x-ms-summary": "Credit Limit",
+                    "x-ms-visibility": "advanced"
                   },
                   "department": {
                     "type": "string",
-                    "description": "Returns a random department.",
-                    "title": "Department"
+                    "description": "Returns the department of the person. For example: Purchasing.",
+                    "x-ms-summary": "Department",
+                    "x-ms-visibility": "advanced"
                   },
                   "description": {
                     "type": "string",
-                    "description": "Returns a random description.",
-                    "title": "Description"
+                    "description": "Returns the description of the person. For example: significance lover.",
+                    "x-ms-summary": "Description",
+                    "x-ms-visibility": "advanced"
                   },
                   "email": {
                     "type": "string",
-                    "description": "Returns a random email address.",
-                    "title": "Email"
+                    "description": "Returns the email of the person. For example: Angelo.Runte95@gmail.com.",
+                    "x-ms-summary": "Email",
+                    "x-ms-visibility": "advanced"
                   },
                   "firstName": {
                     "type": "string",
-                    "description": "Returns a random first name.",
-                    "title": "First Name"
+                    "description": "Returns the first name of the person. For example: Angelo.",
+                    "x-ms-summary": "First Name",
+                    "x-ms-visibility": "important"
                   },
                   "fullName": {
                     "type": "string",
-                    "description": "Generates a random full name.",
-                    "title": "Full Name"
-                  },
-                  "gender": {
-                    "type": "string",
-                    "description": "Returns a random gender.",
-                    "title": "Gender"
+                    "description": "Returns the full name of the person. For example: Angelo Runte.",
+                    "x-ms-summary": "Full Name",
+                    "x-ms-visibility": "important"
                   },
                   "jobArea": {
                     "type": "string",
-                    "description": "Generates a random job area.",
-                    "title": "Job Area"
-                  },
-                  "jobDescriptor": {
-                    "type": "string",
-                    "description": "Generates a random job descriptor.",
-                    "title": "Job Descriptor"
-                  },
-                  "jobTitle": {
-                    "type": "string",
-                    "description": "Generates a random job title.",
-                    "title": "Job Title"
-                  },
-                  "jobType": {
-                    "type": "string",
-                    "description": "Generates a random job type.",
-                    "title": "Job Type"
-                  },
-                  "prefix": {
-                    "type": "string",
-                    "description": "Generates a random prefix.",
-                    "title": "Prefix"
-                  },
-                  "mobilePhone": {
-                    "type": "string",
-                    "description": "Returns a random mobile phone number.",
-                    "title": "Mobile Phone"
+                    "description": "Returns the job area of the person. For example: Intranet.",
+                    "x-ms-summary": "Job Area",
+                    "x-ms-visibility": "advanced"
                   },
                   "lastname": {
                     "type": "string",
-                    "description": "Generates a random last name.",
-                    "title": "Last Name"
-                  },
-                  "salutation": {
-                    "type": "string",
-                    "description": "Generates a random salutation.",
-                    "title": "Salutation"
+                    "description": "Returns the last name of the person. For example: Runte.",
+                    "x-ms-summary": "Last Name",
+                    "x-ms-visibility": "important"
                   },
                   "sexType": {
                     "type": "string",
-                    "description": "Generates a random sex type.",
-                    "title": "Sex Type"
-                  },
-                  "streetAddress": {
-                    "type": "string",
-                    "description": "Returns a random street address.",
-                    "title": "Street Address"
-                  },
-                  "suffix": {
-                    "type": "string",
-                    "description": "Generates a random suffix.",
-                    "title": "Suffix"
-                  },
-                  "zipCode": {
-                    "type": "string",
-                    "description": "Returns a random zip code.",
-                    "title": "Zip Code"
-                  },
-                  "zodiacSign": {
-                    "type": "string",
-                    "description": "Generates a random zodiac sign.",
-                    "title": "Zodiac Sign"
+                    "description": "Returns the sex type of the person. For example: male.",
+                    "x-ms-summary": "Sex Type",
+                    "x-ms-visibility": "advanced"
                   }
                 }
               }
@@ -1566,7 +1540,7 @@
           }
         },
         "summary": "Get people",
-        "description": "Get rich people mockup data. Returns an array of people with additional usefull properties, by default ten.",
+        "description": "Generate data for a person. Returns an array of properties, by default ten. Some properties might be localized.",
         "operationId": "getPeople",
         "parameters": [
           {
@@ -1574,6 +1548,9 @@
           },
           {
             "$ref": "#/parameters/count"
+          },
+          {
+            "$ref": "#/parameters/seed"
           }
         ]
       }
@@ -1590,13 +1567,15 @@
                 "properties":{
                   "imei": {
                     "type": "string",
-                    "description": "Returns a random imei.",
-                    "title": "IMEI"
+                    "description": "Returns the IMEI number of the phone. For example: 45-156714-750405-6.",
+                    "x-ms-summary": "IMEI",
+                    "x-ms-visibility": "important"
                   },
                   "number": {
                     "type": "string",
                     "description": "Returns a random phone number in international format.",
-                    "title": "Phone number"
+                    "x-ms-summary": "Phone number",
+                    "x-ms-visibility": "important"
                   }
                 }
               }
@@ -1604,7 +1583,7 @@
           }
         },
         "summary": "Get phone mockdata",
-        "description": "Get rich data about phones. Returns an object with different phone related properties.",
+        "description": "Generate phone nuber and IMEI. Returns an array of properties, by default ten. Phone number may be localized.",
         "operationId": "getPhones",
         "parameters": [
           {
@@ -1612,6 +1591,9 @@
           },
           {
             "$ref": "#/parameters/count"
+          },
+          {
+            "$ref": "#/parameters/seed"
           }
         ]
       }
@@ -1628,43 +1610,51 @@
                 "properties": {
                   "department": {
                     "type": "string",
-                    "description": "Returns a random department.",
-                    "title": "Department"
+                    "description": "Returns the department of the product. For example: Computers.",
+                    "x-ms-summary": "Department",
+                    "x-ms-visibility": "important"
                   },
                   "isbn": {
                     "type": "string",
-                    "description": "Returns a random ISBN number.",
-                    "title": "ISBN"
+                    "description": "Returns the ISBN of the product. For example: 978-0-911547-60-3.",
+                    "x-ms-summary": "ISBN",
+                    "x-ms-visibility": "advanced"
                   },
                   "price": {
                     "type": "number",
-                    "description": "Returns a random price.",
-                    "title": "Price"
+                    "description": "Returns the price of the product. For example: 606.",
+                    "x-ms-summary": "Price",
+                    "x-ms-visibility": "important"
                   },
                   "product": {
                     "type": "string",
-                    "description": "Returns a random short product name.",
-                    "title": "Short product name"
+                    "description": "Returns the type of the product. For example: Salad.",
+                    "x-ms-summary": "Short product name",
+                    "x-ms-visibility": "important"
                   },
                   "productAdjective": {
                     "type": "string",
-                    "description": "Returns a random product adjective.",
-                    "title": "Product Adjective"
+                    "description": "Returns an adjective describing the product. For example: Elegant.",
+                    "x-ms-summary": "Product Adjective",
+                    "x-ms-visibility": "advanced"
                   },
                   "productDescription": {
                     "type": "string",
-                    "description": "Returns a random product description.",
-                    "title": "Product Description"
+                    "description": "Returns a description of the product. For example: Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles.",
+                    "x-ms-summary": "Product Description",
+                    "x-ms-visibility": "advanced"
                   },
                   "productMaterial": {
                     "type": "string",
-                    "description": "Returns a random product material.",
-                    "title": "Product Material"
+                    "description": "Returns the material of the product. For example: Granite.",
+                    "x-ms-summary": "Product Material",
+                    "x-ms-visibility": "advanced"
                   },
                   "productName": {
                     "type": "string",
-                    "description": "Returns a random descriptive product name.",
-                    "title": "Product Name"
+                    "description": "Returns the name of the product. For example: Oriental Frozen Cheese.",
+                    "x-ms-summary": "Product Name",
+                    "x-ms-visibility": "important"
                   }
                 }
               }
@@ -1672,7 +1662,7 @@
           }
         },
         "summary": "Get product mockdata",
-        "description": "Get rich data about products. Returns an array, by default ten.",
+        "description": "Generate product related data. Returns an array of properties, by default ten. Some properties may be localized.",
         "operationId": "getProducts",
         "parameters": [
           {
@@ -1680,6 +1670,9 @@
           },
           {
             "$ref": "#/parameters/count"
+          },
+          {
+            "$ref": "#/parameters/seed"
           }
         ]
       }
@@ -1694,15 +1687,35 @@
               "items":{
                 "type":"object",
                 "properties":{
-                  "chemicalElement": {
+                  "chemicalElementSymbol": {
                     "type": "string",
-                    "description": "Returns a random chemical element.",
-                    "title": "Chemical Element"
+                    "description": "Returns the symbol of the chemical element. For example: Ga.",
+                    "x-ms-summary": "Chemical Element Symbol",
+                    "x-ms-visibility": "advanced"
                   },
-                  "unit": {
+                  "chemicalElementName": {
+                    "type": "string",
+                    "description": "Returns the name of the chemical element. For example: Gallium.",
+                    "x-ms-summary": "Chemical Element Name",
+                    "x-ms-visibility": "important"
+                  },
+                  "chemicalElementAtomicNumber": {
+                    "type": "integer",
+                    "description": "Returns the atomic number of the chemical element. For example: 31.",
+                    "x-ms-summary": "Chemical Element Atomic Number",
+                    "x-ms-visibility": "advanced"
+                  },
+                  "unitName": {
                     "type":"string",
                     "description":"Returns a random unit.",
-                    "title":"Unit"
+                    "x-ms-summary":"Unit Name",
+                    "x-ms-visibility": "important"
+                  },
+                  "unitSymbol": {
+                    "type":"string",
+                    "description":"Returns the symbol of the unit. For example: lx.",
+                    "x-ms-summary":"Unit Symbol",
+                    "x-ms-visibility": "advanced"
                   }
                 }
               }
@@ -1710,14 +1723,14 @@
           }
         },
         "summary": "Get science mockdata",
-        "description": "Get rich data about science. Returns an object with different science properties.",
+        "description": "Generate science related data. Returns an array of properties, by default ten.",
         "operationId": "getSciences",
         "parameters": [
           {
-            "$ref":"#/parameters/availableLocales"
+            "$ref":"#/parameters/count"
           },
           {
-            "$ref":"#/parameters/count"
+            "$ref":"#/parameters/seed"
           }
         ]
       }
@@ -1734,53 +1747,53 @@
                 "properties":{
                   "alpha": {
                     "type": "string",
-                    "description": "Returns a random alpha string.",
-                    "title": "Alpha"
+                    "description": "Returns an alphabetic character. For example: C.",
+                    "x-ms-summary": "Alpha"
                   },
                   "alphanumeric": {
                     "type": "string",
-                    "description": "Returns a random alphanumeric string.",
-                    "title": "Alphanumeric"
+                    "description": "Returns an alphanumeric character. For example: X.",
+                    "x-ms-summary": "Alphanumeric"
                   },
                   "binary":{
                     "type":"string",
-                    "description":"Returns a random binary string.",
-                    "title":"Binary"
+                    "description":"Returns a binary number. For example: 0b0.",
+                    "x-ms-summary":"Binary"
                   },
                   "hexadecimal":{
                     "type":"string",
-                    "description":"Returns a random hexadecimal string.",
-                    "title":"Hexadecimal"
+                    "description":"Returns a hexadecimal number. For example: 0xa.",
+                    "x-ms-summary":"Hexadecimal"
                   },
                   "nanoid":{
                     "type":"string",
-                    "description":"Returns a random nanoid string.",
-                    "title":"Nanoid"
+                    "description":"Returns a nanoid. For example: tooWOZFFJtCGUTLofxCia.",
+                    "x-ms-summary":"Nanoid"
                   },
                   "numeric":{
                     "type":"string",
-                    "description":"Returns a random numeric string.",
-                    "title":"Numeric"
+                    "description":"Returns a numeric character. For example: 6.",
+                    "x-ms-summary":"Numeric"
                   },
                   "octal":{
                     "type":"string",
-                    "description":"Returns a random octal string.",
-                    "title":"Octal"
+                    "description":"Returns an octal number. For example: 0o6.",
+                    "x-ms-summary":"Octal"
                   },
                   "sample":{
                     "type":"string",
-                    "description":"Returns a random sample string.",
-                    "title":"Sample"
+                    "description":"Returns a sample string. For example: G^XL?D'u|D.",
+                    "x-ms-summary":"Sample"
                   },
                   "symbol":{
                     "type":"string",
-                    "description":"Returns a random symbol string.",
-                    "title":"Symbol"
+                    "description":"Returns a symbol. For example: -.",
+                    "x-ms-summary":"Symbol"
                   },
                   "uuid":{
                     "type":"string",
-                    "description":"Returns a random uuid string.",
-                    "title":"UUID"
+                    "description":"Returns a UUID. For example: 9b39132d-5157-42c4-bd5e-84f30c6d3692.",
+                    "x-ms-summary":"UUID"
                   }
                 }
               }
@@ -1788,14 +1801,14 @@
           }
         },
         "summary": "Get string mockdata",
-        "description": "Get different kinds of strings. Returns an object with different string properties.",
+        "description": "Generate random strings. Returns an array of properties, by default ten.",
         "operationId": "getStrings",
         "parameters": [
           {
-            "$ref":"#/parameters/availableLocales"
+            "$ref":"#/parameters/count"
           },
           {
-            "$ref":"#/parameters/count"
+            "$ref":"#/parameters/seed"
           }
         ]
       }
@@ -1812,63 +1825,74 @@
                 "properties":{
                   "commonFileExt": {
                     "type": "string",
-                    "description": "Returns a random common file extension.",
-                    "title": "Common File Extension"
+                    "description": "Returns a common file name. For example: amongst_vivaciously_populate.wav.",
+                    "x-ms-summary": "Common File Extension",
+                    "x-ms-visibility": "advanced"
                   },
                   "commonFileName": {
                     "type": "string",
-                    "description": "Returns a random common file name.",
-                    "title": "Common File Name"
+                    "description": "Returns a common file name. For example: amongst_vivaciously_populate.wav.",
+                    "x-ms-summary": "Common File Name",
+                    "x-ms-visibility": "important"
                   },
                   "commonFileType": {
                     "type": "string",
-                    "description": "Returns a random common file type.",
-                    "title": "Common File Type"
+                    "description": "Returns a common file type. For example: image.",
+                    "x-ms-summary": "Common File Type",
+                    "x-ms-visibility": "advanced"
                   },
                   "cron": {
                     "type": "string",
-                    "description": "Returns a random cron expression.",
-                    "title": "Cron"
+                    "description": "Returns a cron expression. For example: 15 * * * ?.",
+                    "x-ms-summary": "Cron",
+                    "x-ms-visibility": "advanced"
                   },
                   "directoryPath": {
                     "type": "string",
-                    "description": "Returns a random directory path.",
-                    "title": "Directory Path"
+                    "description": "Returns a directory path. For example: /usr/libexec.",
+                    "x-ms-summary": "Directory Path"
                   },
                   "fileExt": {
                     "type": "string",
-                    "description": "Returns a random file extension.",
-                    "title": "File Extension"
+                    "description": "Returns a file extension. For example: pot.",
+                    "x-ms-summary": "File Extension",
+                    "x-ms-visibility": "important"
                   },
                   "fileName": {
                     "type": "string",
-                    "description": "Returns a random file name.",
-                    "title": "File Name"
+                    "description": "Returns a file name. For example: yummy_commercialise_despite.mid.",
+                    "x-ms-summary": "File Name",
+                    "x-ms-visibility": "advanced"
                   },
                   "filePath": {
                     "type": "string",
-                    "description": "Returns a random file path.",
-                    "title": "File Path"
+                    "description": "Returns a file path. For example: /private/tmp/interrelate_hmph.tar.",
+                    "x-ms-summary": "File Path",
+                    "x-ms-visibility": "advanced"
                   },
                   "fileType": {
                     "type": "string",
-                    "description": "Returns a random file type.",
-                    "title": "File Type"
+                    "description": "Returns a file type. For example: image.",
+                    "x-ms-summary": "File Type",
+                    "x-ms-visibility": "advanced"
                   },
                   "mimeType": {
                     "type": "string",
-                    "description": "Returns a random mime type.",
-                    "title": "Mime Type"
+                    "description": "Returns a mime type. For example: image/gif.",
+                    "x-ms-summary": "Mime Type",
+                    "x-ms-visibility": "important"
                   },
                   "networkInterface": {
                     "type": "string",
-                    "description": "Returns a random network interface.",
-                    "title": "Network Interface"
+                    "description": "Returns a network interface. For example: wlo6.",
+                    "x-ms-summary": "Network Interface",
+                    "x-ms-visibility": "advanced"
                   },
                   "semver": {
                     "type": "string",
-                    "description": "Returns a random semantic version.",
-                    "title": "Semantic Version"
+                    "description": "Returns a semantic version number. For example: 6.2.5.",
+                    "x-ms-summary": "Semantic Version",
+                    "x-ms-visibility": "advanced"
                   }
                 }
               }
@@ -1876,14 +1900,14 @@
           }
         },
         "summary": "Get system mockdata",
-        "description": "Get rich data about systems. Returns an object with different system properties.",
+        "description": "Generate system related data. Returns an array of properties, by default ten.",
         "operationId": "getSystems",
         "parameters": [
           {
-            "$ref":"#/parameters/availableLocales"
+            "$ref":"#/parameters/count"
           },
           {
-            "$ref":"#/parameters/count"
+            "$ref":"#/parameters/seed"
           }
         ]
       }
@@ -1900,48 +1924,57 @@
                 "properties":{
                   "bicycle": {
                     "type":"string",
-                    "description":"Returns a random bicycle.",
-                    "title":"Bicycle"
+                    "description":"Returns the type of the bicycle. For example: Track/Fixed-Gear Bicycle.",
+                    "x-ms-summary":"Bicycle",
+                    "x-ms-visibility": "advanced"
                   },
                   "color":{
                     "type":"string",
-                    "description":"Returns a random color.",
-                    "title":"Color"
+                    "description":"Returns the color of the vehicle. For example: turquoise.",
+                    "x-ms-summary":"Color",
+                    "x-ms-visibility": "important"
                   },
                   "fuel":{
                     "type":"string",
-                    "description":"Returns a random fuel.",
-                    "title":"Fuel"
+                    "description":"Returns the type of fuel the vehicle uses. For example: Electric.",
+                    "x-ms-summary":"Fuel",
+                    "x-ms-visibility": "important"
                   },
                   "manufacturer":{
                     "type":"string",
-                    "description":"Returns a random manufacturer.",
-                    "title":"Manufacturer"
+                    "description":"Returns the manufacturer of the vehicle. For example: Nissan.",
+                    "x-ms-summary":"Manufacturer",
+                    "x-ms-visibility": "important"
                   },
                   "model":{
                     "type":"string",
-                    "description":"Returns a random model.",
-                    "title":"Model"
+                    "description":"Returns the model of the vehicle. For example: Charger.",
+                    "x-ms-summary":"Model",
+                    "x-ms-visibility": "important"
                   },
                   "type":{
                     "type":"string",
-                    "description":"Returns a random type.",
-                    "title":"Type"
+                    "description":"Returns the type of the vehicle. For example: Extended Cab Pickup.",
+                    "x-ms-summary":"Type",
+                    "x-ms-visibility": "advanced"
                   },
                   "vehicle":{
                     "type":"string",
-                    "description":"Returns a random vehicle.",
-                    "title":"Vehicle"
+                    "description":"Returns the name of the vehicle. For example: Toyota Grand Caravan.",
+                    "x-ms-summary":"Vehicle",
+                    "x-ms-visibility": "advanced"
                   },
                   "vin":{
                     "type":"string",
-                    "description":"Returns a random vin.",
-                    "title":"VIN"
+                    "description":"Returns the Vehicle Identification Number. For example: 5Z4BWRAU40BP99482.",
+                    "x-ms-summary":"VIN",
+                    "x-ms-visibility": "advanced"
                   },
                   "vrm":{
                     "type":"string",
-                    "description":"Returns a random vrm.",
-                    "title":"VRM"
+                    "description":"Returns the Vehicle Registration Mark. For example: ZJ14CUT.",
+                    "x-ms-summary":"VRM",
+                    "x-ms-visibility": "advanced"
                   }
                 }
               }
@@ -1949,7 +1982,7 @@
           }
         },
         "summary": "Get vehicle mockdata",
-        "description": "Get rich data about vehicles. Returns an object with different vehicle properties.",
+        "description": "Generate different kinds of vehicles and related properties. Returns an array of properties, by default ten. Some of the data may be localized.",
         "operationId": "getVehicles",
         "parameters": [
           {
@@ -1957,6 +1990,9 @@
           },
           {
             "$ref":"#/parameters/count"
+          },
+          {
+            "$ref":"#/parameters/seed"
           }
         ]
       }
@@ -1973,48 +2009,57 @@
                 "properties":{
                   "adjective":{
                     "type":"string",
-                    "description":"Returns a random adjective.",
-                    "title":"Adjective"
+                    "description":"Returns an adjective. For example: remote.",
+                    "x-ms-summary":"Adjective",
+                    "x-ms-visibility": "important"
                   },
                   "adverb":{
                     "type":"string",
-                    "description":"Returns a random adverb.",
-                    "title":"Adverb"
+                    "description":"Returns an adverb. For example: loudly.",
+                    "x-ms-summary":"Adverb",
+                    "x-ms-visibility": "advanced"
                   },
                   "conjunction":{
                     "type":"string",
-                    "description":"Returns a random conjunction.",
-                    "title":"Conjunction"
+                    "description":"Returns a conjunction. For example: as.",
+                    "x-ms-summary":"Conjunction",
+                    "x-ms-visibility": "advanced"
                   },
                   "interjection":{
                     "type":"string",
-                    "description":"Returns a random interjection.",
-                    "title":"Interjection"
+                    "description":"Returns an interjection. For example: ha.",
+                    "x-ms-summary":"Interjection",
+                    "x-ms-visibility": "advanced"
                   },
                   "noun":{
                     "type":"string",
-                    "description":"Returns a random noun.",
-                    "title":"Noun"
+                    "description":"Returns a noun. For example: testing.",
+                    "x-ms-summary":"Noun",
+                    "x-ms-visibility": "important"
                   },
                   "preposition":{
                     "type":"string",
-                    "description":"Returns a random preposition.",
-                    "title":"Preposition"
+                    "description":"Returns a preposition. For example: between.",
+                    "x-ms-summary":"Preposition",
+                    "x-ms-visibility": "important"
                   },
                   "sample":{
                     "type":"string",
-                    "description":"Returns a random sample.",
-                    "title":"Sample"
+                    "description":"Returns a sample string. For example: deliberately.",
+                    "x-ms-summary":"Sample",
+                    "x-ms-visibility": "advanced"
                   },
                   "verb":{
                     "type":"string",
-                    "description":"Returns a random verb.",
-                    "title":"Verb"
+                    "description":"Returns a verb. For example: crease.",
+                    "x-ms-summary":"Verb",
+                    "x-ms-visibility": "important"
                   },
                   "words":{
                     "type":"string",
-                    "description":"Returns random words.",
-                    "title":"Words"
+                    "description":"Returns a string of words. For example: aha insectarium exhausted.",
+                    "x-ms-summary":"Words",
+                    "x-ms-visibility": "important"
                   }
                 }
               }
@@ -2030,13 +2075,14 @@
           },
           {
             "$ref":"#/parameters/count"
+          },
+          {
+            "$ref":"#/parameters/seed"
           }
         ]
       }
     }       
   },
-  
-  
   "definitions": {},
   "parameters": {
     "availableLocales": {
@@ -2411,20 +2457,6 @@
       "x-ms-visibility": "advanced",
       "description": "Seed value for reproducible results."
     }
-  },
-  "format": {
-    "name": "format",
-    "in": "query",
-    "required": false,
-    "type": "string",
-    "x-ms-summary": "Format",
-    "x-ms-visibility": "advanced",
-    "description": "Select format of the color values. Default is decimal.",
-    "enum": [
-      "binary",
-      "css",
-      "decimal"
-    ]
   },
   "responses": {},
   "securityDefinitions": {},

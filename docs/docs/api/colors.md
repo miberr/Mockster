@@ -5,6 +5,10 @@ description: "Generate color related data. Includes color values in different fo
 
 # 🌈 Colors
 
+:::danger Power Automate connector not yet available
+Power Automate connector can be expected to be available Q1/2024
+:::
+
 ## Description
 
 Generate color related data. Includes color values in different formats as well as human readable value. Returns an array of colors, by default ten. Some values may be localized.

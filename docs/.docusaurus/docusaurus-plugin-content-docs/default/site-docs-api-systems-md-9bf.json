@@ -8,14 +8,13 @@
   "permalink": "/docs/api/systems",
   "draft": false,
   "unlisted": false,
-  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/api/systems.md",
   "tags": [],
   "version": "current",
   "frontMatter": {
     "sidebar_label": "💻 Systems",
     "description": "Generate system data."
   },
-  "sidebar": "tutorialSidebar",
+  "sidebar": "docsSidebar",
   "previous": {
     "title": "🔠 Strings",
     "permalink": "/docs/api/strings"

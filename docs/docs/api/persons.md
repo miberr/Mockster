@@ -1,17 +1,25 @@
 ---
 sidebar_label: "🧍🏻 Persons"
-description: "Generate number data."
+description: "Generate data for a person."
 ---
 
-# 🧍🏽‍♀️🧍🏻 Persons
+# 🧍🏻 Persons
 
-Generate persons related data. Returns an array of properties, by default ten.
+:::danger Power Automate connector not yet available
+Power Automate connector can be expected to be available Q1/2024
+:::
+
+## Description
+
+Generate data for a person. Returns an array of properties, by default ten. Some properties might be localized.
 
 ## Query options
 
 |Parameter|Description|Default|
 |---------|:---------|---------|
 |`Count`| Count of objects returned | 10 |
+|`Locale`| Localization for the response, see [Localization](./../localization) | en |
+|`Seed` | Seed value for reproducible results. | null |
 
 ## Request
 
@@ -27,54 +35,24 @@ Accept: application/json
 ```jsx title="JSON"
 [
     {
-        "sexType": "male",
-        "firstName": "Angelo",
-        "lastName": "Runte",
         "bio": "diabetes supporter, engineer",
         "birthday": "1998-10-17T08:20:10.984Z",
-        "businessPhone": "+1 821031",
+        "businessPhone": "1-617-812-6179 x7382",
         "city": "McLaughlinchester",
         "country": "New Caledonia",
         "creditLimit": 6203000,
         "department": "Purchasing",
         "description": "significance lover",
         "email": "Angelo.Runte95@gmail.com",
+        "firstName": "Angelo",
         "fullName": "Angelo Runte",
         "gender": "Trans male",
-        "jobArea": "Intranet"
+        "jobArea": "Intranet",
+        "lastName": "Runte",
+        "sexType": "male"
     }
 ]
 ```
-
-### Sex Type
-
-|JSON|Power Automate|
-|:---------|:---------|
-`sexType`|`Sex Type`
-
-Returns the sex type of the person. For example: `male`.
-
-Return datatype: **string**
-
-### First Name
-
-|JSON|Power Automate|
-|:---------|:---------|
-`firstName`|`First Name`
-
-Returns the first name of the person. For example: `Angelo`.
-
-Return datatype: **string**
-
-### Last Name
-
-|JSON|Power Automate|
-|:---------|:---------|
-`lastName`|`Last Name`
-
-Returns the last name of the person. For example: `Runte`.
-
-Return datatype: **string**
 
 ### Bio
 
@@ -102,7 +80,7 @@ Return datatype: **string**
 |:---------|:---------|
 `businessPhone`|`Business Phone`
 
-Returns the business phone number of the person. For example: `+1 821031`.
+Returns the business phone number of the person. For example: `1-617-812-6179 x7382`.
 
 Return datatype: **string**
 
@@ -166,6 +144,16 @@ Returns the email of the person. For example: `Angelo.Runte95@gmail.com`.
 
 Return datatype: **string**
 
+### First Name
+
+|JSON|Power Automate|
+|:---------|:---------|
+`firstName`|`First Name`
+
+Returns the first name of the person. For example: `Angelo`.
+
+Return datatype: **string**
+
 ### Full Name
 
 |JSON|Power Automate|
@@ -193,5 +181,25 @@ Return datatype: **string**
 `jobArea`|`Job Area`
 
 Returns the job area of the person. For example: `Intranet`.
+
+Return datatype: **string**
+
+### Last Name
+
+|JSON|Power Automate|
+|:---------|:---------|
+`lastName`|`Last Name`
+
+Returns the last name of the person. For example: `Runte`.
+
+Return datatype: **string**
+
+### Sex Type
+
+|JSON|Power Automate|
+|:---------|:---------|
+`sexType`|`Sex Type`
+
+Returns the sex type of the person. For example: `male`.
 
 Return datatype: **string**

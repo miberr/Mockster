@@ -3,43 +3,8 @@ import ComponentCreator from '@docusaurus/ComponentCreator';
 
 export default [
   {
-    path: '/__docusaurus/debug',
-    component: ComponentCreator('/__docusaurus/debug', '674'),
-    exact: true
-  },
-  {
-    path: '/__docusaurus/debug/config',
-    component: ComponentCreator('/__docusaurus/debug/config', '233'),
-    exact: true
-  },
-  {
-    path: '/__docusaurus/debug/content',
-    component: ComponentCreator('/__docusaurus/debug/content', '190'),
-    exact: true
-  },
-  {
-    path: '/__docusaurus/debug/globalData',
-    component: ComponentCreator('/__docusaurus/debug/globalData', 'e71'),
-    exact: true
-  },
-  {
-    path: '/__docusaurus/debug/metadata',
-    component: ComponentCreator('/__docusaurus/debug/metadata', 'c52'),
-    exact: true
-  },
-  {
-    path: '/__docusaurus/debug/registry',
-    component: ComponentCreator('/__docusaurus/debug/registry', '5ab'),
-    exact: true
-  },
-  {
-    path: '/__docusaurus/debug/routes',
-    component: ComponentCreator('/__docusaurus/debug/routes', '0fe'),
-    exact: true
-  },
-  {
     path: '/blog',
-    component: ComponentCreator('/blog', '2f9'),
+    component: ComponentCreator('/blog', '1be'),
     exact: true
   },
   {
@@ -48,48 +13,23 @@ export default [
     exact: true
   },
   {
-    path: '/blog/first-blog-post',
-    component: ComponentCreator('/blog/first-blog-post', '7d1'),
-    exact: true
-  },
-  {
-    path: '/blog/long-blog-post',
-    component: ComponentCreator('/blog/long-blog-post', '92c'),
-    exact: true
-  },
-  {
-    path: '/blog/mdx-blog-post',
-    component: ComponentCreator('/blog/mdx-blog-post', 'cd3'),
-    exact: true
-  },
-  {
     path: '/blog/tags',
     component: ComponentCreator('/blog/tags', 'e6a'),
     exact: true
   },
   {
-    path: '/blog/tags/docusaurus',
-    component: ComponentCreator('/blog/tags/docusaurus', '61a'),
+    path: '/blog/tags/mockster',
+    component: ComponentCreator('/blog/tags/mockster', 'd19'),
     exact: true
   },
   {
-    path: '/blog/tags/facebook',
-    component: ComponentCreator('/blog/tags/facebook', 'a0c'),
+    path: '/blog/tags/v-1',
+    component: ComponentCreator('/blog/tags/v-1', '489'),
     exact: true
   },
   {
-    path: '/blog/tags/hello',
-    component: ComponentCreator('/blog/tags/hello', '28a'),
-    exact: true
-  },
-  {
-    path: '/blog/tags/hola',
-    component: ComponentCreator('/blog/tags/hola', '85c'),
-    exact: true
-  },
-  {
-    path: '/blog/welcome',
-    component: ComponentCreator('/blog/welcome', '28b'),
+    path: '/blog/v1-released',
+    component: ComponentCreator('/blog/v1-released', '809'),
     exact: true
   },
   {
@@ -99,177 +39,177 @@ export default [
   },
   {
     path: '/docs',
-    component: ComponentCreator('/docs', '878'),
+    component: ComponentCreator('/docs', '154'),
     routes: [
       {
         path: '/docs',
-        component: ComponentCreator('/docs', 'e46'),
+        component: ComponentCreator('/docs', 'b1b'),
         routes: [
           {
             path: '/docs',
-            component: ComponentCreator('/docs', '817'),
+            component: ComponentCreator('/docs', 'a76'),
             routes: [
               {
                 path: '/docs/api/airlines',
-                component: ComponentCreator('/docs/api/airlines', 'c8a'),
+                component: ComponentCreator('/docs/api/airlines', 'af2'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "docsSidebar"
               },
               {
                 path: '/docs/api/animals',
-                component: ComponentCreator('/docs/api/animals', 'fff'),
+                component: ComponentCreator('/docs/api/animals', '4d8'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "docsSidebar"
               },
               {
                 path: '/docs/api/colors',
-                component: ComponentCreator('/docs/api/colors', '5be'),
+                component: ComponentCreator('/docs/api/colors', '021'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "docsSidebar"
               },
               {
                 path: '/docs/api/companies',
-                component: ComponentCreator('/docs/api/companies', 'abf'),
+                component: ComponentCreator('/docs/api/companies', 'e8b'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "docsSidebar"
               },
               {
                 path: '/docs/api/databases',
-                component: ComponentCreator('/docs/api/databases', '778'),
+                component: ComponentCreator('/docs/api/databases', '2fb'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "docsSidebar"
               },
               {
                 path: '/docs/api/dates',
-                component: ComponentCreator('/docs/api/dates', '612'),
+                component: ComponentCreator('/docs/api/dates', '46f'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "docsSidebar"
               },
               {
                 path: '/docs/api/finances',
-                component: ComponentCreator('/docs/api/finances', '1c2'),
+                component: ComponentCreator('/docs/api/finances', 'f1b'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "docsSidebar"
               },
               {
                 path: '/docs/api/gits',
-                component: ComponentCreator('/docs/api/gits', '661'),
+                component: ComponentCreator('/docs/api/gits', '2de'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "docsSidebar"
               },
               {
                 path: '/docs/api/hackers',
-                component: ComponentCreator('/docs/api/hackers', 'b05'),
+                component: ComponentCreator('/docs/api/hackers', '6f2'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "docsSidebar"
               },
               {
                 path: '/docs/api/images',
-                component: ComponentCreator('/docs/api/images', '4d7'),
+                component: ComponentCreator('/docs/api/images', 'a59'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "docsSidebar"
               },
               {
                 path: '/docs/api/internet',
-                component: ComponentCreator('/docs/api/internet', '817'),
+                component: ComponentCreator('/docs/api/internet', '0a0'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "docsSidebar"
               },
               {
                 path: '/docs/api/locations',
-                component: ComponentCreator('/docs/api/locations', '38b'),
+                component: ComponentCreator('/docs/api/locations', '40a'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "docsSidebar"
               },
               {
                 path: '/docs/api/lorem',
-                component: ComponentCreator('/docs/api/lorem', '7ea'),
+                component: ComponentCreator('/docs/api/lorem', '8bc'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "docsSidebar"
               },
               {
                 path: '/docs/api/musics',
-                component: ComponentCreator('/docs/api/musics', '5f9'),
+                component: ComponentCreator('/docs/api/musics', 'ca4'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "docsSidebar"
               },
               {
                 path: '/docs/api/numbers',
-                component: ComponentCreator('/docs/api/numbers', '6a2'),
+                component: ComponentCreator('/docs/api/numbers', '107'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "docsSidebar"
               },
               {
                 path: '/docs/api/persons',
-                component: ComponentCreator('/docs/api/persons', '8be'),
+                component: ComponentCreator('/docs/api/persons', '563'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "docsSidebar"
               },
               {
                 path: '/docs/api/phones',
-                component: ComponentCreator('/docs/api/phones', '9cf'),
+                component: ComponentCreator('/docs/api/phones', '103'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "docsSidebar"
               },
               {
                 path: '/docs/api/products',
-                component: ComponentCreator('/docs/api/products', 'f94'),
+                component: ComponentCreator('/docs/api/products', '7c0'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "docsSidebar"
               },
               {
                 path: '/docs/api/sciences',
-                component: ComponentCreator('/docs/api/sciences', '1e1'),
+                component: ComponentCreator('/docs/api/sciences', '4cc'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "docsSidebar"
               },
               {
                 path: '/docs/api/strings',
-                component: ComponentCreator('/docs/api/strings', '9af'),
+                component: ComponentCreator('/docs/api/strings', '3e6'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "docsSidebar"
               },
               {
                 path: '/docs/api/systems',
-                component: ComponentCreator('/docs/api/systems', 'd43'),
+                component: ComponentCreator('/docs/api/systems', '705'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "docsSidebar"
               },
               {
                 path: '/docs/api/vehicles',
-                component: ComponentCreator('/docs/api/vehicles', '9e6'),
+                component: ComponentCreator('/docs/api/vehicles', '991'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "docsSidebar"
               },
               {
                 path: '/docs/api/words',
-                component: ComponentCreator('/docs/api/words', 'd2c'),
+                component: ComponentCreator('/docs/api/words', 'b0d'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "docsSidebar"
               },
               {
                 path: '/docs/category/api',
-                component: ComponentCreator('/docs/category/api', '664'),
+                component: ComponentCreator('/docs/category/api', '470'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "docsSidebar"
               },
               {
                 path: '/docs/getting-started',
-                component: ComponentCreator('/docs/getting-started', 'a24'),
+                component: ComponentCreator('/docs/getting-started', '575'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "docsSidebar"
               },
               {
                 path: '/docs/localization',
-                component: ComponentCreator('/docs/localization', '501'),
+                component: ComponentCreator('/docs/localization', 'ffb'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "docsSidebar"
               },
               {
                 path: '/docs/whats-mockster',
-                component: ComponentCreator('/docs/whats-mockster', 'e3e'),
+                component: ComponentCreator('/docs/whats-mockster', 'e65'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "docsSidebar"
               }
             ]
           }

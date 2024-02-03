@@ -5,13 +5,21 @@ description: "Generate Lorem Ipsum data."
 
 # 🎶 Musics
 
-Generate musics related data. Returns an array of properties, by default ten.
+:::danger Power Automate connector not yet available
+Power Automate connector can be expected to be available Q1/2024
+:::
+
+## Description
+
+Generate music related data. Returns an array of properties, by default ten. Some properties might be localized.
 
 ## Query options
 
 |Parameter|Description|Default|
 |---------|:---------|---------|
 |`Count`| Count of objects returned | 10 |
+|`Locale`| Localization for the response, see [Localization](./../localization) | en |
+|`Seed` | Seed value for reproducible results. | null |
 
 ## Request
 
@@ -39,7 +47,7 @@ Accept: application/json
 |:---------|:---------|
 `genre`|`Genre`
 
-Returns the genre of the music. For example: `Country`.
+Returns random music genre. For example: `Country`.
 
 Return datatype: **string**
 
@@ -49,6 +57,6 @@ Return datatype: **string**
 |:---------|:---------|
 `songName`|`Song Name`
 
-Returns the name of the song. For example: `Just Dance`.
+Returns a randmo song name. For example: `Just Dance`.
 
 Return datatype: **string**

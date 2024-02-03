@@ -5,6 +5,12 @@ description: "Generate word data."
 
 # 🌆 Images
 
+:::danger Power Automate connector not yet available
+Power Automate connector can be expected to be available Q1/2024
+:::
+
+## Description
+
 Generate real images for your data. You can also use query parameter for returning spesific categories of images with spesific height and width. Returns an array of image URLS and names, by default ten. 
 
 Service is provided by https://loremflickr.com. 
@@ -13,7 +19,7 @@ Service is provided by https://loremflickr.com.
 
 |Parameter|Description|Default|
 |---------|:---------|---------|
-|`Category`| Available categories are: `abstract`, `animals`, `business`, `cats`, `city`, `fashion`, `food`, `nature`, `nightlife`, `people`, `sports`, `technics`, `transport` | `random` |
+|`Category`| Available categories are: `abstract`, `animals`, `business`, `cats`, `city`, `fashion`, `food`, `nature`, `nightlife`, `people`, `sports`, `technics`, `transport` | null |
 |`Count`| Count of objects returned | 10 |
 |`Height`| Height of all returned images in pixels | 480 |
 |`Width`| Widhts of all returned images in pixels | 640 |

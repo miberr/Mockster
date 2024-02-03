@@ -8,7 +8,6 @@
   "permalink": "/docs/getting-started",
   "draft": false,
   "unlisted": false,
-  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/getting-started.md",
   "tags": [],
   "version": "current",
   "sidebarPosition": 2,
@@ -16,7 +15,7 @@
     "sidebar_position": 2,
     "sidebar_label": "Getting started"
   },
-  "sidebar": "tutorialSidebar",
+  "sidebar": "docsSidebar",
   "previous": {
     "title": "What's Mockster?",
     "permalink": "/docs/whats-mockster"

@@ -5,6 +5,10 @@ description: "Generate aviation related data. You can use this endpoint for crea
 
 # ✈️ Airlines
 
+:::danger Power Automate connector not yet available
+Power Automate connector can be expected to be available Q1/2024
+:::
+
 ## Description
 
 Generate aviation related data. You can use this endpoint for creating realistic mock data for flights or tickets. Returns an array of airline related properties, by default ten.

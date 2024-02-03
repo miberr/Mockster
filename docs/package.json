@@ -17,7 +17,9 @@
     "@docusaurus/core": "3.0.1",
     "@docusaurus/preset-classic": "3.0.1",
     "@mdx-js/react": "^3.0.0",
+    "@microsoft/docusaurus-plugin-application-insights": "^4.0.1",
     "clsx": "^2.0.0",
+    "dotenv": "^16.4.1",
     "prism-react-renderer": "^2.3.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"

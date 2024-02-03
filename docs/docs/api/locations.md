@@ -5,13 +5,21 @@ description: "Generate realistic location data."
 
 # 📍 Locations
 
-Generate realistic location data. Returns an array of properties, by default ten. Some properties may be localized.
+:::danger Power Automate connector not yet available
+Power Automate connector can be expected to be available Q1/2024
+:::
+
+## Description
+
+Generate location related data. Returns an array of properties, by default ten. Some attributes may be localized.
 
 ## Query options
 
 |Parameter|Description|Default|
 |---------|:---------|---------|
 |`Count`| Count of objects returned | 10 |
+|`Locale`| Localization for the response, see [Localization](./../localization) | en |
+|`Seed` | Seed value for reproducible results. | null |
 
 ## Request
 
@@ -34,8 +42,6 @@ Accept: application/json
         "countryCode": "PE",
         "county": "Avon",
         "direction": "Southeast",
-        "GPSCoordinateLatitude": 74.5439,
-        "GPSCoordinateLongiture": -173.6781,
         "latitude": -21.109,
         "longitude": -60.2472,
         "ordinalDirection": "Northwest",
@@ -118,26 +124,6 @@ Return datatype: **string**
 Returns a random direction. For example: `Southeast`.
 
 Return datatype: **string**
-
-### GPS Coordinate Latitude
-
-|JSON|Power Automate|
-|:---------|:---------|
-`GPSCoordinateLatitude`|`GPS Coordinate Latitude`
-
-Returns a random GPS coordinate for latitude. For example: `74.5439`.
-
-Return datatype: **number**
-
-### GPS Coordinate Longitude
-
-|JSON|Power Automate|
-|:---------|:---------|
-`GPSCoordinateLongiture`|`GPS Coordinate Longitude`
-
-Returns a random GPS coordinate for longitude. For example: `-173.6781`.
-
-Return datatype: **number**
 
 ### Latitude
 

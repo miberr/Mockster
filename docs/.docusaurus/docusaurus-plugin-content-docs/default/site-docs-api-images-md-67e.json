@@ -8,14 +8,13 @@
   "permalink": "/docs/api/images",
   "draft": false,
   "unlisted": false,
-  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/api/images.md",
   "tags": [],
   "version": "current",
   "frontMatter": {
     "sidebar_label": "🌆 Images",
     "description": "Generate word data."
   },
-  "sidebar": "tutorialSidebar",
+  "sidebar": "docsSidebar",
   "previous": {
     "title": "🥷🏼 Hackers",
     "permalink": "/docs/api/hackers"

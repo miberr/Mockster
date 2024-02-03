@@ -1,22 +1,29 @@
 ---
 sidebar_label: "💬 Lorem"
-description: "Generate Lorem Ipsum data."
+description: "Generate Lorem Ipsum."
 ---
 
 # 💬 Lorem
 
-Generate lorem ipsum related data. Returns an array of properties, by default ten.
+:::danger Power Automate connector not yet available
+Power Automate connector can be expected to be available Q1/2024
+:::
+
+## Description
+
+Generate lorem ipsum. Returns an array of properties, by default ten.
 
 ## Query options
 
 |Parameter|Description|Default|
 |---------|:---------|---------|
 |`Count`| Count of objects returned | 10 |
+|`Seed` | Seed value for reproducible results. | null |
 
 ## Request
 
 ```http title="HTTP"
-GET https://mockster.dev/api/v1/lorem
+GET https://mockster.dev/api/v1/lorems
 Accept: application/json  
 ```
 
@@ -46,7 +53,7 @@ Accept: application/json
 |:---------|:---------|
 `lines`|`Lines`
 
-Returns a set of lines. For example: `"Vorax contigo convoco.\nBeatae comparo animadverto conicio iste.\nUterque succedo attonbitus sordeo est clementia.\nEnim conicio quam praesentium curto adflicto audax."`.
+Returns a set of lines. For example: `Vorax contigo convoco.\nBeatae comparo animadverto conicio iste.\nUterque succedo attonbitus sordeo est clementia.\nEnim conicio quam praesentium curto adflicto audax.`.
 
 Return datatype: **string**
 
@@ -56,7 +63,7 @@ Return datatype: **string**
 |:---------|:---------|
 `paragraph`|`Paragraph`
 
-Returns a paragraph. For example: `"Est tubineus sponte conor nam ipsam optio. Amet volaticus demitto. Et angelus alii demonstro iure."`.
+Returns a paragraph. For example: `Est tubineus sponte conor nam ipsam optio. Amet volaticus demitto. Et angelus alii demonstro iure.`.
 
 Return datatype: **string**
 
@@ -66,7 +73,7 @@ Return datatype: **string**
 |:---------|:---------|
 `paragraphs`|`Paragraphs`
 
-Returns multiple paragraphs. For example: `"Theca adamo video supplanto. Voluptates conturbo creator bellicus aut vir adinventitias altus cupiditate canto. Curo decumbo adipiscor inflammatio sponte cornu aegrotatio sopor capio calcar.\nBibo audeo adipisci beatae ustilo ambulo. Derelinquo desolo spectaculum inventore derelinquo asper carcer caries. Clementia pauper apto armarium.\nDedecor vis tui averto vorax praesentium tantillus catena adhaero adsidue. Decimus vitium aequitas veritas auctor adinventitias desparatus. Defetiscor vicissitudo absum delinquo amplexus acsi sed uter depopulo utor."`.
+Returns multiple paragraphs. For example: `Theca adamo video supplanto. Voluptates conturbo creator bellicus aut vir adinventitias altus cupiditate canto. Curo decumbo adipiscor inflammatio sponte cornu aegrotatio sopor capio calcar.\nBibo audeo adipisci beatae ustilo ambulo. Derelinquo desolo spectaculum inventore derelinquo asper carcer caries. Clementia pauper apto armarium.\nDedecor vis tui averto vorax praesentium tantillus catena adhaero adsidue. Decimus vitium aequitas veritas auctor adinventitias desparatus. Defetiscor vicissitudo absum delinquo amplexus acsi sed uter depopulo utor.`.
 
 Return datatype: **string**
 
@@ -76,7 +83,7 @@ Return datatype: **string**
 |:---------|:---------|
 `sentence`|`Sentence`
 
-Returns a sentence. For example: `"Provident supra custodia aegrotatio."`.
+Returns a sentence. For example: `Provident supra custodia aegrotatio.`.
 
 Return datatype: **string**
 
@@ -86,7 +93,7 @@ Return datatype: **string**
 |:---------|:---------|
 `sentences`|`Sentences`
 
-Returns multiple sentences. For example: `"Terminatio cubo voco trado amaritudo delectus. Beatus attollo arbitro desparatus una angelus vesper. Provident voluntarius capitulus universe compono. Conscendo animadverto apto aegrotatio. Ut virgo turbo sol viscus quam."`.
+Returns multiple sentences. For example: `Terminatio cubo voco trado amaritudo delectus. Beatus attollo arbitro desparatus una angelus vesper. Provident voluntarius capitulus universe compono. Conscendo animadverto apto aegrotatio. Ut virgo turbo sol viscus quam.`.
 
 Return datatype: **string**
 
@@ -96,7 +103,7 @@ Return datatype: **string**
 |:---------|:---------|
 `slug`|`Slug`
 
-Returns a slug. For example: `"patria-numquam-arbor"`.
+Returns a slug. For example: `patria-numquam-arbor`.
 
 Return datatype: **string**
 
@@ -106,7 +113,7 @@ Return datatype: **string**
 |:---------|:---------|
 `text`|`Text`
 
-Returns a text. For example: `"Sum laudantium totam utrum victus sunt paens demergo cervus vulgivagus.\nVentus clarus cotidie conduco sollicito degero carmen turbo combibo.\nTandem vulpes villa tribuo doloremque tergeo."`.
+Returns a text. For example: `Sum laudantium totam utrum victus sunt paens demergo cervus vulgivagus.\nVentus clarus cotidie conduco sollicito degero carmen turbo combibo.\nTandem vulpes villa tribuo doloremque tergeo.`.
 
 Return datatype: **string**
 
@@ -116,7 +123,7 @@ Return datatype: **string**
 |:---------|:---------|
 `word`|`Word`
 
-Returns a word. For example: `"circumvenio"`.
+Returns a word. For example: `circumvenio`.
 
 Return datatype: **string**
 
@@ -126,6 +133,6 @@ Return datatype: **string**
 |:---------|:---------|
 `words`|`Words`
 
-Returns multiple words. For example: `"toties ter colligo"`.
+Returns multiple words. For example: `toties ter colligo`.
 
 Return datatype: **string**

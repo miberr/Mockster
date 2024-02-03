@@ -5,18 +5,25 @@ description: "Generate system data."
 
 # 💻 Systems
 
-Generate phones related data. Returns an array of properties, by default ten.
+:::danger Power Automate connector not yet available
+Power Automate connector can be expected to be available Q1/2024
+:::
+
+## Description
+
+Generate system related data. Returns an array of properties, by default ten.
 
 ## Query options
 
 |Parameter|Description|Default|
 |---------|:---------|---------|
 |`Count`| Count of objects returned | 10 |
+|`Seed` | Seed value for reproducible results. | null |
 
 ## Request
 
 ```http title="HTTP"
-GET https://mockster.dev/api/v1/science
+GET https://mockster.dev/api/v1/systems
 Accept: application/json  
 ```
 
