@@ -24,7 +24,7 @@ Generate data for a person. Returns an array of properties, by default ten. Some
 ## Request
 
 ```http title="HTTP"
-GET https://mockster.dev/api/v1/persons
+GET https://api.mockster.dev/api/v1/persons
 Accept: application/json  
 ```
 

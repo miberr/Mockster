@@ -23,7 +23,7 @@ Generate database related technical data, like columns or engines. Returns an ar
 ## Request
 
 ```http title="HTTP"
-GET https://mockster.dev/api/v1/databases
+GET https://api.mockster.dev/api/v1/databases
 Accept: application/json  
 ```
 

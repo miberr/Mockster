@@ -23,7 +23,7 @@ Generate different kinds of numbers. Returns an array of properties, by default 
 ## Request
 
 ```http title="HTTP"
-GET https://mockster.dev/api/v1/numbers
+GET https://api.mockster.dev/api/v1/numbers
 Accept: application/json  
 ```
 

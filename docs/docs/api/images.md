@@ -27,7 +27,7 @@ Service is provided by https://loremflickr.com.
 ## Request
 
 ```http title="HTTP"
-GET https://mockster.dev/api/v1/images
+GET https://api.mockster.dev/api/v1/images
 Accept: application/json  
 ```
 

@@ -23,7 +23,7 @@ Generate science related data. Returns an array of properties, by default ten.
 ## Request
 
 ```http title="HTTP"
-GET https://mockster.dev/api/v1/sciences
+GET https://api.mockster.dev/api/v1/sciences
 Accept: application/json  
 ```
 

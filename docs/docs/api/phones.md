@@ -24,7 +24,7 @@ Generate phone nuber and IMEI. Returns an array of properties, by default ten. P
 ## Request
 
 ```http title="HTTP"
-GET https://mockster.dev/api/v1/phones
+GET https://api.mockster.dev/api/v1/phones
 Accept: application/json  
 ```
 

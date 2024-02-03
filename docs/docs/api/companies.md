@@ -24,7 +24,7 @@ Generate company related data, like names and company jargon. Returns an array o
 ## Request
 
 ```http title="HTTP"
-GET https://mockster.dev/api/v1/companies
+GET https://api.mockster.dev/api/v1/companies
 Accept: application/json  
 ```
 

@@ -24,7 +24,7 @@ Generate location related data. Returns an array of properties, by default ten. 
 ## Request
 
 ```http title="HTTP"
-GET https://mockster.dev/api/v1/locations
+GET https://api.mockster.dev/api/v1/locations
 Accept: application/json  
 ```
 

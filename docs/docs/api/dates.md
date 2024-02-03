@@ -28,7 +28,7 @@ Reproducible response is available only for `month`, `weekday` and `year`. All o
 ## Request
 
 ```http title="HTTP"
-GET https://mockster.dev/api/v1/dates
+GET https://api.mockster.dev/api/v1/dates
 Accept: application/json  
 ```
 

@@ -24,7 +24,7 @@ Generate hacker or IT related buzzwords. Returns an array of properties, by defa
 ## Request
 
 ```http title="HTTP"
-GET https://mockster.dev/api/v1/hackers
+GET https://api.mockster.dev/api/v1/hackers
 Accept: application/json  
 ```
 
