@@ -4,11 +4,16 @@ One time, I was training a Microsoft Official Course about Power Platform, I was
 
 Mockster is an implementation of [FakerJS](https://fakerjs.dev) exposed as an REST API. I've also created a Microsoft Power Platform connector for easy use for citizen developers.
 
+If you find Mockster usefull, please consider supporting me and Mockster by buying a cup of cofee trough GitHub Sponsors.
+
 ## What's in it?
 
 In Mockster there is many different modules, or endpoints, to be utilized. These include things like `Persons`, `Products`, or `Companies` amd a lot more. For exaustive list please visit Mocksters [website](https://mockster.dev/docs).
 
 ## Mockster in Microsoft Power Platform
+
+> [!NOTE]
+> For time being, the connector is pending certification.
 
 Mockster is meant for citizen developers first. As such, there will be a certified connector in Microsoft Power Platform. For time being, the connector is pending certification.
 
