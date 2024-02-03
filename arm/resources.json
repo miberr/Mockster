@@ -249,6 +249,9 @@
                     "type": "config",
                     "apiVersion": "2022-09-01",
                     "name": "appsettings",
+                    "dependsOn": [
+                        "[resourceId('Microsoft.Web/staticSites', variables('staticSiteName'))]"
+                    ],
                     "kind": "string",
                     "properties": {
                        "APPINSIGHTS_INSTRUMENTATIONKEY": "[reference(resourceId('microsoft.insights/components/', variables('applicationInsightsName')), '2015-05-01').InstrumentationKey]"
