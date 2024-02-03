@@ -37,10 +37,10 @@ All endpoints include `seed` parameter. With identical seed you can reproduce th
 These two requests return randomised results. This is default behaviour when `seed` is not set.
 
 ```http title="HTTP"
-GET https://mockster.dev/api/v1/musics
+GET https://api.mockster.dev/api/v1/musics
 Accept: application/json  
 
-GET https://mockster.dev/api/v1/musics
+GET https://api.mockster.dev/api/v1/musics
 Accept: application/json  
 ```
 
@@ -64,10 +64,10 @@ Accept: application/json
 However, when a seed is given, you will receive the same response every time. In the example `123` is given for a `seed`.
 
 ```http title="HTTP"
-GET https://mockster.dev/api/v1/musics?seed=123
+GET https://api.mockster.dev/api/v1/musics?seed=123
 Accept: application/json  
 
-GET https://mockster.dev/api/v1/musics?seed=123
+GET https://api.mockster.dev/api/v1/musics?seed=123
 Accept: application/json  
 ```
 

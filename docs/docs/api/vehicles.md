@@ -24,7 +24,7 @@ Generate different kinds of vehicles and related properties. Returns an array of
 ## Request
 
 ```http title="HTTP"
-GET https://mockster.dev/api/v1/vehicles
+GET https://api.mockster.dev/api/v1/vehicles
 Accept: application/json  
 ```
 

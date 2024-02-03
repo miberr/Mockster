@@ -23,7 +23,7 @@ Get rich data about things in the internet like users or networking terms. Retur
 ## Request
 
 ```http title="HTTP"
-GET https://mockster.dev/api/v1/internets
+GET https://api.mockster.dev/api/v1/internets
 Accept: application/json  
 ```
 

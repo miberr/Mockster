@@ -24,7 +24,7 @@ Generate music related data. Returns an array of properties, by default ten. Som
 ## Request
 
 ```http title="HTTP"
-GET https://mockster.dev/api/v1/musics
+GET https://api.mockster.dev/api/v1/musics
 Accept: application/json  
 ```
 

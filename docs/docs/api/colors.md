@@ -24,7 +24,7 @@ Generate color related data. Includes color values in different formats as well 
 ## Request
 
 ```http title="HTTP"
-GET https://mockster.dev/api/v1/colors
+GET https://api.mockster.dev/api/v1/colors
 Accept: application/json  
 ```
 

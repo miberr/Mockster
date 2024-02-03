@@ -23,7 +23,7 @@ Generate aviation related data. You can use this endpoint for creating realistic
 ## Request
 
 ```http title="HTTP"
-GET https://mockster.dev/api/v1/airlines
+GET https://api.mockster.dev/api/v1/airlines
 Accept: application/json  
 ```
 

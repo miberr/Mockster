@@ -24,7 +24,7 @@ Generate different kinds of animal species. Returns an array of animal species, 
 ## Request
 
 ```http title="HTTP"
-GET https://mockster.dev/api/v1/animals
+GET https://api.mockster.dev/api/v1/animals
 Accept: application/json  
 ```
 

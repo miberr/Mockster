@@ -23,7 +23,7 @@ Generate lorem ipsum. Returns an array of properties, by default ten.
 ## Request
 
 ```http title="HTTP"
-GET https://mockster.dev/api/v1/lorems
+GET https://api.mockster.dev/api/v1/lorems
 Accept: application/json  
 ```
 

@@ -24,7 +24,7 @@ Generate finance related data, like credit card information, account information
 ## Request
 
 ```http title="HTTP"
-GET https://mockster.dev/api/v1/finances
+GET https://api.mockster.dev/api/v1/finances
 Accept: application/json  
 ```
 

@@ -28,7 +28,7 @@ Reproducible response is not available only for `commitEntry` and `commitDate`. 
 ## Request
 
 ```http title="HTTP"
-GET https://mockster.dev/api/v1/gits
+GET https://api.mockster.dev/api/v1/gits
 Accept: application/json  
 ```
 
