@@ -8,14 +8,13 @@
   "permalink": "/docs/api/persons",
   "draft": false,
   "unlisted": false,
-  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/api/persons.md",
   "tags": [],
   "version": "current",
   "frontMatter": {
     "sidebar_label": "🧍🏻 Persons",
     "description": "Generate data for a person."
   },
-  "sidebar": "tutorialSidebar",
+  "sidebar": "docsSidebar",
   "previous": {
     "title": "🔢 Numbers",
     "permalink": "/docs/api/numbers"

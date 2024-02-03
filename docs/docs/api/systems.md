@@ -5,6 +5,12 @@ description: "Generate system data."
 
 # 💻 Systems
 
+:::danger Power Automate connector not yet available
+Power Automate connector can be expected to be available Q1/2024
+:::
+
+## Description
+
 Generate system related data. Returns an array of properties, by default ten.
 
 ## Query options

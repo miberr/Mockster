@@ -5,6 +5,10 @@ description: "Get rich data about things in the internet like users or networkin
 
 # 🌐 Internet
 
+:::danger Power Automate connector not yet available
+Power Automate connector can be expected to be available Q1/2024
+:::
+
 ## Description
 
 Get rich data about things in the internet like users or networking terms. Returns an array of objects with different internet properties, by default ten.

@@ -5,6 +5,12 @@ description: "Generate Lorem Ipsum data."
 
 # 🎶 Musics
 
+:::danger Power Automate connector not yet available
+Power Automate connector can be expected to be available Q1/2024
+:::
+
+## Description
+
 Generate music related data. Returns an array of properties, by default ten. Some properties might be localized.
 
 ## Query options

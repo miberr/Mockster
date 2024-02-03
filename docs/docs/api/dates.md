@@ -5,6 +5,10 @@ description: "Generate datetime data."
 
 # 🗓️ Dates
 
+:::danger Power Automate connector not yet available
+Power Automate connector can be expected to be available Q1/2024
+:::
+
 ## Description
 
 Generate datetime data. While seed usage is available, note that most of the properties depend on the time the enpoint is requested, rather than a spesific seed value. Returns an array of properties, by default ten. All dates are returned as ISO-8601 datetime strings. `Month` and `weekday` might be localized.

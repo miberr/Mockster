@@ -5,6 +5,10 @@ description: "Generate company related data, like names and company jargon. Retu
 
 # 🏢 Companies
 
+:::danger Power Automate connector not yet available
+Power Automate connector can be expected to be available Q1/2024
+:::
+
 ## Description
 
 Generate company related data, like names and company jargon. Returns an array of properties, by default ten. Some of the properties can be localized.

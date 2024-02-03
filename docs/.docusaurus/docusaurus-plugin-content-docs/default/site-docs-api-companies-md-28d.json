@@ -8,14 +8,13 @@
   "permalink": "/docs/api/companies",
   "draft": false,
   "unlisted": false,
-  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/api/companies.md",
   "tags": [],
   "version": "current",
   "frontMatter": {
     "sidebar_label": "🏢 Companies",
     "description": "Generate company related data, like names and company jargon. Returns an array of properties, by default ten. Some of the properties can be localized."
   },
-  "sidebar": "tutorialSidebar",
+  "sidebar": "docsSidebar",
   "previous": {
     "title": "🌈 Colors",
     "permalink": "/docs/api/colors"

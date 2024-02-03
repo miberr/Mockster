@@ -5,6 +5,10 @@ description: "Generate database related technical data, like columns or engines.
 
 # 💾 Databases
 
+:::danger Power Automate connector not yet available
+Power Automate connector can be expected to be available Q1/2024
+:::
+
 ## Description
 
 Generate database related technical data, like columns or engines. Returns an array of properties, by default ten.

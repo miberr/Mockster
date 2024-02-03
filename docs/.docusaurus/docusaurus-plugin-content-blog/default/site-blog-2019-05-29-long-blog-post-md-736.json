@@ -20,10 +20,10 @@
   "hasTruncateMarker": true,
   "authors": [
     {
-      "name": "Endilie Yacop Sucipto",
-      "title": "Maintainer of Docusaurus",
-      "url": "https://github.com/endiliey",
-      "imageURL": "https://github.com/endiliey.png",
+      "name": "Mikko",
+      "title": "Mockster creator",
+      "url": "https://github.com/miberr",
+      "imageURL": "https://avatars.githubusercontent.com/u/62485576?v=4",
       "key": "endi"
     }
   ],
@@ -37,10 +37,6 @@
     ]
   },
   "unlisted": false,
-  "prevItem": {
-    "title": "MDX Blog Post",
-    "permalink": "/blog/mdx-blog-post"
-  },
   "nextItem": {
     "title": "First Blog Post",
     "permalink": "/blog/first-blog-post"

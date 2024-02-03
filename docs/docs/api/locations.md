@@ -5,6 +5,12 @@ description: "Generate hacker related data."
 
 # 📍 Locations
 
+:::danger Power Automate connector not yet available
+Power Automate connector can be expected to be available Q1/2024
+:::
+
+## Description
+
 Generate location related data. Returns an array of properties, by default ten. Some attributes may be localized.
 
 ## Query options

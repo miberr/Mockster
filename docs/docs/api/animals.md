@@ -5,6 +5,10 @@ description: "Generate different kinds of animal species. Returns an array of an
 
 # 🐷 Animals
 
+:::danger Power Automate connector not yet available
+Power Automate connector can be expected to be available Q1/2024
+:::
+
 ## Description
 
 Generate different kinds of animal species. Returns an array of animal species, by default ten. All values may be localized.

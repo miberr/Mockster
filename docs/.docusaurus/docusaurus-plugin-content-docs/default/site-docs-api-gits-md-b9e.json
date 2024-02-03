@@ -8,14 +8,13 @@
   "permalink": "/docs/api/gits",
   "draft": false,
   "unlisted": false,
-  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/api/gits.md",
   "tags": [],
   "version": "current",
   "frontMatter": {
     "sidebar_label": "📁 Gits",
     "description": "Generate git related data."
   },
-  "sidebar": "tutorialSidebar",
+  "sidebar": "docsSidebar",
   "previous": {
     "title": "💶 Finances",
     "permalink": "/docs/api/finances"

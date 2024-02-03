@@ -5,6 +5,12 @@ description: "Generate science data."
 
 # 👩🏻‍🔬 Science
 
+:::danger Power Automate connector not yet available
+Power Automate connector can be expected to be available Q1/2024
+:::
+
+## Description
+
 Generate science related data. Returns an array of properties, by default ten.
 
 ## Query options

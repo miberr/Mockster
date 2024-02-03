@@ -5,6 +5,10 @@ description: "Generate git related data."
 
 # 📁 Gits
 
+:::danger Power Automate connector not yet available
+Power Automate connector can be expected to be available Q1/2024
+:::
+
 ## Description
 
 Generate git related data. Returns an array of properties, by default ten. 

@@ -5,6 +5,10 @@ description: "Generate word data."
 
 # 🌆 Images
 
+:::danger Power Automate connector not yet available
+Power Automate connector can be expected to be available Q1/2024
+:::
+
 ## Description
 
 Generate real images for your data. You can also use query parameter for returning spesific categories of images with spesific height and width. Returns an array of image URLS and names, by default ten. 

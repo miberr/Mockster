@@ -9,6 +9,10 @@ You can get started by making your first HTTP-request to Mocksters endpoint or f
 
 ## What you'll need
 
+:::danger Power Automate connector not yet available
+Power Automate connector can be expected to be available Q1/2024
+:::
+
 - For REST you don't need anything, go ahead and make your first request!
 - For Power Automate, you can find the Mockster connector when adding an action to your workflow.
 
@@ -19,8 +23,6 @@ Please note, that you'll need a Power Apps or Power Automate Premium license to 
 Another option is using **[Developer plan](https://powerapps.microsoft.com/en-gb/developerplan/)**. It's a great option for development and testing out premium features.
 
 ::::
-
-## First mock data
 
 ## Getting reproducible results
 

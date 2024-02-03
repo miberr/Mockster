@@ -7,7 +7,7 @@ export default {
   "title": "Mockster",
   "tagline": "Generate realistic mock data for your testing and development. Available as Microsoft Power Platform connector.",
   "favicon": "img/favicon.ico",
-  "url": "https://your-docusaurus-site.example.com",
+  "url": "https://mockster.dev",
   "baseUrl": "/",
   "organizationName": "miberr",
   "projectName": "Mockster",
@@ -26,12 +26,10 @@ export default {
       "classic",
       {
         "docs": {
-          "sidebarPath": "./sidebars.js",
-          "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/"
+          "sidebarPath": "./sidebars.js"
         },
         "blog": {
-          "showReadingTime": true,
-          "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/"
+          "showReadingTime": true
         },
         "theme": {
           "customCss": "./src/css/custom.css"
@@ -50,9 +48,9 @@ export default {
       "items": [
         {
           "type": "docSidebar",
-          "sidebarId": "tutorialSidebar",
+          "sidebarId": "docsSidebar",
           "position": "left",
-          "label": "Tutorial"
+          "label": "Documentation"
         },
         {
           "to": "/blog",
@@ -60,7 +58,7 @@ export default {
           "position": "left"
         },
         {
-          "href": "https://github.com/facebook/docusaurus",
+          "href": "https://github.com/miberr/mockster",
           "label": "GitHub",
           "position": "right"
         }
@@ -74,25 +72,12 @@ export default {
           "title": "Docs",
           "items": [
             {
-              "label": "Tutorial",
-              "to": "/docs/intro"
-            }
-          ]
-        },
-        {
-          "title": "Community",
-          "items": [
-            {
-              "label": "Stack Overflow",
-              "href": "https://stackoverflow.com/questions/tagged/docusaurus"
+              "label": "Getting started",
+              "to": "/docs/getting-started"
             },
             {
-              "label": "Discord",
-              "href": "https://discordapp.com/invite/docusaurus"
-            },
-            {
-              "label": "Twitter",
-              "href": "https://twitter.com/docusaurus"
+              "label": "API Reference",
+              "to": "/docs/category/api"
             }
           ]
         },

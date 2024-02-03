@@ -8,14 +8,13 @@
   "permalink": "/docs/api/phones",
   "draft": false,
   "unlisted": false,
-  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/api/phones.md",
   "tags": [],
   "version": "current",
   "frontMatter": {
     "sidebar_label": "📱 Phones",
     "description": "Generate phone nuber and IMEI."
   },
-  "sidebar": "tutorialSidebar",
+  "sidebar": "docsSidebar",
   "previous": {
     "title": "🧍🏻 Persons",
     "permalink": "/docs/api/persons"

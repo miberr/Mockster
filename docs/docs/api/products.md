@@ -5,6 +5,12 @@ description: "Generate products data."
 
 # 🧸 Products
 
+:::danger Power Automate connector not yet available
+Power Automate connector can be expected to be available Q1/2024
+:::
+
+## Description
+
 Generate product related data. Returns an array of properties, by default ten. Some properties may be localized.
 
 ## Query options

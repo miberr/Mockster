@@ -5,6 +5,12 @@ description: "Generate phone nuber and IMEI."
 
 # 📱 Phones
 
+:::danger Power Automate connector not yet available
+Power Automate connector can be expected to be available Q1/2024
+:::
+
+## Description
+
 Generate phone nuber and IMEI. Returns an array of properties, by default ten. Phone number may be localized.
 
 ## Query options

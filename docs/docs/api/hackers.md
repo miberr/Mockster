@@ -5,6 +5,10 @@ description: "Generate hacker related data."
 
 # 🥷🏼 Hackers
 
+:::danger Power Automate connector not yet available
+Power Automate connector can be expected to be available Q1/2024
+:::
+
 ## Description
 
 Generate hacker or IT related buzzwords. Returns an array of properties, by default ten. Some properties might be localized.

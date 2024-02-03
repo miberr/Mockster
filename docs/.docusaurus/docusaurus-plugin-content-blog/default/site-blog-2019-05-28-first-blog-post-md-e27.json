@@ -1,50 +1,39 @@
 {
-  "permalink": "/blog/first-blog-post",
-  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/blog/2019-05-28-first-blog-post.md",
+  "permalink": "/blog/v1-released",
   "source": "@site/blog/2019-05-28-first-blog-post.md",
-  "title": "First Blog Post",
-  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet",
+  "title": "Mockster v1 released 🚀",
+  "description": "One time, I was training a Microsoft Official Course about Power Platform, I was asked how can one generate some testing data to Dataverse. Had no idea. I researched quite a while and couldn't find anything just right for citizen developers. There are so many mock data generators, JSON fakers, data seeders and so on. None I could find makes it easy for non-programmers to use. So Mockster was born.",
   "date": "2019-05-28T00:00:00.000Z",
   "formattedDate": "May 28, 2019",
   "tags": [
     {
-      "label": "hola",
-      "permalink": "/blog/tags/hola"
+      "label": "v1",
+      "permalink": "/blog/tags/v-1"
     },
     {
-      "label": "docusaurus",
-      "permalink": "/blog/tags/docusaurus"
+      "label": "mockster",
+      "permalink": "/blog/tags/mockster"
     }
   ],
-  "readingTime": 0.12,
+  "readingTime": 0.62,
   "hasTruncateMarker": false,
   "authors": [
     {
-      "name": "Gao Wei",
-      "title": "Docusaurus Core Team",
-      "url": "https://github.com/wgao19",
-      "image_url": "https://github.com/wgao19.png",
-      "imageURL": "https://github.com/wgao19.png"
+      "name": "Mikko",
+      "title": "Mockster creator",
+      "url": "https://github.com/miberr",
+      "imageURL": "https://avatars.githubusercontent.com/u/62485576?v=4",
+      "key": "mikko"
     }
   ],
   "frontMatter": {
-    "slug": "first-blog-post",
-    "title": "First Blog Post",
-    "authors": {
-      "name": "Gao Wei",
-      "title": "Docusaurus Core Team",
-      "url": "https://github.com/wgao19",
-      "image_url": "https://github.com/wgao19.png",
-      "imageURL": "https://github.com/wgao19.png"
-    },
+    "slug": "v1-released",
+    "title": "Mockster v1 released 🚀",
+    "authors": "mikko",
     "tags": [
-      "hola",
-      "docusaurus"
+      "v1",
+      "mockster"
     ]
   },
-  "unlisted": false,
-  "prevItem": {
-    "title": "Long Blog Post",
-    "permalink": "/blog/long-blog-post"
-  }
+  "unlisted": false
 }

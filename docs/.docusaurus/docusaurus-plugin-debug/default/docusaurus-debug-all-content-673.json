@@ -11,8 +11,6 @@
           "className": "docs-version-current",
           "path": "/docs",
           "tagsPath": "/docs/tags",
-          "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs",
-          "editUrlLocalized": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/i18n/en/docusaurus-plugin-content-docs/current",
           "isLast": true,
           "routePriority": -1,
           "sidebarFilePath": "/Users/mikkoberg/Library/Mobile Documents/com~apple~CloudDocs/Documents/GitHub/Mockster/docs/sidebars.js",
@@ -29,14 +27,13 @@
               "permalink": "/docs/api/airlines",
               "draft": false,
               "unlisted": false,
-              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/api/airlines.md",
               "tags": [],
               "version": "current",
               "frontMatter": {
                 "sidebar_label": "✈️ Airlines",
                 "description": "Generate aviation related data. You can use this endpoint for creating realistic mock data for flights or tickets. Returns an array of airline related properties, by default ten."
               },
-              "sidebar": "tutorialSidebar",
+              "sidebar": "docsSidebar",
               "previous": {
                 "title": "API",
                 "permalink": "/docs/category/api"
@@ -56,14 +53,13 @@
               "permalink": "/docs/api/animals",
               "draft": false,
               "unlisted": false,
-              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/api/animals.md",
               "tags": [],
               "version": "current",
               "frontMatter": {
                 "sidebar_label": "🐷 Animals",
                 "description": "Generate different kinds of animal species. Returns an array of animal species, by default ten. All values may be localized."
               },
-              "sidebar": "tutorialSidebar",
+              "sidebar": "docsSidebar",
               "previous": {
                 "title": "✈️ Airlines",
                 "permalink": "/docs/api/airlines"
@@ -83,14 +79,13 @@
               "permalink": "/docs/api/colors",
               "draft": false,
               "unlisted": false,
-              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/api/colors.md",
               "tags": [],
               "version": "current",
               "frontMatter": {
                 "sidebar_label": "🌈 Colors",
                 "description": "Generate color related data. Includes color values in different formats as well as human readable value. Returns an array of colors, by default ten. Some values may be localized."
               },
-              "sidebar": "tutorialSidebar",
+              "sidebar": "docsSidebar",
               "previous": {
                 "title": "🐷 Animals",
                 "permalink": "/docs/api/animals"
@@ -110,14 +105,13 @@
               "permalink": "/docs/api/companies",
               "draft": false,
               "unlisted": false,
-              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/api/companies.md",
               "tags": [],
               "version": "current",
               "frontMatter": {
                 "sidebar_label": "🏢 Companies",
                 "description": "Generate company related data, like names and company jargon. Returns an array of properties, by default ten. Some of the properties can be localized."
               },
-              "sidebar": "tutorialSidebar",
+              "sidebar": "docsSidebar",
               "previous": {
                 "title": "🌈 Colors",
                 "permalink": "/docs/api/colors"
@@ -137,14 +131,13 @@
               "permalink": "/docs/api/databases",
               "draft": false,
               "unlisted": false,
-              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/api/databases.md",
               "tags": [],
               "version": "current",
               "frontMatter": {
                 "sidebar_label": "💾 Databases",
                 "description": "Generate database related technical data, like columns or engines. Returns an array of properties, by default ten."
               },
-              "sidebar": "tutorialSidebar",
+              "sidebar": "docsSidebar",
               "previous": {
                 "title": "🏢 Companies",
                 "permalink": "/docs/api/companies"
@@ -164,14 +157,13 @@
               "permalink": "/docs/api/dates",
               "draft": false,
               "unlisted": false,
-              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/api/dates.md",
               "tags": [],
               "version": "current",
               "frontMatter": {
                 "sidebar_label": "🗓️ Dates",
                 "description": "Generate datetime data."
               },
-              "sidebar": "tutorialSidebar",
+              "sidebar": "docsSidebar",
               "previous": {
                 "title": "💾 Databases",
                 "permalink": "/docs/api/databases"
@@ -191,14 +183,13 @@
               "permalink": "/docs/api/finances",
               "draft": false,
               "unlisted": false,
-              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/api/finances.md",
               "tags": [],
               "version": "current",
               "frontMatter": {
                 "sidebar_label": "💶 Finances",
                 "description": "Generate finance related data."
               },
-              "sidebar": "tutorialSidebar",
+              "sidebar": "docsSidebar",
               "previous": {
                 "title": "🗓️ Dates",
                 "permalink": "/docs/api/dates"
@@ -218,14 +209,13 @@
               "permalink": "/docs/api/gits",
               "draft": false,
               "unlisted": false,
-              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/api/gits.md",
               "tags": [],
               "version": "current",
               "frontMatter": {
                 "sidebar_label": "📁 Gits",
                 "description": "Generate git related data."
               },
-              "sidebar": "tutorialSidebar",
+              "sidebar": "docsSidebar",
               "previous": {
                 "title": "💶 Finances",
                 "permalink": "/docs/api/finances"
@@ -245,14 +235,13 @@
               "permalink": "/docs/api/hackers",
               "draft": false,
               "unlisted": false,
-              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/api/hackers.md",
               "tags": [],
               "version": "current",
               "frontMatter": {
                 "sidebar_label": "🥷🏼 Hackers",
                 "description": "Generate hacker related data."
               },
-              "sidebar": "tutorialSidebar",
+              "sidebar": "docsSidebar",
               "previous": {
                 "title": "📁 Gits",
                 "permalink": "/docs/api/gits"
@@ -272,14 +261,13 @@
               "permalink": "/docs/api/images",
               "draft": false,
               "unlisted": false,
-              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/api/images.md",
               "tags": [],
               "version": "current",
               "frontMatter": {
                 "sidebar_label": "🌆 Images",
                 "description": "Generate word data."
               },
-              "sidebar": "tutorialSidebar",
+              "sidebar": "docsSidebar",
               "previous": {
                 "title": "🥷🏼 Hackers",
                 "permalink": "/docs/api/hackers"
@@ -299,14 +287,13 @@
               "permalink": "/docs/api/internet",
               "draft": false,
               "unlisted": false,
-              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/api/internet.md",
               "tags": [],
               "version": "current",
               "frontMatter": {
                 "sidebar_label": "🌐 Internet",
                 "description": "Get rich data about things in the internet like users or networking terms."
               },
-              "sidebar": "tutorialSidebar",
+              "sidebar": "docsSidebar",
               "previous": {
                 "title": "🌆 Images",
                 "permalink": "/docs/api/images"
@@ -326,14 +313,13 @@
               "permalink": "/docs/api/locations",
               "draft": false,
               "unlisted": false,
-              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/api/locations.md",
               "tags": [],
               "version": "current",
               "frontMatter": {
                 "sidebar_label": "📍 Locations",
                 "description": "Generate hacker related data."
               },
-              "sidebar": "tutorialSidebar",
+              "sidebar": "docsSidebar",
               "previous": {
                 "title": "🌐 Internet",
                 "permalink": "/docs/api/internet"
@@ -353,14 +339,13 @@
               "permalink": "/docs/api/lorem",
               "draft": false,
               "unlisted": false,
-              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/api/lorem.md",
               "tags": [],
               "version": "current",
               "frontMatter": {
                 "sidebar_label": "💬 Lorem",
                 "description": "Generate Lorem Ipsum."
               },
-              "sidebar": "tutorialSidebar",
+              "sidebar": "docsSidebar",
               "previous": {
                 "title": "📍 Locations",
                 "permalink": "/docs/api/locations"
@@ -380,14 +365,13 @@
               "permalink": "/docs/api/musics",
               "draft": false,
               "unlisted": false,
-              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/api/musics.md",
               "tags": [],
               "version": "current",
               "frontMatter": {
                 "sidebar_label": "🎶 Musics",
                 "description": "Generate Lorem Ipsum data."
               },
-              "sidebar": "tutorialSidebar",
+              "sidebar": "docsSidebar",
               "previous": {
                 "title": "💬 Lorem",
                 "permalink": "/docs/api/lorem"
@@ -407,14 +391,13 @@
               "permalink": "/docs/api/numbers",
               "draft": false,
               "unlisted": false,
-              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/api/numbers.md",
               "tags": [],
               "version": "current",
               "frontMatter": {
                 "sidebar_label": "🔢 Numbers",
                 "description": "Generate number data."
               },
-              "sidebar": "tutorialSidebar",
+              "sidebar": "docsSidebar",
               "previous": {
                 "title": "🎶 Musics",
                 "permalink": "/docs/api/musics"
@@ -434,14 +417,13 @@
               "permalink": "/docs/api/persons",
               "draft": false,
               "unlisted": false,
-              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/api/persons.md",
               "tags": [],
               "version": "current",
               "frontMatter": {
                 "sidebar_label": "🧍🏻 Persons",
                 "description": "Generate data for a person."
               },
-              "sidebar": "tutorialSidebar",
+              "sidebar": "docsSidebar",
               "previous": {
                 "title": "🔢 Numbers",
                 "permalink": "/docs/api/numbers"
@@ -461,14 +443,13 @@
               "permalink": "/docs/api/phones",
               "draft": false,
               "unlisted": false,
-              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/api/phones.md",
               "tags": [],
               "version": "current",
               "frontMatter": {
                 "sidebar_label": "📱 Phones",
                 "description": "Generate phone nuber and IMEI."
               },
-              "sidebar": "tutorialSidebar",
+              "sidebar": "docsSidebar",
               "previous": {
                 "title": "🧍🏻 Persons",
                 "permalink": "/docs/api/persons"
@@ -488,14 +469,13 @@
               "permalink": "/docs/api/products",
               "draft": false,
               "unlisted": false,
-              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/api/products.md",
               "tags": [],
               "version": "current",
               "frontMatter": {
                 "sidebar_label": "🧸 Products",
                 "description": "Generate products data."
               },
-              "sidebar": "tutorialSidebar",
+              "sidebar": "docsSidebar",
               "previous": {
                 "title": "📱 Phones",
                 "permalink": "/docs/api/phones"
@@ -515,14 +495,13 @@
               "permalink": "/docs/api/sciences",
               "draft": false,
               "unlisted": false,
-              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/api/sciences.md",
               "tags": [],
               "version": "current",
               "frontMatter": {
                 "sidebar_label": "👩🏻‍🔬 Science",
                 "description": "Generate science data."
               },
-              "sidebar": "tutorialSidebar",
+              "sidebar": "docsSidebar",
               "previous": {
                 "title": "🧸 Products",
                 "permalink": "/docs/api/products"
@@ -542,14 +521,13 @@
               "permalink": "/docs/api/strings",
               "draft": false,
               "unlisted": false,
-              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/api/strings.md",
               "tags": [],
               "version": "current",
               "frontMatter": {
                 "sidebar_label": "🔠 Strings",
                 "description": "Generate random strings."
               },
-              "sidebar": "tutorialSidebar",
+              "sidebar": "docsSidebar",
               "previous": {
                 "title": "👩🏻‍🔬 Science",
                 "permalink": "/docs/api/sciences"
@@ -569,14 +547,13 @@
               "permalink": "/docs/api/systems",
               "draft": false,
               "unlisted": false,
-              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/api/systems.md",
               "tags": [],
               "version": "current",
               "frontMatter": {
                 "sidebar_label": "💻 Systems",
                 "description": "Generate system data."
               },
-              "sidebar": "tutorialSidebar",
+              "sidebar": "docsSidebar",
               "previous": {
                 "title": "🔠 Strings",
                 "permalink": "/docs/api/strings"
@@ -596,14 +573,13 @@
               "permalink": "/docs/api/vehicles",
               "draft": false,
               "unlisted": false,
-              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/api/vehicles.md",
               "tags": [],
               "version": "current",
               "frontMatter": {
                 "sidebar_label": "🏎️ Vehicles",
                 "description": "Generate different kinds of vehicles."
               },
-              "sidebar": "tutorialSidebar",
+              "sidebar": "docsSidebar",
               "previous": {
                 "title": "💻 Systems",
                 "permalink": "/docs/api/systems"
@@ -623,14 +599,13 @@
               "permalink": "/docs/api/words",
               "draft": false,
               "unlisted": false,
-              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/api/words.md",
               "tags": [],
               "version": "current",
               "frontMatter": {
                 "sidebar_label": "🆒 Words",
                 "description": "Generate random words."
               },
-              "sidebar": "tutorialSidebar",
+              "sidebar": "docsSidebar",
               "previous": {
                 "title": "🏎️ Vehicles",
                 "permalink": "/docs/api/vehicles"
@@ -646,7 +621,6 @@
               "permalink": "/docs/getting-started",
               "draft": false,
               "unlisted": false,
-              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/getting-started.md",
               "tags": [],
               "version": "current",
               "sidebarPosition": 2,
@@ -654,7 +628,7 @@
                 "sidebar_position": 2,
                 "sidebar_label": "Getting started"
               },
-              "sidebar": "tutorialSidebar",
+              "sidebar": "docsSidebar",
               "previous": {
                 "title": "What's Mockster?",
                 "permalink": "/docs/whats-mockster"
@@ -674,7 +648,6 @@
               "permalink": "/docs/localization",
               "draft": false,
               "unlisted": false,
-              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/localization.md",
               "tags": [],
               "version": "current",
               "sidebarPosition": 3,
@@ -682,7 +655,7 @@
                 "sidebar_position": 3,
                 "sidebar_label": "Localization"
               },
-              "sidebar": "tutorialSidebar",
+              "sidebar": "docsSidebar",
               "previous": {
                 "title": "Getting started",
                 "permalink": "/docs/getting-started"
@@ -702,7 +675,6 @@
               "permalink": "/docs/whats-mockster",
               "draft": false,
               "unlisted": false,
-              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/whats-mockster.md",
               "tags": [],
               "version": "current",
               "sidebarPosition": 1,
@@ -710,7 +682,7 @@
                 "sidebar_position": 1,
                 "sidebar_label": "What's Mockster?"
               },
-              "sidebar": "tutorialSidebar",
+              "sidebar": "docsSidebar",
               "next": {
                 "title": "Getting started",
                 "permalink": "/docs/getting-started"
@@ -719,7 +691,7 @@
           ],
           "drafts": [],
           "sidebars": {
-            "tutorialSidebar": [
+            "docsSidebar": [
               {
                 "type": "doc",
                 "id": "whats-mockster",
@@ -875,257 +847,79 @@
       "blogSidebarTitle": "Recent posts",
       "blogPosts": [
         {
-          "id": "welcome",
+          "id": "v1-released",
           "metadata": {
-            "permalink": "/blog/welcome",
-            "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/blog/2021-08-26-welcome/index.md",
-            "source": "@site/blog/2021-08-26-welcome/index.md",
-            "title": "Welcome",
-            "description": "Docusaurus blogging features are powered by the blog plugin.",
-            "date": "2021-08-26T00:00:00.000Z",
-            "formattedDate": "August 26, 2021",
+            "permalink": "/blog/v1-released",
+            "source": "@site/blog/2024-02-04-Mockster-Released.md",
+            "title": "Mockster v1 released 🚀",
+            "description": "One time, I was training a Microsoft Official Course about Power Platform, I was asked how can one generate some testing data to Dataverse. Had no idea. I researched quite a while and couldn't find anything just right for citizen developers. There are so many mock data generators, JSON fakers, data seeders and so on. None I could find makes it easy for non-programmers to use. So Mockster was born.",
+            "date": "2024-02-04T00:00:00.000Z",
+            "formattedDate": "February 4, 2024",
             "tags": [
               {
-                "label": "facebook",
-                "permalink": "/blog/tags/facebook"
+                "label": "v1",
+                "permalink": "/blog/tags/v-1"
               },
               {
-                "label": "hello",
-                "permalink": "/blog/tags/hello"
-              },
-              {
-                "label": "docusaurus",
-                "permalink": "/blog/tags/docusaurus"
+                "label": "mockster",
+                "permalink": "/blog/tags/mockster"
               }
             ],
-            "readingTime": 0.405,
+            "readingTime": 0.62,
             "hasTruncateMarker": false,
             "authors": [
               {
-                "name": "Sébastien Lorber",
-                "title": "Docusaurus maintainer",
-                "url": "https://sebastienlorber.com",
-                "imageURL": "https://github.com/slorber.png",
-                "key": "slorber"
-              },
-              {
-                "name": "Yangshun Tay",
-                "title": "Front End Engineer @ Facebook",
-                "url": "https://github.com/yangshun",
-                "imageURL": "https://github.com/yangshun.png",
-                "key": "yangshun"
+                "name": "Mikko",
+                "title": "Mockster creator",
+                "url": "https://github.com/miberr",
+                "imageURL": "https://avatars.githubusercontent.com/u/62485576?v=4",
+                "key": "mikko"
               }
             ],
             "frontMatter": {
-              "slug": "welcome",
-              "title": "Welcome",
-              "authors": [
-                "slorber",
-                "yangshun"
-              ],
+              "slug": "v1-released",
+              "title": "Mockster v1 released 🚀",
+              "authors": "mikko",
               "tags": [
-                "facebook",
-                "hello",
-                "docusaurus"
+                "v1",
+                "mockster"
               ]
             },
-            "unlisted": false,
-            "nextItem": {
-              "title": "MDX Blog Post",
-              "permalink": "/blog/mdx-blog-post"
-            }
+            "unlisted": false
           },
-          "content": "[Docusaurus blogging features](https://docusaurus.io/docs/blog) are powered by the [blog plugin](https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-blog).\n\nSimply add Markdown files (or folders) to the `blog` directory.\n\nRegular blog authors can be added to `authors.yml`. \n\nThe blog post date can be extracted from filenames, such aas: \n\n- `2019-05-30-welcome.md`\n- `2019-05-30-welcome/index.md`\n\nA blog post folder can be convenient to co-locate blog post images:\n\n![Docusaurus Plushie](./docusaurus-plushie-banner.jpeg)\n\nThe blog supports tags as well!\n\n**And if you don't want a blog**: just delete this directory, and use `blog: false` in your Docusaurus config."
-        },
-        {
-          "id": "mdx-blog-post",
-          "metadata": {
-            "permalink": "/blog/mdx-blog-post",
-            "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/blog/2021-08-01-mdx-blog-post.mdx",
-            "source": "@site/blog/2021-08-01-mdx-blog-post.mdx",
-            "title": "MDX Blog Post",
-            "description": "Blog posts support Docusaurus Markdown features, such as MDX.",
-            "date": "2021-08-01T00:00:00.000Z",
-            "formattedDate": "August 1, 2021",
-            "tags": [
-              {
-                "label": "docusaurus",
-                "permalink": "/blog/tags/docusaurus"
-              }
-            ],
-            "readingTime": 0.175,
-            "hasTruncateMarker": false,
-            "authors": [
-              {
-                "name": "Sébastien Lorber",
-                "title": "Docusaurus maintainer",
-                "url": "https://sebastienlorber.com",
-                "imageURL": "https://github.com/slorber.png",
-                "key": "slorber"
-              }
-            ],
-            "frontMatter": {
-              "slug": "mdx-blog-post",
-              "title": "MDX Blog Post",
-              "authors": [
-                "slorber"
-              ],
-              "tags": [
-                "docusaurus"
-              ]
-            },
-            "unlisted": false,
-            "prevItem": {
-              "title": "Welcome",
-              "permalink": "/blog/welcome"
-            },
-            "nextItem": {
-              "title": "Long Blog Post",
-              "permalink": "/blog/long-blog-post"
-            }
-          },
-          "content": "Blog posts support [Docusaurus Markdown features](https://docusaurus.io/docs/markdown-features), such as [MDX](https://mdxjs.com/).\n\n:::tip\n\nUse the power of React to create interactive blog posts.\n\n```js\n<button onClick={() => alert('button clicked!')}>Click me!</button>\n```\n\n<button onClick={() => alert('button clicked!')}>Click me!</button>\n\n:::"
-        },
-        {
-          "id": "long-blog-post",
-          "metadata": {
-            "permalink": "/blog/long-blog-post",
-            "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/blog/2019-05-29-long-blog-post.md",
-            "source": "@site/blog/2019-05-29-long-blog-post.md",
-            "title": "Long Blog Post",
-            "description": "This is the summary of a very long blog post,",
-            "date": "2019-05-29T00:00:00.000Z",
-            "formattedDate": "May 29, 2019",
-            "tags": [
-              {
-                "label": "hello",
-                "permalink": "/blog/tags/hello"
-              },
-              {
-                "label": "docusaurus",
-                "permalink": "/blog/tags/docusaurus"
-              }
-            ],
-            "readingTime": 2.05,
-            "hasTruncateMarker": true,
-            "authors": [
-              {
-                "name": "Endilie Yacop Sucipto",
-                "title": "Maintainer of Docusaurus",
-                "url": "https://github.com/endiliey",
-                "imageURL": "https://github.com/endiliey.png",
-                "key": "endi"
-              }
-            ],
-            "frontMatter": {
-              "slug": "long-blog-post",
-              "title": "Long Blog Post",
-              "authors": "endi",
-              "tags": [
-                "hello",
-                "docusaurus"
-              ]
-            },
-            "unlisted": false,
-            "prevItem": {
-              "title": "MDX Blog Post",
-              "permalink": "/blog/mdx-blog-post"
-            },
-            "nextItem": {
-              "title": "First Blog Post",
-              "permalink": "/blog/first-blog-post"
-            }
-          },
-          "content": "This is the summary of a very long blog post,\n\nUse a `<!--` `truncate` `-->` comment to limit blog post size in the list view.\n\n<!--truncate-->\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet"
-        },
-        {
-          "id": "first-blog-post",
-          "metadata": {
-            "permalink": "/blog/first-blog-post",
-            "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/blog/2019-05-28-first-blog-post.md",
-            "source": "@site/blog/2019-05-28-first-blog-post.md",
-            "title": "First Blog Post",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet",
-            "date": "2019-05-28T00:00:00.000Z",
-            "formattedDate": "May 28, 2019",
-            "tags": [
-              {
-                "label": "hola",
-                "permalink": "/blog/tags/hola"
-              },
-              {
-                "label": "docusaurus",
-                "permalink": "/blog/tags/docusaurus"
-              }
-            ],
-            "readingTime": 0.12,
-            "hasTruncateMarker": false,
-            "authors": [
-              {
-                "name": "Gao Wei",
-                "title": "Docusaurus Core Team",
-                "url": "https://github.com/wgao19",
-                "image_url": "https://github.com/wgao19.png",
-                "imageURL": "https://github.com/wgao19.png"
-              }
-            ],
-            "frontMatter": {
-              "slug": "first-blog-post",
-              "title": "First Blog Post",
-              "authors": {
-                "name": "Gao Wei",
-                "title": "Docusaurus Core Team",
-                "url": "https://github.com/wgao19",
-                "image_url": "https://github.com/wgao19.png",
-                "imageURL": "https://github.com/wgao19.png"
-              },
-              "tags": [
-                "hola",
-                "docusaurus"
-              ]
-            },
-            "unlisted": false,
-            "prevItem": {
-              "title": "Long Blog Post",
-              "permalink": "/blog/long-blog-post"
-            }
-          },
-          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet"
+          "content": "One time, I was training a Microsoft Official Course about Power Platform, I was asked how can one generate some testing data to Dataverse. Had no idea. I researched quite a while and couldn't find anything just right for citizen developers. There are so many mock data generators, JSON fakers, data seeders and so on. None I could find makes it easy for non-programmers to use. So Mockster was born.\n\nMockster is an implementation of FakerJS exposed as an REST API. I've also created a Microsoft Power Platform connector for easy use for citizen developers, which for now is in the acceptance process to become a certified connector.\n\nWhile we wait certification, the API itself is up and running. Hope you find it usefull!"
         }
       ],
       "blogListPaginated": [
         {
           "items": [
-            "welcome",
-            "mdx-blog-post",
-            "long-blog-post",
-            "first-blog-post"
+            "v1-released"
           ],
           "metadata": {
             "permalink": "/blog",
             "page": 1,
             "postsPerPage": 10,
             "totalPages": 1,
-            "totalCount": 4,
+            "totalCount": 1,
             "blogDescription": "Blog",
             "blogTitle": "Blog"
           }
         }
       ],
       "blogTags": {
-        "/blog/tags/facebook": {
-          "label": "facebook",
+        "/blog/tags/v-1": {
+          "label": "v1",
           "items": [
-            "welcome"
+            "v1-released"
           ],
-          "permalink": "/blog/tags/facebook",
+          "permalink": "/blog/tags/v-1",
           "pages": [
             {
               "items": [
-                "welcome"
+                "v1-released"
               ],
               "metadata": {
-                "permalink": "/blog/tags/facebook",
+                "permalink": "/blog/tags/v-1",
                 "page": 1,
                 "postsPerPage": 10,
                 "totalPages": 1,
@@ -1137,75 +931,19 @@
           ],
           "unlisted": false
         },
-        "/blog/tags/hello": {
-          "label": "hello",
+        "/blog/tags/mockster": {
+          "label": "mockster",
           "items": [
-            "welcome",
-            "long-blog-post"
+            "v1-released"
           ],
-          "permalink": "/blog/tags/hello",
+          "permalink": "/blog/tags/mockster",
           "pages": [
             {
               "items": [
-                "welcome",
-                "long-blog-post"
+                "v1-released"
               ],
               "metadata": {
-                "permalink": "/blog/tags/hello",
-                "page": 1,
-                "postsPerPage": 10,
-                "totalPages": 1,
-                "totalCount": 2,
-                "blogDescription": "Blog",
-                "blogTitle": "Blog"
-              }
-            }
-          ],
-          "unlisted": false
-        },
-        "/blog/tags/docusaurus": {
-          "label": "docusaurus",
-          "items": [
-            "welcome",
-            "mdx-blog-post",
-            "long-blog-post",
-            "first-blog-post"
-          ],
-          "permalink": "/blog/tags/docusaurus",
-          "pages": [
-            {
-              "items": [
-                "welcome",
-                "mdx-blog-post",
-                "long-blog-post",
-                "first-blog-post"
-              ],
-              "metadata": {
-                "permalink": "/blog/tags/docusaurus",
-                "page": 1,
-                "postsPerPage": 10,
-                "totalPages": 1,
-                "totalCount": 4,
-                "blogDescription": "Blog",
-                "blogTitle": "Blog"
-              }
-            }
-          ],
-          "unlisted": false
-        },
-        "/blog/tags/hola": {
-          "label": "hola",
-          "items": [
-            "first-blog-post"
-          ],
-          "permalink": "/blog/tags/hola",
-          "pages": [
-            {
-              "items": [
-                "first-blog-post"
-              ],
-              "metadata": {
-                "permalink": "/blog/tags/hola",
+                "permalink": "/blog/tags/mockster",
                 "page": 1,
                 "postsPerPage": 10,
                 "totalPages": 1,
