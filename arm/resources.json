@@ -246,6 +246,16 @@
             }
         },
         {
+            "type": "Microsoft.Web/staticSites/customDomains",
+            "apiVersion": "2022-09-01",
+            "name": "[concat(variables('staticSiteName'), '/mockster.dev')]",
+            "location": "[resourceGroup().location]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/staticSites', variables('staticSiteName'))]"
+            ],
+            "properties": {}
+        },
+        {
             "type": "Microsoft.ApiManagement/service",
             "apiVersion": "2023-03-01-preview",
             "name": "[variables('apimName')]",
