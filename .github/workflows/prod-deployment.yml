@@ -119,7 +119,7 @@ jobs:
           lfs: false
       # Create environment file
       - name: Create environment file
-        run: echo "APPINSIGHTS_INSTRUMENTATIONKEY="${{ secrets.APPINSIGHTS_INSTRUMENTATIONKEY }} > /docs/.env.production
+        run: echo "APPINSIGHTS_INSTRUMENTATIONKEY="${{ secrets.APPINSIGHTS_INSTRUMENTATIONKEY }} > ./docs/.env.production
       
       - name: Build And Deploy
         id: builddeploy
