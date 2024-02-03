@@ -23,6 +23,96 @@
     },
     "functions": [],
     "variables": {
+        "apiEndpoints": [
+            {
+                "displayName": "Get Airlines",
+                "urlTemplate": "/airlines"
+            },
+            {
+                "displayName": "Get Animals",
+                "urlTemplate": "/animals"
+            },
+            {
+                "displayName": "Get Colors",
+                "urlTemplate": "/colors"
+            },
+            {
+                "displayName": "Get Companies",
+                "urlTemplate": "/companies"
+            },
+            {
+                "displayName": "Get Databases",
+                "urlTemplate": "/databases"
+            },
+            {
+                "displayName": "Get Dates",
+                "urlTemplate": "/dates"
+            },
+            {
+                "displayName": "Get Finances",
+                "urlTemplate": "/finances"
+            },
+            {
+                "displayName": "Get Gits",
+                "urlTemplate": "/gits"
+            },
+            {
+                "displayName": "Get Hackers",
+                "urlTemplate": "/hackers"
+            },
+            {
+                "displayName": "Get Internets",
+                "urlTemplate": "/internets"
+            },
+            {
+                "displayName": "Get Locations",
+                "urlTemplate": "/locations"
+            },
+            {
+                "displayName": "Get Lorems",
+                "urlTemplate": "/lorems"
+            },
+            {
+                "displayName": "Get Musics",
+                "urlTemplate": "/musics"
+            },
+            {
+                "displayName": "Get Numbers",
+                "urlTemplate": "/numbers"
+            },
+            {
+                "displayName": "Get Persons",
+                "urlTemplate": "/persons"
+            },
+            {
+                "displayName": "Get Phones",
+                "urlTemplate": "/phones"
+            },
+            {
+                "displayName": "Get Products",
+                "urlTemplate": "/products"
+            },
+            {
+                "displayName": "Get Science",
+                "urlTemplate": "/science"
+            },
+            {
+                "displayName": "Get Strings",
+                "urlTemplate": "/strings"
+            },
+            {
+                "displayName": "Get Systems",
+                "urlTemplate": "/systems"
+            },
+            {
+                "displayName": "Get Vehicles",
+                "urlTemplate": "/vehicles"
+            },
+            {
+                "displayName": "Get Words",
+                "urlTemplate": "/words"
+            }
+        ],
         "apimName": "[concat('apim-', parameters('appMame'), '-', variables('environment'))]",
         "apimHostName": {
             "DEV": "api-dev.mockster.dev",
@@ -225,44 +315,204 @@
                         "subscriptionRequired": false,
                         "serviceUrl": "[concat('https://', variables('functionName'), '.azurewebsites.net/')]",
                         "apiVersionSetId": "[resourceId('Microsoft.ApiManagement/service/apiVersionSets', variables('apimName'), variables('apimVersionSetName'))]"
-                    },
-                    "resources": [
-                        {
-                            "type": "operations",
-                            "apiVersion": "2023-03-01-preview",
-                            "name": "getAirlines",
-                            "dependsOn": [
-                                "[resourceId('Microsoft.ApiManagement/service/apis', variables('apimName'), variables('apiName'))]"
-                            ],
-                            "properties": {
-                                "displayName": "Get Airlines",
-                                "method": "GET",
-                                "urlTemplate": "/airlines",
-                                "queryParameters": [
-                                    {
-                                        "name": "count",
-                                        "type": "integer",
-                                        "required": false,
-                                        "description": "Count of requested objects to be returned. Default is 10."
-                                    }
-                                ],
-                                "responses": [
-                                    {
-                                        "statusCode": 200,
-                                        "description": "OK",
-                                        "representation": {
-                                            "contentType": "application/json"
-                                        }
-                                    }
-                                ]
-                            }
-                        }                        
-                    ]
+                    }
                 }
             ]
+        },
+        {
+            // Generating api endpoints in apim with copy loop
+            "copy": {
+                "name": "apiEndpoints",
+                "count": "[length(variables('apiEndpoints'))]"
+            },
+            "type": "Microsoft.ApiManagement/service/apis/operations",
+            "apiVersion": "2023-03-01-preview",
+            "name": "[concat(variables('apimName'), '/', variables('apiName'), '/', replace(toLower(variables('apiEndpoints')[copyIndex()].displayName),' ', ''))]",
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service/apis', variables('apimName'), variables('apiName'))]"
+            ],
+            "properties": {
+                "displayName": "[variables('apiEndpoints')[copyIndex()].displayName]",
+                "method": "GET",
+                "urlTemplate": "[variables('apiEndpoints')[copyIndex()].urlTemplate]",
+                "request": {
+                    "queryParameters": [
+                        {   
+                            "name": "count",
+                            "type": "integer",
+                            "values": [],
+                            "required": false,
+                            "description": "Count of requested objects to be returned. Default is 10."
+                        },
+                        {
+                            "name": "locale",
+                            "type": "string",
+                            "values": [
+                                "af_ZA",
+                                "ar",
+                                "az",
+                                "base",
+                                "cs_CZ",
+                                "da",
+                                "de",
+                                "de_AT",
+                                "de_CH",
+                                "dv",
+                                "el",
+                                "en",
+                                "en_AU",
+                                "en_AU_ocker",
+                                "en_BORK",
+                                "en_CA",
+                                "en_GB",
+                                "en_GH",
+                                "en_HK",
+                                "en_IE",
+                                "en_IN",
+                                "en_NG",
+                                "en_US",
+                                "en_ZA",
+                                "eo",
+                                "es",
+                                "es_MX",
+                                "fa",
+                                "fi",
+                                "fr",
+                                "fr_BE",
+                                "fr_CA",
+                                "fr_CH",
+                                "fr_LU",
+                                "fr_SN",
+                                "he",
+                                "hr",
+                                "hu",
+                                "hy",
+                                "id_ID",
+                                "it",
+                                "ja",
+                                "ka_GE",
+                                "ko",
+                                "lv",
+                                "mk",
+                                "nb_NO",
+                                "ne",
+                                "nl",
+                                "nl_BE",
+                                "pl",
+                                "pt_BR",
+                                "pt_PT",
+                                "ro",
+                                "ro_MD",
+                                "ru",
+                                "sk",
+                                "sr_RS_latin",
+                                "sv",
+                                "th",
+                                "tr",
+                                "uk",
+                                "ur",
+                                "vi",
+                                "yo_NG",
+                                "zh_CN",
+                                "zh_TW",
+                                "zu_ZA"
+                            ],
+                            "required": false,
+                            "description": "Locale of the requested objects. Default is en."
+                        },
+                        {
+                            "name": "seed",
+                            "type": "string",
+                            "values": [],
+                            "required": false,
+                            "description": "Seed for random data generation."
+                        }
+                    ],
+                    "headers": [],
+                    "representations": []
+                },
+                "responses": [
+                    {
+                        "statusCode": 200,
+                        "description": "OK",
+                        "representation": {
+                            "contentType": "application/json"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "type": "Microsoft.ApiManagement/service/apis/operations",
+            "apiVersion": "2023-03-01-preview",
+            "name": "[concat(variables('apimName'), '/', variables('apiName'), '/getimages' )]",
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service/apis', variables('apimName'), variables('apiName'))]"
+            ],
+            "properties": {
+                "displayName": "Get images",
+                "method": "GET",
+                "urlTemplate": "/images",
+                "request": {
+                    "queryParameters": [
+                        {   
+                            "name": "count",
+                            "type": "integer",
+                            "values": [],
+                            "required": false,
+                            "description": "Count of requested objects to be returned. Default is 10."
+                        },
+                        {
+                            "name": "category",
+                            "type": "string",
+                            "values": [
+                                "abstract",
+                                "animals",
+                                "business",
+                                "cats",
+                                "city",
+                                "food",
+                                "nightlife",
+                                "fashion",
+                                "people",
+                                "nature",
+                                "sports",
+                                "technics",
+                                "transport"
+                            ],
+                            "required": false,
+                            "description": "Category of the requested images. Default is random."
+                        },
+                        {
+                            "name": "width",
+                            "type": "integer",
+                            "values": [],
+                            "required": false,
+                            "description": "Width of the requested images. Default is 640."
+                        },
+                        {
+                            "name": "height",
+                            "type": "integer",
+                            "values": [],
+                            "required": false,
+                            "description": "Height of the requested images. Default is 480."
+                        }
+                        
+                    ],
+                    "headers": [],
+                    "representations": []
+                },
+                "responses": [
+                    {
+                        "statusCode": 200,
+                        "description": "OK",
+                        "representation": {
+                            "contentType": "application/json"
+                        }
+                    }
+                ]
+            }
         }
-        
-        
     ],
     "outputs": {}
 }
