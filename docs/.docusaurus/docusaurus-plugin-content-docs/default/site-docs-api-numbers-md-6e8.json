@@ -1,0 +1,26 @@
+{
+  "id": "api/numbers",
+  "title": "🔢 Numbers",
+  "description": "Generate number data.",
+  "source": "@site/docs/api/numbers.md",
+  "sourceDirName": "api",
+  "slug": "/api/numbers",
+  "permalink": "/docs/api/numbers",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "🔢 Numbers",
+    "description": "Generate number data."
+  },
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "🎶 Musics",
+    "permalink": "/docs/api/musics"
+  },
+  "next": {
+    "title": "🧍🏻 Persons",
+    "permalink": "/docs/api/persons"
+  }
+}

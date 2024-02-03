@@ -1,0 +1,23 @@
+{
+  "id": "whats-mockster",
+  "title": "What's Mockster?",
+  "description": "One time, I was training a Microsoft Official Course about Power Platform, I was asked how can one generate some testing data to Dataverse. Had no idea. I researched quite a while and couldn't find anything just right for citizen developers. There are so many mock data generators, JSON fakers, data seeders and so on. None I could find makes it easy for non-programmers to use. So Mockster was born.",
+  "source": "@site/docs/whats-mockster.md",
+  "sourceDirName": ".",
+  "slug": "/whats-mockster",
+  "permalink": "/docs/whats-mockster",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1,
+    "sidebar_label": "What's Mockster?"
+  },
+  "sidebar": "docsSidebar",
+  "next": {
+    "title": "Getting started",
+    "permalink": "/docs/getting-started"
+  }
+}

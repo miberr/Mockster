@@ -1,0 +1,26 @@
+{
+  "id": "api/animals",
+  "title": "🐷 Animals",
+  "description": "Generate different kinds of animal species. Returns an array of animal species, by default ten. All values may be localized.",
+  "source": "@site/docs/api/animals.md",
+  "sourceDirName": "api",
+  "slug": "/api/animals",
+  "permalink": "/docs/api/animals",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "🐷 Animals",
+    "description": "Generate different kinds of animal species. Returns an array of animal species, by default ten. All values may be localized."
+  },
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "✈️ Airlines",
+    "permalink": "/docs/api/airlines"
+  },
+  "next": {
+    "title": "🌈 Colors",
+    "permalink": "/docs/api/colors"
+  }
+}

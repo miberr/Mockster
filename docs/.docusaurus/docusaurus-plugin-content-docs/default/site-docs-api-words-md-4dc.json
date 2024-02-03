@@ -1,0 +1,22 @@
+{
+  "id": "api/words",
+  "title": "🆒 Words",
+  "description": "Generate random words.",
+  "source": "@site/docs/api/words.md",
+  "sourceDirName": "api",
+  "slug": "/api/words",
+  "permalink": "/docs/api/words",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "🆒 Words",
+    "description": "Generate random words."
+  },
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "🏎️ Vehicles",
+    "permalink": "/docs/api/vehicles"
+  }
+}

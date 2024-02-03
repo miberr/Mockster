@@ -1,0 +1,26 @@
+{
+  "id": "api/companies",
+  "title": "🏢 Companies",
+  "description": "Generate company related data, like names and company jargon. Returns an array of properties, by default ten. Some of the properties can be localized.",
+  "source": "@site/docs/api/companies.md",
+  "sourceDirName": "api",
+  "slug": "/api/companies",
+  "permalink": "/docs/api/companies",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "🏢 Companies",
+    "description": "Generate company related data, like names and company jargon. Returns an array of properties, by default ten. Some of the properties can be localized."
+  },
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "🌈 Colors",
+    "permalink": "/docs/api/colors"
+  },
+  "next": {
+    "title": "💾 Databases",
+    "permalink": "/docs/api/databases"
+  }
+}

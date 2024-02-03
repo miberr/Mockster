@@ -1,0 +1,26 @@
+{
+  "id": "api/gits",
+  "title": "📁 Gits",
+  "description": "Generate git related data.",
+  "source": "@site/docs/api/gits.md",
+  "sourceDirName": "api",
+  "slug": "/api/gits",
+  "permalink": "/docs/api/gits",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "📁 Gits",
+    "description": "Generate git related data."
+  },
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "💶 Finances",
+    "permalink": "/docs/api/finances"
+  },
+  "next": {
+    "title": "🥷🏼 Hackers",
+    "permalink": "/docs/api/hackers"
+  }
+}

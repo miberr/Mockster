@@ -1,0 +1,27 @@
+{
+  "id": "localization",
+  "title": "Support for different locales",
+  "description": "As FakerJS, so does Mockster support multiple locales for generated mock data. This means some of the responses can be tailored to spesific locales, for example in Finnish. Default locale is English.",
+  "source": "@site/docs/localization.md",
+  "sourceDirName": ".",
+  "slug": "/localization",
+  "permalink": "/docs/localization",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3,
+    "sidebar_label": "Localization"
+  },
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "Getting started",
+    "permalink": "/docs/getting-started"
+  },
+  "next": {
+    "title": "API",
+    "permalink": "/docs/category/api"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "api/images",
+  "title": "🌆 Images",
+  "description": "Generate word data.",
+  "source": "@site/docs/api/images.md",
+  "sourceDirName": "api",
+  "slug": "/api/images",
+  "permalink": "/docs/api/images",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "🌆 Images",
+    "description": "Generate word data."
+  },
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "🥷🏼 Hackers",
+    "permalink": "/docs/api/hackers"
+  },
+  "next": {
+    "title": "🌐 Internet",
+    "permalink": "/docs/api/internet"
+  }
+}

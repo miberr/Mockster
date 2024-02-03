@@ -1,0 +1,26 @@
+{
+  "id": "api/dates",
+  "title": "🗓️ Dates",
+  "description": "Generate datetime data.",
+  "source": "@site/docs/api/dates.md",
+  "sourceDirName": "api",
+  "slug": "/api/dates",
+  "permalink": "/docs/api/dates",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "🗓️ Dates",
+    "description": "Generate datetime data."
+  },
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "💾 Databases",
+    "permalink": "/docs/api/databases"
+  },
+  "next": {
+    "title": "💶 Finances",
+    "permalink": "/docs/api/finances"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "blogPosts": [
+    {
+      "id": "v1-released",
+      "metadata": {
+        "permalink": "/blog/v1-released",
+        "source": "@site/blog/2024-02-04-Mockster-Released.md",
+        "title": "Mockster v1 released 🚀",
+        "description": "One time, I was training a Microsoft Official Course about Power Platform, I was asked how can one generate some testing data to Dataverse. Had no idea. I researched quite a while and couldn't find anything just right for citizen developers. There are so many mock data generators, JSON fakers, data seeders and so on. None I could find makes it easy for non-programmers to use. So Mockster was born.",
+        "date": "2024-02-04T00:00:00.000Z",
+        "formattedDate": "February 4, 2024",
+        "tags": [
+          {
+            "label": "v1",
+            "permalink": "/blog/tags/v-1"
+          },
+          {
+            "label": "mockster",
+            "permalink": "/blog/tags/mockster"
+          }
+        ],
+        "readingTime": 0.62,
+        "hasTruncateMarker": false,
+        "authors": [
+          {
+            "name": "Mikko",
+            "title": "Mockster creator",
+            "url": "https://github.com/miberr",
+            "imageURL": "https://avatars.githubusercontent.com/u/62485576?v=4",
+            "key": "mikko"
+          }
+        ],
+        "frontMatter": {
+          "slug": "v1-released",
+          "title": "Mockster v1 released 🚀",
+          "authors": "mikko",
+          "tags": [
+            "v1",
+            "mockster"
+          ]
+        },
+        "unlisted": false
+      },
+      "content": "One time, I was training a Microsoft Official Course about Power Platform, I was asked how can one generate some testing data to Dataverse. Had no idea. I researched quite a while and couldn't find anything just right for citizen developers. There are so many mock data generators, JSON fakers, data seeders and so on. None I could find makes it easy for non-programmers to use. So Mockster was born.\n\nMockster is an implementation of FakerJS exposed as an REST API. I've also created a Microsoft Power Platform connector for easy use for citizen developers, which for now is in the acceptance process to become a certified connector.\n\nWhile we wait certification, the API itself is up and running. Hope you find it usefull!"
+    }
+  ]
+}

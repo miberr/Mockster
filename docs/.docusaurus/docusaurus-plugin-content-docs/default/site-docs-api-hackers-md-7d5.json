@@ -1,0 +1,26 @@
+{
+  "id": "api/hackers",
+  "title": "🥷🏼 Hackers",
+  "description": "Generate hacker related data.",
+  "source": "@site/docs/api/hackers.md",
+  "sourceDirName": "api",
+  "slug": "/api/hackers",
+  "permalink": "/docs/api/hackers",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "🥷🏼 Hackers",
+    "description": "Generate hacker related data."
+  },
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "📁 Gits",
+    "permalink": "/docs/api/gits"
+  },
+  "next": {
+    "title": "🌆 Images",
+    "permalink": "/docs/api/images"
+  }
+}

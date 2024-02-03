@@ -1,0 +1,26 @@
+{
+  "id": "api/systems",
+  "title": "💻 Systems",
+  "description": "Generate system data.",
+  "source": "@site/docs/api/systems.md",
+  "sourceDirName": "api",
+  "slug": "/api/systems",
+  "permalink": "/docs/api/systems",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "💻 Systems",
+    "description": "Generate system data."
+  },
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "🔠 Strings",
+    "permalink": "/docs/api/strings"
+  },
+  "next": {
+    "title": "🏎️ Vehicles",
+    "permalink": "/docs/api/vehicles"
+  }
+}
