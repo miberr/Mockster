@@ -117,10 +117,10 @@ jobs:
         with:
           submodules: true
           lfs: false
-      # Create environment file
+# Create environment file
       - name: Create environment file
-        run: echo "APPINSIGHTS_INSTRUMENTATIONKEY=${{ secrets.APPINSIGHTS_INSTRUMENTATIONKEY }}" > /docs/.env.production
-      
+        run: echo "REACT_APP_APPINSIGHTS_INSTRUMENTATIONKEY=\"${{ secrets.APPINSIGHTS_INSTRUMENTATIONKEY }}\"" > ./docs/.env
+
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
