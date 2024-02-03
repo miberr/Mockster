@@ -246,6 +246,7 @@
             }
         },
         {
+            "condition": "[equals(parameters('environment'), 'PROD')]",
             "type": "Microsoft.Web/staticSites/customDomains",
             "apiVersion": "2022-09-01",
             "name": "[concat(variables('staticSiteName'), '/mockster.dev')]",
