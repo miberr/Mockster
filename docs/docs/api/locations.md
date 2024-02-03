@@ -1,6 +1,6 @@
 ---
 sidebar_label: "📍 Locations"
-description: "Generate hacker related data."
+description: "Generate realistic location data."
 ---
 
 # 📍 Locations
@@ -24,7 +24,7 @@ Generate location related data. Returns an array of properties, by default ten. 
 ## Request
 
 ```http title="HTTP"
-GET https://mockster.dev/api/v1/internets
+GET https://mockster.dev/api/v1/locations
 Accept: application/json  
 ```
 
@@ -61,7 +61,7 @@ Accept: application/json
 |:---------|:---------|
 `buildingNumber`|`Building Number`
 
-Returns a building number. For example: `79502`.
+Returns a ranbom building number. For example: `79502`.
 
 Return datatype: **string**
 
@@ -71,7 +71,7 @@ Return datatype: **string**
 |:---------|:---------|
 `cardinalDirection`|`Cardinal Direction`
 
-Returns a cardinal direction. For example: `South`.
+Returns a random cardinal direction. For example: `South`.
 
 Return datatype: **string**
 
@@ -81,7 +81,7 @@ Return datatype: **string**
 |:---------|:---------|
 `city`|`City`
 
-Returns a city name. For example: `Devantestead`.
+Returns a random city name. For example: `Devantestead`.
 
 Return datatype: **string**
 
@@ -91,7 +91,7 @@ Return datatype: **string**
 |:---------|:---------|
 `country`|`Country`
 
-Returns a country name. For example: `Faroe Islands`.
+Returns a random country name. For example: `Faroe Islands`.
 
 Return datatype: **string**
 
@@ -101,7 +101,7 @@ Return datatype: **string**
 |:---------|:---------|
 `countryCode`|`Country Code`
 
-Returns a country code. For example: `PE`.
+Returns a random country code. For example: `PE`.
 
 Return datatype: **string**
 
@@ -111,7 +111,7 @@ Return datatype: **string**
 |:---------|:---------|
 `county`|`County`
 
-Returns a county name. For example: `Avon`.
+Returns a random county name. For example: `Avon`.
 
 Return datatype: **string**
 
@@ -121,7 +121,7 @@ Return datatype: **string**
 |:---------|:---------|
 `direction`|`Direction`
 
-Returns a direction. For example: `Southeast`.
+Returns a random direction. For example: `Southeast`.
 
 Return datatype: **string**
 
@@ -131,7 +131,7 @@ Return datatype: **string**
 |:---------|:---------|
 `latitude`|`Latitude`
 
-Returns a latitude coordinate. For example: `-21.109`.
+Returns a random latitude coordinate. For example: `-21.109`.
 
 Return datatype: **number**
 
@@ -141,7 +141,7 @@ Return datatype: **number**
 |:---------|:---------|
 `longitude`|`Longitude`
 
-Returns a longitude coordinate. For example: `-60.2472`.
+Returns a random longitude coordinate. For example: `-60.2472`.
 
 Return datatype: **number**
 
@@ -151,7 +151,7 @@ Return datatype: **number**
 |:---------|:---------|
 `ordinalDirection`|`Ordinal Direction`
 
-Returns an ordinal direction. For example: `Northwest`.
+Returns a random ordinal direction. For example: `Northwest`.
 
 Return datatype: **string**
 
@@ -161,7 +161,7 @@ Return datatype: **string**
 |:---------|:---------|
 `secondaryAddress`|`Secondary Address`
 
-Returns a secondary address. For example: `Suite 719`.
+Returns a random secondary address. For example: `Suite 719`.
 
 Return datatype: **string**
 
@@ -171,7 +171,7 @@ Return datatype: **string**
 |:---------|:---------|
 `state`|`State`
 
-Returns a state name. For example: `Kansas`.
+Returns a random state name. For example: `Kansas`.
 
 Return datatype: **string**
 
@@ -181,7 +181,7 @@ Return datatype: **string**
 |:---------|:---------|
 `street`|`Street`
 
-Returns a street name. For example: `Willow Street`.
+Returns a random street name. For example: `Willow Street`.
 
 Return datatype: **string**
 
@@ -191,7 +191,7 @@ Return datatype: **string**
 |:---------|:---------|
 `streetAddress`|`Street Address`
 
-Returns a street address. For example: `7619 Damaris Junctions`.
+Returns a ransom street address. For example: `7619 Damaris Junctions`.
 
 Return datatype: **string**
 
@@ -201,7 +201,7 @@ Return datatype: **string**
 |:---------|:---------|
 `timeZone`|`Time Zone`
 
-Returns a time zone. For example: `Pacific/Funafuti`.
+Returns a tandom time zone. For example: `Pacific/Funafuti`.
 
 Return datatype: **string**
 
@@ -211,6 +211,6 @@ Return datatype: **string**
 |:---------|:---------|
 `zipCode`|`Zip Code`
 
-Returns a zip code. For example: `38467`.
+Returns a random zip code. For example: `38467`.
 
 Return datatype: **string**
