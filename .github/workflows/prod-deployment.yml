@@ -1,12 +1,7 @@
 name: Production deployment
 on: 
-  push: 
-    branches:
-      - main
-  pull_request:
-    types: [opened, synchronize, reopened, closed]
-    branches:
-      - main
+  release:
+    types: [published]
 
 permissions:
   id-token: write
@@ -18,7 +13,7 @@ jobs:
     steps:
 
     # Checkout code from repo
-    - name: Checkout code from development branch
+    - name: Checkout code from main branch
       uses: actions/checkout@v4
       
     # Setup Node.js
@@ -59,7 +54,7 @@ jobs:
     steps:
     
     # Checkout code from repo
-    - name: Checkout code from development branch
+    - name: Checkout code from main branch
       uses: actions/checkout@v4
     
     # Login to Azure
@@ -110,7 +105,6 @@ jobs:
           package: deploy.zip
 
   deployDocumentation:
-    if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
     name: Deploy documentation site to Azure
     runs-on: ubuntu-latest
     environment: production
@@ -136,15 +130,4 @@ jobs:
           api_location: "" # Api source code path - optional
           output_location: "build" # Built app content directory - optional
           ###### End of Repository/Build Configurations ######
-   
-  close_pull_request_job:
-    if: github.event_name == 'pull_request' && github.event.action == 'closed'
-    runs-on: ubuntu-latest
-    name: Close Pull Request
-    steps:
-      - name: Close Pull Request
-        id: closepullrequest
-        uses: Azure/static-web-apps-deploy@v1
-        with:
-          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
-          action: "close"
+  
