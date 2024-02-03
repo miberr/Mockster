@@ -1,7 +1,7 @@
 {
   "id": "api/locations",
   "title": "📍 Locations",
-  "description": "Generate hacker related data.",
+  "description": "Generate realistic location data.",
   "source": "@site/docs/api/locations.md",
   "sourceDirName": "api",
   "slug": "/api/locations",
@@ -12,7 +12,7 @@
   "version": "current",
   "frontMatter": {
     "sidebar_label": "📍 Locations",
-    "description": "Generate hacker related data."
+    "description": "Generate realistic location data."
   },
   "sidebar": "docsSidebar",
   "previous": {
