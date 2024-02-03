@@ -17,15 +17,20 @@
       "name": "@docusaurus/plugin-content-pages",
       "version": "3.0.1"
     },
-    "docusaurus-plugin-debug": {
+    "docusaurus-plugin-sitemap": {
       "type": "package",
-      "name": "@docusaurus/plugin-debug",
+      "name": "@docusaurus/plugin-sitemap",
       "version": "3.0.1"
     },
     "docusaurus-theme-classic": {
       "type": "package",
       "name": "@docusaurus/theme-classic",
       "version": "3.0.1"
+    },
+    "@microsoft/docusaurus-plugin-application-insights": {
+      "type": "package",
+      "name": "@microsoft/docusaurus-plugin-application-insights",
+      "version": "4.0.1"
     }
   }
 }

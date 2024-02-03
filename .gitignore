@@ -106,3 +106,7 @@ tests-examples/demo-todo-app.spec.ts
 .fake
 function/playwright-report
 function/test-results
+
+# Docusaurus builds
+docs/.docusaurus
+docs/build

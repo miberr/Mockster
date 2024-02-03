@@ -1,8 +1,12 @@
-name: Development deployment
+name: Production deployment
 on: 
   push: 
     branches:
-      - development
+      - main
+  pull_request:
+    types: [opened, synchronize, reopened, closed]
+    branches:
+      - main
 
 permissions:
   id-token: write
@@ -51,7 +55,7 @@ jobs:
   infra:
     name: Deploy infrastructure to Azure
     runs-on: ubuntu-latest
-    environment: development
+    environment: production
     steps:
     
     # Checkout code from repo
@@ -73,12 +77,12 @@ jobs:
         subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION }}
         resourceGroupName: ${{ secrets.AZURE_RG_NAME }}
         template: ./arm/resources.json
-        parameters: environment=DEV
+        parameters: environment=PROD
 
   deployFunction:
     name: Deploy function to Azure
     runs-on: windows-latest
-    environment: development
+    environment: production
     needs: [setup, infra]
     steps:
 
@@ -105,5 +109,42 @@ jobs:
           slot-name: production
           package: deploy.zip
 
-
+  deployDocumentation:
+    if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
+    name: Deploy documentation site to Azure
+    runs-on: ubuntu-latest
+    environment: production
+    needs: [setup, infra]
+    steps:
+      
+      # Checkout code from repo
+      - name: Checkout code from production branch
+        uses: actions/checkout@v3
+        with:
+          submodules: true
+          lfs: false
+      - name: Build And Deploy
+        id: builddeploy
+        uses: Azure/static-web-apps-deploy@v1
+        with:
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
+          repo_token: ${{ secrets.GITHUB_TOKEN }} # Used for Github integrations (i.e. PR comments)
+          action: "upload"
+          ###### Repository/Build Configurations - These values can be configured to match your app requirements. ######
+          # For more information regarding Static Web App workflow configurations, please visit: https://aka.ms/swaworkflowconfig
+          app_location: "/docs" # App source code path
+          api_location: "" # Api source code path - optional
+          output_location: "build" # Built app content directory - optional
+          ###### End of Repository/Build Configurations ######
    
+  close_pull_request_job:
+    if: github.event_name == 'pull_request' && github.event.action == 'closed'
+    runs-on: ubuntu-latest
+    name: Close Pull Request
+    steps:
+      - name: Close Pull Request
+        id: closepullrequest
+        uses: Azure/static-web-apps-deploy@v1
+        with:
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
+          action: "close"

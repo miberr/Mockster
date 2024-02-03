@@ -6,6 +6,9 @@
 
 import {themes as prismThemes} from 'prism-react-renderer';
 
+const dotenv = require('dotenv');
+dotenv.config();
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Mockster',

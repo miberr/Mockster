@@ -21,6 +21,17 @@ export default {
     "path": "i18n",
     "localeConfigs": {}
   },
+  "plugins": [
+    [
+      "@microsoft/docusaurus-plugin-application-insights",
+      {
+        "config": {
+          "instrumentationKey": "0db2f67d-f8f7-4e90-a1e6-5f2fecff510f"
+        },
+        "enableClickAnalytics": true
+      }
+    ]
+  ],
   "presets": [
     [
       "classic",
@@ -325,7 +336,6 @@ export default {
     "static"
   ],
   "customFields": {},
-  "plugins": [],
   "themes": [],
   "scripts": [],
   "headTags": [],
