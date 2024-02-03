@@ -33,7 +33,14 @@ const config = {
     defaultLocale: 'en',
     locales: ['en'],
   },
-
+  plugins: [
+    ["@microsoft/docusaurus-plugin-application-insights", {
+        config: {
+            instrumentationKey: process.env.APPINSIGHTS_INSTRUMENTATIONKEY,
+        },
+        enableClickAnalytics: true,
+    }]
+  ],
   presets: [
     [
       'classic',
