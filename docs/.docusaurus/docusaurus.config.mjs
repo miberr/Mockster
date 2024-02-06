@@ -26,7 +26,7 @@ export default {
       "@microsoft/docusaurus-plugin-application-insights",
       {
         "config": {
-          "instrumentationKey": "InstrumentationKey=709e34cb-daad-4956-a23d-7e276fa0b4e3;IngestionEndpoint=https://westeurope-4.in.applicationinsights.azure.com/;LiveEndpoint=https://westeurope.livediagnostics.monitor.azure.com/"
+          "connectionString": "InstrumentationKey=709e34cb-daad-4956-a23d-7e276fa0b4e3;IngestionEndpoint=https://westeurope-4.in.applicationinsights.azure.com/;LiveEndpoint=https://westeurope.livediagnostics.monitor.azure.com/"
         },
         "enableClickAnalytics": true
       }
@@ -89,6 +89,10 @@ export default {
             {
               "label": "API Reference",
               "to": "/docs/category/api"
+            },
+            {
+              "label": "Privacy Policy",
+              "to": "/privacy-policy"
             }
           ]
         },

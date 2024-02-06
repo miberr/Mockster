@@ -106,6 +106,10 @@ const config = {
                 label: 'API Reference',
                 to: '/docs/category/api',
               },
+              {
+                label: 'Privacy Policy',
+                to: '/privacy-policy',
+              }
             ],
           },
           {
