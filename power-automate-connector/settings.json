@@ -1,0 +1,9 @@
+{
+  "connectorId": "shared_mockster-5f280d9f3d3a89015f-5fe07c673e53d5a6ca",
+  "environment": "8777b027-3c0f-408b-8a0e-377da9f0738f",
+  "apiProperties": "apiProperties.json",
+  "apiDefinition": "apiDefinition.swagger.json",
+  "icon": "icon.png",
+  "powerAppsUrl": "https://api.powerapps.com",
+  "powerAppsApiVersion": "2016-11-01"
+}

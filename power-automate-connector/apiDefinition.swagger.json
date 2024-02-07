@@ -10,20 +10,6 @@
       "email": "support@mockster.dev"
     }
   },
-  "x-ms-connector-metadata": [
-    {
-      "propertyName": "Website",
-      "propertyValue": "https://mockster.dev"
-    },
-    {
-      "propertyName": "Privacy policy",
-      "propertyValue": "https://mockster.dev/privacy-policy"
-    },
-    {
-      "propertyName": "Categories",
-      "propertyValue": "Data;Content and Files"
-    }
-  ],
   "host": "api.mockster.dev",
   "basePath": "/api/v1",
   "schemes": [
@@ -66,7 +52,7 @@
                     "x-ms-summary": "Name",
                     "x-ms-visibility": "important"
                   },
-                  "airplaneTypeCode":  {
+                  "airplaneTypeCode": {
                     "type": "string",
                     "description": "Returns a random airplane name. For example: DHD.",
                     "x-ms-summary": "Airplane IATA Type Code",
@@ -268,7 +254,7 @@
                   "cmyk": {
                     "type": "array",
                     "items": {
-                      "type": "integer"
+                      "type": "number"
                     },
                     "description": "Returns a random CMYK color decimal values.",
                     "x-ms-summary": "CMYK",
@@ -277,7 +263,7 @@
                   "colorByCSSColorSpace": {
                     "type": "array",
                     "items": {
-                      "type": "integer"
+                      "type": "number"
                     },
                     "description": "Returns a random CSS color decimal values.",
                     "x-ms-summary": "Color By CSS Color Space",
@@ -298,7 +284,7 @@
                   "hsl": {
                     "type": "array",
                     "items": {
-                      "type": "integer"
+                      "type": "number"
                     },
                     "description": "Returns a random hsl color decimal values.",
                     "x-ms-summary": "HSL",
@@ -313,7 +299,7 @@
                   "hwb": {
                     "type": "array",
                     "items": {
-                      "type": "integer"
+                      "type": "number"
                     },
                     "description": "Returns a random hwb color decimal values.",
                     "x-ms-summary": "HWB",
@@ -322,7 +308,7 @@
                   "lab": {
                     "type": "array",
                     "items": {
-                      "type": "integer"
+                      "type": "number"
                     },
                     "description": "Returns a random lab color decimal values.",
                     "x-ms-summary": "LAB",
@@ -331,7 +317,7 @@
                   "lch": {
                     "type": "array",
                     "items": {
-                      "type": "integer"
+                      "type": "number"
                     },
                     "description": "Returns a random lch color decimal values.",
                     "x-ms-summary": "LCH",
@@ -588,60 +574,63 @@
           "200": {
             "description": "OK",
             "schema": {
-              "type": "object",
-              "properties": {
-                "anytime": {
-                  "type": "string",
-                  "description": "Returns a random date and time. For example: 2023-12-30T01:54:24.658Z.",
-                  "x-ms-summary": "Date",
-                  "x-ms-visibility": "important"
-                },
-                "birthdate": {
-                  "type": "string",
-                  "description": "Returns a random birthdate for an adult. For example: 1948-06-14T08:47:26.296Z.",
-                  "x-ms-summary": "Birthdate",
-                  "x-ms-visibility": "advanced"
-                },
-                "future": {
-                  "type": "string",
-                  "description": "Returns a random future date and time. For example: 2024-06-01T09:36:53.510Z.",
-                  "x-ms-summary": "Future",
-                  "x-ms-visibility": "advanced"
-                },
-                "month": {
-                  "type": "string",
-                  "description": "Returns a random month name. For example: March.",
-                  "x-ms-summary": "Month",
-                  "x-ms-visibility": "advanced"
-                },
-                "past": {
-                  "type": "string",
-                  "description": "Returns a random past date and time. For example: 2023-08-20T17:40:37.262Z.",
-                  "x-ms-summary": "Past",
-                  "x-ms-visibility": "advanced"
-                },
-                "recent": {
-                  "type": "string",
-                  "description": "Returns a random recent date and time in recent past.",
-                  "x-ms-summary": "Recent",
-                  "x-ms-visibility": "important"
-                },
-                "soon": {
-                  "type": "string",
-                  "description": "Returns a random date and time in the near future, at most 5 days away.",
-                  "x-ms-summary": "Soon",
-                  "x-ms-visibility": "important"
-                },
-                "weekday": {
-                  "type": "string",
-                  "description": "Returns a random weekday name. For example: Friday.",
-                  "x-ms-summary": "Weekday"
-                },
-                "year": {
-                  "type": "number",
-                  "description": "Returns a random year between 1900 and 2100. For example: 2083.",
-                  "x-ms-summary": "Year",
-                  "x-ms-visibility": "advanced"
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "anytime": {
+                    "type": "string",
+                    "description": "Returns a random date and time. For example: 2023-12-30T01:54:24.658Z.",
+                    "x-ms-summary": "Date",
+                    "x-ms-visibility": "important"
+                  },
+                  "birthdate": {
+                    "type": "string",
+                    "description": "Returns a random birthdate for an adult. For example: 1948-06-14T08:47:26.296Z.",
+                    "x-ms-summary": "Birthdate",
+                    "x-ms-visibility": "advanced"
+                  },
+                  "future": {
+                    "type": "string",
+                    "description": "Returns a random future date and time. For example: 2024-06-01T09:36:53.510Z.",
+                    "x-ms-summary": "Future",
+                    "x-ms-visibility": "advanced"
+                  },
+                  "month": {
+                    "type": "string",
+                    "description": "Returns a random month name. For example: March.",
+                    "x-ms-summary": "Month",
+                    "x-ms-visibility": "advanced"
+                  },
+                  "past": {
+                    "type": "string",
+                    "description": "Returns a random past date and time. For example: 2023-08-20T17:40:37.262Z.",
+                    "x-ms-summary": "Past",
+                    "x-ms-visibility": "advanced"
+                  },
+                  "recent": {
+                    "type": "string",
+                    "description": "Returns a random recent date and time in recent past.",
+                    "x-ms-summary": "Recent",
+                    "x-ms-visibility": "important"
+                  },
+                  "soon": {
+                    "type": "string",
+                    "description": "Returns a random date and time in the near future, at most 5 days away.",
+                    "x-ms-summary": "Soon",
+                    "x-ms-visibility": "important"
+                  },
+                  "weekday": {
+                    "type": "string",
+                    "description": "Returns a random weekday name. For example: Friday.",
+                    "x-ms-summary": "Weekday"
+                  },
+                  "year": {
+                    "type": "number",
+                    "description": "Returns a random year between 1900 and 2100. For example: 2083.",
+                    "x-ms-summary": "Year",
+                    "x-ms-visibility": "advanced"
+                  }
                 }
               }
             }
@@ -736,7 +725,7 @@
                   },
                   "currencySymbol": {
                     "type": "string",
-                    "description": "Returns a random Currency Symbol. For example: ₺.",
+                    "description": "Returns a random Currency Symbol. For example: \u20ba.",
                     "x-ms-summary": "Currency Symbol",
                     "x-ms-visibility": "advanced"
                   },
@@ -760,7 +749,7 @@
                   },
                   "maskedNumber": {
                     "type": "string",
-                    "description": "Returns a random Masked Number. For example: (…0859).",
+                    "description": "Returns a random Masked Number. For example: (\u20260859).",
                     "x-ms-summary": "Masked Number",
                     "x-ms-visibility": "advanced"
                   },
@@ -878,43 +867,46 @@
           "200": {
             "description": "OK",
             "schema": {
-              "type": "object",
-              "properties": {
-                "abbreviation": {
-                  "type": "string",
-                  "description": "Returns an abbreviation from technologies. For example: XSS.",
-                  "x-ms-summary": "Abbreviation",
-                  "x-ms-visibility": "advanced"
-                },
-                "adjective": {
-                  "type": "string",
-                  "description": "Returns a hacker or technology related adjective. For example: 1080p.",
-                  "x-ms-summary": "Adjective",
-                  "x-ms-visibility": "advanced"
-                },
-                "ingverb": {
-                  "type": "string",
-                  "description": "Returns a verb ending in -ing. For example: quantifying.",
-                  "x-ms-summary": "Verb ending with -ing",
-                  "x-ms-visibility": "advanced"
-                },
-                "noun": {
-                  "type": "string",
-                  "description": "Returns a hacker or technology related noun. For example: card.",
-                  "x-ms-summary": "Noun",
-                  "x-ms-visibility": "advanced"
-                },
-                "phrase": {
-                  "type": "string",
-                  "description": "Returns a hacker or technology related phrase.",
-                  "x-ms-summary": "Phrase",
-                  "x-ms-visibility": "important"
-                },
-                "verb": {
-                  "type": "string",
-                  "description": "Returns a hacker or technology related verb. For example: override.",
-                  "x-ms-summary": "Verb",
-                  "x-ms-visibility": "advanced"
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "abbreviation": {
+                    "type": "string",
+                    "description": "Returns an abbreviation from technologies. For example: XSS.",
+                    "x-ms-summary": "Abbreviation",
+                    "x-ms-visibility": "advanced"
+                  },
+                  "adjective": {
+                    "type": "string",
+                    "description": "Returns a hacker or technology related adjective. For example: 1080p.",
+                    "x-ms-summary": "Adjective",
+                    "x-ms-visibility": "advanced"
+                  },
+                  "ingverb": {
+                    "type": "string",
+                    "description": "Returns a verb ending in -ing. For example: quantifying.",
+                    "x-ms-summary": "Verb ending with -ing",
+                    "x-ms-visibility": "advanced"
+                  },
+                  "noun": {
+                    "type": "string",
+                    "description": "Returns a hacker or technology related noun. For example: card.",
+                    "x-ms-summary": "Noun",
+                    "x-ms-visibility": "advanced"
+                  },
+                  "phrase": {
+                    "type": "string",
+                    "description": "Returns a hacker or technology related phrase.",
+                    "x-ms-summary": "Phrase",
+                    "x-ms-visibility": "important"
+                  },
+                  "verb": {
+                    "type": "string",
+                    "description": "Returns a hacker or technology related verb. For example: override.",
+                    "x-ms-summary": "Verb",
+                    "x-ms-visibility": "advanced"
+                  }
                 }
               }
             }
@@ -1023,126 +1015,129 @@
           "200": {
             "description": "OK",
             "schema": {
-              "type": "object",
-              "properties": {
-                "color": {
-                  "type": "string",
-                  "description": "Returns a random color code in hex format. For example: #511134.",
-                  "x-ms-summary": "Color",
-                  "x-ms-visibility": "advanced"
-                },
-                "displayName": {
-                  "type": "string",
-                  "description": "Returns a display name for a given user.",
-                  "x-ms-summary": "Display Name",
-                  "x-ms-visibility": "important"
-                },
-                "domainName": {
-                  "type": "string",
-                  "description": "Returns a random domain name. For example: clear-operating.info.",
-                  "x-ms-summary": "Domain Name",
-                  "x-ms-visibility": "important"
-                },
-                "domainSuffix": {
-                  "type": "string",
-                  "description": "Returns a domain suffix. For example: net.",
-                  "x-ms-summary": "Domain Suffix",
-                  "x-ms-visibility": "advanced"
-                },
-                "domainWord": {
-                  "type": "string",
-                  "description": "Returns a random word to be used in a domain. For example: sparkling-bather.",
-                  "x-ms-summary": "Domain Word",
-                  "x-ms-visibility": "advanced"
-                },
-                "email": {
-                  "type": "string",
-                  "description": "Returns an email address. For example: Ted_Runolfsson10@yahoo.com.",
-                  "x-ms-summary": "Email",
-                  "x-ms-visibility": "advanced"
-                },
-                "emoji": {
-                  "type": "string",
-                  "description": "Returns a random emoji. For example: 😺.",
-                  "x-ms-summary": "Emoji",
-                  "x-ms-visibility": "advanced"
-                },
-                "exampleEmail": {
-                  "type": "string",
-                  "description": "Returns an example email address. For example: Ted_Runolfsson88@example.net.",
-                  "x-ms-summary": "Example Email"
-                },
-                "httpMethod": {
-                  "type": "string",
-                  "description": "Returns a HTTP method. For example: PUT.",
-                  "x-ms-summary": "HTTP Method",
-                  "x-ms-visibility": "advanced"
-                },
-                "httpStatusCode": {
-                  "type": "integer",
-                  "description": "Returns a HTTP status code. For example: 103.",
-                  "x-ms-summary": "HTTP Status Code",
-                  "x-ms-visibility": "advanced"
-                },
-                "ip": {
-                  "type": "string",
-                  "description": "Returns a random IPv4 or IPv6 address.",
-                  "x-ms-summary": "IP Address",
-                  "x-ms-visibility": "advanced"
-                },
-                "ipv4": {
-                  "type": "string",
-                  "description": "Returns an IPv4 address. For example: 146.120.42.165.",
-                  "x-ms-summary": "IPv4 Address",
-                  "x-ms-visibility": "advanced"
-                },
-                "ipv6": {
-                  "type": "string",
-                  "description": "Returns an IPv6 address.",
-                  "x-ms-summary": "IPv6 Address",
-                  "x-ms-visibility": "advanced"
-                },
-                "mac": {
-                  "type": "string",
-                  "description": "Returns a MAC address. For example: c8:14:d0:db:1e:d4.",
-                  "x-ms-summary": "MAC Address",
-                  "x-ms-visibility": "advanced"
-                },
-                "password": {
-                  "type": "string",
-                  "description": "Returns a random string to be used as a password.",
-                  "x-ms-summary": "Password",
-                  "x-ms-visibility": "advanced"
-                },
-                "port": {
-                  "type": "integer",
-                  "description": "Returns a random port number. For example: 5071.",
-                  "x-ms-summary": "Port Number",
-                  "x-ms-visibility": "advanced"
-                },
-                "protocol": {
-                  "type": "string",
-                  "description": "Returns a protocol. For example: https.",
-                  "x-ms-summary": "Protocol",
-                  "x-ms-visibility": "advanced"
-                },
-                "url": {
-                  "type": "string",
-                  "description": "Returns a random URL. For example: https://immaculate-debtor.biz.",
-                  "x-ms-summary": "URL",
-                  "x-ms-visibility": "advanced"
-                },
-                "userAgent": {
-                  "type": "string",
-                  "description": "Returns a random user agent. ",
-                  "x-ms-summary": "User Agent",
-                  "x-ms-visibility": "advanced"
-                },
-                "userName": {
-                  "type": "string",
-                  "description": "Returns a user name. For example: Ted42.",
-                  "x-ms-summary": "Username",
-                  "x-ms-visibility": "important"
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "color": {
+                    "type": "string",
+                    "description": "Returns a random color code in hex format. For example: #511134.",
+                    "x-ms-summary": "Color",
+                    "x-ms-visibility": "advanced"
+                  },
+                  "displayName": {
+                    "type": "string",
+                    "description": "Returns a display name for a given user.",
+                    "x-ms-summary": "Display Name",
+                    "x-ms-visibility": "important"
+                  },
+                  "domainName": {
+                    "type": "string",
+                    "description": "Returns a random domain name. For example: clear-operating.info.",
+                    "x-ms-summary": "Domain Name",
+                    "x-ms-visibility": "important"
+                  },
+                  "domainSuffix": {
+                    "type": "string",
+                    "description": "Returns a domain suffix. For example: net.",
+                    "x-ms-summary": "Domain Suffix",
+                    "x-ms-visibility": "advanced"
+                  },
+                  "domainWord": {
+                    "type": "string",
+                    "description": "Returns a random word to be used in a domain. For example: sparkling-bather.",
+                    "x-ms-summary": "Domain Word",
+                    "x-ms-visibility": "advanced"
+                  },
+                  "email": {
+                    "type": "string",
+                    "description": "Returns an email address. For example: Ted_Runolfsson10@yahoo.com.",
+                    "x-ms-summary": "Email",
+                    "x-ms-visibility": "advanced"
+                  },
+                  "emoji": {
+                    "type": "string",
+                    "description": "Returns a random emoji. For example: \ud83d\ude3a.",
+                    "x-ms-summary": "Emoji",
+                    "x-ms-visibility": "advanced"
+                  },
+                  "exampleEmail": {
+                    "type": "string",
+                    "description": "Returns an example email address. For example: Ted_Runolfsson88@example.net.",
+                    "x-ms-summary": "Example Email"
+                  },
+                  "httpMethod": {
+                    "type": "string",
+                    "description": "Returns a HTTP method. For example: PUT.",
+                    "x-ms-summary": "HTTP Method",
+                    "x-ms-visibility": "advanced"
+                  },
+                  "httpStatusCode": {
+                    "type": "integer",
+                    "description": "Returns a HTTP status code. For example: 103.",
+                    "x-ms-summary": "HTTP Status Code",
+                    "x-ms-visibility": "advanced"
+                  },
+                  "ip": {
+                    "type": "string",
+                    "description": "Returns a random IPv4 or IPv6 address.",
+                    "x-ms-summary": "IP Address",
+                    "x-ms-visibility": "advanced"
+                  },
+                  "ipv4": {
+                    "type": "string",
+                    "description": "Returns an IPv4 address. For example: 146.120.42.165.",
+                    "x-ms-summary": "IPv4 Address",
+                    "x-ms-visibility": "advanced"
+                  },
+                  "ipv6": {
+                    "type": "string",
+                    "description": "Returns an IPv6 address.",
+                    "x-ms-summary": "IPv6 Address",
+                    "x-ms-visibility": "advanced"
+                  },
+                  "mac": {
+                    "type": "string",
+                    "description": "Returns a MAC address. For example: c8:14:d0:db:1e:d4.",
+                    "x-ms-summary": "MAC Address",
+                    "x-ms-visibility": "advanced"
+                  },
+                  "password": {
+                    "type": "string",
+                    "description": "Returns a random string to be used as a password.",
+                    "x-ms-summary": "Password",
+                    "x-ms-visibility": "advanced"
+                  },
+                  "port": {
+                    "type": "integer",
+                    "description": "Returns a random port number. For example: 5071.",
+                    "x-ms-summary": "Port Number",
+                    "x-ms-visibility": "advanced"
+                  },
+                  "protocol": {
+                    "type": "string",
+                    "description": "Returns a protocol. For example: https.",
+                    "x-ms-summary": "Protocol",
+                    "x-ms-visibility": "advanced"
+                  },
+                  "url": {
+                    "type": "string",
+                    "description": "Returns a random URL. For example: https://immaculate-debtor.biz.",
+                    "x-ms-summary": "URL",
+                    "x-ms-visibility": "advanced"
+                  },
+                  "userAgent": {
+                    "type": "string",
+                    "description": "Returns a random user agent. ",
+                    "x-ms-summary": "User Agent",
+                    "x-ms-visibility": "advanced"
+                  },
+                  "userName": {
+                    "type": "string",
+                    "description": "Returns a user name. For example: Ted42.",
+                    "x-ms-summary": "Username",
+                    "x-ms-visibility": "important"
+                  }
                 }
               }
             }
@@ -1298,7 +1293,7 @@
             "schema": {
               "type": "array",
               "items": {
-                "type":"object",
+                "type": "object",
                 "properties": {
                   "lines": {
                     "type": "string",
@@ -1381,8 +1376,8 @@
             "schema": {
               "type": "array",
               "items": {
-                "type":"object",
-                "properties":{
+                "type": "object",
+                "properties": {
                   "genre": {
                     "type": "string",
                     "description": "Returns a random genre.",
@@ -1425,8 +1420,8 @@
             "schema": {
               "type": "array",
               "items": {
-                "type":"object",
-                "properties":{
+                "type": "object",
+                "properties": {
                   "binary": {
                     "type": "string",
                     "description": "Returns a binary number. For example: 0.",
@@ -1575,7 +1570,7 @@
             }
           }
         },
-        "summary": "Get people",
+        "summary": "Get people mockdata",
         "description": "Generate data for a person.",
         "operationId": "GetPeople",
         "x-ms-visibility": "important",
@@ -1600,8 +1595,8 @@
             "schema": {
               "type": "array",
               "items": {
-                "type":"object",
-                "properties":{
+                "type": "object",
+                "properties": {
                   "imei": {
                     "type": "string",
                     "description": "Returns the IMEI number of the phone. For example: 45-156714-750405-6.",
@@ -1716,16 +1711,16 @@
         ]
       }
     },
-    "/sciences": {
+    "/science": {
       "get": {
         "responses": {
           "200": {
-            "description":"default",
-            "schema":{
-              "type":"array",
-              "items":{
-                "type":"object",
-                "properties":{
+            "description": "default",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
                   "chemicalElementSymbol": {
                     "type": "string",
                     "description": "Returns the symbol of the chemical element. For example: Ga.",
@@ -1745,15 +1740,15 @@
                     "x-ms-visibility": "advanced"
                   },
                   "unitName": {
-                    "type":"string",
-                    "description":"Returns a random unit.",
-                    "x-ms-summary":"Unit Name",
+                    "type": "string",
+                    "description": "Returns a random unit.",
+                    "x-ms-summary": "Unit Name",
                     "x-ms-visibility": "important"
                   },
                   "unitSymbol": {
-                    "type":"string",
-                    "description":"Returns the symbol of the unit. For example: lx.",
-                    "x-ms-summary":"Unit Symbol",
+                    "type": "string",
+                    "description": "Returns the symbol of the unit. For example: lx.",
+                    "x-ms-summary": "Unit Symbol",
                     "x-ms-visibility": "advanced"
                   }
                 }
@@ -1767,10 +1762,10 @@
         "x-ms-visibility": "advanced",
         "parameters": [
           {
-            "$ref":"#/parameters/count"
+            "$ref": "#/parameters/count"
           },
           {
-            "$ref":"#/parameters/seed"
+            "$ref": "#/parameters/seed"
           }
         ]
       }
@@ -1779,12 +1774,12 @@
       "get": {
         "responses": {
           "200": {
-            "description":"default",
-            "schema":{
-              "type":"array",
-              "items":{
-                "type":"object",
-                "properties":{
+            "description": "default",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
                   "alpha": {
                     "type": "string",
                     "description": "Returns an alphabetic character. For example: C.",
@@ -1795,45 +1790,45 @@
                     "description": "Returns an alphanumeric character. For example: X.",
                     "x-ms-summary": "Alphanumeric"
                   },
-                  "binary":{
-                    "type":"string",
-                    "description":"Returns a binary number. For example: 0b0.",
-                    "x-ms-summary":"Binary"
+                  "binary": {
+                    "type": "string",
+                    "description": "Returns a binary number. For example: 0b0.",
+                    "x-ms-summary": "Binary"
                   },
-                  "hexadecimal":{
-                    "type":"string",
-                    "description":"Returns a hexadecimal number. For example: 0xa.",
-                    "x-ms-summary":"Hexadecimal"
+                  "hexadecimal": {
+                    "type": "string",
+                    "description": "Returns a hexadecimal number. For example: 0xa.",
+                    "x-ms-summary": "Hexadecimal"
                   },
-                  "nanoid":{
-                    "type":"string",
-                    "description":"Returns a nanoid. For example: tooWOZFFJtCGUTLofxCia.",
-                    "x-ms-summary":"Nanoid"
+                  "nanoid": {
+                    "type": "string",
+                    "description": "Returns a nanoid. For example: tooWOZFFJtCGUTLofxCia.",
+                    "x-ms-summary": "Nanoid"
                   },
-                  "numeric":{
-                    "type":"string",
-                    "description":"Returns a numeric character. For example: 6.",
-                    "x-ms-summary":"Numeric"
+                  "numeric": {
+                    "type": "string",
+                    "description": "Returns a numeric character. For example: 6.",
+                    "x-ms-summary": "Numeric"
                   },
-                  "octal":{
-                    "type":"string",
-                    "description":"Returns an octal number. For example: 0o6.",
-                    "x-ms-summary":"Octal"
+                  "octal": {
+                    "type": "string",
+                    "description": "Returns an octal number. For example: 0o6.",
+                    "x-ms-summary": "Octal"
                   },
-                  "sample":{
-                    "type":"string",
-                    "description":"Returns a sample string. For example: G^XL?D'u|D.",
-                    "x-ms-summary":"Sample"
+                  "sample": {
+                    "type": "string",
+                    "description": "Returns a sample string. For example: G^XL?D'u|D.",
+                    "x-ms-summary": "Sample"
                   },
-                  "symbol":{
-                    "type":"string",
-                    "description":"Returns a symbol. For example: -.",
-                    "x-ms-summary":"Symbol"
+                  "symbol": {
+                    "type": "string",
+                    "description": "Returns a symbol. For example: -.",
+                    "x-ms-summary": "Symbol"
                   },
-                  "uuid":{
-                    "type":"string",
-                    "description":"Returns a UUID. For example: 9b39132d-5157-42c4-bd5e-84f30c6d3692.",
-                    "x-ms-summary":"UUID"
+                  "uuid": {
+                    "type": "string",
+                    "description": "Returns a UUID. For example: 9b39132d-5157-42c4-bd5e-84f30c6d3692.",
+                    "x-ms-summary": "UUID"
                   }
                 }
               }
@@ -1846,10 +1841,10 @@
         "x-ms-visibility": "advanced",
         "parameters": [
           {
-            "$ref":"#/parameters/count"
+            "$ref": "#/parameters/count"
           },
           {
-            "$ref":"#/parameters/seed"
+            "$ref": "#/parameters/seed"
           }
         ]
       }
@@ -1858,12 +1853,12 @@
       "get": {
         "responses": {
           "200": {
-            "description":"default",
-            "schema":{
-              "type":"array",
-              "items":{
-                "type":"object",
-                "properties":{
+            "description": "default",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
                   "commonFileExt": {
                     "type": "string",
                     "description": "Returns a common file name. For example: amongst_vivaciously_populate.wav.",
@@ -1946,10 +1941,10 @@
         "x-ms-visibility": "advanced",
         "parameters": [
           {
-            "$ref":"#/parameters/count"
+            "$ref": "#/parameters/count"
           },
           {
-            "$ref":"#/parameters/seed"
+            "$ref": "#/parameters/seed"
           }
         ]
       }
@@ -1958,64 +1953,64 @@
       "get": {
         "responses": {
           "200": {
-            "description":"default",
-            "schema":{
-              "type":"array",
-              "items":{
-                "type":"object",
-                "properties":{
+            "description": "default",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
                   "bicycle": {
-                    "type":"string",
-                    "description":"Returns the type of the bicycle. For example: Track/Fixed-Gear Bicycle.",
-                    "x-ms-summary":"Bicycle",
+                    "type": "string",
+                    "description": "Returns the type of the bicycle. For example: Track/Fixed-Gear Bicycle.",
+                    "x-ms-summary": "Bicycle",
                     "x-ms-visibility": "advanced"
                   },
-                  "color":{
-                    "type":"string",
-                    "description":"Returns the color of the vehicle. For example: turquoise.",
-                    "x-ms-summary":"Color",
+                  "color": {
+                    "type": "string",
+                    "description": "Returns the color of the vehicle. For example: turquoise.",
+                    "x-ms-summary": "Color",
                     "x-ms-visibility": "important"
                   },
-                  "fuel":{
-                    "type":"string",
-                    "description":"Returns the type of fuel the vehicle uses. For example: Electric.",
-                    "x-ms-summary":"Fuel",
+                  "fuel": {
+                    "type": "string",
+                    "description": "Returns the type of fuel the vehicle uses. For example: Electric.",
+                    "x-ms-summary": "Fuel",
                     "x-ms-visibility": "important"
                   },
-                  "manufacturer":{
-                    "type":"string",
-                    "description":"Returns the manufacturer of the vehicle. For example: Nissan.",
-                    "x-ms-summary":"Manufacturer",
+                  "manufacturer": {
+                    "type": "string",
+                    "description": "Returns the manufacturer of the vehicle. For example: Nissan.",
+                    "x-ms-summary": "Manufacturer",
                     "x-ms-visibility": "important"
                   },
-                  "model":{
-                    "type":"string",
-                    "description":"Returns the model of the vehicle. For example: Charger.",
-                    "x-ms-summary":"Model",
+                  "model": {
+                    "type": "string",
+                    "description": "Returns the model of the vehicle. For example: Charger.",
+                    "x-ms-summary": "Model",
                     "x-ms-visibility": "important"
                   },
-                  "type":{
-                    "type":"string",
-                    "description":"Returns the type of the vehicle. For example: Extended Cab Pickup.",
-                    "x-ms-summary":"Type",
+                  "type": {
+                    "type": "string",
+                    "description": "Returns the type of the vehicle. For example: Extended Cab Pickup.",
+                    "x-ms-summary": "Type",
                     "x-ms-visibility": "advanced"
                   },
-                  "vehicle":{
-                    "type":"string",
-                    "description":"Returns the name of the vehicle. For example: Toyota Grand Caravan.",
-                    "x-ms-summary":"Vehicle",
+                  "vehicle": {
+                    "type": "string",
+                    "description": "Returns the name of the vehicle. For example: Toyota Grand Caravan.",
+                    "x-ms-summary": "Vehicle",
                     "x-ms-visibility": "advanced"
                   },
-                  "vin":{
-                    "type":"string",
-                    "description":"Returns the Vehicle Identification Number. For example: 5Z4BWRAU40BP99482.",
-                    "x-ms-summary":"VIN",
+                  "vin": {
+                    "type": "string",
+                    "description": "Returns the Vehicle Identification Number. For example: 5Z4BWRAU40BP99482.",
+                    "x-ms-summary": "VIN",
                     "x-ms-visibility": "advanced"
                   },
-                  "vrm":{
-                    "type":"string",
-                    "description":"Returns the Vehicle Registration Mark. For example: ZJ14CUT.",
-                    "x-ms-summary":"VRM",
+                  "vrm": {
+                    "type": "string",
+                    "description": "Returns the Vehicle Registration Mark. For example: ZJ14CUT.",
+                    "x-ms-summary": "VRM",
                     "x-ms-visibility": "advanced"
                   }
                 }
@@ -2029,13 +2024,13 @@
         "x-ms-visibility": "advanced",
         "parameters": [
           {
-            "$ref":"#/parameters/availableLocales"
+            "$ref": "#/parameters/availableLocales"
           },
           {
-            "$ref":"#/parameters/count"
+            "$ref": "#/parameters/count"
           },
           {
-            "$ref":"#/parameters/seed"
+            "$ref": "#/parameters/seed"
           }
         ]
       }
@@ -2044,64 +2039,64 @@
       "get": {
         "responses": {
           "200": {
-            "description":"default",
-            "schema":{
-              "type":"array",
-              "items":{
-                "type":"object",
-                "properties":{
-                  "adjective":{
-                    "type":"string",
-                    "description":"Returns an adjective. For example: remote.",
-                    "x-ms-summary":"Adjective",
+            "description": "default",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "adjective": {
+                    "type": "string",
+                    "description": "Returns an adjective. For example: remote.",
+                    "x-ms-summary": "Adjective",
                     "x-ms-visibility": "important"
                   },
-                  "adverb":{
-                    "type":"string",
-                    "description":"Returns an adverb. For example: loudly.",
-                    "x-ms-summary":"Adverb",
+                  "adverb": {
+                    "type": "string",
+                    "description": "Returns an adverb. For example: loudly.",
+                    "x-ms-summary": "Adverb",
                     "x-ms-visibility": "advanced"
                   },
-                  "conjunction":{
-                    "type":"string",
-                    "description":"Returns a conjunction. For example: as.",
-                    "x-ms-summary":"Conjunction",
+                  "conjunction": {
+                    "type": "string",
+                    "description": "Returns a conjunction. For example: as.",
+                    "x-ms-summary": "Conjunction",
                     "x-ms-visibility": "advanced"
                   },
-                  "interjection":{
-                    "type":"string",
-                    "description":"Returns an interjection. For example: ha.",
-                    "x-ms-summary":"Interjection",
+                  "interjection": {
+                    "type": "string",
+                    "description": "Returns an interjection. For example: ha.",
+                    "x-ms-summary": "Interjection",
                     "x-ms-visibility": "advanced"
                   },
-                  "noun":{
-                    "type":"string",
-                    "description":"Returns a noun. For example: testing.",
-                    "x-ms-summary":"Noun",
+                  "noun": {
+                    "type": "string",
+                    "description": "Returns a noun. For example: testing.",
+                    "x-ms-summary": "Noun",
                     "x-ms-visibility": "important"
                   },
-                  "preposition":{
-                    "type":"string",
-                    "description":"Returns a preposition. For example: between.",
-                    "x-ms-summary":"Preposition",
+                  "preposition": {
+                    "type": "string",
+                    "description": "Returns a preposition. For example: between.",
+                    "x-ms-summary": "Preposition",
                     "x-ms-visibility": "important"
                   },
-                  "sample":{
-                    "type":"string",
-                    "description":"Returns a sample string. For example: deliberately.",
-                    "x-ms-summary":"Sample",
+                  "sample": {
+                    "type": "string",
+                    "description": "Returns a sample string. For example: deliberately.",
+                    "x-ms-summary": "Sample",
                     "x-ms-visibility": "advanced"
                   },
-                  "verb":{
-                    "type":"string",
-                    "description":"Returns a verb. For example: crease.",
-                    "x-ms-summary":"Verb",
+                  "verb": {
+                    "type": "string",
+                    "description": "Returns a verb. For example: crease.",
+                    "x-ms-summary": "Verb",
                     "x-ms-visibility": "important"
                   },
-                  "words":{
-                    "type":"string",
-                    "description":"Returns a string of words. For example: aha insectarium exhausted.",
-                    "x-ms-summary":"Words",
+                  "words": {
+                    "type": "string",
+                    "description": "Returns a string of words. For example: aha insectarium exhausted.",
+                    "x-ms-summary": "Words",
                     "x-ms-visibility": "important"
                   }
                 }
@@ -2115,17 +2110,17 @@
         "x-ms-visibility": "advanced",
         "parameters": [
           {
-            "$ref":"#/parameters/availableLocales"
+            "$ref": "#/parameters/availableLocales"
           },
           {
-            "$ref":"#/parameters/count"
+            "$ref": "#/parameters/count"
           },
           {
-            "$ref":"#/parameters/seed"
+            "$ref": "#/parameters/seed"
           }
         ]
       }
-    }       
+    }
   },
   "definitions": {},
   "parameters": {
@@ -2372,7 +2367,6 @@
           "value": "hu",
           "displayName": "Hungarian"
         },
-        
         {
           "value": "id_ID",
           "displayName": "Indonesian (Indonesia)"
@@ -2385,7 +2379,6 @@
           "value": "ja",
           "displayName": "Japanese"
         },
-        
         {
           "value": "ko",
           "displayName": "Korean"
@@ -2506,5 +2499,19 @@
   "responses": {},
   "securityDefinitions": {},
   "security": [],
-  "tags": []
+  "tags": [],
+  "x-ms-connector-metadata": [
+    {
+      "propertyName": "Website",
+      "propertyValue": "https://mockster.dev"
+    },
+    {
+      "propertyName": "Privacy policy",
+      "propertyValue": "https://mockster.dev/privacy-policy"
+    },
+    {
+      "propertyName": "Categories",
+      "propertyValue": "Data;Content and Files"
+    }
+  ]
 }
