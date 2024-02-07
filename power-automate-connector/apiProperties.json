@@ -1,11 +1,8 @@
 {
-    "properties": {
-        "connectionParameters": {},
-        "iconBrandColor": "#0071c9",
-        "capabilities": [
-            "actions"
-        ],
-        "publisher": "Mockster",
-        "stackOwner": "Mockster"
-    }
+  "properties": {
+    "connectionParameters": {},
+    "iconBrandColor": "#0071c9",
+    "capabilities": [],
+    "publisher": "Mockster"
+  }
 }
