@@ -124,6 +124,7 @@
         "applicationInsightsName": "[concat('appi-', parameters('appMame'), '-', variables('environment'))]",
         "environment": "[toLower(parameters('environment'))]",
         "functionName": "[concat('fa-', parameters('appMame'), '-', variables('environment'))]",
+        "logWorkspaceName": "[concat('log-', parameters('appMame'), '-', variables('environment'))]",
         "serverFarmName": "[concat('asp-', parameters('appMame'), '-', variables('environment'))]",
         "staticSiteName": "[concat('swa-', parameters('appMame'), '-', variables('environment'))]",
         "storageAccountName": "[concat('st', parameters('appMame'), variables('environment'))]",
@@ -221,7 +222,19 @@
             "kind": "web",
             "properties": {
                 "Application_Type": "web",
-                "Request_Source": "rest"
+                "Request_Source": "rest",
+                "WorkspaceResourceId": "[resourceId('Microsoft.OperationalInsights/workspaces', variables('logWorkspaceName'))]"
+            }
+        },
+        {
+            "type": "Microsoft.OperationalInsights/workspaces",
+            "apiVersion": "2021-12-01-preview",
+            "name": "[variables('logWorkspaceName')]",
+            "location": "[resourceGroup().location]",
+            "properties": {
+                "sku": {
+                    "name": "pergb2018"
+                }
             }
         },
         {   
