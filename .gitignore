@@ -107,6 +107,9 @@ tests-examples/demo-todo-app.spec.ts
 function/playwright-report
 function/test-results
 
+# MacOS .ds_store files
+.DS_Store
+
 # Docusaurus builds
 docs/.docusaurus
 docs/build
