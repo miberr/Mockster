@@ -122,6 +122,7 @@
         "apimVersionSetName": "[concat(variables('apimName'),'-',variables('suffix'))]",
         "apiName": "[concat(variables('apimName'),'-',parameters('appMame'),'-v1')]",
         "applicationInsightsName": "[concat('appi-', parameters('appMame'), '-', variables('environment'))]",
+        "availabilityTestName": "Ping persons endpoint",
         "environment": "[toLower(parameters('environment'))]",
         "functionName": "[concat('fa-', parameters('appMame'), '-', variables('environment'))]",
         "logWorkspaceName": "[concat('log-', parameters('appMame'), '-', variables('environment'))]",
@@ -227,10 +228,57 @@
             }
         },
         {
+            "type": "Microsoft.Insights/webtests",
+            "apiVersion": "2022-06-15",
+            "name": "[variables('availabilityTestName')]",
+            "location": "[resourceGroup().location]",
+            "tags": {
+                "[concat('hidden-link:', resourceId('Microsoft.Insights/components', variables('applicationInsightsName')))]": "Resource"
+            },
+            "kind": "standard",
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', variables('functionName'))]",
+                "[resourceId('Microsoft.Insights/components', variables('applicationInsightsName'))]"
+            ],
+            "properties": {
+                "Description": "Availability test for persons endpoint",
+                "Enabled": true,
+                "Frequency": 900,
+                "Kind": "standard",
+                "Locations": [
+                    {
+                        "Id": "emea-nl-ams-azr"
+                    },
+                    {
+                        "Id": "us-tx-sn1-azr"
+                    },
+                    {
+                        "Id": "us-va-ash-azr"
+                    },
+                    {
+                        "Id": "apac-hk-hkn-azr"
+                    },
+                    {
+                        "Id": "emea-au-syd-edge"
+                    }
+                ],
+                "Name": "[variables('availabilityTestName')]",
+                "RetryEnabled": true,
+                "SyntheticMonitorId": "[variables('availabilityTestName')]",
+                "Request": {
+                    "HttpVerb": "GET",
+                    "RequestUrl": "[concat('https://',variables('apimHostName')[variables('environment')], '/api/v1/persons')]"
+                }
+            }
+        },
+        {
             "type": "Microsoft.OperationalInsights/workspaces",
             "apiVersion": "2021-12-01-preview",
             "name": "[variables('logWorkspaceName')]",
             "location": "[resourceGroup().location]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Insights/components', variables('applicationInsightsName'))]"
+            ],
             "properties": {
                 "sku": {
                     "name": "pergb2018"
