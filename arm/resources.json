@@ -230,6 +230,7 @@
         {
             "type": "Microsoft.Insights/webtests",
             "apiVersion": "2022-06-15",
+            "condition": "[equals(parameters('environment'), 'PROD')]",
             "name": "[variables('availabilityTestName')]",
             "location": "[resourceGroup().location]",
             "tags": {
