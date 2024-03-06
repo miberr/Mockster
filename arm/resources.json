@@ -94,7 +94,7 @@
             },
             {
                 "displayName": "Get Science",
-                "urlTemplate": "/sciences"
+                "urlTemplate": "/science"
             },
             {
                 "displayName": "Get Strings",
