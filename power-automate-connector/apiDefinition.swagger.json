@@ -581,7 +581,7 @@
                   "anytime": {
                     "type": "string",
                     "description": "Returns a random date and time. For example: 2023-12-30T01:54:24.658Z.",
-                    "x-ms-summary": "Date",
+                    "x-ms-summary": "Anytime",
                     "x-ms-visibility": "important"
                   },
                   "birthdate": {
