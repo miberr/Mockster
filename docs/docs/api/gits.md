@@ -3,6 +3,8 @@ sidebar_label: "📁 Gits"
 description: "Generate git related data."
 ---
 
+import PAAImage from '@site/src/components/powerAutomateActionImage'
+
 # 📁 Gits
 
 :::danger Power Automate connector not yet available
@@ -26,6 +28,16 @@ Reproducible response is not available only for `commitEntry` and `commitDate`. 
 |`Seed` | Seed value for reproducible results. | null |
 
 ## Request
+
+### Power Automate
+
+In Power Automate you can find this endpoint by searching for `Get git mockdata`.
+
+<PAAImage src="/img/gits-action.jpg" alt="Get git mockdata action" />
+
+### HTTP
+
+Or you can use an HTTP request.
 
 ```http title="HTTP"
 GET https://api.mockster.dev/api/v1/gits
