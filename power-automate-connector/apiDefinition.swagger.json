@@ -49,7 +49,7 @@
                   "airplaneName": {
                     "type": "string",
                     "description": "Returns a random airplane name. For example: De Havilland DH.104 Dove.",
-                    "x-ms-summary": "Name",
+                    "x-ms-summary": "Airplane Name",
                     "x-ms-visibility": "important"
                   },
                   "airplaneTypeCode": {
