@@ -286,7 +286,7 @@
                 }
             }
         },
-        {   
+        {
             "condition": "[equals(parameters('environment'), 'PROD')]",
             "type": "Microsoft.Web/staticSites",
             "apiVersion": "2022-09-01",
@@ -382,7 +382,7 @@
                     "dependsOn": [
                         "[resourceId('Microsoft.ApiManagement/service', variables('apimName'))]"
                     ],
-                        "properties": {
+                    "properties": {
                         "displayName": "Mockster",
                         "description": "Mocking data API",
                         "subscriptionRequired": false,
@@ -432,7 +432,7 @@
                 "urlTemplate": "[variables('apiEndpoints')[copyIndex()].urlTemplate]",
                 "request": {
                     "queryParameters": [
-                        {   
+                        {
                             "name": "count",
                             "type": "integer",
                             "values": [],
@@ -550,7 +550,7 @@
                 "urlTemplate": "/images",
                 "request": {
                     "queryParameters": [
-                        {   
+                        {
                             "name": "count",
                             "type": "integer",
                             "values": [],
@@ -592,7 +592,7 @@
                             "required": false,
                             "description": "Height of the requested images. Default is 480."
                         }
-                        
+
                     ],
                     "headers": [],
                     "representations": []
