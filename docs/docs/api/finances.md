@@ -3,6 +3,8 @@ sidebar_label: "💶 Finances"
 description: "Generate finance related data."
 ---
 
+import PAAImage from '@site/src/components/powerAutomateActionImage'
+
 # 💶 Finances
 
 :::danger Power Automate connector not yet available
@@ -22,6 +24,16 @@ Generate finance related data, like credit card information, account information
 |`Seed` | Seed value for reproducible results. | null |
 
 ## Request
+
+### Power Automate
+
+In Power Automate you can find this endpoint by searching for `Get finance mockdata`.
+
+<PAAImage src="/img/finances-action.jpg" alt="Get finance mockdata action" />
+
+### HTTP
+
+Or you can use an HTTP request.
 
 ```http title="HTTP"
 GET https://api.mockster.dev/api/v1/finances
@@ -251,3 +263,5 @@ Return datatype: **string**
 ## Related endpoints
 
 To create realistic personal finance data you can use the [🧍🏻 Persons](./persons) endpoint.
+
+For numeric data, see [🔢 Numbers](./numbers) endpoint.

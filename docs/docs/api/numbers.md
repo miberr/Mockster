@@ -92,3 +92,7 @@ Return datatype: **number**
 Returns an octal number. For example: `5`.
 
 Return datatype: **string**
+
+## Related endpoints
+
+For finance related data, see [💶 Finances](./finances) endpoint.
