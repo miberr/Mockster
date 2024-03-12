@@ -886,7 +886,7 @@
                   "ingverb": {
                     "type": "string",
                     "description": "Returns a verb ending in -ing. For example: quantifying.",
-                    "x-ms-summary": "Verb ending with -ing",
+                    "x-ms-summary": "Ingverb",
                     "x-ms-visibility": "advanced"
                   },
                   "noun": {

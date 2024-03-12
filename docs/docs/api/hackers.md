@@ -3,6 +3,8 @@ sidebar_label: "🥷🏼 Hackers"
 description: "Generate hacker related data."
 ---
 
+import PAAImage from '@site/src/components/powerAutomateActionImage'
+
 # 🥷🏼 Hackers
 
 :::danger Power Automate connector not yet available
@@ -22,6 +24,16 @@ Generate hacker or IT related buzzwords. Returns an array of properties, by defa
 |`Seed` | Seed value for reproducible results. | null |
 
 ## Request
+
+### Power Automate
+
+In Power Automate you can find this endpoint by searching for `Get hacker mockdata`.
+
+<PAAImage src="/img/hackers-action.jpg" alt="Get hacker mockdata action" />
+
+### HTTP
+
+Or you can use an HTTP request.
 
 ```http title="HTTP"
 GET https://api.mockster.dev/api/v1/hackers
@@ -107,7 +119,4 @@ Return datatype: **string**
 
 ## Related endpoints
 
-There are multiple endpoints that create similar data:
-
-- [🆒 Words](./words) endpoint for generic words.
-- [💬 Lorem](./lorem) endpoint for lorem ipsum words and phrases.
+Other technical terms can be found in the [💻 Systems](./systems) and [💾 Databases](./databases) endpoints.
