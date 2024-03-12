@@ -53,7 +53,7 @@ Accept: application/json
             0.93,
             0.65
         ],
-        "human": "turquoise",
+        "humanReadableColor": "turquoise",
         "hwb": [
             124,
             0.03,
@@ -154,7 +154,7 @@ Return datatype: **array**
 
 |JSON|Power Automate|
 |:---------|:---------|
-`human`|`Human`
+`humanReadableColor`|`Human readable color`
 
 Returns a random human readable color name. For example `turquoise`.
 

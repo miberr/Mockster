@@ -4,7 +4,7 @@ export class Color {
     cssSupportedFunction: string;
     cssSupportedSpace: string;
     hsl: number[];
-    human: string;
+    humanReadableColor: string;
     hwb: number[];
     lab: number[];
     lch: number[];
@@ -18,7 +18,7 @@ export class Color {
         this.cssSupportedFunction = faker.cssSupportedFunction();
         this.cssSupportedSpace = faker.cssSupportedSpace();
         this.hsl = faker.hsl();
-        this.human = faker.human();
+        this.humanReadableColor = faker.human();
         this.hwb = faker.hwb();
         this.lab = faker.lab();
         this.lch = faker.lch();

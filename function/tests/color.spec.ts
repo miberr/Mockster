@@ -20,7 +20,7 @@ test('All properties returned', async ({ request }) => {
   expect(responseJson[0]).toHaveProperty('cssSupportedFunction');
   expect(responseJson[0]).toHaveProperty('cssSupportedSpace');
   expect(responseJson[0]).toHaveProperty('hsl');
-  expect(responseJson[0]).toHaveProperty('human');
+  expect(responseJson[0]).toHaveProperty('humanReadableColor');
   expect(responseJson[0]).toHaveProperty('hwb');
   expect(responseJson[0]).toHaveProperty('lab');
   expect(responseJson[0]).toHaveProperty('lch');
@@ -60,7 +60,7 @@ test('All properties have current datatypes', async ({ request }) => {
     expect(typeof value).toBe('number');
   });
 
-  expect(typeof responseJson[0].human).toBe('string');
+  expect(typeof responseJson[0].humanReadableColor).toBe('string');
 
   // Is array with lenght of 3
   expect(Array.isArray(responseJson[0].hwb)).toBe(true);
@@ -107,7 +107,7 @@ test('Seeded properties are consistent with the same seed', async ({ request }) 
   expect(response1Json[0].cssSupportedFunction).toEqual(response2Json[0].cssSupportedFunction);
   expect(response1Json[0].cssSupportedSpace).toEqual(response2Json[0].cssSupportedSpace);
   expect(response1Json[0].hsl).toEqual(response2Json[0].hsl);
-  expect(response1Json[0].human).toEqual(response2Json[0].human);
+  expect(response1Json[0].humanReadableColor).toEqual(response2Json[0].humanReadableColor);
   expect(response1Json[0].hwb).toEqual(response2Json[0].hwb);
   expect(response1Json[0].lab).toEqual(response2Json[0].lab);
   expect(response1Json[0].lch).toEqual(response2Json[0].lch);
