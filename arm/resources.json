@@ -206,14 +206,33 @@
                         },
                         {
                             "name": "WEBSITE_NODE_DEFAULT_VERSION",
-                            "value": "~18"
+                            "value": "~20"
                         }
                     ],
                     "ftpsState": "FtpsOnly",
                     "minTlsVersion": "1.2"
                 },
                 "httpsOnly": true
-            }
+            },
+            "resources": [
+                {
+                    "type": "config",
+                    "apiVersion": "2022-09-01",
+                    "name": "web",
+                    "location": "[resourceGroup().location]",
+                    "dependsOn": [
+                        "[resourceId('Microsoft.Web/sites', variables('functionName'))]"
+                    ],
+                    "properties": {
+                        "numberOfWorkers": 1,
+                        "netFrameworkVersion": "v4.0",
+                        "autoHealEnabled": true,
+                        "apiManagementConfig": {
+                            "id": "[resourceId('Microsoft.ApiManagement/service/apis', variables('apimName'), variables('apiName'))]"
+                        }
+                    }
+                }
+            ]
         },
         {
             "type": "Microsoft.Insights/components",
@@ -286,7 +305,7 @@
                 }
             }
         },
-        {   
+        {
             "condition": "[equals(parameters('environment'), 'PROD')]",
             "type": "Microsoft.Web/staticSites",
             "apiVersion": "2022-09-01",
@@ -382,7 +401,7 @@
                     "dependsOn": [
                         "[resourceId('Microsoft.ApiManagement/service', variables('apimName'))]"
                     ],
-                        "properties": {
+                    "properties": {
                         "displayName": "Mockster",
                         "description": "Mocking data API",
                         "subscriptionRequired": false,
@@ -415,6 +434,55 @@
             ]
         },
         {
+            "type": "Microsoft.ApiManagement/service/apis/diagnostics",
+            "apiVersion": "2023-05-01-preview",
+            "name": "[concat(variables('apimName'), '/', variables('apiName'), '/applicationinsights')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service/apis', variables('apimName'), variables('apiName'))]",
+                "[resourceId('Microsoft.ApiManagement/service', variables('apimName'))]",
+                "[resourceId('Microsoft.ApiManagement/service/loggers', variables('apimName'), concat(variables('apimName'), '-loggers'))]"
+            ],
+            "properties": {
+                "alwaysLog": "allErrors",
+                "httpCorrelationProtocol": "Legacy",
+                "verbosity": "information",
+                "logClientIp": true,
+                "loggerId": "[resourceId('Microsoft.ApiManagement/service/loggers', variables('apimName'), concat(variables('apimName'), '-loggers'))]",
+                "sampling": {
+                    "samplingType": "fixed",
+                    "percentage": 100
+                },
+                "frontend": {
+                    "request": {
+                        "headers": [],
+                        "body": {
+                            "bytes": 0
+                        }
+                    },
+                    "response": {
+                        "headers": [],
+                        "body": {
+                            "bytes": 0
+                        }
+                    }
+                },
+                "backend": {
+                    "request": {
+                        "headers": [],
+                        "body": {
+                            "bytes": 0
+                        }
+                    },
+                    "response": {
+                        "headers": [],
+                        "body": {
+                            "bytes": 0
+                        }
+                    }
+                }
+            }
+        },
+        {
             // Generating api endpoints in apim with copy loop
             "copy": {
                 "name": "apiEndpoints",
@@ -432,7 +500,7 @@
                 "urlTemplate": "[variables('apiEndpoints')[copyIndex()].urlTemplate]",
                 "request": {
                     "queryParameters": [
-                        {   
+                        {
                             "name": "count",
                             "type": "integer",
                             "values": [],
@@ -550,7 +618,7 @@
                 "urlTemplate": "/images",
                 "request": {
                     "queryParameters": [
-                        {   
+                        {
                             "name": "count",
                             "type": "integer",
                             "values": [],
@@ -592,7 +660,7 @@
                             "required": false,
                             "description": "Height of the requested images. Default is 480."
                         }
-                        
+
                     ],
                     "headers": [],
                     "representations": []
