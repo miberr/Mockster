@@ -233,3 +233,8 @@ Return datatype: **string**
 Returns a random color space name. For example: `CIEUVW`.
 
 Return datatype: **string**
+
+## Related endpoints
+
+To use your colors with product data, use the [🧸 Products](./products.md) endpoint.
+

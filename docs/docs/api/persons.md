@@ -203,3 +203,7 @@ Return datatype: **string**
 Returns the sex type of the person. For example: `male`.
 
 Return datatype: **string**
+
+## Related endpoints
+
+Create some plane tickets for your persons with the [✈️ Airlines](./airlines) endpoint.

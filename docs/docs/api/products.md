@@ -126,3 +126,7 @@ Return datatype: **string**
 Returns the name of the product. For example: `Oriental Frozen Cheese`.
 
 Return datatype: **string**
+
+## Related endpoints
+
+Add some color to your product data with the [🌈 Colors](./colors) endpoint.

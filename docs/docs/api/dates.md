@@ -141,3 +141,7 @@ Return datatype: **string**
 Returns a random year between 1900 and 2100. For example: `2083`.
 
 Return datatype: **number**
+
+## Related endpoints
+
+Plane tickets need some dates, create the ticket data with [✈️ Airlines](./airlines) endpoint.
