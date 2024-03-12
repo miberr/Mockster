@@ -3,6 +3,8 @@ sidebar_label: "🏢 Companies"
 description: "Generate company related data, like names and company jargon. Returns an array of properties, by default ten. Some of the properties can be localized."
 ---
 
+import PAAImage from '@site/src/components/powerAutomateActionImage'
+
 # 🏢 Companies
 
 :::danger Power Automate connector not yet available
@@ -22,6 +24,16 @@ Generate company related data, like names and company jargon. Returns an array o
 |`Seed` | Seed value for reproducible results | null |
 
 ## Request
+
+### Power Automate
+
+In Power Automate you can find this endpoint by searching for `Get company mockdata`.
+
+<PAAImage src="/img/companies-action.jpg" alt="Get company mockdata action" />
+
+### HTTP
+
+Or you can use an HTTP request.
 
 ```http title="HTTP"
 GET https://api.mockster.dev/api/v1/companies

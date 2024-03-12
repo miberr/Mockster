@@ -2,6 +2,7 @@
 sidebar_label: "🌈 Colors"
 description: "Generate color related data. Includes color values in different formats as well as human readable value. Returns an array of colors, by default ten. Some values may be localized."
 ---
+import PAAImage from '@site/src/components/powerAutomateActionImage'
 
 # 🌈 Colors
 
@@ -22,6 +23,16 @@ Generate color related data. Includes color values in different formats as well 
 |`Seed` | Seed value for reproducible results | null |
 
 ## Request
+
+### Power Automate
+
+In Power Automate you can find this endpoint by searching for `Get color mockdata`.
+
+<PAAImage src="/img/colors-action.jpg" alt="Get color mockdata action" />
+
+### HTTP
+
+Or you can use an HTTP request.
 
 ```http title="HTTP"
 GET https://api.mockster.dev/api/v1/colors
