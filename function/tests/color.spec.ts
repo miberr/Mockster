@@ -25,7 +25,7 @@ test('All properties returned', async ({ request }) => {
   expect(responseJson[0]).toHaveProperty('lab');
   expect(responseJson[0]).toHaveProperty('lch');
   expect(responseJson[0]).toHaveProperty('rgb');
-  expect(responseJson[0]).toHaveProperty('space');
+  expect(responseJson[0]).toHaveProperty('colorSpace');
 
 });
 
@@ -87,7 +87,7 @@ test('All properties have current datatypes', async ({ request }) => {
   });
 
   expect(typeof responseJson[0].rgb).toBe('string');
-  expect(typeof responseJson[0].space).toBe('string');
+  expect(typeof responseJson[0].colorSpace).toBe('string');
   
 });
 
@@ -112,6 +112,6 @@ test('Seeded properties are consistent with the same seed', async ({ request }) 
   expect(response1Json[0].lab).toEqual(response2Json[0].lab);
   expect(response1Json[0].lch).toEqual(response2Json[0].lch);
   expect(response1Json[0].rgb).toEqual(response2Json[0].rgb);
-  expect(response1Json[0].space).toEqual(response2Json[0].space);
+  expect(response1Json[0].colorSpace).toEqual(response2Json[0].colorSpace);
   
 });

@@ -70,7 +70,7 @@ Accept: application/json
             33.2
         ],
         "rgb": "#be7fcc",
-        "space": "CIEUVW"
+        "colorSpace": "CIEUVW"
     }
 ]
 ```
@@ -224,11 +224,11 @@ Returns a random RGB color in hex format. For example: `#be7fcc`.
 
 Return datatype: **string**
 
-### Space
+### Color space
 
 |JSON|Power Automate|
 |:---------|:---------|
-`space`|`Space`
+`colorSpace`|`Color space`
 
 Returns a random color space name. For example: `CIEUVW`.
 

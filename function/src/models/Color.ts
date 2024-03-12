@@ -9,7 +9,7 @@ export class Color {
     lab: number[];
     lch: number[];
     rgb: string;
-    space: string;
+    colorSpace: string;
 
     constructor(localizedFaker) {
         const faker = localizedFaker.color;
@@ -23,6 +23,6 @@ export class Color {
         this.lab = faker.lab();
         this.lch = faker.lch();
         this.rgb = faker.rgb();
-        this.space = faker.space();
+        this.colorSpace = faker.space();
     }
 }

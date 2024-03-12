@@ -290,7 +290,7 @@
                     "x-ms-summary": "HSL",
                     "x-ms-visibility": "advanced"
                   },
-                  "human": {
+                  "humanReadableColor": {
                     "type": "string",
                     "description": "Returns a random human readable color name. For example turquoise.",
                     "x-ms-summary": "Human readable color",
@@ -329,7 +329,7 @@
                     "x-ms-summary": "RGB",
                     "x-ms-visibility": "advanced"
                   },
-                  "space": {
+                  "colorSpace": {
                     "type": "string",
                     "description": "Returns a random color space name. For example: CIEUVW.",
                     "x-ms-summary": "Color space",
