@@ -169,3 +169,7 @@ Return datatype: **string**
 Returns a semantic version number. For example: `6.2.5`.
 
 Return datatype: **string**
+
+## Related endpoints
+
+Database related properties can be found at [💾 Databases](./databases) endpoint.
