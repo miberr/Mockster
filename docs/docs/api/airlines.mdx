@@ -3,6 +3,8 @@ sidebar_label: "✈️ Airlines"
 description: "Generate aviation related data. You can use this endpoint for creating realistic mock data for flights or tickets. Returns an array of airline related properties, by default ten."
 ---
 
+import PAAImage from '@site/src/components/powerAutomateActionImage'
+
 # ✈️ Airlines
 
 :::danger Power Automate connector not yet available
@@ -22,7 +24,17 @@ Generate aviation related data. You can use this endpoint for creating realistic
 
 ## Request
 
-```http title="HTTP"
+### Power Automate
+
+In Power Automate you can find this endpoint by searching for `Get airline mockdata`.
+
+<PAAImage src="/img/airline-action.jpg" alt="Get airline mockdata action" />
+
+### HTTP
+
+Or you can use an HTTP request.
+
+```http title="HTTPS"
 GET https://api.mockster.dev/api/v1/airlines
 Accept: application/json  
 ```
@@ -174,3 +186,5 @@ Return datatype: **string**
 ## Related endpoints
 
 To create realistic passenger data you can use the [🧍🏻 Persons](./persons) endpoint.
+
+You might also want to add some dates to the flights with [🗓️ Dates](./dates) endpoint. 
