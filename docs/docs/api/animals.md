@@ -3,6 +3,8 @@ sidebar_label: "🐷 Animals"
 description: "Generate different kinds of animal species. Returns an array of animal species, by default ten. All values may be localized."
 ---
 
+import PAAImage from '@site/src/components/powerAutomateActionImage'
+
 # 🐷 Animals
 
 :::danger Power Automate connector not yet available
@@ -22,6 +24,16 @@ Generate different kinds of animal species. Returns an array of animal species, 
 |`Seed` | Seed value for reproducible results | null |
 
 ## Request
+
+### Power Automate
+
+In Power Automate you can find this endpoint by searching for `Get animals mockdata`.
+
+<PAAImage src="/img/animals-action.jpg" alt="Get animals mockdata action" />
+
+### HTTP
+
+Or you can use an HTTP request.
 
 ```http title="HTTP"
 GET https://api.mockster.dev/api/v1/animals
