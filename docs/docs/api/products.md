@@ -130,3 +130,5 @@ Return datatype: **string**
 ## Related endpoints
 
 Add some color to your product data with the [🌈 Colors](./colors) endpoint.
+
+Create manufacturers for your products with the [🏢 Companies](./companies) endpoint.

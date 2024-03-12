@@ -207,3 +207,5 @@ Return datatype: **string**
 ## Related endpoints
 
 Create some plane tickets for your persons with the [✈️ Airlines](./airlines) endpoint.
+
+To create employers for the persons, use the [🏢 Companies](./companies) endpoint.

@@ -195,7 +195,7 @@ Return datatype: **string**
 |:---------|:---------|
 `name`|`Name`
 
-Returns a random name. For example: `Dibbert, Kirlin and Hammes`.
+Returns a random company name. For example: `Dibbert, Kirlin and Hammes`.
 
 Return datatype: **string**
 
@@ -262,4 +262,5 @@ Return datatype: **string**
 ## Related endpoints
 
 To create realistic employee data you can use the [🧍🏻 Persons](./persons) endpoint.
+
 For product data, try the [🧸 Products](./products) endpoint.

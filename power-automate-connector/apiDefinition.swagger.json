@@ -447,7 +447,7 @@
                   },
                   "name": {
                     "type": "string",
-                    "description": "Returns a random name. For example: Dibbert, Kirlin and Hammes.",
+                    "description": "Returns a random company name. For example: Dibbert, Kirlin and Hammes.",
                     "x-ms-summary": "Name",
                     "x-ms-visibility": "important"
                   },
