@@ -203,7 +203,7 @@
                   },
                   "rodent": {
                     "type": "string",
-                    "description": "Returns a random breed of rodent. For example: Rodent.",
+                    "description": "Returns a random breed of rodent. For example: Fukomys mechowii.",
                     "x-ms-summary": "Rodent",
                     "x-ms-visibility": "advanced"
                   },

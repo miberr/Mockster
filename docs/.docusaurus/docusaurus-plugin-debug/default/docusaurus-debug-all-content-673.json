@@ -13,9 +13,9 @@
           "tagsPath": "/docs/tags",
           "isLast": true,
           "routePriority": -1,
-          "sidebarFilePath": "/Users/mikkoberg/Library/Mobile Documents/com~apple~CloudDocs/Documents/GitHub/Mockster/docs/sidebars.js",
-          "contentPath": "/Users/mikkoberg/Library/Mobile Documents/com~apple~CloudDocs/Documents/GitHub/Mockster/docs/docs",
-          "contentPathLocalized": "/Users/mikkoberg/Library/Mobile Documents/com~apple~CloudDocs/Documents/GitHub/Mockster/docs/i18n/en/docusaurus-plugin-content-docs/current",
+          "sidebarFilePath": "/Users/mikkoberg/Documents/GitHub/Mockster/docs/sidebars.js",
+          "contentPath": "/Users/mikkoberg/Documents/GitHub/Mockster/docs/docs",
+          "contentPathLocalized": "/Users/mikkoberg/Documents/GitHub/Mockster/docs/i18n/en/docusaurus-plugin-content-docs/current",
           "docs": [
             {
               "id": "api/airlines",

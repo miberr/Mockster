@@ -114,16 +114,6 @@ Returns a random breed of crocodilia. For example: `Philippine Crocodile`.
 
 Return datatype: **string**
 
-### Crocodilia
-
-|JSON|Power Automate|
-|:---------|:---------|
-`crocodilia`|`Crocodilia`
-
-Returns a random breed of crocodilia. For example: `Philippine Crocodile`.
-
-Return datatype: **string**
-
 ### Dog
 
 |JSON|Power Automate|
@@ -190,7 +180,7 @@ Return datatype: **string**
 |:---------|:---------|
 `rodent`|`Rodent`
 
-Returns a random breed of rodent. For example: `Rodent`.
+Returns a random breed of rodent. For example: `Fukomys mechowii`.
 
 Return datatype: **string**
 
