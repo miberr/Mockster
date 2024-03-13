@@ -1132,9 +1132,9 @@
                     "x-ms-summary": "User Agent",
                     "x-ms-visibility": "advanced"
                   },
-                  "userName": {
+                  "username": {
                     "type": "string",
-                    "description": "Returns a user name. For example: Ted42.",
+                    "description": "Returns a username. For example: Ted42.",
                     "x-ms-summary": "Username",
                     "x-ms-visibility": "important"
                   }

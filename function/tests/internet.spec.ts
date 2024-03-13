@@ -34,7 +34,7 @@ test('All properties returned', async ({ request }) => {
   expect(responseJson[0]).toHaveProperty('protocol');
   expect(responseJson[0]).toHaveProperty('url');
   expect(responseJson[0]).toHaveProperty('userAgent');
-  expect(responseJson[0]).toHaveProperty('userName');
+  expect(responseJson[0]).toHaveProperty('username');
 
 });
 
@@ -61,7 +61,7 @@ test('All properties have current datatypes', async ({ request }) => {
   expect(typeof responseJson[0].protocol).toBe('string');
   expect(typeof responseJson[0].url).toBe('string');
   expect(typeof responseJson[0].userAgent).toBe('string');
-  expect(typeof responseJson[0].userName).toBe('string');
+  expect(typeof responseJson[0].username).toBe('string');
 
 });
 
