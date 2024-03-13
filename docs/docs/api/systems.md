@@ -3,6 +3,8 @@ sidebar_label: "💻 Systems"
 description: "Generate system data."
 ---
 
+import PAAImage from '@site/src/components/powerAutomateActionImage'
+
 # 💻 Systems
 
 :::danger Power Automate connector not yet available
@@ -21,6 +23,16 @@ Generate system related data. Returns an array of properties, by default ten.
 |`Seed` | Seed value for reproducible results. | null |
 
 ## Request
+
+### Power Automate
+
+In Power Automate you can find this endpoint by searching for `Get system mockdata`.
+
+<PAAImage src="/img/systems-action.jpg" alt="Get system mockdata action" />
+
+### HTTP
+
+Or you can use an HTTP request.
 
 ```http title="HTTP"
 GET https://api.mockster.dev/api/v1/systems
@@ -164,7 +176,7 @@ Return datatype: **string**
 
 |JSON|Power Automate|
 |:---------|:---------|
-`semver`|`Semver`
+`semver`|`Semantic version`
 
 Returns a semantic version number. For example: `6.2.5`.
 
