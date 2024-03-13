@@ -3,6 +3,8 @@ sidebar_label: "💬 Lorem"
 description: "Generate Lorem Ipsum."
 ---
 
+import PAAImage from '@site/src/components/powerAutomateActionImage'
+
 # 💬 Lorem
 
 :::danger Power Automate connector not yet available
@@ -21,6 +23,16 @@ Generate lorem ipsum. Returns an array of properties, by default ten.
 |`Seed` | Seed value for reproducible results. | null |
 
 ## Request
+
+### Power Automate
+
+In Power Automate you can find this endpoint by searching for `Get Lorem Ipsum mockdata`.
+
+<PAAImage src="/img/lorem-action.jpg" alt="Get lorem mockdata action" />
+
+### HTTP
+
+Or you can use an HTTP request.
 
 ```http title="HTTP"
 GET https://api.mockster.dev/api/v1/lorems
