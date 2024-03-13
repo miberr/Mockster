@@ -3,6 +3,8 @@ sidebar_label: "🔠 Strings"
 description: "Generate random strings."
 ---
 
+import PAAImage from '@site/src/components/powerAutomateActionImage'
+
 # 🔠 Strings
 
 :::danger Power Automate connector not yet available
@@ -21,6 +23,16 @@ Generate random strings. Returns an array of properties, by default ten.
 |`Seed` | Seed value for reproducible results. | null |
 
 ## Request
+
+### Power Automate
+
+In Power Automate you can find this endpoint by searching for `Get string mockdata`.
+
+<PAAImage src="/img/strings-action.jpg" alt="Get string mockdata action" />
+
+### HTTP
+
+Or you can use an HTTP request.
 
 ```http title="HTTP"
 GET https://api.mockster.dev/api/v1/strings
@@ -62,7 +74,7 @@ Return datatype: **string**
 
 |JSON|Power Automate|
 |:---------|:---------|
-`alphaNumeric`|`Alpha Numeric`
+`alphaNumeric`|`Alphanumeric`
 
 Returns an alphanumeric character. For example: `X`.
 
