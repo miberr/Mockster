@@ -3,6 +3,8 @@ sidebar_label: "🧍🏻 Persons"
 description: "Generate data for a person."
 ---
 
+import PAAImage from '@site/src/components/powerAutomateActionImage'
+
 # 🧍🏻 Persons
 
 :::danger Power Automate connector not yet available
@@ -22,6 +24,16 @@ Generate data for a person. Returns an array of properties, by default ten. Some
 |`Seed` | Seed value for reproducible results. | null |
 
 ## Request
+
+### Power Automate
+
+In Power Automate you can find this endpoint by searching for `Get people mockdata`.
+
+<PAAImage src="/img/persons-action.jpg" alt="Get people mockdata action" />
+
+### HTTP
+
+Or you can use an HTTP request.
 
 ```http title="HTTP"
 GET https://api.mockster.dev/api/v1/persons

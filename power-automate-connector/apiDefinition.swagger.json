@@ -1547,6 +1547,12 @@
                     "x-ms-summary": "Full Name",
                     "x-ms-visibility": "important"
                   },
+                  "gender": {
+                    "type": "string",
+                    "description": "Returns the gender of the person. For example: Trans male.",
+                    "x-ms-summary": "Gender",
+                    "x-ms-visibility": "advanced"
+                  },
                   "jobArea": {
                     "type": "string",
                     "description": "Returns the job area of the person. For example: Intranet.",
