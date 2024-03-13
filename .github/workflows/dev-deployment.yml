@@ -109,7 +109,7 @@ jobs:
     name: Run Playwright tests
     timeout-minutes: 60
     runs-on: ubuntu-latest
-    need: [deployFunction]
+    needs: [deployFunction]
     steps:
       # Setup Node.js
       - uses: actions/checkout@v4
