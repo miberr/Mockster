@@ -3,6 +3,8 @@ sidebar_label: "📱 Phones"
 description: "Generate phone nuber and IMEI."
 ---
 
+import PAAImage from '@site/src/components/powerAutomateActionImage'
+
 # 📱 Phones
 
 :::danger Power Automate connector not yet available
@@ -22,6 +24,16 @@ Generate phone nuber and IMEI. Returns an array of properties, by default ten. P
 |`Seed` | Seed value for reproducible results. | null |
 
 ## Request
+
+### Power Automate
+
+In Power Automate you can find this endpoint by searching for `Get phone mockdata`.
+
+<PAAImage src="/img/phones-action.jpg" alt="Get phone mockdata action" />
+
+### HTTP
+
+Or you can use an HTTP request.
 
 ```http title="HTTP"
 GET https://api.mockster.dev/api/v1/phones
@@ -55,7 +67,7 @@ Return datatype: **string**
 
 |JSON|Power Automate|
 |:---------|:---------|
-`number`|`Number`
+`number`|`Phone number`
 
 Returns the phone number. For example: `1-603-414-6600`.
 
