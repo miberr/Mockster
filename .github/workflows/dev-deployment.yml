@@ -105,5 +105,28 @@ jobs:
           slot-name: production
           package: deploy.zip
 
+  test:
+    name: Run Playwright tests
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+    need: [deployFunction]
+    steps:
+      # Setup Node.js
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
 
-   
+      # Install dependencies
+      - name: Install dependencies
+        run: npm ci
+      - name: Install Playwright
+        run: npx playwright install --with-deps
+      
+      # Run tests
+      - name: Run Playwright tests
+        run: npx playwright test
+        env:
+          PLAYWRIGHT_TEST_BASE_URL: ${{ vars.API_URL }}
+
+
