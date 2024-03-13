@@ -116,6 +116,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 18
+      - shell: bash
+        run: cd function
 
       # Install dependencies
       - name: Install dependencies
