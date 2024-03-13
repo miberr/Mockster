@@ -3,6 +3,8 @@ sidebar_label: "🌆 Images"
 description: "Generate word data."
 ---
 
+import PAAImage from '@site/src/components/powerAutomateActionImage'
+
 # 🌆 Images
 
 :::danger Power Automate connector not yet available
@@ -26,6 +28,16 @@ Service is provided by https://loremflickr.com.
 
 ## Request
 
+### Power Automate
+
+In Power Automate you can find this endpoint by searching for `Get random images`.
+
+<PAAImage src="/img/images-action.jpg" alt="Get image mockdata action" />
+
+### HTTP
+
+Or you can use an HTTP request.
+
 ```http title="HTTP"
 GET https://api.mockster.dev/api/v1/images
 Accept: application/json  
@@ -48,7 +60,7 @@ Accept: application/json
 
 |JSON|Power Automate|
 |:---------|:---------|
-`name`|`Name`
+`name`|`Image name`
 
 Returns the name of the image file. For example: `random_1.jpg`.
 
@@ -58,7 +70,7 @@ Return datatype: **string**
 
 |JSON|Power Automate|
 |:---------|:---------|
-`url`|`URL`
+`url`|`Image URL`
 
 Returns the URL where the image is located. For example: `https://loremflickr.com/640/480/random?lock=2279108562124800`.
 

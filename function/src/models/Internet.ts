@@ -20,7 +20,7 @@ export class Internet {
     protocol: string;
     url: string;
     userAgent: string;
-    userName: string;
+    username: string;
 
     constructor(localizedFaker) {
         const faker = localizedFaker.internet;
@@ -46,6 +46,6 @@ export class Internet {
         this.protocol = faker.protocol();
         this.url = faker.url();
         this.userAgent = faker.userAgent();
-        this.userName = faker.userName({firstName: firstName, lastName: lastName});
+        this.username = faker.userName({firstName: firstName, lastName: lastName});
     }
 }

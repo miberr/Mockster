@@ -3,6 +3,8 @@ sidebar_label: "🗓️ Dates"
 description: "Generate datetime data."
 ---
 
+import PAAImage from '@site/src/components/powerAutomateActionImage'
+
 # 🗓️ Dates
 
 :::danger Power Automate connector not yet available
@@ -26,6 +28,16 @@ Reproducible response is available only for `month`, `weekday` and `year`. All o
 |`Seed` | Seed value for reproducible results. | null |
 
 ## Request
+
+### Power Automate
+
+In Power Automate you can find this endpoint by searching for `Get date mockdata`.
+
+<PAAImage src="/img/dates-action.jpg" alt="Get date mockdata action" />
+
+### HTTP
+
+Or you can use an HTTP request.
 
 ```http title="HTTP"
 GET https://api.mockster.dev/api/v1/dates
@@ -141,3 +153,7 @@ Return datatype: **string**
 Returns a random year between 1900 and 2100. For example: `2083`.
 
 Return datatype: **number**
+
+## Related endpoints
+
+Plane tickets need some dates, create the ticket data with [✈️ Airlines](./airlines) endpoint.

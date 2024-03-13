@@ -3,6 +3,8 @@ sidebar_label: "🧸 Products"
 description: "Generate products data."
 ---
 
+import PAAImage from '@site/src/components/powerAutomateActionImage'
+
 # 🧸 Products
 
 :::danger Power Automate connector not yet available
@@ -22,6 +24,16 @@ Generate product related data. Returns an array of properties, by default ten. S
 |`Seed` | Seed value for reproducible results. | null |
 
 ## Request
+
+### Power Automate
+
+In Power Automate you can find this endpoint by searching for `Get product mockdata`.
+
+<PAAImage src="/img/products-action.jpg" alt="Get product mockdata action" />
+
+### HTTP
+
+Or you can use an HTTP request.
 
 ```http title="HTTP"
 GET https://api.mockster.dev/api/v1/products
@@ -81,7 +93,7 @@ Return datatype: **number**
 
 |JSON|Power Automate|
 |:---------|:---------|
-`product`|`Product`
+`product`|`Short product name`
 
 Returns the type of the product. For example: `Salad`.
 
@@ -126,3 +138,9 @@ Return datatype: **string**
 Returns the name of the product. For example: `Oriental Frozen Cheese`.
 
 Return datatype: **string**
+
+## Related endpoints
+
+Add some color to your product data with the [🌈 Colors](./colors) endpoint.
+
+Create manufacturers for your products with the [🏢 Companies](./companies) endpoint.

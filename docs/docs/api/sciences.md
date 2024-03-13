@@ -1,9 +1,11 @@
 ---
-sidebar_label: "👩🏻‍🔬 Science"
+sidebar_label: "👩🏻‍🔬 Sciences"
 description: "Generate science data."
 ---
 
-# 👩🏻‍🔬 Science
+import PAAImage from '@site/src/components/powerAutomateActionImage'
+
+# 👩🏻‍🔬 Sciences
 
 :::danger Power Automate connector not yet available
 Power Automate connector can be expected to be available Q1/2024
@@ -22,8 +24,18 @@ Generate science related data. Returns an array of properties, by default ten.
 
 ## Request
 
+### Power Automate
+
+In Power Automate you can find this endpoint by searching for `Get science mockdata`.
+
+<PAAImage src="/img/sciences-action.jpg" alt="Get science mockdata action" />
+
+### HTTP
+
+Or you can use an HTTP request.
+
 ```http title="HTTP"
-GET https://api.mockster.dev/api/v1/science
+GET https://api.mockster.dev/api/v1/sciences
 Accept: application/json  
 ```
 

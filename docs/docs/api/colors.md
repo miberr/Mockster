@@ -2,6 +2,7 @@
 sidebar_label: "🌈 Colors"
 description: "Generate color related data. Includes color values in different formats as well as human readable value. Returns an array of colors, by default ten. Some values may be localized."
 ---
+import PAAImage from '@site/src/components/powerAutomateActionImage'
 
 # 🌈 Colors
 
@@ -22,6 +23,16 @@ Generate color related data. Includes color values in different formats as well 
 |`Seed` | Seed value for reproducible results | null |
 
 ## Request
+
+### Power Automate
+
+In Power Automate you can find this endpoint by searching for `Get color mockdata`.
+
+<PAAImage src="/img/colors-action.jpg" alt="Get color mockdata action" />
+
+### HTTP
+
+Or you can use an HTTP request.
 
 ```http title="HTTP"
 GET https://api.mockster.dev/api/v1/colors
@@ -53,7 +64,7 @@ Accept: application/json
             0.93,
             0.65
         ],
-        "human": "turquoise",
+        "humanReadableColor": "turquoise",
         "hwb": [
             124,
             0.03,
@@ -70,7 +81,7 @@ Accept: application/json
             33.2
         ],
         "rgb": "#be7fcc",
-        "space": "CIEUVW"
+        "colorSpace": "CIEUVW"
     }
 ]
 ```
@@ -154,7 +165,7 @@ Return datatype: **array**
 
 |JSON|Power Automate|
 |:---------|:---------|
-`human`|`Human`
+`humanReadableColor`|`Human readable color`
 
 Returns a random human readable color name. For example `turquoise`.
 
@@ -224,12 +235,17 @@ Returns a random RGB color in hex format. For example: `#be7fcc`.
 
 Return datatype: **string**
 
-### Space
+### Color space
 
 |JSON|Power Automate|
 |:---------|:---------|
-`space`|`Space`
+`colorSpace`|`Color space`
 
 Returns a random color space name. For example: `CIEUVW`.
 
 Return datatype: **string**
+
+## Related endpoints
+
+To use your colors with product data, use the [🧸 Products](./products.md) endpoint.
+

@@ -3,6 +3,8 @@ sidebar_label: "💾 Databases"
 description: "Generate database related technical data, like columns or engines. Returns an array of properties, by default ten."
 ---
 
+import PAAImage from '@site/src/components/powerAutomateActionImage'
+
 # 💾 Databases
 
 :::danger Power Automate connector not yet available
@@ -21,6 +23,16 @@ Generate database related technical data, like columns or engines. Returns an ar
 |`Seed` | Seed value for reproducible results | null |
 
 ## Request
+
+### Power Automate
+
+In Power Automate you can find this endpoint by searching for `Get database mockdata`.
+
+<PAAImage src="/img/databases-action.jpg" alt="Get database mockdata action" />
+
+### HTTP
+
+Or you can use an HTTP request.
 
 ```http title="HTTP"
 GET https://api.mockster.dev/api/v1/databases

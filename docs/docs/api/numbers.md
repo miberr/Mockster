@@ -3,6 +3,8 @@ sidebar_label: "🔢 Numbers"
 description: "Generate number data."
 ---
 
+import PAAImage from '@site/src/components/powerAutomateActionImage'
+
 # 🔢 Numbers
 
 :::danger Power Automate connector not yet available
@@ -21,6 +23,16 @@ Generate different kinds of numbers. Returns an array of properties, by default 
 |`Seed` | Seed value for reproducible results. | null |
 
 ## Request
+
+### Power Automate
+
+In Power Automate you can find this endpoint by searching for `Get numeric mockdata`.
+
+<PAAImage src="/img/numbers-action.jpg" alt="Get numeric mockdata action" />
+
+### HTTP
+
+Or you can use an HTTP request.
 
 ```http title="HTTP"
 GET https://api.mockster.dev/api/v1/numbers
@@ -92,3 +104,7 @@ Return datatype: **number**
 Returns an octal number. For example: `5`.
 
 Return datatype: **string**
+
+## Related endpoints
+
+For finance related data, see [💶 Finances](./finances) endpoint.

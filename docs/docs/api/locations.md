@@ -3,6 +3,8 @@ sidebar_label: "📍 Locations"
 description: "Generate realistic location data."
 ---
 
+import PAAImage from '@site/src/components/powerAutomateActionImage'
+
 # 📍 Locations
 
 :::danger Power Automate connector not yet available
@@ -22,6 +24,16 @@ Generate location related data. Returns an array of properties, by default ten. 
 |`Seed` | Seed value for reproducible results. | null |
 
 ## Request
+
+### Power Automate
+
+In Power Automate you can find this endpoint by searching for `Get location mockdata`.
+
+<PAAImage src="/img/locations-action.jpg" alt="Get location mockdata action" />
+
+### HTTP
+
+Or you can use an HTTP request.
 
 ```http title="HTTP"
 GET https://api.mockster.dev/api/v1/locations

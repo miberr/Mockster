@@ -1,9 +1,11 @@
 ---
-sidebar_label: "🌐 Internet"
+sidebar_label: "🌐 Internets"
 description: "Get rich data about things in the internet like users or networking terms."
 ---
 
-# 🌐 Internet
+import PAAImage from '@site/src/components/powerAutomateActionImage'
+
+# 🌐 Internets
 
 :::danger Power Automate connector not yet available
 Power Automate connector can be expected to be available Q1/2024
@@ -21,6 +23,16 @@ Get rich data about things in the internet like users or networking terms. Retur
 |`Seed` | Seed value for reproducible results. | null |
 
 ## Request
+
+### Power Automate
+
+In Power Automate you can find this endpoint by searching for `Get internet mockdata`.
+
+<PAAImage src="/img/internet-action.jpg" alt="Get internet mockdata action" />
+
+### HTTP
+
+Or you can use an HTTP request.
 
 ```http title="HTTP"
 GET https://api.mockster.dev/api/v1/internets
@@ -166,7 +178,7 @@ Return datatype: **number**
 
 |JSON|Power Automate|
 |:---------|:---------|
-`ip`|`IP`
+`ip`|`IP Address`
 
 Returns a random IPv4 or IPv6 address. For example: `b8bb:21ac:da45:baf2:fe1c:7e62:7f2c:c6dc`.
 
@@ -176,7 +188,7 @@ Return datatype: **string**
 
 |JSON|Power Automate|
 |:---------|:---------|
-`ipv4`|`IPv4`
+`ipv4`|`IPv4 Address`
 
 Returns an IPv4 address. For example: `146.120.42.165`.
 
@@ -186,7 +198,7 @@ Return datatype: **string**
 
 |JSON|Power Automate|
 |:---------|:---------|
-`ipv6`|`IPv6`
+`ipv6`|`IPv6 Address`
 
 Returns an IPv6 address. For example: `1eff:77af:b6d3:ae02:8e0d:1d7d:feb2:7a01`.
 
@@ -196,7 +208,7 @@ Return datatype: **string**
 
 |JSON|Power Automate|
 |:---------|:---------|
-`mac`|`MAC`
+`mac`|`MAC Address`
 
 Returns a MAC address. For example: `c8:14:d0:db:1e:d4`.
 
@@ -216,7 +228,7 @@ Return datatype: **string**
 
 |JSON|Power Automate|
 |:---------|:---------|
-`port`|`Port`
+`port`|`Port Number`
 
 Returns a random port number. For example: `5071`.
 
@@ -256,7 +268,7 @@ Return datatype: **string**
 
 |JSON|Power Automate|
 |:---------|:---------|
-`userName`|`User Name`
+`username`|`Username`
 
 Returns a user name. All user related properties use the same first and lastname as a base. For example: `Ted42`.
 
