@@ -3,6 +3,8 @@ sidebar_label: "🎶 Musics"
 description: "Generate Lorem Ipsum data."
 ---
 
+import PAAImage from '@site/src/components/powerAutomateActionImage'
+
 # 🎶 Musics
 
 :::danger Power Automate connector not yet available
@@ -22,6 +24,16 @@ Generate music related data. Returns an array of properties, by default ten. Som
 |`Seed` | Seed value for reproducible results. | null |
 
 ## Request
+
+### Power Automate
+
+In Power Automate you can find this endpoint by searching for `Get music mockdata`.
+
+<PAAImage src="/img/musics-action.jpg" alt="Get music mockdata action" />
+
+### HTTP
+
+Or you can use an HTTP request.
 
 ```http title="HTTP"
 GET https://api.mockster.dev/api/v1/musics
