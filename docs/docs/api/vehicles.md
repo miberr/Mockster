@@ -3,6 +3,8 @@ sidebar_label: "🏎️ Vehicles"
 description: "Generate different kinds of vehicles."
 ---
 
+import PAAImage from '@site/src/components/powerAutomateActionImage'
+
 # 🏎️ Vehicles
 
 :::danger Power Automate connector not yet available
@@ -22,6 +24,16 @@ Generate different kinds of vehicles and related properties. Returns an array of
 |`Seed` | Seed value for reproducible results. | null |
 
 ## Request
+
+### Power Automate
+
+In Power Automate you can find this endpoint by searching for `Get vehicle mockdata`.
+
+<PAAImage src="/img/vehicles-action.jpg" alt="Get vehicle mockdata action" />
+
+### HTTP
+
+Or you can use an HTTP request.
 
 ```http title="HTTP"
 GET https://api.mockster.dev/api/v1/vehicles
