@@ -93,8 +93,8 @@
                 "urlTemplate": "/products"
             },
             {
-                "displayName": "Get Science",
-                "urlTemplate": "/science"
+                "displayName": "Get Sciences",
+                "urlTemplate": "/sciences"
             },
             {
                 "displayName": "Get Strings",

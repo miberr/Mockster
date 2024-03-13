@@ -135,7 +135,7 @@ app.http('products', {
     handler: (request, context) => customRequest(request, context, Product)
 });
 
-app.http('science', {
+app.http('sciences', {
     methods: ['GET'],
     authLevel: 'anonymous',
     handler: (request, context) => customRequest(request, context, Science)

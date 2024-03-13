@@ -1717,7 +1717,7 @@
         ]
       }
     },
-    "/science": {
+    "/sciences": {
       "get": {
         "responses": {
           "200": {
