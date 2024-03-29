@@ -19,6 +19,12 @@
             "metadata": {
                 "description": "The environment to deploy to."
             }
+        },
+        "gitHubAppUserId": {
+            "type": "string",
+            "metadata": {
+                "description": "The GitHub App user id from Entra ID."
+            }
         }
     },
     "functions": [],
@@ -125,6 +131,7 @@
         "availabilityTestName": "Ping persons endpoint",
         "environment": "[toLower(parameters('environment'))]",
         "functionName": "[concat('fa-', parameters('appMame'), '-', variables('environment'))]",
+        "keyVaultName": "[concat('kv-', parameters('appMame'), '-', variables('environment'))]",
         "logWorkspaceName": "[concat('log-', parameters('appMame'), '-', variables('environment'))]",
         "serverFarmName": "[concat('asp-', parameters('appMame'), '-', variables('environment'))]",
         "staticSiteName": "[concat('swa-', parameters('appMame'), '-', variables('environment'))]",
@@ -144,6 +151,37 @@
             "properties": {
                 "supportsHttpsTrafficOnly": true,
                 "defaultToOAuthAuthentication": true
+            }
+        },
+        {
+            "type": "Microsoft.KeyVault/vaults",
+            "apiVersion": "2023-02-01",
+            "name": "[variables('keyVaultName')]",
+            "location": "[resourceGroup().location]",
+            "properties": {
+                "sku": {
+                    "family": "A",
+                    "name": "standard"
+                },
+                "tenantId": "[subscription().tenantId]",
+                "enablesoftDelete": true,
+                "softDeleteRetentionInDays": 90,
+                "accessPolicies": [
+                    {
+                        "tenantId": "[subscription().tenantId]",
+                        "objectId": "[parameters('gitHubAppUserId')]",
+                        "permissions": {
+                            "keys": [
+                                "get",
+                                "list"
+                            ],
+                            "secrets": [
+                                "get",
+                                "list"
+                            ]
+                        }
+                    }
+                ]
             }
         },
         {
