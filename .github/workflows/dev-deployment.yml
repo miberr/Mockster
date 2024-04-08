@@ -66,6 +66,9 @@ jobs:
         tenant-id: ${{ secrets.AZURE_TENANT_ID }}
         subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
    
+    - id: date
+      run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
+
     # Deploy infrastructure
     - name: Run ARM deployment
       uses: azure/arm-deploy@v1
@@ -73,7 +76,7 @@ jobs:
         subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION }}
         resourceGroupName: ${{ secrets.AZURE_RG_NAME }}
         template: ./arm/resources.json
-        deploymentName: deploymentName='GitHubActions'$(date +"%d-%b-%Y")
+        deploymentName: deploymentName=GitHubActions${{ steps.date.outputs.date }}
         parameters: environment=DEV gitHubAppUserId=${{ secrets.AZURE_GITHUB_APP_USER_ID }}
 
   deployFunction:
