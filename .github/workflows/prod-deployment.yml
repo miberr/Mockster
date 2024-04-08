@@ -72,7 +72,8 @@ jobs:
         subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION }}
         resourceGroupName: ${{ secrets.AZURE_RG_NAME }}
         template: ./arm/resources.json
-        parameters: environment=PROD, gitHubAppUserId=${{ secrets.AZURE_GITHUB_APP_USER_ID }}
+        deploymentName: deploymentName='GitHubActions'$(date +"%d-%b-%Y")
+        parameters: environment=PROD gitHubAppUserId=${{ secrets.AZURE_GITHUB_APP_USER_ID }}
   deployFunction:
     name: Deploy function to Azure
     runs-on: windows-latest
