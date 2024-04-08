@@ -74,7 +74,7 @@ jobs:
         subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION }}
         resourceGroupName: ${{ secrets.AZURE_RG_NAME }}
         template: ./arm/resources.json
-        deploymentName: deploymentName=GitHubActions${{ steps.date.outputs.date }}
+        deploymentName: GitHubActions${{ steps.date.outputs.date }}
         parameters: environment=PROD gitHubAppUserId=${{ secrets.AZURE_GITHUB_APP_USER_ID }}
   deployFunction:
     name: Deploy function to Azure
