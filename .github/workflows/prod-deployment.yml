@@ -64,7 +64,9 @@ jobs:
         client-id: ${{ secrets.AZURE_CLIENT_ID }}
         tenant-id: ${{ secrets.AZURE_TENANT_ID }}
         subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
-   
+  
+    - id: date
+      run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
     # Deploy infrastructure
     - name: Run ARM deployment
       uses: azure/arm-deploy@v1
@@ -72,8 +74,8 @@ jobs:
         subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION }}
         resourceGroupName: ${{ secrets.AZURE_RG_NAME }}
         template: ./arm/resources.json
-        parameters: environment=PROD
-
+        deploymentName: GitHubActions${{ steps.date.outputs.date }}
+        parameters: environment=PROD gitHubAppUserId=${{ secrets.AZURE_GITHUB_APP_USER_ID }}
   deployFunction:
     name: Deploy function to Azure
     runs-on: windows-latest
@@ -117,6 +119,24 @@ jobs:
         with:
           submodules: true
           lfs: false
+      
+      - name: Login to Azure
+        uses: azure/login@v1
+        with:
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+
+      - name: Retrieve secrets from Key Vault
+        uses: azure/CLI@v1
+        with:
+          inlineScript: |
+            algoliaAppId=$(az keyvault secret show --name "ALGOLIA-APP-ID" --vault-name "${{ secrets.AZURE_KV_NAME }}" --query "value")
+            echo "ALGOLIA_APP_ID="$algoliaAppId >> $GITHUB_ENV
+            algoliaIndexName=$(az keyvault secret show --name "ALGOLIA-INDEX-NAME" --vault-name "${{ secrets.AZURE_KV_NAME }}" --query "value")
+            echo "ALGOLIA_INDEX_NAME="$algoliaIndexName >> $GITHUB_ENV
+            AlgoliaSearchApiKey=$(az keyvault secret show --name "ALGOLIA-SEARCH-API-KEY" --vault-name "${{ secrets.AZURE_KV_NAME }}" --query "value")
+            echo "ALGOLIA_SEARCH_API_KEY="$AlgoliaSearchApiKey >> $GITHUB_ENV
 
       - name: Build And Deploy
         id: builddeploy
@@ -132,4 +152,8 @@ jobs:
           api_location: "" # Api source code path - optional
           output_location: "build" # Built app content directory - optional
           ###### End of Repository/Build Configurations ######
+        env:
+          ALGOLIA_APP_ID: $ALGOLIA_APP_ID
+          ALGOLIA_INDEX_NAME: $ALGOLIA_INDEX_NAME
+          ALGOLIA_SEARCH_API_KEY: $ALGOLIA_SEARCH_API_KEY
   

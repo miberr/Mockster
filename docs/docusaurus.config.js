@@ -121,7 +121,7 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/miberr/Mockster',
               },
             ],
           },
@@ -132,6 +132,21 @@ const config = {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
       },
+      algolia: {
+        // The application ID provided by Algolia
+        appId: process.env.ALGOLIA_APP_ID,
+  
+        // Public API key: it is safe to commit it
+        apiKey: process.env.ALGOLIA_SEARCH_API_KEY,
+  
+        indexName: process.env.ALGOLIA_INDEX_NAME,
+  
+        // Optional: see doc section below
+        contextualSearch: true,
+  
+        // Optional: path for search page that enabled by default (`false` to disable it)
+        searchPagePath: 'search'
+      }
     }),
 };
 
