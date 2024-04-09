@@ -153,7 +153,7 @@ jobs:
           output_location: "build" # Built app content directory - optional
           ###### End of Repository/Build Configurations ######
         env:
-          ALGOLIA_APP_ID: $ALGOLIA_APP_ID
-          ALGOLIA_INDEX_NAME: $ALGOLIA_INDEX_NAME
-          ALGOLIA_SEARCH_API_KEY: $ALGOLIA_SEARCH_API_KEY
+          ALGOLIA_APP_ID: ${{ env.ALGOLIA_APP_ID }}
+          ALGOLIA_INDEX_NAME: ${{ env.ALGOLIA_INDEX_NAME }}
+          ALGOLIA_SEARCH_API_KEY: ${{ env.ALGOLIA_SEARCH_API_KEY }}
   
