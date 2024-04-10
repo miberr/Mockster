@@ -19,12 +19,6 @@
             "metadata": {
                 "description": "The environment to deploy to."
             }
-        },
-        "gitHubAppUserId": {
-            "type": "string",
-            "metadata": {
-                "description": "The GitHub App user id from Entra ID."
-            }
         }
     },
     "functions": [],
@@ -166,22 +160,7 @@
                 "tenantId": "[subscription().tenantId]",
                 "enablesoftDelete": true,
                 "softDeleteRetentionInDays": 90,
-                "accessPolicies": [
-                    {
-                        "tenantId": "[subscription().tenantId]",
-                        "objectId": "[parameters('gitHubAppUserId')]",
-                        "permissions": {
-                            "keys": [
-                                "get",
-                                "list"
-                            ],
-                            "secrets": [
-                                "get",
-                                "list"
-                            ]
-                        }
-                    }
-                ]
+                "enableRbacAuthorization": true
             }
         },
         {
