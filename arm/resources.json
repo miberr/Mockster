@@ -159,7 +159,8 @@
                 },
                 "tenantId": "[subscription().tenantId]",
                 "enablesoftDelete": true,
-                "softDeleteRetentionInDays": 90
+                "softDeleteRetentionInDays": 90,
+                "enableRbacAuthorization": true
             }
         },
         {
