@@ -9,8 +9,8 @@ You can get started by making your first HTTP-request to Mocksters endpoint or f
 
 ## What you'll need
 
-:::danger Power Automate connector not yet available
-Power Automate connector can be expected to be available Q1/2024
+:::danger Power Automate connector rolling out
+Power Automate connector is currently rolling out. The connector might be in your environment already. If not, please wait for a couple of weeks or see updates on this site.
 :::
 
 - For REST you don't need anything, go ahead and make your first request!

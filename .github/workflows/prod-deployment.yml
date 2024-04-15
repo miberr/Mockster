@@ -1,7 +1,10 @@
 name: Production deployment
-on: 
-  release:
-    types: [published]
+on:
+  pull_request_target:
+    types:
+      - closed
+    branches:
+      - production
 
 permissions:
   id-token: write
@@ -9,6 +12,7 @@ permissions:
 jobs:
   setup: 
     name: Setup
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
 
@@ -49,6 +53,7 @@ jobs:
         path: ./function/deploy.zip
   infra:
     name: Deploy infrastructure to Azure
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     environment: production
     steps:
@@ -78,6 +83,7 @@ jobs:
         parameters: environment=PROD
   deployFunction:
     name: Deploy function to Azure
+    if: github.event.pull_request.merged == true
     runs-on: windows-latest
     environment: production
     needs: [setup, infra]
@@ -108,6 +114,7 @@ jobs:
 
   deployDocumentation:
     name: Deploy documentation site to Azure
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     environment: production
     needs: [setup, infra]
@@ -131,11 +138,11 @@ jobs:
         uses: azure/CLI@v1
         with:
           inlineScript: |
-            algoliaAppId=$(az keyvault secret show --name "ALGOLIA-APP-ID" --vault-name "${{ secrets.AZURE_KV_NAME }}" --query "value")
+            algoliaAppId=$(az keyvault secret show --name "ALGOLIA-APP-ID" --vault-name "${{ secrets.AZURE_KV_NAME }}" --query "value" -o tsv)
             echo "ALGOLIA_APP_ID="$algoliaAppId >> "$GITHUB_ENV"
-            algoliaIndexName=$(az keyvault secret show --name "ALGOLIA-INDEX-NAME" --vault-name "${{ secrets.AZURE_KV_NAME }}" --query "value")
+            algoliaIndexName=$(az keyvault secret show --name "ALGOLIA-INDEX-NAME" --vault-name "${{ secrets.AZURE_KV_NAME }}" --query "value" -o tsv)
             echo "ALGOLIA_INDEX_NAME="$algoliaIndexName >> "$GITHUB_ENV"
-            AlgoliaSearchApiKey=$(az keyvault secret show --name "ALGOLIA-SEARCH-API-KEY" --vault-name "${{ secrets.AZURE_KV_NAME }}" --query "value")
+            AlgoliaSearchApiKey=$(az keyvault secret show --name "ALGOLIA-SEARCH-API-KEY" --vault-name "${{ secrets.AZURE_KV_NAME }}" --query "value" -o tsv)
             echo "ALGOLIA_SEARCH_API_KEY="$AlgoliaSearchApiKey >> "$GITHUB_ENV"
 
       - name: Build And Deploy
@@ -156,4 +163,4 @@ jobs:
           ALGOLIA_APP_ID: ${{ env.ALGOLIA_APP_ID }}
           ALGOLIA_INDEX_NAME: ${{ env.ALGOLIA_INDEX_NAME }}
           ALGOLIA_SEARCH_API_KEY: ${{ env.ALGOLIA_SEARCH_API_KEY }}
-  
+ 
