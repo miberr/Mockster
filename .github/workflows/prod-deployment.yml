@@ -131,11 +131,11 @@ jobs:
         uses: azure/CLI@v1
         with:
           inlineScript: |
-            algoliaAppId=$(az keyvault secret show --name "ALGOLIA-APP-ID" --vault-name "${{ secrets.AZURE_KV_NAME }}" --query "value")
+            algoliaAppId=$(az keyvault secret show --name "ALGOLIA-APP-ID" --vault-name "${{ secrets.AZURE_KV_NAME }}" --query "value" -o tsv)
             echo "ALGOLIA_APP_ID="$algoliaAppId >> "$GITHUB_ENV"
-            algoliaIndexName=$(az keyvault secret show --name "ALGOLIA-INDEX-NAME" --vault-name "${{ secrets.AZURE_KV_NAME }}" --query "value")
+            algoliaIndexName=$(az keyvault secret show --name "ALGOLIA-INDEX-NAME" --vault-name "${{ secrets.AZURE_KV_NAME }}" --query "value" -o tsv)
             echo "ALGOLIA_INDEX_NAME="$algoliaIndexName >> "$GITHUB_ENV"
-            AlgoliaSearchApiKey=$(az keyvault secret show --name "ALGOLIA-SEARCH-API-KEY" --vault-name "${{ secrets.AZURE_KV_NAME }}" --query "value")
+            AlgoliaSearchApiKey=$(az keyvault secret show --name "ALGOLIA-SEARCH-API-KEY" --vault-name "${{ secrets.AZURE_KV_NAME }}" --query "value" -o tsv)
             echo "ALGOLIA_SEARCH_API_KEY="$AlgoliaSearchApiKey >> "$GITHUB_ENV"
 
       - name: Build And Deploy
