@@ -1,10 +1,8 @@
 name: Production deployment
 on:
-  pull_request_target:
-    types:
-      - closed
+  push:
     branches:
-      - production
+      - 'main'
 
 permissions:
   id-token: write
@@ -53,7 +51,6 @@ jobs:
         path: ./function/deploy.zip
   infra:
     name: Deploy infrastructure to Azure
-    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     environment: production
     steps:
@@ -83,7 +80,6 @@ jobs:
         parameters: environment=PROD
   deployFunction:
     name: Deploy function to Azure
-    if: github.event.pull_request.merged == true
     runs-on: windows-latest
     environment: production
     needs: [setup, infra]
@@ -114,7 +110,6 @@ jobs:
 
   deployDocumentation:
     name: Deploy documentation site to Azure
-    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     environment: production
     needs: [setup, infra]
