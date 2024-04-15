@@ -1,10 +1,10 @@
 name: Production deployment
 on:
-  pull_request:
+  pull_request_target:
     types:
-      - opened
+      - closed
     branches:
-      - 'main'
+      - production
 
 permissions:
   id-token: write
@@ -12,6 +12,7 @@ permissions:
 jobs:
   setup: 
     name: Setup
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
 
@@ -52,6 +53,7 @@ jobs:
         path: ./function/deploy.zip
   infra:
     name: Deploy infrastructure to Azure
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     environment: production
     steps:
@@ -81,6 +83,7 @@ jobs:
         parameters: environment=PROD
   deployFunction:
     name: Deploy function to Azure
+    if: github.event.pull_request.merged == true
     runs-on: windows-latest
     environment: production
     needs: [setup, infra]
@@ -111,6 +114,7 @@ jobs:
 
   deployDocumentation:
     name: Deploy documentation site to Azure
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     environment: production
     needs: [setup, infra]
@@ -159,12 +163,4 @@ jobs:
           ALGOLIA_APP_ID: ${{ env.ALGOLIA_APP_ID }}
           ALGOLIA_INDEX_NAME: ${{ env.ALGOLIA_INDEX_NAME }}
           ALGOLIA_SEARCH_API_KEY: ${{ env.ALGOLIA_SEARCH_API_KEY }}
-  closePullRequest:
-    name: Close pull request
-    runs-on: ubuntu-latest
-    needs: [deployFunction, deployDocumentation]
-    steps:
-      - name: Close pull request
-        run: gh pr close ${{ github.event.number }} --comment "Auto-closing pull request"
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+ 
