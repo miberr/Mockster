@@ -7,8 +7,8 @@ import PAAImage from '@site/src/components/powerAutomateActionImage'
 
 # 💻 Systems
 
-:::danger Power Automate connector not yet available
-Power Automate connector can be expected to be available Q1/2024
+:::danger Power Automate connector rolling out
+Power Automate connector is currently rolling out. The connector might be in your environment already. If not, please wait for a couple of weeks or see updates on this site.
 :::
 
 ## Description
