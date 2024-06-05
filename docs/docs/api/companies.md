@@ -7,8 +7,8 @@ import PAAImage from '@site/src/components/powerAutomateActionImage'
 
 # 🏢 Companies
 
-:::danger Power Automate connector rolling out
-Power Automate connector is currently rolling out. The connector might be in your environment already. If not, please wait for a couple of weeks or see updates on this site.
+:::info Power Automate connector in preview
+Power Automate connector is currently in preview. It has all the functionality. Preview flag will be removed in some time as Mockster finds its users.
 :::
 
 ## Description
