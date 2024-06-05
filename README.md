@@ -12,9 +12,6 @@ In Mockster there is many different modules, or endpoints, to be utilized. These
 
 ## Mockster in Microsoft Power Platform
 
-> [!NOTE]
-> For time being, the connector is pending certification.
-
 Mockster is meant for citizen developers first. As such, there will be a certified connector in Microsoft Power Platform. For time being, the connector is pending certification.
 
 ## How do I contribute?

@@ -5,12 +5,12 @@ sidebar_label: "Getting started"
 
 # Getting Started
 
-You can get started by making your first HTTP-request to Mocksters endpoint or from Power Automate.
+You can get started by making your first HTTP-request to Mocksters endpoint, Power Automate or from Power Apps.
 
 ## What you'll need
 
-:::danger Power Automate connector rolling out
-Power Automate connector is currently rolling out. The connector might be in your environment already. If not, please wait for a couple of weeks or see updates on this site.
+:::info Power Automate connector in preview
+Power Automate connector is currently in preview. It has all the functionality. Preview flag will be removed in some time as Mockster finds its users.
 :::
 
 - For REST you don't need anything, go ahead and make your first request!
@@ -23,6 +23,8 @@ Please note, that you'll need a Power Apps or Power Automate Premium license to 
 Another option is using **[Developer plan](https://powerapps.microsoft.com/en-gb/developerplan/)**. It's a great option for development and testing out premium features.
 
 ::::
+
+For detailed instructions, see [Usage in Microsoft Power Platform](./usage-in-power-platform).
 
 ## Getting reproducible results
 
