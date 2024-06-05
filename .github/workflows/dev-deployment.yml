@@ -19,7 +19,7 @@ jobs:
       
     # Setup Node.js
     - name: Setup Node.js
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v4
       with:
         node-version: '18.x'
     
@@ -44,7 +44,7 @@ jobs:
 
     # Upload build artifact
     - name: Upload build artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: function
         path: ./function/deploy.zip
@@ -60,7 +60,7 @@ jobs:
     
     # Login to Azure
     - name: Authenticate to Azure
-      uses: azure/login@v1
+      uses: azure/login@v2
       with:
         client-id: ${{ secrets.AZURE_CLIENT_ID }}
         tenant-id: ${{ secrets.AZURE_TENANT_ID }}
@@ -71,7 +71,7 @@ jobs:
 
     # Deploy infrastructure
     - name: Run ARM deployment
-      uses: azure/arm-deploy@v1
+      uses: azure/arm-deploy@v2
       with: 
         subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION }}
         resourceGroupName: ${{ secrets.AZURE_RG_NAME }}
@@ -94,7 +94,7 @@ jobs:
 
       # Login to Azure
       - name: Authenticate to Azure
-        uses: azure/login@v1
+        uses: azure/login@v2
         with:
           client-id: ${{ secrets.AZURE_CLIENT_ID }}
           tenant-id: ${{ secrets.AZURE_TENANT_ID }}
@@ -141,7 +141,7 @@ jobs:
       
       # Upload test results
       - name: Upload test results
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: playwright-report
           path: ./function/playwright-report/
