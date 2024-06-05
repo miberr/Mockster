@@ -67,7 +67,7 @@ jobs:
         subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
    
     - id: date
-      run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
+      run: echo " date=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
 
     # Deploy infrastructure
     - name: Run ARM deployment
