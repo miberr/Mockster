@@ -23,7 +23,7 @@ const FeatureList = [
   },
   {
     title: 'From Finland with love',
-    emoji: '🇫🇮',
+    svg: '/img/finnish_flag.svg',
     description: (
       <>
         Mockster is open sourced and free to use.
@@ -32,18 +32,34 @@ const FeatureList = [
   },
 ];
 
-function Feature({title, emoji, description}) {
-  return (
-    <div className={clsx('col col--4')}>
-      <div className="text--center emoji">
-        {emoji}
+function Feature({title, emoji, svg, description}) {
+  if (svg != null) {
+    return (
+      <div className={clsx('col col--4')}>
+        <div className="text--center emoji">
+          <img src={svg} width="60" height="50" />
+        </div>
+        <div className="text--center padding-horiz--md">
+          <Heading as="h3">{title}</Heading>
+          <p>{description}</p>
+        </div>
       </div>
-      <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
-        <p>{description}</p>
+    );
+  } else {
+    return (
+      <div className={clsx('col col--4')}>
+        <div className="text--center emoji">
+          {emoji}
+        </div>
+        <div className="text--center padding-horiz--md">
+          <Heading as="h3">{title}</Heading>
+          <p>{description}</p>
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
+
+  
 }
 
 export default function HomepageFeatures() {
