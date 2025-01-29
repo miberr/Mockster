@@ -138,7 +138,7 @@ jobs:
             algoliaIndexName=$(az keyvault secret show --name "ALGOLIA-INDEX-NAME" --vault-name "${{ secrets.AZURE_KV_NAME }}" --query "value" -o tsv)
             echo "ALGOLIA_INDEX_NAME="$algoliaIndexName >> "$GITHUB_ENV"
             AlgoliaSearchApiKey=$(az keyvault secret show --name "ALGOLIA-SEARCH-API-KEY" --vault-name "${{ secrets.AZURE_KV_NAME }}" --query "value" -o tsv)
-            
+            echo "ALGOLIA_SEARCH_API_KEY="$AlgoliaSearchApiKey >> "$GITHUB_ENV"
 
       - name: Build And Deploy
         id: builddeploy
