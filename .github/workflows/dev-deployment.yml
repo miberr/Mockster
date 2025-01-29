@@ -73,6 +73,7 @@ jobs:
     - name: Run ARM deployment
       uses: azure/arm-deploy@v2
       with: 
+        scope: resourcegroup
         subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION }}
         resourceGroupName: ${{ secrets.AZURE_RG_NAME }}
         template: ./arm/resources.json

@@ -500,7 +500,6 @@
             }
         },
         {
-            // Generating api endpoints in apim with copy loop
             "copy": {
                 "name": "apiEndpoints",
                 "count": "[length(variables('apiEndpoints'))]"
