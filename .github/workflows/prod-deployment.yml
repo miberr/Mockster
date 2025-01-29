@@ -72,6 +72,7 @@ jobs:
     - name: Run ARM deployment
       uses: azure/arm-deploy@v2
       with: 
+        scope: resourcegroup
         subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION }}
         resourceGroupName: ${{ secrets.AZURE_RG_NAME }}
         template: ./arm/resources.json
@@ -154,6 +155,7 @@ jobs:
           output_location: "build" # Built app content directory - optional
           ###### End of Repository/Build Configurations ######
         env:
+          PRE_BUILD_COMMAND: git config --global --add safe.directory /github/workspace
           ALGOLIA_APP_ID: ${{ env.ALGOLIA_APP_ID }}
           ALGOLIA_INDEX_NAME: ${{ env.ALGOLIA_INDEX_NAME }}
           ALGOLIA_SEARCH_API_KEY: ${{ env.ALGOLIA_SEARCH_API_KEY }}
