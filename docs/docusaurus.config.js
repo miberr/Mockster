@@ -44,6 +44,7 @@ const config = {
                 config: {
                     connectionString:
                         "InstrumentationKey=709e34cb-daad-4956-a23d-7e276fa0b4e3;IngestionEndpoint=https://westeurope-4.in.applicationinsights.azure.com/;LiveEndpoint=https://westeurope.livediagnostics.monitor.azure.com/",
+                    autoTrackPageVisitTime: true,
                 },
                 enableClickAnalytics: true,
             },
@@ -85,6 +86,21 @@ const config = {
     themeConfig:
         /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
         ({
+            metadata: [
+                {
+                    name: "description",
+                    content:
+                        "Generate realistic mock data for your testing and development. Available as Microsoft Power Platform connector.",
+                },
+                {
+                    name: "keywords",
+                    content:
+                        "microsoft, power platform, mockdata, mocking, mocked data, power automate, power apps, mocker api, mocker-api",
+                },
+            ],
+            colorMode: {
+                respectPrefersColorScheme: true,
+            },
             navbar: {
                 title: "Mockster",
                 logo: {
